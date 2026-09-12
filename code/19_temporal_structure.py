@@ -96,6 +96,11 @@ def staleness(con) -> dict:
                     rec[f"t{int(th*100)}_{defn}"] = round(hit["years"], 2) if hit else None
                     rec[f"r{int(th*100)}_{defn}"] = hit["tgt"] if hit else None
             rec["final"] = {k: curve[-1][k] for k in ("hard", "unrec", "sem", "sub")} if curve else {}
+            # fixed-horizon fractions: censoring-free comparison across cohorts
+            for horizon in (1, 2, 3):
+                at = [c for c in curve if c["years"] <= horizon]
+                rec[f"at_{horizon}y"] = ({k: at[-1][k] for k in ("hard", "unrec", "sem", "sub")}
+                                         if at and curve[-1]["years"] >= horizon else None)
             rows.append(rec)
         out[dom] = rows
     return out

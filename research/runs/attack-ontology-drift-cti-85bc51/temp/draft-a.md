@@ -696,18 +696,17 @@ objection properly.
 ## 7. Downstream Impact of Drift on CTI Analytics
 
 Section 6 measured the instrument. This section measures what the recalibration does to
-conclusions drawn with it. Every experiment holds the adversary intelligence fixed and moves
-only the vocabulary, so every difference reported below is attributable to the instrument and
-to nothing else.
+conclusions drawn with it. Every experiment holds the adversary intelligence fixed and moves only
+the vocabulary, so every difference below is attributable to the instrument and to nothing else.
 
 ### 7.1 Attribution under vocabulary mismatch
 
-**Figure 5.** Top-1 attribution accuracy by condition against the artefact's vocabulary
-release, with the drift penalty and its bootstrap confidence band.
+**Figure 5.** Top-1 attribution accuracy by condition against the artefact's vocabulary release,
+with the drift penalty and its bootstrap confidence band.
 
 **Table 6.** Controlled attribution experiment at k = 10, analysis release v19.0. "OOV" is the
-share of observed identifiers not live at v19.0. The drift penalty is back-projected minus
-naive; recovery is the share of that penalty returned by ATT&CK-Norm.
+share of observed identifiers not live at v19.0. The drift penalty is back-projected minus naive;
+recovery is the share of that penalty returned by ATT&CK-Norm.
 
 | Artefact vocabulary | k | Groups | OOV | Contemporaneous | Naive | ATT&CK-Norm | Oracle | Drift penalty (pp) [95% CI] | Recovered |
 |---|---|---|---|---|---|---|---|---|---|
@@ -731,52 +730,39 @@ naive; recovery is the share of that penalty returned by ATT&CK-Norm.
 | v18.0 (2025-10-28) | 10 | 161 | 0.015 | 0.860 | 0.844 | 0.858 | 0.858 | 1.6 [0.6, 2.8] | 0.88 |
 
 The structure of Table 6 mirrors the structure of Table 3, which is the point: the downstream
-effect tracks the instrument, not the adversary. A legacy artefact written in the v1.0
-vocabulary and consumed by a v19.0 analytic loses 42.2 points of top-1 accuracy relative to the
-same intelligence consumed in its own vocabulary, with a bootstrap interval of [37.8, 46.8];
-at v6.0 the penalty is 46.2 [41.6, 51.0]. After the restructuring the penalty collapses to 7.0
-at v7.0 and settles between 1.2 and 3.4 points thereafter, with the interval touching or
-crossing zero at v11.0, v14.0 and v16.0.
+effect tracks the instrument, not the adversary. A legacy artefact in the v1.0 vocabulary
+consumed by a v19.0 analytic loses 42.2 points of top-1 accuracy relative to the same
+intelligence consumed in its own vocabulary, interval [37.8, 46.8]; at v6.0 the penalty is 46.2
+[41.6, 51.0]. After the restructuring it collapses to 7.0 at v7.0 and settles between 1.2 and 3.4
+points, with the interval touching or crossing zero at v11.0, v14.0 and v16.0.
 
-Three readings of that table are available and only one survives.
+The obvious reading — that the modern penalty is negligible, so the problem is historical — fails
+on its own arithmetic. A 1.6-point penalty at v18.0 is *one release boundary*, six months. It is a
+per-release increment, not an asymptote, and the artefacts the field actually consumes are years
+old (Section 9). The aggregate also hides its own concentration. Stratifying the candidate
+universe by whether a group has at least one technique unique to it within that universe, the
+modern penalty is 2.5 to 7 times larger on the identifiable stratum: +0.0344 [+0.0101, +0.0607]
+against +0.0089 [−0.0010, +0.0189] at v12.0; +0.0331 [+0.0166, +0.0497] against +0.0049 [−0.0010,
++0.0118] at v16.0; +0.0239 [+0.0109, +0.0391] against +0.0067 [+0.0019, +0.0125] at v18.0. The
+specificity fractions our corpus computes independently — 0.325, 0.309, 0.298 — reproduce the
+published finding that roughly a third of ATT&CK groups have any group-specific technique [59].
+The mechanism is immediate once stated: a group's identifying token is by definition a rare
+technique, and rare techniques are the ones ATT&CK adds, splits and revokes. Drift attacks
+precisely the signal attribution depends on, and an average over a population that is mostly
+unattributable understates the effect on the subset carrying the task.
 
-The first is that the modern penalty is negligible, so the problem is historical. This fails on
-its own arithmetic. A 1.6-point penalty at v18.0 is one release boundary, six months. It is not
-an asymptote; it is a per-release increment, and the artefacts the field actually consumes —
-benchmark label files, published coverage layers, training corpora — are years old, not six
-months (Section 9). Moreover the aggregate hides its own concentration. Stratifying the
-candidate universe by whether a group has at least one technique unique to it within that
-universe, the modern penalty is 2.5 to 7 times larger on the identifiable stratum: +0.0344
-[+0.0101, +0.0607] against +0.0089 [−0.0010, +0.0189] at v12.0; +0.0331 [+0.0166, +0.0497]
-against +0.0049 [−0.0010, +0.0118] at v16.0; +0.0239 [+0.0109, +0.0391] against +0.0067
-[+0.0019, +0.0125] at v18.0. The specificity fraction our corpus computes independently —
-0.325, 0.309, 0.298 — reproduces the published finding that roughly a third of ATT&CK groups
-have any group-specific technique [59]. The mechanism is immediate once stated: a group's
-identifying token is by definition a rare technique, and rare techniques are the ones ATT&CK
-adds, splits and revokes. Drift attacks precisely the signal on which attribution depends. An
-average taken over a population that is mostly unattributable understates the effect on the
-subset that carries the task.
-
-The second reading is that the enormous legacy penalties are the real finding. They are not,
-or not straightforwardly, because they are inflated by the back-projection. Collapsing dense
-modern profiles onto a coarse pre-2020 vocabulary makes them collide with each other in a way
-no 2018 system experienced, since 2018 profiles were genuinely sparse. Running the missing
-control — real archival v-era labels against real archival v-era profiles — gives self-consistency
-0.969 at v1.0 against the back-projected condition's 0.668, and 0.900 against 0.663 at v6.0.
-The collision artefact depresses the control condition and therefore *deflates* the reported
-penalty, while the perfect-recall idealisation inflates it; in the modern regime the two
-converge (0.856 against 0.837 at v12.0; 0.846 against 0.841 at v18.0), so the modern claim is
-unaffected either way. Table 6 also reports the back-projection loss directly: at v1.0, 389 of
-697 modern techniques have no v1.0 ancestor and profiles retain 0.618 of their distinct
-identifiers; at v7.0, 155 of 697 and 0.903; at v18.0, 7 of 697 and 0.998. The legacy
-conditions all consume the same lossy observation, so the contrast between them is clean even
-though their absolute level is not.
-
-The third reading, and the one we defend, is that the table measures comparability rather than
-capability. Every absolute number here is an internal-consistency score computed inside one
-curator's graph, where observation, profile, ground truth and back-projection map all come
-from MITRE. None of them is a statement about how well TTP attribution works. What the design
-licenses is the *contrast*, because the contrast holds the intelligence fixed.
+The legacy penalties, conversely, must not be over-read: they are inflated by the back-projection,
+which collapses dense modern profiles onto a coarse pre-2020 vocabulary and makes them collide in
+a way no 2018 system experienced. Running the missing control — real archival labels against real
+archival profiles — gives self-consistency 0.969 at v1.0 against the back-projected condition's
+0.668, and 0.900 against 0.663 at v6.0, while the two converge in the modern regime (0.856 against
+0.837 at v12.0; 0.846 against 0.841 at v18.0). Back-projection loss is reported directly: at v1.0,
+389 of 697 modern techniques have no v1.0 ancestor and profiles retain 0.618 of their distinct
+identifiers; at v7.0, 155 of 697 and 0.903; at v18.0, 7 of 697 and 0.998. All three legacy
+conditions consume the same lossy observation, so the contrast between them is clean even where
+their absolute level is not — which is the reading we defend. Every absolute number in Table 6 is
+an internal-consistency score inside one curator's graph; what the design licenses is the
+*contrast*, because the contrast holds the intelligence fixed.
 
 ### 7.2 Robustness: the penalty is not an artefact of one scorer
 
@@ -817,19 +803,16 @@ profile.
 | v18.0 | overlap | yes | 0.533 | 0.523 | 0.533 | 1.0 | 1.0 |
 | v18.0 | overlap | no | 0.987 | 0.983 | 0.987 | 0.3 | 0.3 |
 
-The absolute accuracies in Table 7 move enormously with the design choices — IDF-cosine over
-software-mediated profiles scores 0.693 at v1.0 where plain overlap scores 0.240 — which is
-itself a warning about reading any absolute attribution number. The penalty's *sign and order
-of magnitude* do not move. Every one of the 30 cells shows a positive drift penalty; the
-pre-restructuring penalty ranges from 18.7 to 56.7 points and the post-restructuring penalty
-from 0.3 to 5.3. Normalization gain follows the same pattern, 6.0 to 32.0 points before the
-restructuring and 0.0 to 2.0 after it. Whatever else is fragile here, the existence and the
-regime structure of the drift penalty are not.
+Absolute accuracies move enormously with design choices — IDF-cosine over software-mediated
+profiles scores 0.693 at v1.0 where plain overlap scores 0.240, which is itself a warning against
+reading any absolute attribution number. The penalty's sign and order of magnitude do not move.
+All 30 cells show a positive drift penalty: 18.7 to 56.7 points before the restructuring, 0.3 to
+5.3 after it. Normalization gain follows the same pattern, 6.0 to 32.0 points before and 0.0 to
+2.0 after.
 
 ### 7.3 From scores to verdicts
 
 A score movement is a methodological curiosity; a changed verdict is a changed conclusion.
-Table 10 reports the verdict-level readout of the same trials.
 
 **Figure 8.** Attribution verdict instability and mitigation leaderboard reordering by frozen
 release.
@@ -858,57 +841,51 @@ where the named top-1 actor differs between the back-projected and naive conditi
 | v17.0 (2025-04-22) | 0.018 | 0.018 | 0.012 | 0.006 | 0.010 |
 | v18.0 (2025-10-28) | 0.022 | 0.022 | 0.016 | 0.006 | 0.020 |
 
-For a v1.0-vocabulary artefact the named actor changes in 0.722 of observations and 0.712
-change to a *wrong* actor; at v6.0 the figures are 0.790 and 0.774. These are not score
-degradations, they are different answers to the question the analytic was asked. Across a
-single modern release boundary the verdict still changes in 0.022 of observations and every one
-of those changes is to a wrong actor. The final column is the finding that should most trouble
-a practitioner: applying normalization *itself* changes the verdict in 0.368 to 0.442 of
-pre-restructuring observations and in 0.006 to 0.030 of modern ones. Silently normalizing an
-inherited label set is therefore not a neutral cleanup step. It is an intervention that
-changes published conclusions, and it must be declared as one.
+For a v1.0-vocabulary artefact the named actor changes in 0.722 of observations and 0.712 change
+to a *wrong* actor; at v6.0, 0.790 and 0.774. These are not degraded scores, they are different
+answers to the question the analytic was asked. Across a single modern release boundary the
+verdict still changes in 0.022 of observations, and every one of those changes is to a wrong
+actor. The final column is the finding a practitioner should find hardest: applying normalization
+*itself* changes the verdict in 0.368 to 0.442 of pre-restructuring observations and 0.006 to
+0.030 of modern ones. Silently normalizing an inherited label set is not a neutral cleanup step;
+it is an intervention that changes published conclusions and must be declared as one.
 
 ### 7.4 Is this separable from the single-version noise floor?
 
-The strongest published objection to everything above is that ATT&CK labelling is so noisy at
-a *single* pinned release that drift is a second-order term on a first-order problem.
-Detection products pinned to one release assign disjoint technique labels to the same
-behaviour — one vendor's rule for a named-pipe impersonation carries T1134 while another's
-rule for the same pipe write carries a four-identifier set with zero overlap [74] — roughly a
-third of extraction errors fall between same-tactic, description-overlapping techniques [20],
-and most ATT&CK groups have no group-specific technique at all [59]. Recent work goes further
-and argues that LLM agents can reproduce documented APT profiles well enough to undermine the
-premise of TTP-based attribution [66]. We concede the noise floor completely: it is large, and
-this paper does not claim drift dominates it.
+The strongest published objection is that ATT&CK labelling is so noisy at a *single* pinned
+release that drift is a second-order term on a first-order problem. Products pinned to one release
+assign disjoint technique labels to the same behaviour [74], roughly a third of extraction errors
+fall between same-tactic, description-overlapping techniques [20], most ATT&CK groups have no
+group-specific technique [59], and LLM agents can reproduce documented APT profiles well enough to
+undermine the premise of TTP attribution [66]. We concede the noise floor completely: it is large,
+and we do not claim drift dominates it.
 
-Separability is a design property here, not an assumption. Every condition draws its
-observations from the same curated ATT&CK edges, so the labelling process is identical across
-conditions and cancels in the contrast. But holding a nuisance term at *zero* licenses
-separability while leaving *additivity* untested, and an interaction cannot be seen in a design
-with one level of the moderator. We therefore ran the missing factorial: each observed
-technique is replaced with probability ρ by a sibling sub-technique, its parent, or a
-same-tactic technique — a substitution shaped like the vendor disagreement the objection
-describes — applied in the modern vocabulary before back-projection so that it flows
-identically into all four conditions, at 1,200 trials per cell.
+Separability is a design property here rather than an assumption, because every condition draws
+observations from the same curated edges, so the labelling process is identical across conditions
+and cancels in the contrast. But holding a nuisance term at *zero* licenses separability while
+leaving *additivity* untested — an interaction cannot be seen in a design with one level of the
+moderator. We therefore ran the missing factorial: each observed technique is replaced with
+probability ρ by a sibling sub-technique, its parent, or a same-tactic technique, applied in the
+modern vocabulary before back-projection so it flows identically into all four conditions, at
+1,200 trials per cell.
 
-The penalty survives at every noise level and at every boundary. At v1.0 it falls from +0.439
-at ρ = 0 to +0.342 at ρ = 0.4; at v6.0 from +0.476 to +0.317; at v12.0 it is +0.017 against
-+0.021 and at v18.0 +0.012 against +0.012. Strict additivity fails in the large-drift regime:
-the pre-restructuring penalty is attenuated by 22 to 33 percent at ρ = 0.4, because noise and
-drift consume the same finite signal. In the modern regime the penalty is flat in ρ, that is,
-effectively additive. The correct claim is therefore **separable and sub-additive**, and the
-noise-free figures in Table 6 are *upper bounds* on drift's contribution in a noisy world.
-Normalization degrades faster than the penalty does — recovery at v1.0 falls from 0.44 at
-ρ = 0 to 0.30 at ρ = 0.4 — so a repair protocol returns less exactly as label quality falls,
-which is the regime where it is most needed.
+The penalty survives at every noise level and every boundary. At v1.0 it falls from +0.439 at
+ρ = 0 to +0.342 at ρ = 0.4; at v6.0 from +0.476 to +0.317; at v12.0 it is +0.017 against +0.021,
+and at v18.0 +0.012 against +0.012. Strict additivity fails where drift is large — the
+pre-restructuring penalty is attenuated 22 to 33 percent at ρ = 0.4, because noise and drift
+consume the same finite signal — while in the modern regime the penalty is flat in ρ, that is,
+effectively additive. The correct claim is **separable and sub-additive**, and the noise-free
+figures in Table 6 are *upper bounds* on drift's contribution in a noisy world. Normalization
+degrades faster than the penalty does: recovery at v1.0 falls from 0.44 at ρ = 0 to 0.30 at
+ρ = 0.4, so the repair returns least exactly where label quality is worst.
 
 ### 7.5 Coverage claims and mitigation leaderboards
 
 **Figure 6.** Coverage claims under a frozen capability, and the random-portfolio sweep of the
 same artefact.
 
-**Table 8.** Coverage claims under a capability frozen at release V and re-measured at v19.0.
-The identifier artefact is the gap between the naive and normalized re-measurements.
+**Table 8.** Coverage claims under a capability frozen at release V and re-measured at v19.0. The
+identifier artefact is the gap between the naive and normalized re-measurements.
 
 | Capability frozen at | Portfolio | Claimed then | Naive at v19.0 | Normalized at v19.0 | Identifier artefact (pp) |
 |---|---|---|---|---|---|
@@ -931,28 +908,24 @@ The identifier artefact is the gap between the naive and normalized re-measureme
 | v17.0 (2025-04-22) | 575 | 84.7% | 80.2% | 82.2% | 2.0 |
 | v18.0 (2025-10-28) | 582 | 84.2% | 81.1% | 83.2% | 2.2 |
 
-A capability frozen at v6.0 that could legitimately claim 97.0% coverage reads 17.4% when its
-identifiers are matched naively against v19.0 and 33.9% after normalization. Nothing about the
-capability changed. The 79.6-point collapse decomposes into two entirely different quantities:
-16.5 points are pure identifier artefact, repairable by arithmetic, and the remaining 63.1
-points are the catalogue growing underneath a fixed portfolio, which is not an artefact at all
-but the honest statement that the defender's coverage of the current threat model has fallen.
-Conflating those two is exactly what an undeclared coverage percentage does. In the modern
-regime the artefact term shrinks to 1.1 to 2.2 points while the growth term remains large:
-frozen at v17.0, a claim of 84.7% reads 80.2% one year later, of which 2.0 points are
-bookkeeping. The random-portfolio sweep confirms that none of this depends on which techniques
-MITRE happened to write mitigations for: over 500 random 30% portfolios per release the mean
-naive error is −26.49 points at v1.0 and −1.00 at v18.0, with standard deviations under 0.55
-throughout, and normalization removes roughly four points of it at v1.0 and 0.70 at v18.0.
-This is the measurement behind a practitioner complaint that has been made repeatedly without
-numbers: that vendor coverage percentages are padded, that a 100% claim is a red flag, and
-that at least three incompatible denominators circulate [80, 82, 84].
+A capability frozen at v6.0 that could legitimately claim 97.0% coverage reads 17.4% matched
+naively against v19.0 and 33.9% after normalization, with nothing about the capability changed.
+The 79.6-point collapse decomposes into two different quantities: 16.5 points of pure identifier
+artefact, repairable by arithmetic, and 63.1 points of catalogue growing underneath a fixed
+portfolio — not an artefact at all, but the honest statement that coverage of the current threat
+model has fallen. Conflating the two is precisely what an undeclared coverage percentage does. In
+the modern regime the artefact shrinks to 1.1 to 2.2 points while the growth term stays large: a
+claim of 84.7% frozen at v17.0 reads 80.2% one year later, of which 2.0 points are bookkeeping.
+The random-portfolio sweep shows none of this depends on which techniques MITRE wrote mitigations
+for: over 500 random 30% portfolios per release the mean naive error is −26.49 points at v1.0 and
+−1.00 at v18.0, standard deviations under 0.55 throughout. This is the measurement behind a
+practitioner complaint long made without numbers — that coverage percentages are padded, that a
+100% claim is a red flag, and that incompatible denominators circulate [80, 82, 84].
 
 Ranking is the more consequential readout, because defenders use ATT&CK to prioritise.
 
-**Table 11.** Mitigation leaderboard reordering. Kendall tau compares the ranking of
-mitigations by techniques addressed at the frozen release against the same mitigations
-re-measured at v19.0.
+**Table 11.** Mitigation leaderboard reordering. Kendall tau compares the ranking of mitigations
+by techniques addressed at the frozen release against the same mitigations re-measured at v19.0.
 
 | Portfolios frozen at | Mitigations ranked | Kendall tau, naive | Kendall tau, normalized | Top-10 members displaced (naive) | Top-10 displaced (normalized) | Rank-1 changed |
 |---|---|---|---|---|---|---|
@@ -971,37 +944,31 @@ re-measured at v19.0.
 | v17.0 (2025-04-22) | 43 | 0.976 | 1.000 | 0 | 0 | yes |
 | v18.0 (2025-10-28) | 43 | 0.978 | 0.998 | 0 | 0 | no |
 
-Here, and only here, normalization is close to a cure: mean Kendall tau rises from 0.931 to
-0.992 across the sweep, three of the four naive rank-1 flips vanish and none are introduced.
-But the rank-1 column is a warning on its own terms. The single highest-priority mitigation
-changes identity at four of fourteen frozen releases, including at v17.0 — one release before
-the analysis — where naive tau is 0.976. A near-perfect rank correlation coexisting with a
-changed top-ranked control is exactly the failure mode a defender cannot afford, because the
-leaderboard is consumed at the top and reported as an aggregate.
+Here, and only here, normalization is close to a cure: mean Kendall tau rises from 0.931 to 0.992,
+three of four naive rank-1 flips vanish and none are introduced. The rank-1 column is nonetheless
+a warning on its own terms. The single highest-priority mitigation changes identity at four of
+fourteen frozen releases, including v17.0 — one release before the analysis — where naive tau is
+0.976. A near-perfect rank correlation coexisting with a changed top-ranked control is exactly the
+failure a defender cannot afford, because the leaderboard is consumed at the top.
 
 ### 7.6 The long tail objection, adjudicated
 
-The remaining defence is that drift lands on techniques nobody reports. MITRE's own bias
-analysis and sightings work establish that observed adversary behaviour is heavily
-concentrated in a short head of techniques [49], so churn among rare identifiers should barely
-move any frequency-weighted quantity.
+The remaining defence is that drift lands on techniques nobody reports: observed adversary
+behaviour is concentrated in a short head [49], so churn among rare identifiers should barely move
+a frequency-weighted quantity. We repeated the frozen-capability experiment with techniques
+weighted by documented prevalence, the `uses` edge count at v19.0. The artefact *grows* under
+weighting: frozen at v6.0 it is +16.50 points unweighted and +20.01 weighted; at v10.0, +1.58
+against +1.43; at v18.0, +2.15 against +1.57. The head here is only moderately concentrated — the
+fifteen most-referenced techniques carry 0.285 of all `uses` edges at v19.0 — and is itself a
+product of restructuring, the most recent wave having removed T1562.001 at rank 33 of 599.
 
-We tested it by repeating the frozen-capability experiment with techniques weighted by
-documented prevalence, the number of `uses` edges a technique carries at v19.0. The artefact
-*grows* under weighting rather than shrinking: frozen at v6.0 it is +16.50 points unweighted
-and +20.01 weighted; at v10.0, +1.58 against +1.43; at v18.0, +2.15 against +1.57. In this
-corpus the head is only moderately concentrated — the fifteen most-referenced techniques carry
-0.285 of all `uses` edges at v19.0 — and the head is itself a product of restructuring, since
-the most recent revocation wave removed T1562.001 at rank 33 of 599 (Section 6.7).
-
-The limitation must be stated in the terms it deserves rather than argued away. `uses` edges
-count how many groups, malware families and tools MITRE has *documented* as employing a
-technique. That is a cumulative documentation stock, biased toward behaviours that are easy to
-narrate in a report and monotone in time, and it is not an alert stream. Defender telemetry is
-materially more concentrated than documentation. So: the long-tail objection is refuted for the
-fraction of the *written CTI corpus* affected by drift, and it is untested for the fraction of
-the *alert stream* affected, because the telemetry that would test it on its own data is not
-reachable here. We claim the first and not the second.
+The limitation deserves its own terms rather than an argument. `uses` edges count how many groups,
+malware families and tools MITRE has *documented* as employing a technique: a cumulative
+documentation stock, biased toward behaviours easy to narrate in a report, monotone in time, and
+not an alert stream. Defender telemetry is materially more concentrated. The long-tail objection
+is therefore refuted for the fraction of the *written CTI corpus* affected and left untested for
+the fraction of the *alert stream* affected, because the telemetry that would test it on its own
+data is not reachable here. We claim the first and not the second.
 
 ## 8. ATT&CK-Norm: A Version-Normalization Protocol
 

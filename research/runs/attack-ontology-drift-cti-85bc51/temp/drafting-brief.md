@@ -133,3 +133,5 @@ code calls `contemporaneous` is a **back-projected self-consistent** system, not
 a V-era system. Table 16 gives the real archival control alongside it. Wherever
 the manuscript describes that condition it must say back-projected, and it must
 report both numbers rather than only the one that flatters the design.
+
+| Figure 9 | `paper/figures/fig9_two_clocks.pdf` | the intensional clock measured at a two-year horizon per cohort, and the five restructuring events across the three domains |

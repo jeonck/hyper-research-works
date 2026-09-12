@@ -237,6 +237,7 @@ def main() -> None:
     fig6_coverage(e6)
     fig7_artifacts(e7)
     fig8_flips(load("e10_conclusion_flips.json"))
+    fig9_clocks(load("e12_temporal_structure.json"))
     print("figures written to", FIG, file=sys.stderr)
 
 
@@ -271,6 +272,45 @@ def fig8_flips(e10):  # appended: conclusion-flip figure
     ax[1].set_title("mitigation coverage leaderboard", fontsize=7)
     fig.savefig(FIG / "fig8_conclusion_flips.pdf")
     fig.savefig(FIG / "fig8_conclusion_flips.png")
+    plt.close(fig)
+
+
+
+
+def fig9_clocks(e12):  # the two clocks and the recurrence hazard
+    import matplotlib.pyplot as plt
+    ent = e12["staleness_clocks"]["enterprise-attack"]
+    post = [r for r in ent if int(r["src"].split(".")[0]) >= 7 and r.get("at_2y")]
+    fig, ax = plt.subplots(1, 2, figsize=(6.4, 2.4))
+    xs = [f"v{r['src']}" for r in post]
+    ax[0].plot(xs, [r["at_2y"]["sub"] for r in post], "o-", color=C["b"], ms=3, lw=1.3,
+               label="substantively rewritten or re-tactic'd")
+    ax[0].plot(xs, [r["at_2y"]["sem"] for r in post], "s-", color=C["d"], ms=3, lw=1.3,
+               label="any description or tactic change")
+    ax[0].plot(xs, [r["at_2y"]["hard"] for r in post], "^-", color=C["a"], ms=3, lw=1.3,
+               label="identifier no longer live")
+    ax[0].set_ylabel("share of the cohort, two years on")
+    ax[0].set_ylim(0, 1.0)
+    ax[0].tick_params(axis="x", rotation=60, labelsize=6)
+    ax[0].legend(fontsize=5.5, loc="upper right")
+    ax[0].set_title("the intensional clock", fontsize=7)
+
+    ev = e12["recurrence"]["events"]
+    labels = [f"{e['domain'].replace('-attack','')}\nv{e['from']}→v{e['to']}" for e in ev]
+    order = sorted(range(len(ev)), key=lambda i: ev[i]["date"])
+    ax[1].bar([labels[i] for i in order], [ev[i]["jaccard"] for i in order],
+              color=[C["a"] if "enterprise" in ev[i]["domain"] else
+                     C["c"] if "mobile" in ev[i]["domain"] else C["d"] for i in order])
+    for pos, i in enumerate(order):
+        if ev[i]["jaccard"] < 0.02:
+            ax[1].annotate(f"{ev[i]['jaccard']:.3f}", xy=(pos, 0.02), ha="center",
+                           fontsize=5.5, color=C["b"])
+    ax[1].axhline(0.80, color="k", lw=0.7, ls="--")
+    ax[1].set_ylabel("identifier-set Jaccard")
+    ax[1].tick_params(axis="x", labelsize=5.5)
+    ax[1].set_title("the referential clock: restructuring events", fontsize=7)
+    fig.savefig(FIG / "fig9_two_clocks.pdf")
+    fig.savefig(FIG / "fig9_two_clocks.png")
     plt.close(fig)
 
 
