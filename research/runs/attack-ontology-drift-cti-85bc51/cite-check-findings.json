@@ -1,0 +1,149 @@
+{
+ "critic_type": "cite-check",
+ "checked": {
+  "number_bearing": 70,
+  "sampled_other": 84
+ },
+ "findings": [
+  {
+   "severity": "critical",
+   "citation": 78,
+   "note_id": "attck-v19-retires-defense-evasion-tactic-reassignment-at-scale-and-the-industrys",
+   "section": "6. Measuring Ontology Drift in ATT&CK",
+   "sentence": "Between v18.1 and v19.2 the object carrying TA0005 keeps its UUID and identifier while its name changes from Defense Evasion to Stealth, its shortname from `defense-evasion` to `stealth`, and its `x_mitre_version` stays at 1.0, with TA0112 Defense Impairment minted alongside and T1562 retired into the new arrangement [78].",
+   "verdict": "misattributed",
+   "issue": "Every specific in this sentence - the UUID and identifier holding across v18.1 to v19.2, the shortname change, x_mitre_version staying at 1.0, and T1562 - is a STIX-bundle measurement, but the cited note is a search-summary of vendor blog posts whose own fidelity statement says it did not verify any technique ID against a STIX bundle, never mentions T1562, and describes TA0005 as retired and replaced rather than renamed in place.",
+   "recommendation": "Re-point the object-level facts at this study's own v18.1/v19.2 extraction (the table or section that reports them), and keep [78] only for the uncontroversial fact that v19 split Defense Evasion and its release date."
+  },
+  {
+   "severity": "critical",
+   "citation": 78,
+   "note_id": "attck-v19-retires-defense-evasion-tactic-reassignment-at-scale-and-the-industrys",
+   "section": "1. Introduction",
+   "sentence": "The problem is current, not historical: four months before this analysis, ATT&CK v19 retired Defense Evasion as a tactic, renamed TA0005 in place to Stealth, minted TA0112 Defense Impairment, and revoked the twelve-child T1562 family into the new arrangement [78].",
+   "verdict": "misattributed",
+   "issue": "The note supports only 'v19 retired Defense Evasion and replaced it with Stealth and Defense Impairment (TA0112)'; it does not support 'renamed TA0005 in place' (it says the opposite), does not mention T1562 at all, and does not state a twelve-child count.",
+   "recommendation": "Split the sentence's sourcing: attribute the split and the date to [78] as reported, and attribute the rename-in-place and the T1562 arity to this study's own measurement of the release bundles."
+  },
+  {
+   "severity": "critical",
+   "citation": 63,
+   "note_id": "sok-the-mitre-attck-framework-in-research-and-practice-non-comparability-already",
+   "section": "3. Related Work",
+   "sentence": "**ATT&CK-based analytics.** The systematization of ATT&CK establishes that coverage claims are not comparable across products and flags temporal instability as open [63]; a 2025 survey sets the bar a contribution must clear [47].",
+   "verdict": "misattributed",
+   "issue": "The note records explicitly that the SoK frames the problem as implementation heterogeneity across vendors and papers and NOT as temporal instability of the ontology, so attributing a flag of temporal instability to [63] asserts the reverse of what the source note says.",
+   "recommendation": "Drop the temporal-instability clause from [63] and keep only the non-comparability claim; if the intended meaning was that the SoK leaves temporal instability unaddressed, rewrite so the citation cannot be read as attribution."
+  },
+  {
+   "severity": "major",
+   "citation": 47,
+   "note_id": "mitre-attck-state-of-the-art-and-way-forward-acm-csur-2025-the-novelty-bar-an-sc",
+   "section": "2. Background: ATT&CK as a Versioned Ontology",
+   "sentence": "One structural fact shapes everything downstream: the March 2020 introduction of sub-techniques was not an addition but a re-cut, it is the most-cited instability in the ATT&CK literature [47, 63], and Section 6.5 shows it is one draw from a live hazard rather than a closed wound.",
+   "verdict": "overstated",
+   "issue": "Neither cited note supports a claim about citation frequency: the CSUR-2025 note is abstract- and metadata-level only and warns 'do not attribute specific limitation claims to this survey without reading Section 6', while the SoK note does not discuss sub-techniques at all.",
+   "recommendation": "Either drop the superlative and say only that both surveys treat the 2020 restructuring as a known instability, or support the 'most-cited' claim with a citation count this study actually performed."
+  },
+  {
+   "severity": "major",
+   "citation": 61,
+   "note_id": "sevenllm-arxiv-240503446-90k-samples-and-28-tasks-from-8485-reports-spanning-200",
+   "section": "3. Related Work",
+   "sentence": "LLM-era benchmarks are the dominant evaluation surface: CTIBench treats authoritative sources as fixed and time-controls one task but not the ATT&CK task [30]; a successor line grew from 691 to 1,860 QA pairs under one identifier and the same nine-task taxonomy [29]; AthenaBench argues static benchmarks go stale and proposes live-API construction [13]; large instruction corpora span two decades of reports with no declared release [61]; synthesis work targets the long tail [65]; sequence-level benchmarks add tactic ordering as a drift surface [17]; telemetry grounding is the only structurally drift-resistant design in the set [28]; and answer-key decay has been quantified outside security [75].",
+   "verdict": "unverifiable-stated-as-fact",
+   "issue": "The sentence asserts as fact that this corpus carries no declared ATT&CK release, but the note's fidelity statement says it could not establish whether the benchmark assigns any ATT&CK labels at all, let alone whether it pins a release.",
+   "recommendation": "Attribute the two-decade span as reported and either remove the 'no declared release' assertion or mark it as an unresolved absence with the bound of the search that failed to settle it."
+  },
+  {
+   "severity": "major",
+   "citation": 17,
+   "note_id": "attackseqbench-arxiv-250303170-sequence-level-attck-reasoning-and-the-tactic-rea",
+   "section": "3. Related Work",
+   "sentence": "LLM-era benchmarks are the dominant evaluation surface: CTIBench treats authoritative sources as fixed and time-controls one task but not the ATT&CK task [30]; a successor line grew from 691 to 1,860 QA pairs under one identifier and the same nine-task taxonomy [29]; AthenaBench argues static benchmarks go stale and proposes live-API construction [13]; large instruction corpora span two decades of reports with no declared release [61]; synthesis work targets the long tail [65]; sequence-level benchmarks add tactic ordering as a drift surface [17]; telemetry grounding is the only structurally drift-resistant design in the set [28]; and answer-key decay has been quantified outside security [75].",
+   "verdict": "unverifiable-stated-as-fact",
+   "issue": "The tactic-ordering drift surface is, by the note's own fidelity statement, the note-writer's analytical inference and not a claim the paper makes, and the note instructs that the source be treated as a lead requiring verification rather than as evidence.",
+   "recommendation": "Either present the tactic-ordering exposure as this study's own argument about what a sequence benchmark must depend on, with [17] cited only to identify the benchmark, or remove the clause."
+  },
+  {
+   "severity": "major",
+   "citation": 58,
+   "note_id": "rahman-williams-arxiv221106500-mitigation-coverage-has-a-ceiling-set-by-the-cont",
+   "section": "3. Related Work",
+   "sentence": "Summiting the Pyramid replaces techniques with implementations as the denominator outright [64], and mitigation coverage has a ceiling set by the control catalogue rather than the product [58].",
+   "verdict": "overstated",
+   "issue": "The note states that the two headline numbers behind a mitigation ceiling surfaced in a search summary that blended several papers, that it could not confirm they belong to this paper, and that they should not be attributed to these authors until verified; the drift-of-the-ceiling argument is additionally the note-writer's inference.",
+   "recommendation": "Attribute the ceiling claim as reported and unverified, or drop [58] from the claim and rest the point on a source that carries it."
+  },
+  {
+   "severity": "major",
+   "citation": 58,
+   "note_id": "rahman-williams-arxiv221106500-mitigation-coverage-has-a-ceiling-set-by-the-cont",
+   "section": "7. Downstream Impact of Drift on CTI Analytics",
+   "sentence": "Two to three points of a published coverage number that is nothing but identifier arithmetic is not a rounding error in a market where products are compared on such numbers [80, 82, 84], and it sits on top of a denominator that other work argues is the wrong unit entirely [62, 64] and a ceiling set by the control catalogue rather than the product [58].",
+   "verdict": "overstated",
+   "issue": "Same binding as in Section 3: a mitigation ceiling set by the control catalogue is stated as established, while the cited note flags the underlying figures as possibly belonging to a different paper and explicitly not attributable to these authors until checked.",
+   "recommendation": "Soften to an as-reported attribution or remove [58] here, since this sentence is load-bearing for the downstream-harm argument."
+  },
+  {
+   "severity": "major",
+   "citation": 10,
+   "note_id": "tumeteormitre-ttp-mapping-audit-a-declared-v120-remap-that-still-leaks-pre-v7-re",
+   "section": "9. Label Validity of Deployed CTI Corpora",
+   "sentence": "Two of the four corpora can be dated precisely from their labels alone, which is itself a useful capability: rcATT's vocabulary is simultaneously live only across v4.0 to v6.3 and TRAM 2's only across v8.2 to v16.1, so an undeclared artefact's release can be bounded by inspection [8, 10], the same move AVClass makes for malware family aliases [19].",
+   "verdict": "misattributed",
+   "issue": "[10] audits the tumeteor v12.0 remap, which is a declared-version corpus and carries nothing about TRAM 2 or its v8.2-v16.1 liveness window; the window itself comes from Table 9, so the reader is pointed at a source that does not support either the corpus or the number.",
+   "recommendation": "Point the TRAM 2 window at Table 9 (or at whichever audit note actually covers TRAM 2) and keep [10] only where the declared-v12.0 corpus is the subject."
+  },
+  {
+   "severity": "minor",
+   "citation": 59,
+   "note_id": "saha-et-al-kitten-or-panda-two-thirds-of-attck-threat-groups-have-no-group-speci",
+   "section": "1. Introduction",
+   "sentence": "The noise floor is real: products pinned to one release disagree about the label for the same behaviour [74] and roughly a third of ATT&CK groups have any technique unique to them [59]; we do not claim drift dominates that noise, only that it is separable by construction, and we test additivity rather than assuming it (Section 7.3).",
+   "verdict": "unverifiable-stated-as-fact",
+   "issue": "The one-third figure is a Tier B claim taken from an abstract via search summary, and the note says so, yet the sentence opens 'The noise floor is real' and uses the number as an established bound on the paper's own separability argument.",
+   "recommendation": "Attribute the figure as reported, consistent with the manuscript's own Tier B rule, without changing the argument it supports."
+  },
+  {
+   "severity": "minor",
+   "citation": 66,
+   "note_id": "synthetic-apts-2026-llm-agents-reproduce-documented-apt-profiles-at-55-80-precis",
+   "section": "3. Related Work",
+   "sentence": "Attribution has moved to TTP sequences [23] and is surveyed by artefact type rather than ontology version [12], while two results bound what it can do at all: most ATT&CK groups have no group-specific behaviour [59], and LLM agents reproduce documented APT profiles at 55-80% precision [66].",
+   "verdict": "unverifiable-stated-as-fact",
+   "issue": "The 55-80% precision range is presented as an established bound on attribution, while the note records it as a search-summary figure that needs verification against the PDF.",
+   "recommendation": "Mark it as reported rather than measured, in line with the manuscript's stated Tier B discipline."
+  },
+  {
+   "severity": "minor",
+   "citation": 1,
+   "note_id": "attcks-published-retirement-contract-read-from-the-artefact",
+   "section": "5. Data and Methodology",
+   "sentence": "We clone MITRE's `attack-stix-data` repository, which publishes every release as an immutable STIX 2.1 bundle at a stable path [1].",
+   "verdict": "overstated",
+   "issue": "The cited note is a read of USAGE.md covering the two-class retirement contract and the consumer filter; it contains no statement about release immutability or a stable per-release path, which is what this sentence attributes to it.",
+   "recommendation": "Cite the artefact that actually establishes per-release immutable bundles at stable paths (or state it as this study's own observation from the clone), and keep [1] for the retirement contract."
+  },
+  {
+   "severity": "minor",
+   "citation": 16,
+   "note_id": "attck-navigator-layer-upgrade-version-stamping-is-mandatory-migration-is-manual",
+   "section": "2. Background: ATT&CK as a Versioned Ontology",
+   "sentence": "The Center for Threat-Informed Defense funds ATT&CK Sync to flag mappings affected by a release [5], an institutional concession that staying in sync is an operational burden, and the Navigator layer format can record the content version of a coverage layer [15], though the field is optional and defaults silently to current [16] and widely used tooling omits it altogether [79].",
+   "verdict": "misattributed",
+   "issue": "The optional-and-defaults-to-current property is established by the layer-format spec note [15], already cited in the same sentence, whereas [16] asserts the contrary - that version stamping is mandatory in the artefact.",
+   "recommendation": "Move the optionality clause onto [15] alone and use [16] for the manual, unrecorded upgrade workflow it actually documents."
+  },
+  {
+   "severity": "minor",
+   "citation": 19,
+   "note_id": "avclass-alias-resolution-and-label-normalization-as-prior-art-for-a-migration-ma",
+   "section": "9. Label Validity of Deployed CTI Corpora",
+   "sentence": "Two of the four corpora can be dated precisely from their labels alone, which is itself a useful capability: rcATT's vocabulary is simultaneously live only across v4.0 to v6.3 and TRAM 2's only across v8.2 to v16.1, so an undeclared artefact's release can be bounded by inspection [8, 10], the same move AVClass makes for malware family aliases [19].",
+   "verdict": "overstated",
+   "issue": "AVClass canonicalises divergent family names across labellers at one moment; it does not date an undeclared artefact by inspecting its label set, so 'the same move' claims a closer correspondence than the note supports.",
+   "recommendation": "Weaken the analogy to a shared normalization ancestry rather than the same operation, or drop the comparison."
+  }
+ ]
+}

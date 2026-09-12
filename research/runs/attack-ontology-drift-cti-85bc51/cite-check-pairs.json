@@ -1,8 +1,8 @@
 {
  "summary": {
-  "total": 154,
+  "total": 152,
   "dangling": 0,
-  "number_bearing": 70,
+  "number_bearing": 68,
   "distinct_sources": 81
  },
  "dangling": [],
@@ -144,7 +144,7 @@
    "source_url": "https://www.usenix.org/conference/usenixsecurity24/presentation/virkud",
    "tier": "institutional",
    "section": "## 1. Introduction",
-   "sentence": "The noise floor is real: products pinned to one release disagree about the label for the same behaviour [74] and roughly a third of ATT&CK groups have any technique unique to them [59]; we do not claim drift dominates that noise, only that it is separable by construction, and we test additivity rather than assuming it (Section 7.3).",
+   "sentence": "The noise floor is real: products pinned to one release disagree about the label for the same behaviour [74] and, as reported, roughly a third of ATT&CK groups have any technique unique to them [59]; we do not claim drift dominates that noise, only that it is separable by construction, and we test additivity rather than assuming it (Section 7.3).",
    "number_bearing": true
   },
   {
@@ -154,7 +154,7 @@
    "source_url": "https://arxiv.org/abs/2506.10645",
    "tier": "institutional",
    "section": "## 1. Introduction",
-   "sentence": "The noise floor is real: products pinned to one release disagree about the label for the same behaviour [74] and roughly a third of ATT&CK groups have any technique unique to them [59]; we do not claim drift dominates that noise, only that it is separable by construction, and we test additivity rather than assuming it (Section 7.3).",
+   "sentence": "The noise floor is real: products pinned to one release disagree about the label for the same behaviour [74] and, as reported, roughly a third of ATT&CK groups have any technique unique to them [59]; we do not claim drift dominates that noise, only that it is separable by construction, and we test additivity rather than assuming it (Section 7.3).",
    "number_bearing": true
   },
   {
@@ -164,7 +164,7 @@
    "source_url": "https://medium.com/mitre-attack/attack-v19-ff329cb65d66",
    "tier": "practitioner",
    "section": "## 1. Introduction",
-   "sentence": "The problem is current, not historical: four months before this analysis, ATT&CK v19 retired Defense Evasion as a tactic, renamed TA0005 in place to Stealth, minted TA0112 Defense Impairment, and revoked the twelve-child T1562 family into the new arrangement [78].",
+   "sentence": "The problem is current, not historical: four months before this analysis, ATT&CK v19 separated Defense Evasion into a stealth and an impairment tactic, as reported in its release announcement [78]; our reading of the bundles adds what the announcement does not say, that TA0005 was renamed in place rather than retired and that the twelve-child T1562 family was revoked into the new arrangement (Section 6.2).",
    "number_bearing": true
   },
   {
@@ -334,7 +334,7 @@
    "source_url": "https://github.com/center-for-threat-informed-defense/attack-sync",
    "tier": "ground_truth",
    "section": "## 2. Background: ATT&CK as a Versioned Ontology",
-   "sentence": "The Center for Threat-Informed Defense funds ATT&CK Sync to flag mappings affected by a release [5], an institutional concession that staying in sync is an operational burden, and the Navigator layer format can record the content version of a coverage layer [15], though the field is optional and defaults silently to current [16] and widely used tooling omits it altogether [79].",
+   "sentence": "The Center for Threat-Informed Defense funds ATT&CK Sync to flag mappings affected by a release [5], an institutional concession that staying in sync is an operational burden, and the Navigator layer format can record the content version of a coverage layer, though the field is optional and defaults silently to current [15], with the upgrade path itself manual and unrecorded [16] and widely used tooling omits it altogether [79].",
    "number_bearing": false
   },
   {
@@ -344,7 +344,7 @@
    "source_url": "https://github.com/mitre-attack/attack-navigator/blob/master/layers/spec/v4.5/layerformat.md",
    "tier": "institutional",
    "section": "## 2. Background: ATT&CK as a Versioned Ontology",
-   "sentence": "The Center for Threat-Informed Defense funds ATT&CK Sync to flag mappings affected by a release [5], an institutional concession that staying in sync is an operational burden, and the Navigator layer format can record the content version of a coverage layer [15], though the field is optional and defaults silently to current [16] and widely used tooling omits it altogether [79].",
+   "sentence": "The Center for Threat-Informed Defense funds ATT&CK Sync to flag mappings affected by a release [5], an institutional concession that staying in sync is an operational burden, and the Navigator layer format can record the content version of a coverage layer, though the field is optional and defaults silently to current [15], with the upgrade path itself manual and unrecorded [16] and widely used tooling omits it altogether [79].",
    "number_bearing": false
   },
   {
@@ -354,7 +354,7 @@
    "source_url": "https://github.com/mitre-attack/attack-navigator/blob/master/USAGE.md",
    "tier": "institutional",
    "section": "## 2. Background: ATT&CK as a Versioned Ontology",
-   "sentence": "The Center for Threat-Informed Defense funds ATT&CK Sync to flag mappings affected by a release [5], an institutional concession that staying in sync is an operational burden, and the Navigator layer format can record the content version of a coverage layer [15], though the field is optional and defaults silently to current [16] and widely used tooling omits it altogether [79].",
+   "sentence": "The Center for Threat-Informed Defense funds ATT&CK Sync to flag mappings affected by a release [5], an institutional concession that staying in sync is an operational burden, and the Navigator layer format can record the content version of a coverage layer, though the field is optional and defaults silently to current [15], with the upgrade path itself manual and unrecorded [16] and widely used tooling omits it altogether [79].",
    "number_bearing": false
   },
   {
@@ -364,7 +364,7 @@
    "source_url": "https://github.com/rabobank-cdc/DeTTECT",
    "tier": "practitioner",
    "section": "## 2. Background: ATT&CK as a Versioned Ontology",
-   "sentence": "The Center for Threat-Informed Defense funds ATT&CK Sync to flag mappings affected by a release [5], an institutional concession that staying in sync is an operational burden, and the Navigator layer format can record the content version of a coverage layer [15], though the field is optional and defaults silently to current [16] and widely used tooling omits it altogether [79].",
+   "sentence": "The Center for Threat-Informed Defense funds ATT&CK Sync to flag mappings affected by a release [5], an institutional concession that staying in sync is an operational burden, and the Navigator layer format can record the content version of a coverage layer, though the field is optional and defaults silently to current [15], with the upgrade path itself manual and unrecorded [16] and widely used tooling omits it altogether [79].",
    "number_bearing": false
   },
   {
@@ -374,7 +374,7 @@
    "source_url": "https://dl.acm.org/doi/10.1145/3687300",
    "tier": "institutional",
    "section": "## 2. Background: ATT&CK as a Versioned Ontology",
-   "sentence": "One structural fact shapes everything downstream: the March 2020 introduction of sub-techniques was not an addition but a re-cut, it is the most-cited instability in the ATT&CK literature [47, 63], and Section 6.5 shows it is one draw from a live hazard rather than a closed wound.",
+   "sentence": "One structural fact shapes everything downstream: the March 2020 introduction of sub-techniques was not an addition but a re-cut, both systematizations of the field treat it as a known instability [47, 63], and Section 6.5 shows it is one draw from a live hazard rather than a closed wound.",
    "number_bearing": true
   },
   {
@@ -384,7 +384,7 @@
    "source_url": "https://arxiv.org/abs/2304.07411",
    "tier": "institutional",
    "section": "## 2. Background: ATT&CK as a Versioned Ontology",
-   "sentence": "One structural fact shapes everything downstream: the March 2020 introduction of sub-techniques was not an addition but a re-cut, it is the most-cited instability in the ATT&CK literature [47, 63], and Section 6.5 shows it is one draw from a live hazard rather than a closed wound.",
+   "sentence": "One structural fact shapes everything downstream: the March 2020 introduction of sub-techniques was not an addition but a re-cut, both systematizations of the field treat it as a known instability [47, 63], and Section 6.5 shows it is one draw from a live hazard rather than a closed wound.",
    "number_bearing": true
   },
   {
@@ -494,7 +494,7 @@
    "source_url": "https://arxiv.org/abs/2304.07411",
    "tier": "institutional",
    "section": "## 3. Related Work",
-   "sentence": "**ATT&CK-based analytics.** The systematization of ATT&CK establishes that coverage claims are not comparable across products and flags temporal instability as open [63]; a 2025 survey sets the bar a contribution must clear [47].",
+   "sentence": "**ATT&CK-based analytics.** The systematization of ATT&CK establishes that coverage claims are not comparable across products, framing the problem as heterogeneity of implementation across vendors and papers rather than as instability of the ontology over time [63]; a 2025 survey sets the bar a contribution must clear [47].",
    "number_bearing": true
   },
   {
@@ -504,7 +504,7 @@
    "source_url": "https://dl.acm.org/doi/10.1145/3687300",
    "tier": "institutional",
    "section": "## 3. Related Work",
-   "sentence": "**ATT&CK-based analytics.** The systematization of ATT&CK establishes that coverage claims are not comparable across products and flags temporal instability as open [63]; a 2025 survey sets the bar a contribution must clear [47].",
+   "sentence": "**ATT&CK-based analytics.** The systematization of ATT&CK establishes that coverage claims are not comparable across products, framing the problem as heterogeneity of implementation across vendors and papers rather than as instability of the ontology over time [63]; a 2025 survey sets the bar a contribution must clear [47].",
    "number_bearing": true
   },
   {
@@ -584,7 +584,7 @@
    "source_url": "https://github.com/center-for-threat-informed-defense/summiting-the-pyramid",
    "tier": "institutional",
    "section": "## 3. Related Work",
-   "sentence": "Summiting the Pyramid replaces techniques with implementations as the denominator outright [64], and mitigation coverage has a ceiling set by the control catalogue rather than the product [58].",
+   "sentence": "Summiting the Pyramid replaces techniques with implementations as the denominator outright [64], and mitigation coverage is reported to have a ceiling set by the control catalogue rather than the product, a figure we could not verify against its source [58].",
    "number_bearing": false
   },
   {
@@ -594,7 +594,7 @@
    "source_url": "https://arxiv.org/abs/2211.06500",
    "tier": "institutional",
    "section": "## 3. Related Work",
-   "sentence": "Summiting the Pyramid replaces techniques with implementations as the denominator outright [64], and mitigation coverage has a ceiling set by the control catalogue rather than the product [58].",
+   "sentence": "Summiting the Pyramid replaces techniques with implementations as the denominator outright [64], and mitigation coverage is reported to have a ceiling set by the control catalogue rather than the product, a figure we could not verify against its source [58].",
    "number_bearing": false
   },
   {
@@ -664,7 +664,7 @@
    "source_url": "https://proceedings.neurips.cc/paper_files/paper/2024/file/5acd3c628aa1819fbf07c39ef73e7285-Paper-Datasets_and_Benchmarks_Track.pdf",
    "tier": "institutional",
    "section": "## 3. Related Work",
-   "sentence": "LLM-era benchmarks are the dominant evaluation surface: CTIBench treats authoritative sources as fixed and time-controls one task but not the ATT&CK task [30]; a successor line grew from 691 to 1,860 QA pairs under one identifier and the same nine-task taxonomy [29]; AthenaBench argues static benchmarks go stale and proposes live-API construction [13]; large instruction corpora span two decades of reports with no declared release [61]; synthesis work targets the long tail [65]; sequence-level benchmarks add tactic ordering as a drift surface [17]; telemetry grounding is the only structurally drift-resistant design in the set [28]; and answer-key decay has been quantified outside security [75].",
+   "sentence": "LLM-era benchmarks are the dominant evaluation surface: CTIBench treats authoritative sources as fixed and time-controls one task but not the ATT&CK task [30]; a successor line grew from 691 to 1,860 QA pairs under one identifier and the same nine-task taxonomy [29]; AthenaBench argues static benchmarks go stale and proposes live-API construction [13]; a large instruction corpus is reported to span two decades of reports, and we could not establish from the sources reachable here whether it declares a release or assigns ATT&CK labels at all [61]; synthesis work targets the long tail [65]; sequence-level benchmarks exist [17], and by our argument tactic ordering is a drift surface for them, since Section 6.1 measures 198 techniques changing tactic in one release; telemetry grounding is the only structurally drift-resistant design in the set [28]; and answer-key decay has been quantified outside security [75].",
    "number_bearing": true
   },
   {
@@ -674,7 +674,7 @@
    "source_url": "https://arxiv.org/abs/2510.11974",
    "tier": "institutional",
    "section": "## 3. Related Work",
-   "sentence": "LLM-era benchmarks are the dominant evaluation surface: CTIBench treats authoritative sources as fixed and time-controls one task but not the ATT&CK task [30]; a successor line grew from 691 to 1,860 QA pairs under one identifier and the same nine-task taxonomy [29]; AthenaBench argues static benchmarks go stale and proposes live-API construction [13]; large instruction corpora span two decades of reports with no declared release [61]; synthesis work targets the long tail [65]; sequence-level benchmarks add tactic ordering as a drift surface [17]; telemetry grounding is the only structurally drift-resistant design in the set [28]; and answer-key decay has been quantified outside security [75].",
+   "sentence": "LLM-era benchmarks are the dominant evaluation surface: CTIBench treats authoritative sources as fixed and time-controls one task but not the ATT&CK task [30]; a successor line grew from 691 to 1,860 QA pairs under one identifier and the same nine-task taxonomy [29]; AthenaBench argues static benchmarks go stale and proposes live-API construction [13]; a large instruction corpus is reported to span two decades of reports, and we could not establish from the sources reachable here whether it declares a release or assigns ATT&CK labels at all [61]; synthesis work targets the long tail [65]; sequence-level benchmarks exist [17], and by our argument tactic ordering is a drift surface for them, since Section 6.1 measures 198 techniques changing tactic in one release; telemetry grounding is the only structurally drift-resistant design in the set [28]; and answer-key decay has been quantified outside security [75].",
    "number_bearing": true
   },
   {
@@ -684,7 +684,7 @@
    "source_url": "https://arxiv.org/abs/2511.01144",
    "tier": "institutional",
    "section": "## 3. Related Work",
-   "sentence": "LLM-era benchmarks are the dominant evaluation surface: CTIBench treats authoritative sources as fixed and time-controls one task but not the ATT&CK task [30]; a successor line grew from 691 to 1,860 QA pairs under one identifier and the same nine-task taxonomy [29]; AthenaBench argues static benchmarks go stale and proposes live-API construction [13]; large instruction corpora span two decades of reports with no declared release [61]; synthesis work targets the long tail [65]; sequence-level benchmarks add tactic ordering as a drift surface [17]; telemetry grounding is the only structurally drift-resistant design in the set [28]; and answer-key decay has been quantified outside security [75].",
+   "sentence": "LLM-era benchmarks are the dominant evaluation surface: CTIBench treats authoritative sources as fixed and time-controls one task but not the ATT&CK task [30]; a successor line grew from 691 to 1,860 QA pairs under one identifier and the same nine-task taxonomy [29]; AthenaBench argues static benchmarks go stale and proposes live-API construction [13]; a large instruction corpus is reported to span two decades of reports, and we could not establish from the sources reachable here whether it declares a release or assigns ATT&CK labels at all [61]; synthesis work targets the long tail [65]; sequence-level benchmarks exist [17], and by our argument tactic ordering is a drift surface for them, since Section 6.1 measures 198 techniques changing tactic in one release; telemetry grounding is the only structurally drift-resistant design in the set [28]; and answer-key decay has been quantified outside security [75].",
    "number_bearing": true
   },
   {
@@ -694,7 +694,7 @@
    "source_url": "https://arxiv.org/abs/2405.03446",
    "tier": "institutional",
    "section": "## 3. Related Work",
-   "sentence": "LLM-era benchmarks are the dominant evaluation surface: CTIBench treats authoritative sources as fixed and time-controls one task but not the ATT&CK task [30]; a successor line grew from 691 to 1,860 QA pairs under one identifier and the same nine-task taxonomy [29]; AthenaBench argues static benchmarks go stale and proposes live-API construction [13]; large instruction corpora span two decades of reports with no declared release [61]; synthesis work targets the long tail [65]; sequence-level benchmarks add tactic ordering as a drift surface [17]; telemetry grounding is the only structurally drift-resistant design in the set [28]; and answer-key decay has been quantified outside security [75].",
+   "sentence": "LLM-era benchmarks are the dominant evaluation surface: CTIBench treats authoritative sources as fixed and time-controls one task but not the ATT&CK task [30]; a successor line grew from 691 to 1,860 QA pairs under one identifier and the same nine-task taxonomy [29]; AthenaBench argues static benchmarks go stale and proposes live-API construction [13]; a large instruction corpus is reported to span two decades of reports, and we could not establish from the sources reachable here whether it declares a release or assigns ATT&CK labels at all [61]; synthesis work targets the long tail [65]; sequence-level benchmarks exist [17], and by our argument tactic ordering is a drift surface for them, since Section 6.1 measures 198 techniques changing tactic in one release; telemetry grounding is the only structurally drift-resistant design in the set [28]; and answer-key decay has been quantified outside security [75].",
    "number_bearing": true
   },
   {
@@ -704,7 +704,7 @@
    "source_url": "https://arxiv.org/abs/2507.16852",
    "tier": "institutional",
    "section": "## 3. Related Work",
-   "sentence": "LLM-era benchmarks are the dominant evaluation surface: CTIBench treats authoritative sources as fixed and time-controls one task but not the ATT&CK task [30]; a successor line grew from 691 to 1,860 QA pairs under one identifier and the same nine-task taxonomy [29]; AthenaBench argues static benchmarks go stale and proposes live-API construction [13]; large instruction corpora span two decades of reports with no declared release [61]; synthesis work targets the long tail [65]; sequence-level benchmarks add tactic ordering as a drift surface [17]; telemetry grounding is the only structurally drift-resistant design in the set [28]; and answer-key decay has been quantified outside security [75].",
+   "sentence": "LLM-era benchmarks are the dominant evaluation surface: CTIBench treats authoritative sources as fixed and time-controls one task but not the ATT&CK task [30]; a successor line grew from 691 to 1,860 QA pairs under one identifier and the same nine-task taxonomy [29]; AthenaBench argues static benchmarks go stale and proposes live-API construction [13]; a large instruction corpus is reported to span two decades of reports, and we could not establish from the sources reachable here whether it declares a release or assigns ATT&CK labels at all [61]; synthesis work targets the long tail [65]; sequence-level benchmarks exist [17], and by our argument tactic ordering is a drift surface for them, since Section 6.1 measures 198 techniques changing tactic in one release; telemetry grounding is the only structurally drift-resistant design in the set [28]; and answer-key decay has been quantified outside security [75].",
    "number_bearing": true
   },
   {
@@ -714,7 +714,7 @@
    "source_url": "https://arxiv.org/abs/2503.03170",
    "tier": "institutional",
    "section": "## 3. Related Work",
-   "sentence": "LLM-era benchmarks are the dominant evaluation surface: CTIBench treats authoritative sources as fixed and time-controls one task but not the ATT&CK task [30]; a successor line grew from 691 to 1,860 QA pairs under one identifier and the same nine-task taxonomy [29]; AthenaBench argues static benchmarks go stale and proposes live-API construction [13]; large instruction corpora span two decades of reports with no declared release [61]; synthesis work targets the long tail [65]; sequence-level benchmarks add tactic ordering as a drift surface [17]; telemetry grounding is the only structurally drift-resistant design in the set [28]; and answer-key decay has been quantified outside security [75].",
+   "sentence": "LLM-era benchmarks are the dominant evaluation surface: CTIBench treats authoritative sources as fixed and time-controls one task but not the ATT&CK task [30]; a successor line grew from 691 to 1,860 QA pairs under one identifier and the same nine-task taxonomy [29]; AthenaBench argues static benchmarks go stale and proposes live-API construction [13]; a large instruction corpus is reported to span two decades of reports, and we could not establish from the sources reachable here whether it declares a release or assigns ATT&CK labels at all [61]; synthesis work targets the long tail [65]; sequence-level benchmarks exist [17], and by our argument tactic ordering is a drift surface for them, since Section 6.1 measures 198 techniques changing tactic in one release; telemetry grounding is the only structurally drift-resistant design in the set [28]; and answer-key decay has been quantified outside security [75].",
    "number_bearing": true
   },
   {
@@ -724,7 +724,7 @@
    "source_url": "https://arxiv.org/abs/2603.13517",
    "tier": "institutional",
    "section": "## 3. Related Work",
-   "sentence": "LLM-era benchmarks are the dominant evaluation surface: CTIBench treats authoritative sources as fixed and time-controls one task but not the ATT&CK task [30]; a successor line grew from 691 to 1,860 QA pairs under one identifier and the same nine-task taxonomy [29]; AthenaBench argues static benchmarks go stale and proposes live-API construction [13]; large instruction corpora span two decades of reports with no declared release [61]; synthesis work targets the long tail [65]; sequence-level benchmarks add tactic ordering as a drift surface [17]; telemetry grounding is the only structurally drift-resistant design in the set [28]; and answer-key decay has been quantified outside security [75].",
+   "sentence": "LLM-era benchmarks are the dominant evaluation surface: CTIBench treats authoritative sources as fixed and time-controls one task but not the ATT&CK task [30]; a successor line grew from 691 to 1,860 QA pairs under one identifier and the same nine-task taxonomy [29]; AthenaBench argues static benchmarks go stale and proposes live-API construction [13]; a large instruction corpus is reported to span two decades of reports, and we could not establish from the sources reachable here whether it declares a release or assigns ATT&CK labels at all [61]; synthesis work targets the long tail [65]; sequence-level benchmarks exist [17], and by our argument tactic ordering is a drift surface for them, since Section 6.1 measures 198 techniques changing tactic in one release; telemetry grounding is the only structurally drift-resistant design in the set [28]; and answer-key decay has been quantified outside security [75].",
    "number_bearing": true
   },
   {
@@ -734,7 +734,7 @@
    "source_url": "https://arxiv.org/abs/2510.07238",
    "tier": "institutional",
    "section": "## 3. Related Work",
-   "sentence": "LLM-era benchmarks are the dominant evaluation surface: CTIBench treats authoritative sources as fixed and time-controls one task but not the ATT&CK task [30]; a successor line grew from 691 to 1,860 QA pairs under one identifier and the same nine-task taxonomy [29]; AthenaBench argues static benchmarks go stale and proposes live-API construction [13]; large instruction corpora span two decades of reports with no declared release [61]; synthesis work targets the long tail [65]; sequence-level benchmarks add tactic ordering as a drift surface [17]; telemetry grounding is the only structurally drift-resistant design in the set [28]; and answer-key decay has been quantified outside security [75].",
+   "sentence": "LLM-era benchmarks are the dominant evaluation surface: CTIBench treats authoritative sources as fixed and time-controls one task but not the ATT&CK task [30]; a successor line grew from 691 to 1,860 QA pairs under one identifier and the same nine-task taxonomy [29]; AthenaBench argues static benchmarks go stale and proposes live-API construction [13]; a large instruction corpus is reported to span two decades of reports, and we could not establish from the sources reachable here whether it declares a release or assigns ATT&CK labels at all [61]; synthesis work targets the long tail [65]; sequence-level benchmarks exist [17], and by our argument tactic ordering is a drift surface for them, since Section 6.1 measures 198 techniques changing tactic in one release; telemetry grounding is the only structurally drift-resistant design in the set [28]; and answer-key decay has been quantified outside security [75].",
    "number_bearing": true
   },
   {
@@ -744,7 +744,7 @@
    "source_url": "https://arxiv.org/abs/2409.16400",
    "tier": "institutional",
    "section": "## 3. Related Work",
-   "sentence": "Attribution has moved to TTP sequences [23] and is surveyed by artefact type rather than ontology version [12], while two results bound what it can do at all: most ATT&CK groups have no group-specific behaviour [59], and LLM agents reproduce documented APT profiles at 55-80% precision [66].",
+   "sentence": "Attribution has moved to TTP sequences [23] and is surveyed by artefact type rather than ontology version [12], while two results bound what it can do at all: most ATT&CK groups have no group-specific behaviour [59], and LLM agents are reported to reproduce documented APT profiles at 55-80% precision [66].",
    "number_bearing": true
   },
   {
@@ -754,7 +754,7 @@
    "source_url": "https://doi.org/10.1016/j.jisa.2025.104076",
    "tier": "institutional",
    "section": "## 3. Related Work",
-   "sentence": "Attribution has moved to TTP sequences [23] and is surveyed by artefact type rather than ontology version [12], while two results bound what it can do at all: most ATT&CK groups have no group-specific behaviour [59], and LLM agents reproduce documented APT profiles at 55-80% precision [66].",
+   "sentence": "Attribution has moved to TTP sequences [23] and is surveyed by artefact type rather than ontology version [12], while two results bound what it can do at all: most ATT&CK groups have no group-specific behaviour [59], and LLM agents are reported to reproduce documented APT profiles at 55-80% precision [66].",
    "number_bearing": true
   },
   {
@@ -764,7 +764,7 @@
    "source_url": "https://arxiv.org/abs/2506.10645",
    "tier": "institutional",
    "section": "## 3. Related Work",
-   "sentence": "Attribution has moved to TTP sequences [23] and is surveyed by artefact type rather than ontology version [12], while two results bound what it can do at all: most ATT&CK groups have no group-specific behaviour [59], and LLM agents reproduce documented APT profiles at 55-80% precision [66].",
+   "sentence": "Attribution has moved to TTP sequences [23] and is surveyed by artefact type rather than ontology version [12], while two results bound what it can do at all: most ATT&CK groups have no group-specific behaviour [59], and LLM agents are reported to reproduce documented APT profiles at 55-80% precision [66].",
    "number_bearing": true
   },
   {
@@ -774,7 +774,7 @@
    "source_url": "https://arxiv.org/abs/2606.07158",
    "tier": "institutional",
    "section": "## 3. Related Work",
-   "sentence": "Attribution has moved to TTP sequences [23] and is surveyed by artefact type rather than ontology version [12], while two results bound what it can do at all: most ATT&CK groups have no group-specific behaviour [59], and LLM agents reproduce documented APT profiles at 55-80% precision [66].",
+   "sentence": "Attribution has moved to TTP sequences [23] and is surveyed by artefact type rather than ontology version [12], while two results bound what it can do at all: most ATT&CK groups have no group-specific behaviour [59], and LLM agents are reported to reproduce documented APT profiles at 55-80% precision [66].",
    "number_bearing": true
   },
   {
@@ -1004,7 +1004,7 @@
    "source_url": "https://github.com/mitre-attack/attack-stix-data/blob/master/USAGE.md",
    "tier": "ground_truth",
    "section": "## 5. Data and Methodology",
-   "sentence": "We clone MITRE's `attack-stix-data` repository, which publishes every release as an immutable STIX 2.1 bundle at a stable path [1].",
+   "sentence": "We clone MITRE's `attack-stix-data` repository, whose index addresses every release as a separate STIX 2.1 bundle at a stable path, and whose published contract defines the two-class retirement semantics we rely on [1].",
    "number_bearing": true
   },
   {
@@ -1024,7 +1024,7 @@
    "source_url": "https://obofoundry.org/principles/fp-019-term-stability.html",
    "tier": "institutional",
    "section": "## 6. Measuring Ontology Drift in ATT&CK",
-   "sentence": "A crosswalk that resolves in one hop, reports success, and silently narrows the extension of the original assertion is not broken; it is a 1:1 relation doing what a 1:1 relation can do in a situation that needs more [54].",
+   "sentence": "A crosswalk that resolves in one hop, reports success, and silently narrows the original assertion is not broken; it is a 1:1 relation in a situation that needs more [54].",
    "number_bearing": true
   },
   {
@@ -1034,7 +1034,7 @@
    "source_url": "https://medium.com/mitre-attack/attack-v19-ff329cb65d66",
    "tier": "practitioner",
    "section": "## 6. Measuring Ontology Drift in ATT&CK",
-   "sentence": "Between v18.1 and v19.2 the object carrying TA0005 keeps its UUID and identifier while its name changes from Defense Evasion to Stealth, its shortname from `defense-evasion` to `stealth`, and its `x_mitre_version` stays at 1.0, with TA0112 Defense Impairment minted alongside and T1562 retired into the new arrangement [78].",
+   "sentence": "Those are our measurements of the two bundles; that v19 separated Defense Evasion into a stealth and an impairment tactic is reported in MITRE's release announcement [78].",
    "number_bearing": true
   },
   {
@@ -1044,7 +1044,7 @@
    "source_url": "https://obofoundry.org/principles/fp-019-term-stability.html",
    "tier": "institutional",
    "section": "## 6. Measuring Ontology Drift in ATT&CK",
-   "sentence": "This is the edit that the stability principle exists to forbid: a changed referent requires a new identifier [54].",
+   "sentence": "This is what the stability principle exists to forbid: a changed referent requires a new identifier [54].",
    "number_bearing": false
   },
   {
@@ -1134,7 +1134,7 @@
    "source_url": "https://www.forrester.com/blogs/dont-trust-vendor-claims-about-getting-100-on-the-mitre-attck-evaluations",
    "tier": "practitioner",
    "section": "## 7. Downstream Impact of Drift on CTI Analytics",
-   "sentence": "Two to three points of a published coverage number that is nothing but identifier arithmetic is not a rounding error in a market where products are compared on such numbers [80, 82, 84], and it sits on top of a denominator that other work argues is the wrong unit entirely [62, 64] and a ceiling set by the control catalogue rather than the product [58].",
+   "sentence": "Two to three points of a published coverage number that is nothing but identifier arithmetic is not a rounding error in a market where products are compared on such numbers [80, 82, 84], and it sits on top of a denominator that other work argues is the wrong unit entirely [62, 64] and, as reported, a ceiling set by the control catalogue rather than the product [58].",
    "number_bearing": false
   },
   {
@@ -1144,7 +1144,7 @@
    "source_url": "https://www.attackiq.com/2026/03/10/what-does-mitre-attack-coverage-really-mean/",
    "tier": "practitioner",
    "section": "## 7. Downstream Impact of Drift on CTI Analytics",
-   "sentence": "Two to three points of a published coverage number that is nothing but identifier arithmetic is not a rounding error in a market where products are compared on such numbers [80, 82, 84], and it sits on top of a denominator that other work argues is the wrong unit entirely [62, 64] and a ceiling set by the control catalogue rather than the product [58].",
+   "sentence": "Two to three points of a published coverage number that is nothing but identifier arithmetic is not a rounding error in a market where products are compared on such numbers [80, 82, 84], and it sits on top of a denominator that other work argues is the wrong unit entirely [62, 64] and, as reported, a ceiling set by the control catalogue rather than the product [58].",
    "number_bearing": false
   },
   {
@@ -1154,7 +1154,7 @@
    "source_url": "https://dev.to/chrisray/your-attck-heatmap-is-counting-rules-not-coverage-2gh3",
    "tier": "commentary",
    "section": "## 7. Downstream Impact of Drift on CTI Analytics",
-   "sentence": "Two to three points of a published coverage number that is nothing but identifier arithmetic is not a rounding error in a market where products are compared on such numbers [80, 82, 84], and it sits on top of a denominator that other work argues is the wrong unit entirely [62, 64] and a ceiling set by the control catalogue rather than the product [58].",
+   "sentence": "Two to three points of a published coverage number that is nothing but identifier arithmetic is not a rounding error in a market where products are compared on such numbers [80, 82, 84], and it sits on top of a denominator that other work argues is the wrong unit entirely [62, 64] and, as reported, a ceiling set by the control catalogue rather than the product [58].",
    "number_bearing": false
   },
   {
@@ -1164,7 +1164,7 @@
    "source_url": "https://arxiv.org/abs/2401.15878",
    "tier": "institutional",
    "section": "## 7. Downstream Impact of Drift on CTI Analytics",
-   "sentence": "Two to three points of a published coverage number that is nothing but identifier arithmetic is not a rounding error in a market where products are compared on such numbers [80, 82, 84], and it sits on top of a denominator that other work argues is the wrong unit entirely [62, 64] and a ceiling set by the control catalogue rather than the product [58].",
+   "sentence": "Two to three points of a published coverage number that is nothing but identifier arithmetic is not a rounding error in a market where products are compared on such numbers [80, 82, 84], and it sits on top of a denominator that other work argues is the wrong unit entirely [62, 64] and, as reported, a ceiling set by the control catalogue rather than the product [58].",
    "number_bearing": false
   },
   {
@@ -1174,7 +1174,7 @@
    "source_url": "https://github.com/center-for-threat-informed-defense/summiting-the-pyramid",
    "tier": "institutional",
    "section": "## 7. Downstream Impact of Drift on CTI Analytics",
-   "sentence": "Two to three points of a published coverage number that is nothing but identifier arithmetic is not a rounding error in a market where products are compared on such numbers [80, 82, 84], and it sits on top of a denominator that other work argues is the wrong unit entirely [62, 64] and a ceiling set by the control catalogue rather than the product [58].",
+   "sentence": "Two to three points of a published coverage number that is nothing but identifier arithmetic is not a rounding error in a market where products are compared on such numbers [80, 82, 84], and it sits on top of a denominator that other work argues is the wrong unit entirely [62, 64] and, as reported, a ceiling set by the control catalogue rather than the product [58].",
    "number_bearing": false
   },
   {
@@ -1184,7 +1184,7 @@
    "source_url": "https://arxiv.org/abs/2211.06500",
    "tier": "institutional",
    "section": "## 7. Downstream Impact of Drift on CTI Analytics",
-   "sentence": "Two to three points of a published coverage number that is nothing but identifier arithmetic is not a rounding error in a market where products are compared on such numbers [80, 82, 84], and it sits on top of a denominator that other work argues is the wrong unit entirely [62, 64] and a ceiling set by the control catalogue rather than the product [58].",
+   "sentence": "Two to three points of a published coverage number that is nothing but identifier arithmetic is not a rounding error in a market where products are compared on such numbers [80, 82, 84], and it sits on top of a denominator that other work argues is the wrong unit entirely [62, 64] and, as reported, a ceiling set by the control catalogue rather than the product [58].",
    "number_bearing": false
   },
   {
@@ -1204,7 +1204,7 @@
    "source_url": "https://github.com/maveryn/cti-bench",
    "tier": "ground_truth",
    "section": "## 8. ATT&CK-Norm: A Version-Normalization Protocol",
-   "sentence": "That is 0.875 of the apparent drift damage in that corpus being a labelling error the protocol would have confidently misdiagnosed, and it is the clearest argument for a residual ledger a human reads rather than a number a pipeline consumes [4, 30].",
+   "sentence": "That is 0.875 of the apparent drift damage in that corpus being a labelling error the protocol would have confidently misdiagnosed, and it is the argument for a residual ledger a human reads rather than a number a pipeline consumes [4, 30].",
    "number_bearing": true
   },
   {
@@ -1214,7 +1214,7 @@
    "source_url": "https://proceedings.neurips.cc/paper_files/paper/2024/file/5acd3c628aa1819fbf07c39ef73e7285-Paper-Datasets_and_Benchmarks_Track.pdf",
    "tier": "institutional",
    "section": "## 8. ATT&CK-Norm: A Version-Normalization Protocol",
-   "sentence": "That is 0.875 of the apparent drift damage in that corpus being a labelling error the protocol would have confidently misdiagnosed, and it is the clearest argument for a residual ledger a human reads rather than a number a pipeline consumes [4, 30].",
+   "sentence": "That is 0.875 of the apparent drift damage in that corpus being a labelling error the protocol would have confidently misdiagnosed, and it is the argument for a residual ledger a human reads rather than a number a pipeline consumes [4, 30].",
    "number_bearing": true
   },
   {
@@ -1258,33 +1258,13 @@
    "number_bearing": true
   },
   {
-   "citation": 8,
-   "note_id": "rcatt-repo-audit-a-2019-era-flat-attck-label-space-half-of-it-revoked-by-v13",
-   "source_title": "rcATT repo audit: a 2019-era flat ATT&CK label space, half of it revoked by v13",
-   "source_url": "https://github.com/vlegoy/rcATT",
-   "tier": "ground_truth",
-   "section": "## 9. Label Validity of Deployed CTI Corpora",
-   "sentence": "Two of the four corpora can be dated precisely from their labels alone, which is itself a useful capability: rcATT's vocabulary is simultaneously live only across v4.0 to v6.3 and TRAM 2's only across v8.2 to v16.1, so an undeclared artefact's release can be bounded by inspection [8, 10], the same move AVClass makes for malware family aliases [19].",
-   "number_bearing": true
-  },
-  {
-   "citation": 10,
-   "note_id": "tumeteormitre-ttp-mapping-audit-a-declared-v120-remap-that-still-leaks-pre-v7-re",
-   "source_title": "tumeteor/mitre-ttp-mapping audit: a declared v12.0 remap that still leaks pre-v7 revoked IDs",
-   "source_url": "https://github.com/tumeteor/mitre-ttp-mapping",
-   "tier": "ground_truth",
-   "section": "## 9. Label Validity of Deployed CTI Corpora",
-   "sentence": "Two of the four corpora can be dated precisely from their labels alone, which is itself a useful capability: rcATT's vocabulary is simultaneously live only across v4.0 to v6.3 and TRAM 2's only across v8.2 to v16.1, so an undeclared artefact's release can be bounded by inspection [8, 10], the same move AVClass makes for malware family aliases [19].",
-   "number_bearing": true
-  },
-  {
    "citation": 19,
    "note_id": "avclass-alias-resolution-and-label-normalization-as-prior-art-for-a-migration-ma",
    "source_title": "AVClass: alias resolution and label normalization as prior art for a migration map",
    "source_url": "https://software.imdea.org/~juanca/papers/avclass_raid16.pdf",
    "tier": "institutional",
    "section": "## 9. Label Validity of Deployed CTI Corpora",
-   "sentence": "Two of the four corpora can be dated precisely from their labels alone, which is itself a useful capability: rcATT's vocabulary is simultaneously live only across v4.0 to v6.3 and TRAM 2's only across v8.2 to v16.1, so an undeclared artefact's release can be bounded by inspection [8, 10], the same move AVClass makes for malware family aliases [19].",
+   "sentence": "Two of the four corpora can be dated precisely from their labels alone, : rcATT's vocabulary is simultaneously live only across v4.0 to v6.3 and TRAM 2's only across v8.2 to v16.1 (Table 9), so an undeclared artefact's release can be bounded by inspection, which shares an ancestry with the label-normalization work that canonicalises malware family aliases across labellers [19].",
    "number_bearing": true
   },
   {

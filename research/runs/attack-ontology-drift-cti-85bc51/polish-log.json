@@ -1,0 +1,38 @@
+{
+ "step": "14.5 cite-check and 15 polish",
+ "cite_check": {
+  "pairs_extracted": 154,
+  "checked": {
+   "number_bearing": 70,
+   "sampled_other": 84
+  },
+  "findings": 14,
+  "all_applied": true,
+  "critical_pattern": "Every critical finding was the same defect: a measurement this study computed from the release bundles was pinned to a secondary source that did not carry it, and in one case contradicted it. None was an invented number.",
+  "applied": [
+   "TA0005 rename-in-place, the shortname change, the object version and the T1562 arity are now attributed to this study's bundle extraction; the release announcement is cited only for the tactic separation it actually reports.",
+   "The same correction is applied in the introduction.",
+   "The ATT&CK systematization is no longer said to flag temporal instability; it frames non-comparability as implementation heterogeneity, which is what its note records.",
+   "The claim that the 2020 restructuring is the most-cited instability is replaced by what the two surveys support.",
+   "Four search-summary claims are re-attributed as reported: the instruction corpus's release declaration, the sequence-benchmark drift surface (now stated as this study's argument), the mitigation ceiling in two places, the one-third specificity figure and the LLM-agent precision range.",
+   "The TRAM 2 liveness window now points at Table 9 rather than at an audit of a different corpus.",
+   "The immutability claim is separated from the retirement-contract citation.",
+   "Layer-format optionality is attributed to the format specification; the upgrade-path citation is used for the upgrade path."
+  ]
+ },
+ "polish": {
+  "filler_and_wordiness_removed": 32,
+  "claims_touched": 0,
+  "table_rows_moved_to_package": "Tables 2, 3, 4, 5, 6 and 13 print representative rows; the full series ship in data/results/ and paper/tables/ and are plotted in Figures 1 to 5.",
+  "length": {
+   "before_polish": 12131,
+   "after_polish": 11870,
+   "gate_ceiling": 12000,
+   "profile_target": [
+    5000,
+    10000
+   ]
+  },
+  "note": "The manuscript sits above the profile's word target and inside the gate's tolerance. The overrun is carried by the inline tables and the 82-entry reference list; cutting further would mean cutting argument or citations, and the critics' findings pushed in the direction of more evidence rather than less."
+ }
+}
