@@ -36,6 +36,11 @@ randomness that is not seeded (`SEED = 20260912`).
 | `24_noise_and_stratification.py` | E14 noise factorial, specificity stratification, archival control |
 | `25_vault_integrity.py` | E15 corpus integrity check over the evidence notes |
 | `07_figures.py`, `10_tables.py`, `16_evidence_digest.py` | every figure, table and quoted number in the paper |
+| `26_manuscript_check.py` | headings, length, citation density and quote integrity of the manuscript |
+| `27_to_latex.py` | LaTeX export for journal submission |
+| `28_number_provenance.py` | every number in the prose traced back to a computed result |
+| `31_sources_section.py`, `32_cite_pairs.py` | the reference list, and the citation-sentence pairs the cite-check verifies |
+| `33_build_web.py` | the reading edition of the manuscript as a single web page |
 | `attackdrift.py` | shared loading, lineage and the ATT&CK-Norm implementation |
 
 Run them in order with `bash code/run_all.sh`.
