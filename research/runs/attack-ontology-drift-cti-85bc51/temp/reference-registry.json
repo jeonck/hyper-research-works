@@ -1,0 +1,785 @@
+[
+ {
+  "n": 1,
+  "id": "attack-stix-data-usagemd-normative-deprecated-vs-revoked-semantics-and-the-non-d",
+  "title": "attack-stix-data USAGE.md: normative deprecated-vs-revoked semantics and the non-destructive retirement contract",
+  "url": "https://github.com/mitre-attack/attack-stix-data/blob/master/USAGE.md",
+  "tier": "ground_truth",
+  "summary": "MITRE's normative guide: revoked = replaced with a revoked-by pointer, deprecated = withdrawn with no replacement, both retained in the bundle for backward compatibility with filtering left to the consumer; the unversioned bundle is a moving target.",
+  "content_type": "docs"
+ },
+ {
+  "n": 2,
+  "id": "attackg-repo-audit-attck-ontology-frozen-as-a-2021-08-31-html-scrape-parent-only",
+  "title": "AttacKG repo audit: ATT&CK ontology frozen as a 2021-08-31 HTML scrape, parent-only templates, unvalidated non-Enterprise IDs",
+  "url": "https://github.com/li-zhenyuan/Knowledge-enhanced-Attack-Graph",
+  "tier": "ground_truth",
+  "summary": "AttacKG's technique knowledge is a dated HTML scrape (MITRE ATT&CK-20210831.html, v9 era); its reference graph has 185 parent-only IDs plus ICS and non-ATT&CK identifiers scraped in unvalidated.",
+  "content_type": "dataset"
+ },
+ {
+  "n": 3,
+  "id": "b2-synthesis-six-ttp-systems-five-different-attck-ontologies-two-declared-versio",
+  "title": "B2 synthesis: six TTP systems, five different ATT&CK ontologies, two declared versions",
+  "url": "https://github.com/center-for-threat-informed-defense/tram",
+  "tier": "ground_truth",
+  "summary": "Cross-artefact audit: 2/6 TTP systems declare an ATT&CK version; rcATT has 49.8% dead labels, v13.1 itself is 19.1% tombstones, and a declared v12 remap still leaks 3.6% pre-v7 IDs in its inherited split.",
+  "content_type": "dataset"
+ },
+ {
+  "n": 4,
+  "id": "cti-bench-data-audit-v15-era-vocabulary-hard-coded-into-prompts-sub-techniques-e",
+  "title": "CTI-Bench data audit: v15-era vocabulary hard-coded into prompts, sub-techniques erased, attribution task unlabelled",
+  "url": "https://github.com/maveryn/cti-bench",
+  "tier": "ground_truth",
+  "summary": "CTI-ATE inlines a 202-entry v15-era Enterprise ID list in every prompt and its 397 GT ids contain zero sub-techniques; CTI-TAA ships 50 rows with no ground-truth column at all.",
+  "content_type": "dataset"
+ },
+ {
+  "n": 5,
+  "id": "measured-43x-label-space-growth-between-ctibench-and-athenabench-is-96-pre-exist",
+  "title": "Measured: 4.3x label-space growth between CTIBench and AthenaBench is ~96% pre-existing catalogue, only 6 new top-level techniques",
+  "url": "https://github.com/Athena-Software-Group/athenabench",
+  "tier": "ground_truth",
+  "summary": "Direct computation over both cloned benchmark files: distinct gold ATT&CK IDs grew 115 to 500 across the v15-to-v17 transition, but 70.4% of the new labels are sub-techniques of pre-existing parents, 155 of 161 parents were already in the v15 catalogue, and exactly 6 genuinely new top-level techniques appear, with parent-space Jaccard of only 0.26 between the two benchmarks.",
+  "content_type": "dataset"
+ },
+ {
+  "n": 6,
+  "id": "rcatt-repo-audit-a-2019-era-flat-attck-label-space-half-of-it-revoked-by-v13",
+  "title": "rcATT repo audit: a 2019-era flat ATT&CK label space, half of it revoked by v13",
+  "url": "https://github.com/vlegoy/rcATT",
+  "tier": "ground_truth",
+  "summary": "rcATT ships 12 tactics + 215 flat pre-sub-technique labels, declares no ATT&CK version, and 107/215 (49.8%) of its technique labels are revoked or deprecated by v13.1.",
+  "content_type": "dataset"
+ },
+ {
+  "n": 7,
+  "id": "the-revoked-by-crosswalk-is-a-function-but-not-a-bijection-149-edges-8-many-to-o",
+  "title": "The revoked-by crosswalk is a function but not a bijection: 149 edges, 8 many-to-one merges, 3 multi-hop chains, 12 unmappable deprecations",
+  "url": "https://github.com/mitre-attack/attack-stix-data",
+  "tier": "ground_truth",
+  "summary": "Forward migration is mechanical and total, backward migration is provably lossy: 8 targets absorb 12 predecessor IDs, 3 chains need transitive closure to a fixed point, and 12 deprecated techniques have no successor at all.",
+  "content_type": "dataset"
+ },
+ {
+  "n": 8,
+  "id": "tumeteormitre-ttp-mapping-audit-a-declared-v120-remap-that-still-leaks-pre-v7-re",
+  "title": "tumeteor/mitre-ttp-mapping audit: a declared v12.0 remap that still leaks pre-v7 revoked IDs",
+  "url": "https://github.com/tumeteor/mitre-ttp-mapping",
+  "tier": "ground_truth",
+  "summary": "EACL-2024 TTP-mapping dataset declares remap to ATT&CK v12.0, yet 208/23,007 label occurrences are revoked/deprecated by v13.1 \u2014 3.6% of the TRAM-inherited split, 0% of the MITRE-sourced splits.",
+  "content_type": "dataset"
+ },
+ {
+  "n": 9,
+  "id": "a-comprehensive-survey-of-threat-intelligence-research-a-measurement-based-study",
+  "title": "A Comprehensive Survey of Threat Intelligence Research: A Measurement-Based Study (ACM CSUR 2025)",
+  "url": "https://dl.acm.org/doi/10.1145/3772280",
+  "tier": "institutional",
+  "summary": "200+ studies 2001-2025 plus a measurement study of CTI datasets: evaluation results depend on which vendors are in the dataset; IoC-type gaps (DarkFox has no IPv6) and 19,491-vs-381 file-path counts; duplication flagged as a defect.",
+  "content_type": "paper"
+ },
+ {
+  "n": 10,
+  "id": "apt-attribution-survey-jisa-2025-taxonomy-by-artefact-type-not-by-ontology-versi",
+  "title": "APT attribution survey (JISA 2025): taxonomy by artefact type, not by ontology version",
+  "url": "https://doi.org/10.1016/j.jisa.2025.104076",
+  "tier": "institutional",
+  "summary": "The field's reference attribution survey taxonomises evidence types and compares datasets, but does not appear to treat ATT&CK release version as a dimension of dataset comparability.",
+  "content_type": "paper"
+ },
+ {
+  "n": 11,
+  "id": "athenabench-arxiv-251101144-dynamic-live-api-benchmarking-as-the-fields-answer-t",
+  "title": "AthenaBench (arXiv 2511.01144): dynamic live-API benchmarking as the field's answer to CTIBench staleness",
+  "url": "https://arxiv.org/abs/2511.01144",
+  "tier": "institutional",
+  "summary": "AthenaBench explicitly diagnoses CTIBench as static-knowledge-limited and regenerates items from live MITRE ATT&CK and NVD APIs, fixing currency but removing any stable release identifier, and scores lowest exactly on the two ATT&CK-bookkeeping-exposed tasks (RMS 32.6, TAA 39.0).",
+  "content_type": "paper"
+ },
+ {
+  "n": 12,
+  "id": "attck-design-and-philosophy-inclusion-criteria-are-explicitly-non-stationary-and",
+  "title": "ATT&CK Design and Philosophy: inclusion criteria are explicitly non-stationary and abstraction level is an interpretive standard",
+  "url": "https://attack.mitre.org/docs/ATTACK_Design_and_Philosophy_March_2020.pdf",
+  "tier": "institutional",
+  "summary": "MITRE documents that its criteria for adding information have changed as scope expanded, that sub-technique goals are abstraction harmonisation and count management, and that technique abstraction is an interpretive standard - so ATT&CK is a non-stationary measuring instrument by design.",
+  "content_type": "paper"
+ },
+ {
+  "n": 13,
+  "id": "attck-navigator-layer-file-format-the-attck-content-version-is-an-optional-field",
+  "title": "ATT&CK Navigator layer file format: the ATT&CK content version is an optional field that silently defaults to current",
+  "url": "https://github.com/mitre-attack/attack-navigator/blob/master/layers/spec/v4.5/layerformat.md",
+  "tier": "institutional",
+  "summary": "Navigator layer spec: versions.attack is optional and defaults to 'current ATT&CK'; formats 1.x-3.0 had no ATT&CK version at all; version-less layers are silently re-based; minor versions truncated; upgrade is manual, one-way and unrecorded.",
+  "content_type": "docs"
+ },
+ {
+  "n": 14,
+  "id": "attck-navigator-layer-upgrade-version-stamping-is-mandatory-migration-is-manual",
+  "title": "ATT&CK Navigator layer upgrade: version stamping is mandatory, migration is manual, irreversible and unaudited",
+  "url": "https://github.com/mitre-attack/attack-navigator/blob/master/USAGE.md",
+  "tier": "institutional",
+  "summary": "Layer format mandates a versions.attack stamp and Navigator ships a guided cross-version upgrade, but the migration is human-judgement, writes no provenance and cannot be revisited \u2014 the official remedy launders a coverage claim's history.",
+  "content_type": "docs"
+ },
+ {
+  "n": 15,
+  "id": "attck-v19-announcement-defense-evasion-split-into-stealth-and-impair-defenses-t1",
+  "title": "ATT&CK v19 announcement: Defense Evasion split into Stealth and Impair Defenses, T1562 promoted technique-to-tactic",
+  "url": "https://medium.com/mitre-attack/attack-v19-ff329cb65d66",
+  "tier": "institutional",
+  "summary": "v19 (28 Apr 2026) dissolved TA0005 into Stealth and Impair Defenses and elevated T1562 from technique to tactic - a cross-layer promotion that no ID crosswalk can express - while shipping genuine new AI/social-engineering content in the same release.",
+  "content_type": "blog"
+ },
+ {
+  "n": 16,
+  "id": "attackseqbench-arxiv-250303170-sequence-level-attck-reasoning-and-the-tactic-rea",
+  "title": "AttackSeqBench (arXiv 2503.03170): sequence-level ATT&CK reasoning and the tactic-reassignment drift surface",
+  "url": "https://arxiv.org/abs/2503.03170",
+  "tier": "institutional",
+  "summary": "Lead (not yet verified) on sequence-level ATT&CK benchmarking, used here to frame a four-level hierarchy of drift exposure from telemetry-grounded detection at the bottom to threat-actor attribution at the top, where technique-ID remapping alone cannot restore comparability.",
+  "content_type": "paper"
+ },
+ {
+  "n": 17,
+  "id": "audit-six-of-eight-sample-layers-shipped-in-mitres-own-navigator-repository-carr",
+  "title": "Audit: six of eight sample layers shipped in MITRE's own Navigator repository carry no ATT&CK version",
+  "url": "https://github.com/mitre-attack/attack-navigator/tree/master/layers/samples",
+  "tier": "institutional",
+  "summary": "In-run audit of the Navigator repo at HEAD: six of eight shipped sample layers use layer format 3.0 with no ATT&CK version field and the legacy mitre-enterprise domain, including 2018 ATTACKcon layers that silently re-render against current ATT&CK; the two versioned samples declare a stale attack:17.",
+  "content_type": "docs"
+ },
+ {
+  "n": 18,
+  "id": "avclass-alias-resolution-and-label-normalization-as-prior-art-for-a-migration-ma",
+  "title": "AVClass: alias resolution and label normalization as prior art for a migration map",
+  "url": "https://software.imdea.org/~juanca/papers/avclass_raid16.pdf",
+  "tier": "institutional",
+  "summary": "Canonicalises divergent AV family labels via normalization, alias resolution and plurality voting - the structural ancestor of a cross-version ATT&CK normalization protocol, but across labellers rather than across releases.",
+  "content_type": "paper"
+ },
+ {
+  "n": 19,
+  "id": "beyond-single-reports-intra-version-technique-confusability-as-a-rival-explanati",
+  "title": "Beyond Single Reports \u2014 intra-version technique confusability as a rival explanation for label instability",
+  "url": "https://arxiv.org/abs/2604.07470",
+  "tier": "institutional",
+  "summary": "Best F1 78.6% (SolarWinds) / 54.9% (XZ Utils) after aggregating reports; 33.3% of misclassifications are between semantically similar same-tactic techniques \u2014 a synchronic confusability floor entangled with sub-technique restructuring.",
+  "content_type": "paper"
+ },
+ {
+  "n": 20,
+  "id": "boundary-synthesis-where-concept-drift-literature-stops-and-ontology-drift-begin",
+  "title": "Boundary synthesis: where concept-drift literature stops and ontology drift begins",
+  "url": "",
+  "tier": "institutional",
+  "summary": "Five-tier map of what the surveyed literature lets change over time, showing that non-monotone curator-driven schema evolution and cross-version comparability are covered nowhere.",
+  "content_type": "article"
+ },
+ {
+  "n": 21,
+  "id": "cade-detecting-and-explaining-concept-drift-samples-for-security-applications",
+  "title": "CADE: Detecting and Explaining Concept Drift Samples for Security Applications",
+  "url": "https://www.usenix.org/conference/usenixsecurity21/presentation/yang-limin",
+  "tier": "institutional",
+  "summary": "Closest security-side neighbour: detects individual samples deviating from existing classes (new-class discovery), but cannot see label-space changes that leave features untouched.",
+  "content_type": "paper"
+ },
+ {
+  "n": 22,
+  "id": "captain-chasing-the-shadows-ttp-sequence-attribution-with-no-declared-attck-vers",
+  "title": "CAPTAIN / Chasing the Shadows: TTP-sequence attribution with no declared ATT&CK version",
+  "url": "https://arxiv.org/abs/2409.16400",
+  "tier": "institutional",
+  "summary": "Reference automated TTP-attribution pipeline (TTPXHunter extraction + kill-chain sequencing + sequence similarity) that names no ATT&CK release for either its evidence or its group profiles.",
+  "content_type": "paper"
+ },
+ {
+  "n": 23,
+  "id": "class-incremental-learning-surveys-the-additive-quadrant-of-label-space-change",
+  "title": "Class-Incremental Learning surveys: the additive quadrant of label-space change",
+  "url": "https://arxiv.org/abs/2302.03648",
+  "tier": "institutional",
+  "summary": "CIL formalises a label space that grows over time, covering technique additions only; no operation exists for removal, merge, split, reparenting or in-place redefinition.",
+  "content_type": "paper"
+ },
+ {
+  "n": 24,
+  "id": "cleaning-the-nvd-and-the-security-knowledge-base-data-quality-genre",
+  "title": "Cleaning the NVD and the security knowledge-base data-quality genre",
+  "url": "https://arxiv.org/pdf/2006.15074",
+  "tier": "institutional",
+  "summary": "Established template - enumerate defects, quantify, publish a cleaned derivative, show which analyses change - plus the finding that security KB records mutate after publication, which is the argument for hash-pinning over version-pinning.",
+  "content_type": "paper"
+ },
+ {
+  "n": 25,
+  "id": "conto-diff-hartung-gross-rahm-complex-change-operations-as-evolution-mappings-be",
+  "title": "COnto-Diff (Hartung, Gross, Rahm): complex change operations as evolution mappings between ontology versions",
+  "url": "https://www.sciencedirect.com/science/article/pii/S1532046412000627",
+  "tier": "institutional",
+  "summary": "Rule-based aggregation of basic inserts/deletes into complex merge/split/move operations - the published methodology for separating real growth from bookkeeping and for migrating annotations across versions.",
+  "content_type": "paper"
+ },
+ {
+  "n": 26,
+  "id": "cti-quality-assessment-cluster-automated-dynamic-assessment-misp-weighted-criter",
+  "title": "CTI Quality Assessment Cluster \u2014 automated dynamic assessment, MISP weighted criteria, completeness/timeliness of artefacts, STIX graphs",
+  "url": "https://www.sciencedirect.com/science/article/pii/S0167404824003845",
+  "tier": "institutional",
+  "summary": "Pointer bundle for the CTI quality-metric family: fuzzy-AHP/entropy weighting, nine-parameter quality vocabulary (compliance, maintenance, extensiveness...) \u2014 compliance means format conformance and maintenance means feed upkeep, neither is taxonomy versioning.",
+  "content_type": "paper"
+ },
+ {
+  "n": 27,
+  "id": "cti-realm-arxiv-260313517-telemetry-grounded-detection-evaluation-as-the-only-st",
+  "title": "CTI-REALM (arXiv 2603.13517): telemetry-grounded detection evaluation as the only structurally drift-resistant CTI benchmark design",
+  "url": "https://arxiv.org/abs/2603.13517",
+  "tier": "institutional",
+  "summary": "Scores agents on detection rules fired against authentic telemetry from sandboxed Azure attack emulations rather than on ATT&CK ID-string matching, making it the one design in this batch immune to renumbering and sub-technique splits, at the cost of relocating irreproducibility from ontology versioning to environment versioning.",
+  "content_type": "paper"
+ },
+ {
+  "n": 28,
+  "id": "ctiarena-to-cticonnect-arxiv-251011974-691-to-1860-qa-pairs-under-one-identifier",
+  "title": "CTIArena to CTIConnect (arXiv 2510.11974): 691 to 1,860 QA pairs under one identifier, same 9-task taxonomy",
+  "url": "https://arxiv.org/abs/2510.11974",
+  "tier": "institutional",
+  "summary": "One arXiv record carries two benchmark identities: CTIArena v1 with 691 QA pairs and CTIConnect v2 (KDD 26) with 1,860 expert-verified pairs over the same 9 tasks and 5 sources, a 2.7x growth from re-verification rather than new adversary intelligence, and a citation hazard mirroring ATT&CK's own version instability.",
+  "content_type": "paper"
+ },
+ {
+  "n": 29,
+  "id": "ctibench-neurips-2024-authoritative-source-design-treats-attck-as-fixed-has-a-ti",
+  "title": "CTIBench (NeurIPS 2024): authoritative-source design treats ATT&CK as fixed, has a time-controlled split for CVEs but none for ATT&CK",
+  "url": "https://proceedings.neurips.cc/paper_files/paper/2024/file/5acd3c628aa1819fbf07c39ef73e7285-Paper-Datasets_and_Benchmarks_Track.pdf",
+  "tier": "institutional",
+  "summary": "CTIBench justifies its ATT&CK/NVD/CWE sourcing on reproducibility grounds while treating those versioned ontologies as fixed; it builds a 2021 time-controlled comparison split for CVE data but no equivalent for its 60-item ATT&CK task, and reports persistent LLM knowledge gaps specifically in ATT&CK.",
+  "content_type": "paper"
+ },
+ {
+  "n": 30,
+  "id": "ctid-attck-sync-institutional-admission-that-version-drift-invalidates-dependent",
+  "title": "CTID ATT&CK Sync: institutional admission that version drift invalidates dependent projects, but tooling not measurement",
+  "url": "https://ctid.mitre.org/projects/attack-sync/",
+  "tier": "institutional",
+  "summary": "MITRE's own centre states dependent projects are pinned to whatever ATT&CK version was current at development time and quickly become out-of-date; ATT&CK Sync flags affected mappings but publishes no quantification of corpus impact or analytic performance change.",
+  "content_type": "docs"
+ },
+ {
+  "n": 31,
+  "id": "cve-identifier-lifecycle-rejected-disputed-merge-and-split-as-security-vocabular",
+  "title": "CVE identifier lifecycle: REJECTED, DISPUTED, merge and split as security-vocabulary precedent",
+  "url": "https://www.cve.org/Resources/Media/Archives/OldWebsite/about/faqs.html",
+  "tier": "institutional",
+  "summary": "Tombstone-never-delete plus a DISPUTED state for contested entries; the transferable proposals are a controlled obsolescence reason for ATT&CK and a contested-assertion flag for group-technique attributions, plus auditing consumer conformance to lifecycle flags.",
+  "content_type": "policy"
+ },
+ {
+  "n": 32,
+  "id": "cve-cwe-cpe-mapping-instability-abstraction-ladder-drift-between-security-vocabu",
+  "title": "CVE-CWE-CPE mapping instability: abstraction-ladder drift between security vocabularies",
+  "url": "https://dl.acm.org/doi/10.1145/3641819",
+  "tier": "institutional",
+  "summary": "The CPE-CVE-CWE ladder drifts the same way ATT&CK's observable-technique-tactic ladder does: the abstract layer is restructured and the mapping re-derived per release, so coverage claims are statements about an unstable mapping rather than about capability.",
+  "content_type": "paper"
+ },
+ {
+  "n": 33,
+  "id": "dataset-shift-and-concept-drift-taxonomies-gama-moreno-torres-lu-et-al",
+  "title": "Dataset shift and concept drift taxonomies (Gama, Moreno-Torres, Lu et al.)",
+  "url": "https://dl.acm.org/doi/10.1145/2523813",
+  "tier": "institutional",
+  "summary": "Covariate, prior-probability and concept shift are all defined over a fixed label space, so the standard drift formalism cannot even express a change in the class vocabulary.",
+  "content_type": "paper"
+ },
+ {
+  "n": 34,
+  "id": "diff_stix-official-change-taxonomy-eight-change-classes-including-patches-and-un",
+  "title": "diff_stix official change taxonomy: eight change classes including patches and unintended version changes",
+  "url": "https://github.com/mitre-attack/mitreattack-python/blob/master/mitreattack/diffStix/README.md",
+  "tier": "institutional",
+  "summary": "MITRE's own changelog generator defines additions, major/minor/other version changes, patches, revocations, deprecations and deletions - conceding that x_mitre_version is historically inconsistent and that content can be patched with no version bump.",
+  "content_type": "docs"
+ },
+ {
+  "n": 35,
+  "id": "diffstix-mitres-own-machine-readable-ontology-drift-ledger-and-the-errors-it-def",
+  "title": "diffStix: MITRE's own machine-readable ontology-drift ledger \u2014 and the errors it defends against",
+  "url": "https://github.com/mitre-attack/mitreattack-python/tree/master/mitreattack/diffStix",
+  "tier": "institutional",
+  "summary": "MITRE computes additions/major/minor/patch/revocation/deprecation/deletion buckets plus line-level description diffs per release pair; its code also logs 'unexpected version increase' and missing revoked-by edges.",
+  "content_type": "docs"
+ },
+ {
+  "n": 36,
+  "id": "dos-and-donts-of-machine-learning-in-computer-security-arp-et-al",
+  "title": "Dos and Don'ts of Machine Learning in Computer Security (Arp et al.)",
+  "url": "https://www.usenix.org/conference/usenixsecurity22/presentation/arp",
+  "tier": "institutional",
+  "summary": "Ten pitfalls of security ML including label inaccuracy and temporal snooping, all assuming a static class vocabulary; the natural home for an eleventh pitfall covering ontology drift.",
+  "content_type": "paper"
+ },
+ {
+  "n": 37,
+  "id": "evidence-driven-analysis-of-threat-information-sharing-challenges-for-ics-arxiv",
+  "title": "Evidence-Driven Analysis of Threat Information Sharing Challenges for ICS (arXiv 2512.18714 / Computers & Security 2026)",
+  "url": "https://arxiv.org/abs/2512.18714",
+  "tier": "institutional",
+  "summary": "Empirical measurement of STIX volume/timeliness/coverage/quality across public sources; diagnoses insufficient standardization and TTPs lacking defined technical artifacts \u2014 underspecification, not version drift.",
+  "content_type": "paper"
+ },
+ {
+  "n": 38,
+  "id": "evolution-of-vocabulary-terms-in-knowledge-graphs-vocabulary-churn-vs-instance-d",
+  "title": "Evolution of vocabulary terms in knowledge graphs: vocabulary churn vs instance-data usage as two time series",
+  "url": "https://arxiv.org/pdf/1710.00232",
+  "tier": "institutional",
+  "summary": "Framing for measuring the lag between a term's deprecation in the vocabulary and its disappearance from deployed data - the design for measuring how long revoked ATT&CK techniques persist in published CTI corpora.",
+  "content_type": "paper"
+ },
+ {
+  "n": 39,
+  "id": "feedmeter-evaluating-the-quality-of-community-driven-threat-intelligence-2024",
+  "title": "FeedMeter \u2014 Evaluating the Quality of Community-Driven Threat Intelligence (2024)",
+  "url": "https://www.scitepress.org/Papers/2024/123576/123576.pdf",
+  "tier": "institutional",
+  "summary": "Continuous-monitoring platform scoring feeds on eight descriptive metrics; normalization means cross-producer format harmonization, not cross-version vocabulary harmonization.",
+  "content_type": "paper"
+ },
+ {
+  "n": 40,
+  "id": "fragmentation-of-cvss-scores-in-the-nvd-cross-version-incomparability-in-a-secur",
+  "title": "Fragmentation of CVSS scores in the NVD: cross-version incomparability in a security vocabulary",
+  "url": "https://www.sciencedirect.com/science/article/abs/pii/S0167404826001549",
+  "tier": "institutional",
+  "summary": "Peer-reviewed census showing CVSS version choice systematically shifts severity classification across ~298k CVEs and that NVD/CNA scores disagree on 34.1% of dual-assessed entries - the security-domain precedent for the drift thesis, and the bar the ATT&CK paper must exceed by flipping a downstream conclusion.",
+  "content_type": "paper"
+ },
+ {
+  "n": 41,
+  "id": "geras-schreck-the-big-beast-to-tackle-practices-in-quality-assurance-for-cti-rai",
+  "title": "Geras & Schreck \u2014 The Big Beast to Tackle: Practices in Quality Assurance for CTI (RAID 2024)",
+  "url": "https://dl.acm.org/doi/10.1145/3678890.3678903",
+  "tier": "institutional",
+  "summary": "25 practitioner interviews: organizations recognize the need for CTI quality but have no systematic assessment processes \u2014 corroborating the Delphi finding that no concrete metrics are in operational use.",
+  "content_type": "paper"
+ },
+ {
+  "n": 42,
+  "id": "griffioen-booij-doerr-quality-evaluation-of-cyber-threat-intelligence-feeds-acns",
+  "title": "Griffioen, Booij & Doerr \u2014 Quality Evaluation of Cyber Threat Intelligence Feeds (ACNS 2020)",
+  "url": "https://link.springer.com/chapter/10.1007/978-3-030-57878-7_14",
+  "tier": "institutional",
+  "summary": "Independent measurement of feed timeliness/coverage/accuracy; establishes that a consumer's threat landscape is an artifact of source selection \u2014 but uses no vocabulary-stability axis.",
+  "content_type": "paper"
+ },
+ {
+  "n": 43,
+  "id": "increttp-attck-version-updates-framed-as-concept-drift-and-why-incremental-learn",
+  "title": "IncreTTP: ATT&CK version updates framed as concept drift \u2014 and why incremental learning is not enough",
+  "url": "https://link.springer.com/chapter/10.1007/978-3-032-23450-6_2",
+  "tier": "institutional",
+  "summary": "Closest prior art: treats ATT&CK releases as concept drift and proposes incremental learning, but addresses only technique additions, not revocation, sub-technique restructuring, tactic reassignment or silent description rewriting.",
+  "content_type": "paper"
+ },
+ {
+  "n": 44,
+  "id": "leco-continual-learning-with-evolving-class-ontologies-neurips-2022",
+  "title": "LECO: Continual Learning with Evolving Class Ontologies (NeurIPS 2022)",
+  "url": "https://arxiv.org/abs/2210.04993",
+  "tier": "institutional",
+  "summary": "The one prior work squarely on label-space drift: coarse-to-fine ontology refinement across time periods, but monotone, training-focused, and without deprecation, revocation, reparenting or silent redefinition.",
+  "content_type": "paper"
+ },
+ {
+  "n": 45,
+  "id": "legoy-et-al-2020-automated-retrieval-of-attck-tactics-and-techniques-rcatt-paper",
+  "title": "Legoy et al. 2020 \u2014 Automated Retrieval of ATT&CK Tactics and Techniques (rcATT paper)",
+  "url": "https://arxiv.org/abs/2004.14322",
+  "tier": "institutional",
+  "summary": "Canonical multi-label report-to-ATT&CK baseline whose reported scores are conditional on an undeclared pre-sub-technique ontology.",
+  "content_type": "paper"
+ },
+ {
+  "n": 46,
+  "id": "li-et-al-reading-the-tea-leaves-a-comparative-analysis-of-threat-intelligence-us",
+  "title": "Li et al. \u2014 Reading the Tea Leaves: A Comparative Analysis of Threat Intelligence (USENIX Security 2019)",
+  "url": "https://www.usenix.org/conference/usenixsecurity19/presentation/li",
+  "tier": "institutional",
+  "summary": "Six feed metrics (volume, differential/exclusive contribution, latency, accuracy, coverage); 3 malware feeds shared >40% of entries with a two-year-old snapshot; labels like malicious/suspicious loosely defined.",
+  "content_type": "paper"
+ },
+ {
+  "n": 47,
+  "id": "mitre-attck-changelog-version-history-and-release-cadence-semiannual-majors-iner",
+  "title": "MITRE ATT&CK changelog, version history and release cadence: semiannual majors, inert minors, and out-of-band agile Group/Software updates",
+  "url": "https://attack.mitre.org/resources/changelog.html",
+  "tier": "institutional",
+  "summary": "Official cadence is twice-yearly majors with minors carrying only corrections; deprecation is an editorial scope judgement not evidence behaviour ceased; agile out-of-band Group/Software/Campaign updates mean a release tag alone no longer pins the dataset.",
+  "content_type": "docs"
+ },
+ {
+  "n": 48,
+  "id": "mitre-attck-evaluations-a-governed-measurement-protocol-that-refuses-to-emit-a-c",
+  "title": "MITRE ATT&CK Evaluations: a governed measurement protocol that refuses to emit a coverage score, and drifts round to round",
+  "url": "https://evals.mitre.org/methodology-overview/",
+  "tier": "institutional",
+  "summary": "Evals scores per-substep detection categories (None/Telemetry/General/Technique) with a pre-enumerated denominator and publishes no ranking or score; but scope, category semantics ('General' redefined, 'Tainted'->'Correlated') and detection criteria change every round, and MITRE's remedy is a diff tool not a normalized series.",
+  "content_type": "docs"
+ },
+ {
+  "n": 49,
+  "id": "mitre-attck-state-of-the-art-and-way-forward-acm-csur-2025-the-novelty-bar-an-sc",
+  "title": "MITRE ATT&CK: State of the Art and Way Forward (ACM CSUR 2025) \u2014 the novelty bar an SCI contribution must clear",
+  "url": "https://dl.acm.org/doi/10.1145/3687300",
+  "tier": "institutional",
+  "summary": "Second top-venue survey of ATT&CK research in two years; closes off critique-shaped contributions and forces the drift thesis into separable-effect-size, frequency-weighted, confounder-separated empirical territory.",
+  "content_type": "paper"
+ },
+ {
+  "n": 50,
+  "id": "mitre-diffstix-changelog_helper-attcks-own-change-taxonomy-patch-detection-and-d",
+  "title": "MITRE diffStix changelog_helper: ATT&CK's own change taxonomy, patch detection, and dangling-revocation handling",
+  "url": "https://github.com/mitre-attack/mitreattack-python/blob/master/mitreattack/diffStix/changelog_helper.py",
+  "tier": "institutional",
+  "summary": "Artefact read of MITRE's changelog generator: additions/major/minor/other/patches/revocations/deprecations/unchanged, where 'patch' means version-unchanged content edits detected only by the modified timestamp - silent rewriting is official, and dangling revocations are handled because they occur.",
+  "content_type": "docs"
+ },
+ {
+  "n": 51,
+  "id": "mitres-own-bias-taxonomy-and-the-sightings-ecosystem-top-15-techniques-are-80-of",
+  "title": "MITRE's own bias taxonomy and the Sightings Ecosystem: top 15 techniques are >80% of observed events",
+  "url": "https://ctid.mitre.org/projects/sightings-ecosystem/",
+  "tier": "institutional",
+  "summary": "MITRE publicly names novelty/visibility/producer/victim/availability bias and funds telemetry to correct it; with 15 of 353 sighted techniques carrying >80% of events, long-tail churn barely moves frequency-weighted coverage.",
+  "content_type": "article"
+ },
+ {
+  "n": 52,
+  "id": "mitres-sub-technique-release-announcement-and-the-jsoncsv-crosswalks-abstraction",
+  "title": "MITRE's sub-technique release announcement and the JSON/CSV crosswalks: abstraction correction, not intelligence growth",
+  "url": "https://medium.com/mitre-attack/attack-with-sub-techniques-is-now-just-attack-8fc20997d8de",
+  "tier": "institutional",
+  "summary": "MITRE framed sub-techniques as fixing technique scope discrepancies and shipped JSON/CSV crosswalks it later had to refine to reduce human intervention and text parsing - the publisher-sanctioned precedent for version pinning plus explicit mapping artefacts.",
+  "content_type": "blog"
+ },
+ {
+  "n": 53,
+  "id": "modern-malware-drift-adaptation-morph-adapt-few-sample-adaptation-still-a-fixed",
+  "title": "Modern malware drift adaptation (MORPH, ADAPT, few-sample adaptation): still a fixed vocabulary",
+  "url": "https://arxiv.org/pdf/2401.12790",
+  "tier": "institutional",
+  "summary": "2024-2026 state of the art in security drift adaptation optimises relabelling cost under a fixed class set; pseudo-labelling would silently propagate an obsolete ontology.",
+  "content_type": "paper"
+ },
+ {
+  "n": 54,
+  "id": "motif-ground-truth-malware-family-labels-and-the-open-unstable-class-set",
+  "title": "MOTIF: ground-truth malware family labels and the open, unstable class set",
+  "url": "https://arxiv.org/abs/2111.15031",
+  "tier": "institutional",
+  "summary": "Shows AV voting and AVClass recover report-derived families only ~62% and ~47% of the time; synchronic label-vocabulary instability, with no version axis.",
+  "content_type": "paper"
+ },
+ {
+  "n": 55,
+  "id": "multi-label-attck-classification-arxiv-260618166-tram-annotations-declared-not-g",
+  "title": "Multi-label ATT&CK classification (arXiv 2606.18166): TRAM annotations declared not-gold, best open LLM micro-F1 0.22",
+  "url": "https://arxiv.org/abs/2606.18166",
+  "tier": "institutional",
+  "summary": "Builds a 2,076-sentence / 83-report / 114-technique gold set at kappa 0.68 after finding TRAM's annotations were never designed as gold and contain systematic over-annotation; best open-source LLM reaches only micro-F1 0.22, and its annotation rule makes official ATT&CK descriptions the sole label arbiter, hence release-dependent.",
+  "content_type": "paper"
+ },
+ {
+  "n": 56,
+  "id": "obo-foundry-identifier-policy-global-uniqueness-no-reuse-and-persistence-as-a-pr",
+  "title": "OBO Foundry Identifier Policy: global uniqueness, no reuse, and persistence as a provider obligation",
+  "url": "https://obofoundry.org/id-policy.html",
+  "tier": "institutional",
+  "summary": "Artefact-read identifier policy: one ID per concept forever, bidirectional ID-URI mapping, persistence that must outlive the maintainer - the codified guarantee ATT&CK follows in practice but has never published.",
+  "content_type": "policy"
+ },
+ {
+  "n": 57,
+  "id": "obo-foundry-principle-19-stability-of-term-meaning-referent-stability-obsoletion",
+  "title": "OBO Foundry Principle 19: Stability of Term Meaning (referent stability, obsoletion mechanics, replaced_by vs consider)",
+  "url": "https://obofoundry.org/principles/fp-019-term-stability.html",
+  "tier": "institutional",
+  "summary": "Artefact-read policy forbidding referent-changing edits at a stable ID and specifying obsoletion mechanics (deprecation flag, visible label prefix, no dangling axioms, exact vs inexact successors, controlled obsolescence reasons) - the protocol ATT&CK lacks.",
+  "content_type": "policy"
+ },
+ {
+  "n": 58,
+  "id": "obo-foundry-principle-4-versioning-version-iris-release-immutability-perpetual-r",
+  "title": "OBO Foundry Principle 4: Versioning (version IRIs, release immutability, perpetual resolvability)",
+  "url": "https://obofoundry.org/principles/fp-004-versioning.html",
+  "tier": "institutional",
+  "summary": "Artefact-read policy requiring distinct resolvable version IRIs and immutable official releases - the established justification for version-pinned (and hash-pinned) CTI reporting.",
+  "content_type": "policy"
+ },
+ {
+  "n": 59,
+  "id": "ontology-evolution-vs-ontology-versioning-change-management-as-the-core-task-kle",
+  "title": "Ontology evolution vs ontology versioning: change management as the core task (Klein, Fensel, Noy, Stojanovic line)",
+  "url": "https://www.researchgate.net/publication/37538421_Change_Management_The_Core_Task_of_Ontology_Versioning_and_Evolution",
+  "tier": "institutional",
+  "summary": "Foundational distinction between evolution (keeping one ontology consistent) and versioning (coexisting versions and their declared relations) - CTI analytics is a versioning problem that the field treats as an evolution problem.",
+  "content_type": "paper"
+ },
+ {
+  "n": 60,
+  "id": "owl-versioning-vocabulary-versioniri-priorversion-backwardcompatiblewith-owldepr",
+  "title": "OWL versioning vocabulary: versionIRI, priorVersion, backwardCompatibleWith, owl:deprecated",
+  "url": "https://www.w3.org/2007/OWL/wiki/Ontology_Versions",
+  "tier": "institutional",
+  "summary": "Standard machine-readable slots for version identity, prior-version lineage, declared compatibility and deprecation - ATT&CK has counterparts for deprecation and revocation but none for lineage or compatibility.",
+  "content_type": "docs"
+ },
+ {
+  "n": 61,
+  "id": "rahman-williams-arxiv221106500-mitigation-coverage-has-a-ceiling-set-by-the-cont",
+  "title": "Rahman & Williams (arXiv:2211.06500): mitigation coverage has a ceiling set by the control catalogue, and the ceiling moves with each ATT&CK release",
+  "url": "https://arxiv.org/abs/2211.06500",
+  "tier": "institutional",
+  "summary": "Study of 298 NIST SP800-53 controls against 188 ATT&CK techniques across 669 groups/malware; reported that only a minority of controls mitigate anything and some techniques are unmitigable, implying mitigation-coverage percentages have an unstated, version-dependent ceiling.",
+  "content_type": "paper"
+ },
+ {
+  "n": 62,
+  "id": "saha-et-al-kitten-or-panda-two-thirds-of-attck-threat-groups-have-no-group-speci",
+  "title": "Saha et al. \u2014 Kitten or Panda? Two-thirds of ATT&CK threat groups have no group-specific behaviour",
+  "url": "https://arxiv.org/abs/2506.10645",
+  "tier": "institutional",
+  "summary": "Only 34% of ATT&CK groups (24% in Malpedia) have any group-specific technique \u2014 TTP attribution is non-identifiable for most groups within a single version, before drift enters.",
+  "content_type": "paper"
+ },
+ {
+  "n": 63,
+  "id": "schlette-et-al-measuring-and-visualizing-cyber-threat-intelligence-quality-ijis",
+  "title": "Schlette et al. \u2014 Measuring and Visualizing Cyber Threat Intelligence Quality (IJIS 2021)",
+  "url": "https://link.springer.com/article/10.1007/s10207-020-00490-y",
+  "tier": "institutional",
+  "summary": "Computable CTI quality metrics at attribute/object/report level anchored to STIX 2, plus a Quality Indicator custom object \u2014 format-level scoring is blind to ontology drift by construction.",
+  "content_type": "paper"
+ },
+ {
+  "n": 64,
+  "id": "sevenllm-arxiv-240503446-90k-samples-and-28-tasks-from-8485-reports-spanning-200",
+  "title": "SEvenLLM (arXiv 2405.03446): 90k samples and 28 tasks from 8,485 reports spanning 2004-present, with no ATT&CK label spine",
+  "url": "https://arxiv.org/abs/2405.03446",
+  "tier": "institutional",
+  "summary": "Largest LLM-CTI benchmark in this batch, built from 6,706 English plus 1,779 Chinese curated reports into ~90,000 instruction samples over an unversioned 28-task taxonomy with no external referent; a clean case of dataset growth by task multiplication, and its ATT&CK labelling status could not be established.",
+  "content_type": "paper"
+ },
+ {
+  "n": 65,
+  "id": "shen-et-al-asia-ccs-2024-whole-graph-re-analysis-of-mitre-evaluations-shows-per",
+  "title": "Shen et al. (ASIA CCS 2024): whole-graph re-analysis of MITRE Evaluations shows per-technique tallies are the wrong unit",
+  "url": "https://arxiv.org/abs/2401.15878",
+  "tier": "institutional",
+  "summary": "Re-analyses multi-year MITRE Evaluations data with control/data-flow whole-graph analysis; finds graph-level correlation is what determines defence, protection delay is ubiquitous, and per-test protection rates are dominated by scenario construction.",
+  "content_type": "paper"
+ },
+ {
+  "n": 66,
+  "id": "sok-the-mitre-attck-framework-in-research-and-practice-non-comparability-already",
+  "title": "SoK: The MITRE ATT&CK Framework in Research and Practice \u2014 non-comparability already established, temporal instability not",
+  "url": "https://arxiv.org/abs/2304.07411",
+  "tier": "institutional",
+  "summary": "Canonical SoK finds no standardization in how products implement ATT&CK and discrepancies across the literature \u2014 occupying the non-comparability slot synchronically and raising the novelty bar for a drift paper.",
+  "content_type": "paper"
+ },
+ {
+  "n": 67,
+  "id": "summiting-the-pyramid-v50-ctid-implementations-replace-techniques-as-the-coverag",
+  "title": "Summiting the Pyramid v5.0 (CTID): implementations replace techniques as the coverage denominator \u2014 710 techniques map to 1,637 implementations",
+  "url": "https://github.com/center-for-threat-informed-defense/summiting-the-pyramid",
+  "tier": "institutional",
+  "summary": "CTID's Sept 2026 Detection Coverage Calculator: technique mappings are not coverage; replaces them with Detection Quality (robustness x precision) and Implementation Coverage over a 1,637-entry catalog (mean 2.31 impls/technique, max 13), version-pins its data-component column to ATT&CK v19, and names 'outdated ATT&CK mapping' as a cause of coverage gaps.",
+  "content_type": "docs"
+ },
+ {
+  "n": 68,
+  "id": "synthcti-arxiv-250716852-synthesising-the-attck-long-tail-and-what-that-says-abo",
+  "title": "SynthCTI (arXiv 2507.16852): synthesising the ATT&CK long tail, and what that says about catalogue-driven class imbalance",
+  "url": "https://arxiv.org/abs/2507.16852",
+  "tier": "institutional",
+  "summary": "LLM-generated synthetic sentences for underrepresented ATT&CK techniques lift ALBERT macro-F1 from 0.35 to 0.52 on CTI-to-MITRE and TRAM, evidence that much of the ATT&CK label space is populated by catalogue growth rather than observed reporting, and that macro-F1 over the long tail is partly a measurement over synthetic data.",
+  "content_type": "paper"
+ },
+ {
+  "n": 69,
+  "id": "synthetic-apts-2026-llm-agents-reproduce-documented-apt-profiles-at-55-80-precis",
+  "title": "Synthetic APTs (2026): LLM agents reproduce documented APT profiles at 55-80% precision",
+  "url": "https://arxiv.org/abs/2606.07158",
+  "tier": "institutional",
+  "summary": "20 cyber-range experiments show agents given published ATT&CK group profiles match those profiles at 55-80% precision, bounding how discriminative a TTP profile can be.",
+  "content_type": "paper"
+ },
+ {
+  "n": 70,
+  "id": "tesseract-eliminating-experimental-bias-in-malware-classification-across-space-a",
+  "title": "TESSERACT: Eliminating Experimental Bias in Malware Classification across Space and Time",
+  "url": "https://arxiv.org/abs/1807.07838",
+  "tier": "institutional",
+  "summary": "Defines temporal and spatial bias in malware-classification evaluation and the AUT decay metric; constrains the sample-time axis but assumes a fixed binary label space throughout.",
+  "content_type": "paper"
+ },
+ {
+  "n": 71,
+  "id": "the-cti-echo-chamber-vendor-fragmentation-as-the-confounder-the-drift-thesis-mus",
+  "title": "The CTI Echo Chamber \u2014 vendor fragmentation as the confounder the drift thesis must separate",
+  "url": "https://arxiv.org/abs/2602.17458",
+  "tier": "institutional",
+  "summary": "13,308 reports over 20 years: 88% niche vendors, siloed geographic/sectoral bias, low inter-vendor overlap, TTPs reported rarely and by few \u2014 source-composition drift is a third term the genuine-vs-bookkeeping split omits.",
+  "content_type": "paper"
+ },
+ {
+  "n": 72,
+  "id": "tomczak-et-al-2018-gene-ontology-evolution-changes-the-interpretation-of-biologi",
+  "title": "Tomczak et al. (2018): Gene Ontology evolution changes the interpretation of biological experiments",
+  "url": "https://www.nature.com/articles/s41598-018-23395-2",
+  "tier": "institutional",
+  "summary": "Canonical prior art: holding the pipeline fixed and sweeping GO versions shows enrichment conclusions are version-dependent - the direct methodological template for the ATT&CK drift experiment.",
+  "content_type": "paper"
+ },
+ {
+  "n": 73,
+  "id": "transcend-and-transcendent-conformal-evaluation-and-rejection-under-concept-drif",
+  "title": "Transcend and Transcendent: Conformal Evaluation and Rejection under Concept Drift",
+  "url": "https://arxiv.org/abs/2010.03856",
+  "tier": "institutional",
+  "summary": "Conformal rejection quarantines samples unlike the training distribution; handles new-class arrival in the data but has no mechanism for labels being deprecated, merged, split or redefined.",
+  "content_type": "paper"
+ },
+ {
+  "n": 74,
+  "id": "ttpdrill-acsac-2017-the-pre-sub-technique-baseline-everyone-still-compares-again",
+  "title": "TTPDrill (ACSAC 2017): the pre-sub-technique baseline everyone still compares against",
+  "url": "https://dl.acm.org/doi/10.1145/3134600.3134646",
+  "tier": "institutional",
+  "summary": "TTPDrill's 82%+ precision/recall was measured on a 2017 derived ontology, yet is still tabulated beside F1 scores computed on v12/v13 hierarchical label spaces.",
+  "content_type": "paper"
+ },
+ {
+  "n": 75,
+  "id": "ttphunter-ttpxhunter-50-then-193-ttp-classes-no-declared-attck-release",
+  "title": "TTPHunter / TTPXHunter: 50 then 193 TTP classes, no declared ATT&CK release",
+  "url": "https://arxiv.org/abs/2403.03267",
+  "tier": "institutional",
+  "summary": "TTPHunter trains on 50 TTPs, TTPXHunter on 193 over 10,906 sentences; neither declares an ATT&CK version, and TTPXHunter is the extractor feeding the CAPTAIN attribution system.",
+  "content_type": "paper"
+ },
+ {
+  "n": 76,
+  "id": "ttprint-arxiv-260525836-tram-clean-fork-and-verification-against-official-attck",
+  "title": "TTPrint (arXiv 2605.25836): TRAM-Clean fork and verification against official ATT&CK descriptions",
+  "url": "https://arxiv.org/abs/2605.25836",
+  "tier": "institutional",
+  "summary": "Second independent 2026 rejection of TRAM's labels, shipping a cleaned TRAM-Clean plus a document-level TTPrint-Bench (Macro-F1 76.48 and 87.39); its verification stage adjudicates candidate techniques against the official ATT&CK description, making its scores explicitly release-conditional.",
+  "content_type": "paper"
+ },
+ {
+  "n": 77,
+  "id": "virkud-et-al-usenix-security-2024-attck-coverage-is-not-comparable-across-produc",
+  "title": "Virkud et al. (USENIX Security 2024): ATT&CK coverage is not comparable across products \u2014 recomputed from the public artefact",
+  "url": "https://www.usenix.org/conference/usenixsecurity24/presentation/virkud",
+  "tier": "institutional",
+  "summary": "USENIX Sec'24: products disagree on the ATT&CK label for the same threat 51% of the time; recomputed from artefact repo: Splunk 38.9%, Elastic 37.5%, Sigma 57.8% of ATT&CK v11, pairwise Jaccard ~0.5, parents 79.6% vs sub-techniques 60.2%, and live Sigma rules still tagging revoked T1035/T1043/T1050.",
+  "content_type": "paper"
+ },
+ {
+  "n": 78,
+  "id": "when-benchmarks-age-quantifying-answer-key-decay-in-static-benchmarks",
+  "title": "When Benchmarks Age: quantifying answer-key decay in static benchmarks",
+  "url": "https://arxiv.org/abs/2510.07238",
+  "tier": "institutional",
+  "summary": "Measures benchmark staleness with Dataset Drift Score, Evaluation Misleading Rate and Temporal Alignment Gap; the methodological template for measuring CTI benchmark decay under ATT&CK versioning.",
+  "content_type": "paper"
+ },
+ {
+  "n": 79,
+  "id": "zibak-et-al-threat-intelligence-quality-dimensions-for-research-and-practice-dtr",
+  "title": "Zibak et al. \u2014 Threat Intelligence Quality Dimensions for Research and Practice (DTRAP 2022)",
+  "url": "https://dl.acm.org/doi/full/10.1145/3484202",
+  "tier": "institutional",
+  "summary": "Delphi study with ~30 experts fixes seven CTI quality dimensions (accuracy, actionability, interoperability, provenance, relevance, reliability, timeliness) \u2014 none covers label-vocabulary versioning; no concrete metrics exist in practice.",
+  "content_type": "paper"
+ },
+ {
+  "n": 80,
+  "id": "attck-is-an-ontology-not-a-taxonomy-the-definitional-defence-and-the-ontology-ev",
+  "title": "'ATT&CK is an ontology, not a taxonomy' \u2014 the definitional defence and the ontology-evolution prior-art objection",
+  "url": "https://www.tripwire.com/state-of-security/attck-structure-ontology",
+  "tier": "practitioner",
+  "summary": "If ATT&CK is an ontology then evolution is expected and ontology-versioning research already covers it; the counter is that ATT&CK's change contract (revoked-by + deprecated flag) is far weaker than OWL's.",
+  "content_type": "blog"
+ },
+ {
+  "n": 81,
+  "id": "dettct-omits-the-attck-version-from-generated-navigator-layers-by-default-and-st",
+  "title": "DeTT&CT omits the ATT&CK version from generated Navigator layers by default, and stamps its own build constant when it does not",
+  "url": "https://github.com/rabobank-cdc/DeTTECT",
+  "tier": "practitioner",
+  "summary": "Source-verified: DeTT&CT writes versions.attack only if the user passes includeAttackVersion=True (default off), the value is a hardcoded ATTACK_VERSION='19.1' build constant not data provenance, Navigator truncates it to '19' on load, and the technique-administration YAML that holds the real scores has no ATT&CK version field at all.",
+  "content_type": "docs"
+ },
+ {
+  "n": 82,
+  "id": "forrester-a-100-attck-evaluations-claim-is-a-red-flag-selective-presentation-unr",
+  "title": "Forrester: a 100% ATT&CK Evaluations claim is a red flag \u2014 selective presentation, unrealistic configuration, competition framing",
+  "url": "https://www.forrester.com/blogs/dont-trust-vendor-claims-about-getting-100-on-the-mitre-attck-evaluations",
+  "tier": "practitioner",
+  "summary": "Analyst-firm critique naming three mechanisms behind 100% coverage claims, and arguing per-technique counting is a category error because techniques like T1059.004 are often benign.",
+  "content_type": "blog"
+ },
+ {
+  "n": 83,
+  "id": "how-coverage-layers-are-actually-built-ad-hoc-scoring-schemes-over-a-data-source",
+  "title": "How coverage layers are actually built: ad hoc scoring schemes over a data-source mapping that is itself version-dependent",
+  "url": "https://blog.reconinfosec.com/automating-coverage-analysis-with-att-ck-navigator",
+  "tier": "practitioner",
+  "summary": "Practitioner recipes score layers binary / TTP-vs-IOC / confidence-banded with no declared semantics, and build the 'could be detected' denominator from MITRE's technique-to-data-source mapping \u2014 a second versioned artefact, remodelled at ATT&CK v10, that no recipe pins.",
+  "content_type": "blog"
+ },
+ {
+  "n": 84,
+  "id": "practitioner-evidence-on-coverage-claim-fragility-red-canary-remapping-cost-elas",
+  "title": "Practitioner evidence on coverage-claim fragility: Red Canary remapping cost, Elastic v19 remap docs, and the counting-rules-not-coverage critique",
+  "url": "https://redcanary.com/blog/threat-detection/mitre-sub-techniques/",
+  "tier": "practitioner",
+  "summary": "Red Canary painstakingly remapped thousands of behavioural analytics after sub-techniques; vendors still ship v19 remap docs; and coverage heatmaps are criticised as counting tagged rules rather than protection - a metric that moves whenever the ID space moves.",
+  "content_type": "blog"
+ },
+ {
+  "n": 85,
+  "id": "vendor-attck-coverage-claims-100-of-what-exactly-and-the-five-ways-a-coverage-nu",
+  "title": "Vendor ATT&CK coverage claims: '100% of what, exactly?' and the five ways a coverage number is padded",
+  "url": "https://www.attackiq.com/2026/03/10/what-does-mitre-attack-coverage-really-mean/",
+  "tier": "practitioner",
+  "summary": "Vendor and counter-vendor commentary enumerating scope manipulations behind coverage claims (partner integrations, sibling products, endpoint-centric scope, zero-filled non-participants); notably the market contests scope on four axes and has not noticed the version axis.",
+  "content_type": "blog"
+ },
+ {
+  "n": 86,
+  "id": "vmray-stix-and-taxii-explained-why-a-valid-feed-still-might-not-be-usable",
+  "title": "VMRay \u2014 STIX and TAXII Explained: Why a Valid Feed Still Might Not Be Usable",
+  "url": "https://www.vmray.com/stix-taxii-explianed/",
+  "tier": "practitioner",
+  "summary": "Practitioner account that schema validity does not imply usability; the only versioning concern raised is STIX object versioning/update handling, not versioning of the label vocabulary.",
+  "content_type": "article"
+ },
+ {
+  "n": 87,
+  "id": "practitioner-critique-the-attck-heatmap-counts-rules-not-coverage-and-three-inco",
+  "title": "Practitioner critique: the ATT&CK heatmap counts rules, not coverage, and three incompatible denominators now circulate",
+  "url": "https://dev.to/chrisray/your-attck-heatmap-is-counting-rules-not-coverage-2gh3",
+  "tier": "commentary",
+  "summary": "Field articulation of the denominator problem: heatmaps count techniques with at least one mapped rule, a quantity unrelated to whether an alert fires; techniques vs implementations vs security-layers-per-technique are three non-inter-convertible denominators now in use.",
+  "content_type": "blog"
+ }
+]
