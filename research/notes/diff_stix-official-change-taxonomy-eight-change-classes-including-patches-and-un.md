@@ -5,16 +5,17 @@ id: diff_stix-official-change-taxonomy-eight-change-classes-including-patches-an
 tags:
 - attack-ontology-drift-cti-85bc51
 - attack-versioning
+- quarantined-metadata-mismatch
 created: '2026-09-12T13:24:27.278827Z'
+updated: '2026-09-12T13:45:45.718728Z'
 source: https://github.com/mitre-attack/mitreattack-python/blob/master/mitreattack/diffStix/README.md
-status: draft
+status: deprecated
 type: note
 tier: institutional
 content_type: docs
-deprecated: false
-summary: MITRE's own changelog generator defines additions, major/minor/other version
-  changes, patches, revocations, deprecations and deletions - conceding that x_mitre_version
-  is historically inconsistent and that content can be patched with no version bump.
+deprecated: true
+summary: 'QUARANTINED: front matter and body describe different sources; excluded
+  from the corpus (see data/results/e15_vault_integrity.json).'
 ---
 
 ## What this is

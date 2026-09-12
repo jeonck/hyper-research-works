@@ -10,6 +10,11 @@ import json
 import subprocess
 from pathlib import Path
 
+def _vkey(v: str) -> tuple:
+    """Version ordering. Plain string comparison puts "9.0" above "19.2"."""
+    return tuple(int(x) for x in v.split("."))
+
+
 ROOT = Path(__file__).resolve().parents[1]
 RES = ROOT / "data" / "results"
 TMP = Path("/tmp/claude-0/-home-user-hyper-research-works/"
@@ -178,7 +183,7 @@ def main() -> None:
          "measurement", "Controlled experiment isolating drift from intelligence change")
 
     # --- E6 coverage ---------------------------------------------------
-    tgt = max(r["w"] for r in e6["portfolios"])
+    tgt = max((r["w"] for r in e6["portfolios"]), key=_vkey)
     rows = [r for r in e6["portfolios"] if r["w"] == tgt and r["relation"] == "mitigates"]
     lines = [f"# E6 — coverage claims under a frozen capability (re-measured at v{tgt})", "",
              "Fidelity: PRIMARY ARTEFACT (computed). The capability never changes; only",

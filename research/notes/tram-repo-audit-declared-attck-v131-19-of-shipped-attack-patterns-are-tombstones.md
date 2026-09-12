@@ -5,16 +5,17 @@ id: tram-repo-audit-declared-attck-v131-19-of-shipped-attack-patterns-are-tombst
 tags:
 - attack-ontology-drift-cti-85bc51
 - ttp-extraction
+- quarantined-metadata-mismatch
 created: '2026-09-12T13:20:59.337494Z'
+updated: '2026-09-12T13:45:46.704738Z'
 source: https://github.com/center-for-threat-informed-defense/tram
-status: draft
+status: deprecated
 type: note
 tier: ground_truth
 content_type: dataset
-deprecated: false
-summary: TRAM declares ATT&CK v13; its bundled v13.1 STIX has 750 attack-patterns
-  of which 131 revoked + 12 deprecated (19.1% tombstones), and TRAM2 trains on only
-  50 of 607 live labels.
+deprecated: true
+summary: 'QUARANTINED: front matter and body describe different sources; excluded
+  from the corpus (see data/results/e15_vault_integrity.json).'
 ---
 
 ## What this is

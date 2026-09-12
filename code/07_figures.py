@@ -10,6 +10,11 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
 
+def _vkey(v: str) -> tuple:
+    """Version ordering. Plain string comparison puts "9.0" above "19.2"."""
+    return tuple(int(x) for x in v.split("."))
+
+
 ROOT = Path(__file__).resolve().parents[1]
 RES = ROOT / "data" / "results"
 FIG = ROOT / "paper" / "figures"
@@ -167,7 +172,8 @@ def fig6_coverage(e6):
     rows = [r for r in e6["portfolios"] if r["w"] == "19.2" and r["relation"] == "mitigates"]
     if not rows:
         rows = [r for r in e6["portfolios"]
-                if r["w"] == max(x["w"] for x in e6["portfolios"]) and r["relation"] == "mitigates"]
+                if r["w"] == max((x["w"] for x in e6["portfolios"]), key=_vkey)
+                and r["relation"] == "mitigates"]
     fig, ax = plt.subplots(1, 2, figsize=(6.4, 2.4))
     xs = [f"v{r['v']}" for r in rows]
     ax[0].plot(xs, [100 * r["coverage_at_v"] for r in rows], "o-", color=C["a"], ms=3,

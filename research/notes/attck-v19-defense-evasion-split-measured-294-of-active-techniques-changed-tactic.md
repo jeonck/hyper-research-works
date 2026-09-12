@@ -5,16 +5,17 @@ id: attck-v19-defense-evasion-split-measured-294-of-active-techniques-changed-ta
 tags:
 - attack-ontology-drift-cti-85bc51
 - attack-versioning
+- quarantined-metadata-mismatch
 created: '2026-09-12T13:24:01.266049Z'
+updated: '2026-09-12T13:45:46.459291Z'
 source: https://github.com/mitre-attack/attack-stix-data
-status: draft
+status: deprecated
 type: note
 tier: ground_truth
 content_type: dataset
-deprecated: false
-summary: 198 of 674 shared active techniques lost defense-evasion in one release (144
-  to stealth, 41 to defense-impairment); 13 of 17 v19 revocations are the T1562 family,
-  with T1562/.001/.006 all merging into T1685 - a non-invertible mapping.
+deprecated: true
+summary: 'QUARANTINED: front matter and body describe different sources; excluded
+  from the corpus (see data/results/e15_vault_integrity.json).'
 ---
 
 ## What this is

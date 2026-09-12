@@ -1,11 +1,11 @@
 [
  {
   "n": 1,
-  "id": "attack-stix-data-usagemd-normative-deprecated-vs-revoked-semantics-and-the-non-d",
-  "title": "attack-stix-data USAGE.md: normative deprecated-vs-revoked semantics and the non-destructive retirement contract",
+  "id": "attcks-published-retirement-contract-read-from-the-artefact",
+  "title": "ATT&CK's published retirement contract, read from the artefact",
   "url": "https://github.com/mitre-attack/attack-stix-data/blob/master/USAGE.md",
   "tier": "ground_truth",
-  "summary": "MITRE's normative guide: revoked = replaced with a revoked-by pointer, deprecated = withdrawn with no replacement, both retained in the bundle for backward compatibility with filtering left to the consumer; the unversioned bundle is a moving target.",
+  "summary": "Primary-artefact replacement for a quarantined note",
   "content_type": "docs"
  },
  {
@@ -37,6 +37,15 @@
  },
  {
   "n": 5,
+  "id": "ctid-attck-sync",
+  "title": "CTID ATT&CK Sync",
+  "url": "what it publishes, read from the repository:https://github.com/center-for-threat-informed-defense/attack-sync",
+  "tier": "ground_truth",
+  "summary": "Primary-artefact replacement for a quarantined note",
+  "content_type": "docs"
+ },
+ {
+  "n": 6,
   "id": "measured-43x-label-space-growth-between-ctibench-and-athenabench-is-96-pre-exist",
   "title": "Measured: 4.3x label-space growth between CTIBench and AthenaBench is ~96% pre-existing catalogue, only 6 new top-level techniques",
   "url": "https://github.com/Athena-Software-Group/athenabench",
@@ -45,7 +54,16 @@
   "content_type": "dataset"
  },
  {
-  "n": 6,
+  "n": 7,
+  "id": "mitres-own-change-taxonomy-read-from-diffstix-source",
+  "title": "MITRE's own change taxonomy, read from diffStix source",
+  "url": "https://github.com/mitre-attack/mitreattack-python",
+  "tier": "ground_truth",
+  "summary": "Primary-artefact replacement for a quarantined note",
+  "content_type": "docs"
+ },
+ {
+  "n": 8,
   "id": "rcatt-repo-audit-a-2019-era-flat-attck-label-space-half-of-it-revoked-by-v13",
   "title": "rcATT repo audit: a 2019-era flat ATT&CK label space, half of it revoked by v13",
   "url": "https://github.com/vlegoy/rcATT",
@@ -54,16 +72,16 @@
   "content_type": "dataset"
  },
  {
-  "n": 7,
-  "id": "the-revoked-by-crosswalk-is-a-function-but-not-a-bijection-149-edges-8-many-to-o",
-  "title": "The revoked-by crosswalk is a function but not a bijection: 149 edges, 8 many-to-one merges, 3 multi-hop chains, 12 unmappable deprecations",
+  "n": 9,
+  "id": "silent-technique-description-rewriting-1366-edits-over-8359-pairs-163-494-with-n",
+  "title": "Silent technique-description rewriting: 1366 edits over 8359 pairs (16.3%), 494 with no version bump",
   "url": "https://github.com/mitre-attack/attack-stix-data",
   "tier": "ground_truth",
-  "summary": "Forward migration is mechanical and total, backward migration is provably lossy: 8 targets absorb 12 predecessor IDs, 3 chains need transitive closure to a fixed point, and 12 deprecated techniques have no successor at all.",
+  "summary": "Across 18 major transitions 16.3% of carried-over techniques had descriptions rewritten; x_mitre_version fails both ways (1072 bumps with no text change, 494 text changes with no bump); v2.0-v3.0 rewrote 100% of descriptions at median similarity 0.679.",
   "content_type": "dataset"
  },
  {
-  "n": 8,
+  "n": 10,
   "id": "tumeteormitre-ttp-mapping-audit-a-declared-v120-remap-that-still-leaks-pre-v7-re",
   "title": "tumeteor/mitre-ttp-mapping audit: a declared v12.0 remap that still leaks pre-v7 revoked IDs",
   "url": "https://github.com/tumeteor/mitre-ttp-mapping",
@@ -72,7 +90,7 @@
   "content_type": "dataset"
  },
  {
-  "n": 9,
+  "n": 11,
   "id": "a-comprehensive-survey-of-threat-intelligence-research-a-measurement-based-study",
   "title": "A Comprehensive Survey of Threat Intelligence Research: A Measurement-Based Study (ACM CSUR 2025)",
   "url": "https://dl.acm.org/doi/10.1145/3772280",
@@ -81,7 +99,7 @@
   "content_type": "paper"
  },
  {
-  "n": 10,
+  "n": 12,
   "id": "apt-attribution-survey-jisa-2025-taxonomy-by-artefact-type-not-by-ontology-versi",
   "title": "APT attribution survey (JISA 2025): taxonomy by artefact type, not by ontology version",
   "url": "https://doi.org/10.1016/j.jisa.2025.104076",
@@ -90,7 +108,7 @@
   "content_type": "paper"
  },
  {
-  "n": 11,
+  "n": 13,
   "id": "athenabench-arxiv-251101144-dynamic-live-api-benchmarking-as-the-fields-answer-t",
   "title": "AthenaBench (arXiv 2511.01144): dynamic live-API benchmarking as the field's answer to CTIBench staleness",
   "url": "https://arxiv.org/abs/2511.01144",
@@ -99,7 +117,7 @@
   "content_type": "paper"
  },
  {
-  "n": 12,
+  "n": 14,
   "id": "attck-design-and-philosophy-inclusion-criteria-are-explicitly-non-stationary-and",
   "title": "ATT&CK Design and Philosophy: inclusion criteria are explicitly non-stationary and abstraction level is an interpretive standard",
   "url": "https://attack.mitre.org/docs/ATTACK_Design_and_Philosophy_March_2020.pdf",
@@ -108,7 +126,7 @@
   "content_type": "paper"
  },
  {
-  "n": 13,
+  "n": 15,
   "id": "attck-navigator-layer-file-format-the-attck-content-version-is-an-optional-field",
   "title": "ATT&CK Navigator layer file format: the ATT&CK content version is an optional field that silently defaults to current",
   "url": "https://github.com/mitre-attack/attack-navigator/blob/master/layers/spec/v4.5/layerformat.md",
@@ -117,7 +135,7 @@
   "content_type": "docs"
  },
  {
-  "n": 14,
+  "n": 16,
   "id": "attck-navigator-layer-upgrade-version-stamping-is-mandatory-migration-is-manual",
   "title": "ATT&CK Navigator layer upgrade: version stamping is mandatory, migration is manual, irreversible and unaudited",
   "url": "https://github.com/mitre-attack/attack-navigator/blob/master/USAGE.md",
@@ -126,16 +144,7 @@
   "content_type": "docs"
  },
  {
-  "n": 15,
-  "id": "attck-v19-announcement-defense-evasion-split-into-stealth-and-impair-defenses-t1",
-  "title": "ATT&CK v19 announcement: Defense Evasion split into Stealth and Impair Defenses, T1562 promoted technique-to-tactic",
-  "url": "https://medium.com/mitre-attack/attack-v19-ff329cb65d66",
-  "tier": "institutional",
-  "summary": "v19 (28 Apr 2026) dissolved TA0005 into Stealth and Impair Defenses and elevated T1562 from technique to tactic - a cross-layer promotion that no ID crosswalk can express - while shipping genuine new AI/social-engineering content in the same release.",
-  "content_type": "blog"
- },
- {
-  "n": 16,
+  "n": 17,
   "id": "attackseqbench-arxiv-250303170-sequence-level-attck-reasoning-and-the-tactic-rea",
   "title": "AttackSeqBench (arXiv 2503.03170): sequence-level ATT&CK reasoning and the tactic-reassignment drift surface",
   "url": "https://arxiv.org/abs/2503.03170",
@@ -144,7 +153,7 @@
   "content_type": "paper"
  },
  {
-  "n": 17,
+  "n": 18,
   "id": "audit-six-of-eight-sample-layers-shipped-in-mitres-own-navigator-repository-carr",
   "title": "Audit: six of eight sample layers shipped in MITRE's own Navigator repository carry no ATT&CK version",
   "url": "https://github.com/mitre-attack/attack-navigator/tree/master/layers/samples",
@@ -153,7 +162,7 @@
   "content_type": "docs"
  },
  {
-  "n": 18,
+  "n": 19,
   "id": "avclass-alias-resolution-and-label-normalization-as-prior-art-for-a-migration-ma",
   "title": "AVClass: alias resolution and label normalization as prior art for a migration map",
   "url": "https://software.imdea.org/~juanca/papers/avclass_raid16.pdf",
@@ -162,7 +171,7 @@
   "content_type": "paper"
  },
  {
-  "n": 19,
+  "n": 20,
   "id": "beyond-single-reports-intra-version-technique-confusability-as-a-rival-explanati",
   "title": "Beyond Single Reports \u2014 intra-version technique confusability as a rival explanation for label instability",
   "url": "https://arxiv.org/abs/2604.07470",
@@ -171,7 +180,7 @@
   "content_type": "paper"
  },
  {
-  "n": 20,
+  "n": 21,
   "id": "boundary-synthesis-where-concept-drift-literature-stops-and-ontology-drift-begin",
   "title": "Boundary synthesis: where concept-drift literature stops and ontology drift begins",
   "url": "",
@@ -180,7 +189,7 @@
   "content_type": "article"
  },
  {
-  "n": 21,
+  "n": 22,
   "id": "cade-detecting-and-explaining-concept-drift-samples-for-security-applications",
   "title": "CADE: Detecting and Explaining Concept Drift Samples for Security Applications",
   "url": "https://www.usenix.org/conference/usenixsecurity21/presentation/yang-limin",
@@ -189,7 +198,7 @@
   "content_type": "paper"
  },
  {
-  "n": 22,
+  "n": 23,
   "id": "captain-chasing-the-shadows-ttp-sequence-attribution-with-no-declared-attck-vers",
   "title": "CAPTAIN / Chasing the Shadows: TTP-sequence attribution with no declared ATT&CK version",
   "url": "https://arxiv.org/abs/2409.16400",
@@ -198,7 +207,7 @@
   "content_type": "paper"
  },
  {
-  "n": 23,
+  "n": 24,
   "id": "class-incremental-learning-surveys-the-additive-quadrant-of-label-space-change",
   "title": "Class-Incremental Learning surveys: the additive quadrant of label-space change",
   "url": "https://arxiv.org/abs/2302.03648",
@@ -207,7 +216,7 @@
   "content_type": "paper"
  },
  {
-  "n": 24,
+  "n": 25,
   "id": "cleaning-the-nvd-and-the-security-knowledge-base-data-quality-genre",
   "title": "Cleaning the NVD and the security knowledge-base data-quality genre",
   "url": "https://arxiv.org/pdf/2006.15074",
@@ -216,7 +225,7 @@
   "content_type": "paper"
  },
  {
-  "n": 25,
+  "n": 26,
   "id": "conto-diff-hartung-gross-rahm-complex-change-operations-as-evolution-mappings-be",
   "title": "COnto-Diff (Hartung, Gross, Rahm): complex change operations as evolution mappings between ontology versions",
   "url": "https://www.sciencedirect.com/science/article/pii/S1532046412000627",
@@ -225,7 +234,7 @@
   "content_type": "paper"
  },
  {
-  "n": 26,
+  "n": 27,
   "id": "cti-quality-assessment-cluster-automated-dynamic-assessment-misp-weighted-criter",
   "title": "CTI Quality Assessment Cluster \u2014 automated dynamic assessment, MISP weighted criteria, completeness/timeliness of artefacts, STIX graphs",
   "url": "https://www.sciencedirect.com/science/article/pii/S0167404824003845",
@@ -234,7 +243,7 @@
   "content_type": "paper"
  },
  {
-  "n": 27,
+  "n": 28,
   "id": "cti-realm-arxiv-260313517-telemetry-grounded-detection-evaluation-as-the-only-st",
   "title": "CTI-REALM (arXiv 2603.13517): telemetry-grounded detection evaluation as the only structurally drift-resistant CTI benchmark design",
   "url": "https://arxiv.org/abs/2603.13517",
@@ -243,7 +252,7 @@
   "content_type": "paper"
  },
  {
-  "n": 28,
+  "n": 29,
   "id": "ctiarena-to-cticonnect-arxiv-251011974-691-to-1860-qa-pairs-under-one-identifier",
   "title": "CTIArena to CTIConnect (arXiv 2510.11974): 691 to 1,860 QA pairs under one identifier, same 9-task taxonomy",
   "url": "https://arxiv.org/abs/2510.11974",
@@ -252,22 +261,13 @@
   "content_type": "paper"
  },
  {
-  "n": 29,
+  "n": 30,
   "id": "ctibench-neurips-2024-authoritative-source-design-treats-attck-as-fixed-has-a-ti",
   "title": "CTIBench (NeurIPS 2024): authoritative-source design treats ATT&CK as fixed, has a time-controlled split for CVEs but none for ATT&CK",
   "url": "https://proceedings.neurips.cc/paper_files/paper/2024/file/5acd3c628aa1819fbf07c39ef73e7285-Paper-Datasets_and_Benchmarks_Track.pdf",
   "tier": "institutional",
   "summary": "CTIBench justifies its ATT&CK/NVD/CWE sourcing on reproducibility grounds while treating those versioned ontologies as fixed; it builds a 2021 time-controlled comparison split for CVE data but no equivalent for its 60-item ATT&CK task, and reports persistent LLM knowledge gaps specifically in ATT&CK.",
   "content_type": "paper"
- },
- {
-  "n": 30,
-  "id": "ctid-attck-sync-institutional-admission-that-version-drift-invalidates-dependent",
-  "title": "CTID ATT&CK Sync: institutional admission that version drift invalidates dependent projects, but tooling not measurement",
-  "url": "https://ctid.mitre.org/projects/attack-sync/",
-  "tier": "institutional",
-  "summary": "MITRE's own centre states dependent projects are pinned to whatever ATT&CK version was current at development time and quickly become out-of-date; ATT&CK Sync flags affected mappings but publishes no quantification of corpus impact or analytic performance change.",
-  "content_type": "docs"
  },
  {
   "n": 31,
@@ -298,15 +298,6 @@
  },
  {
   "n": 34,
-  "id": "diff_stix-official-change-taxonomy-eight-change-classes-including-patches-and-un",
-  "title": "diff_stix official change taxonomy: eight change classes including patches and unintended version changes",
-  "url": "https://github.com/mitre-attack/mitreattack-python/blob/master/mitreattack/diffStix/README.md",
-  "tier": "institutional",
-  "summary": "MITRE's own changelog generator defines additions, major/minor/other version changes, patches, revocations, deprecations and deletions - conceding that x_mitre_version is historically inconsistent and that content can be patched with no version bump.",
-  "content_type": "docs"
- },
- {
-  "n": 35,
   "id": "diffstix-mitres-own-machine-readable-ontology-drift-ledger-and-the-errors-it-def",
   "title": "diffStix: MITRE's own machine-readable ontology-drift ledger \u2014 and the errors it defends against",
   "url": "https://github.com/mitre-attack/mitreattack-python/tree/master/mitreattack/diffStix",
@@ -315,7 +306,7 @@
   "content_type": "docs"
  },
  {
-  "n": 36,
+  "n": 35,
   "id": "dos-and-donts-of-machine-learning-in-computer-security-arp-et-al",
   "title": "Dos and Don'ts of Machine Learning in Computer Security (Arp et al.)",
   "url": "https://www.usenix.org/conference/usenixsecurity22/presentation/arp",
@@ -324,7 +315,7 @@
   "content_type": "paper"
  },
  {
-  "n": 37,
+  "n": 36,
   "id": "evidence-driven-analysis-of-threat-information-sharing-challenges-for-ics-arxiv",
   "title": "Evidence-Driven Analysis of Threat Information Sharing Challenges for ICS (arXiv 2512.18714 / Computers & Security 2026)",
   "url": "https://arxiv.org/abs/2512.18714",
@@ -333,7 +324,7 @@
   "content_type": "paper"
  },
  {
-  "n": 38,
+  "n": 37,
   "id": "evolution-of-vocabulary-terms-in-knowledge-graphs-vocabulary-churn-vs-instance-d",
   "title": "Evolution of vocabulary terms in knowledge graphs: vocabulary churn vs instance-data usage as two time series",
   "url": "https://arxiv.org/pdf/1710.00232",
@@ -342,7 +333,7 @@
   "content_type": "paper"
  },
  {
-  "n": 39,
+  "n": 38,
   "id": "feedmeter-evaluating-the-quality-of-community-driven-threat-intelligence-2024",
   "title": "FeedMeter \u2014 Evaluating the Quality of Community-Driven Threat Intelligence (2024)",
   "url": "https://www.scitepress.org/Papers/2024/123576/123576.pdf",
@@ -351,7 +342,7 @@
   "content_type": "paper"
  },
  {
-  "n": 40,
+  "n": 39,
   "id": "fragmentation-of-cvss-scores-in-the-nvd-cross-version-incomparability-in-a-secur",
   "title": "Fragmentation of CVSS scores in the NVD: cross-version incomparability in a security vocabulary",
   "url": "https://www.sciencedirect.com/science/article/abs/pii/S0167404826001549",
@@ -360,7 +351,7 @@
   "content_type": "paper"
  },
  {
-  "n": 41,
+  "n": 40,
   "id": "geras-schreck-the-big-beast-to-tackle-practices-in-quality-assurance-for-cti-rai",
   "title": "Geras & Schreck \u2014 The Big Beast to Tackle: Practices in Quality Assurance for CTI (RAID 2024)",
   "url": "https://dl.acm.org/doi/10.1145/3678890.3678903",
@@ -369,7 +360,7 @@
   "content_type": "paper"
  },
  {
-  "n": 42,
+  "n": 41,
   "id": "griffioen-booij-doerr-quality-evaluation-of-cyber-threat-intelligence-feeds-acns",
   "title": "Griffioen, Booij & Doerr \u2014 Quality Evaluation of Cyber Threat Intelligence Feeds (ACNS 2020)",
   "url": "https://link.springer.com/chapter/10.1007/978-3-030-57878-7_14",
@@ -378,7 +369,7 @@
   "content_type": "paper"
  },
  {
-  "n": 43,
+  "n": 42,
   "id": "increttp-attck-version-updates-framed-as-concept-drift-and-why-incremental-learn",
   "title": "IncreTTP: ATT&CK version updates framed as concept drift \u2014 and why incremental learning is not enough",
   "url": "https://link.springer.com/chapter/10.1007/978-3-032-23450-6_2",
@@ -387,7 +378,7 @@
   "content_type": "paper"
  },
  {
-  "n": 44,
+  "n": 43,
   "id": "leco-continual-learning-with-evolving-class-ontologies-neurips-2022",
   "title": "LECO: Continual Learning with Evolving Class Ontologies (NeurIPS 2022)",
   "url": "https://arxiv.org/abs/2210.04993",
@@ -396,7 +387,7 @@
   "content_type": "paper"
  },
  {
-  "n": 45,
+  "n": 44,
   "id": "legoy-et-al-2020-automated-retrieval-of-attck-tactics-and-techniques-rcatt-paper",
   "title": "Legoy et al. 2020 \u2014 Automated Retrieval of ATT&CK Tactics and Techniques (rcATT paper)",
   "url": "https://arxiv.org/abs/2004.14322",
@@ -405,7 +396,7 @@
   "content_type": "paper"
  },
  {
-  "n": 46,
+  "n": 45,
   "id": "li-et-al-reading-the-tea-leaves-a-comparative-analysis-of-threat-intelligence-us",
   "title": "Li et al. \u2014 Reading the Tea Leaves: A Comparative Analysis of Threat Intelligence (USENIX Security 2019)",
   "url": "https://www.usenix.org/conference/usenixsecurity19/presentation/li",
@@ -414,16 +405,7 @@
   "content_type": "paper"
  },
  {
-  "n": 47,
-  "id": "mitre-attck-changelog-version-history-and-release-cadence-semiannual-majors-iner",
-  "title": "MITRE ATT&CK changelog, version history and release cadence: semiannual majors, inert minors, and out-of-band agile Group/Software updates",
-  "url": "https://attack.mitre.org/resources/changelog.html",
-  "tier": "institutional",
-  "summary": "Official cadence is twice-yearly majors with minors carrying only corrections; deprecation is an editorial scope judgement not evidence behaviour ceased; agile out-of-band Group/Software/Campaign updates mean a release tag alone no longer pins the dataset.",
-  "content_type": "docs"
- },
- {
-  "n": 48,
+  "n": 46,
   "id": "mitre-attck-evaluations-a-governed-measurement-protocol-that-refuses-to-emit-a-c",
   "title": "MITRE ATT&CK Evaluations: a governed measurement protocol that refuses to emit a coverage score, and drifts round to round",
   "url": "https://evals.mitre.org/methodology-overview/",
@@ -432,7 +414,7 @@
   "content_type": "docs"
  },
  {
-  "n": 49,
+  "n": 47,
   "id": "mitre-attck-state-of-the-art-and-way-forward-acm-csur-2025-the-novelty-bar-an-sc",
   "title": "MITRE ATT&CK: State of the Art and Way Forward (ACM CSUR 2025) \u2014 the novelty bar an SCI contribution must clear",
   "url": "https://dl.acm.org/doi/10.1145/3687300",
@@ -441,7 +423,7 @@
   "content_type": "paper"
  },
  {
-  "n": 50,
+  "n": 48,
   "id": "mitre-diffstix-changelog_helper-attcks-own-change-taxonomy-patch-detection-and-d",
   "title": "MITRE diffStix changelog_helper: ATT&CK's own change taxonomy, patch detection, and dangling-revocation handling",
   "url": "https://github.com/mitre-attack/mitreattack-python/blob/master/mitreattack/diffStix/changelog_helper.py",
@@ -450,7 +432,7 @@
   "content_type": "docs"
  },
  {
-  "n": 51,
+  "n": 49,
   "id": "mitres-own-bias-taxonomy-and-the-sightings-ecosystem-top-15-techniques-are-80-of",
   "title": "MITRE's own bias taxonomy and the Sightings Ecosystem: top 15 techniques are >80% of observed events",
   "url": "https://ctid.mitre.org/projects/sightings-ecosystem/",
@@ -459,16 +441,7 @@
   "content_type": "article"
  },
  {
-  "n": 52,
-  "id": "mitres-sub-technique-release-announcement-and-the-jsoncsv-crosswalks-abstraction",
-  "title": "MITRE's sub-technique release announcement and the JSON/CSV crosswalks: abstraction correction, not intelligence growth",
-  "url": "https://medium.com/mitre-attack/attack-with-sub-techniques-is-now-just-attack-8fc20997d8de",
-  "tier": "institutional",
-  "summary": "MITRE framed sub-techniques as fixing technique scope discrepancies and shipped JSON/CSV crosswalks it later had to refine to reduce human intervention and text parsing - the publisher-sanctioned precedent for version pinning plus explicit mapping artefacts.",
-  "content_type": "blog"
- },
- {
-  "n": 53,
+  "n": 50,
   "id": "modern-malware-drift-adaptation-morph-adapt-few-sample-adaptation-still-a-fixed",
   "title": "Modern malware drift adaptation (MORPH, ADAPT, few-sample adaptation): still a fixed vocabulary",
   "url": "https://arxiv.org/pdf/2401.12790",
@@ -477,7 +450,7 @@
   "content_type": "paper"
  },
  {
-  "n": 54,
+  "n": 51,
   "id": "motif-ground-truth-malware-family-labels-and-the-open-unstable-class-set",
   "title": "MOTIF: ground-truth malware family labels and the open, unstable class set",
   "url": "https://arxiv.org/abs/2111.15031",
@@ -486,7 +459,7 @@
   "content_type": "paper"
  },
  {
-  "n": 55,
+  "n": 52,
   "id": "multi-label-attck-classification-arxiv-260618166-tram-annotations-declared-not-g",
   "title": "Multi-label ATT&CK classification (arXiv 2606.18166): TRAM annotations declared not-gold, best open LLM micro-F1 0.22",
   "url": "https://arxiv.org/abs/2606.18166",
@@ -495,7 +468,7 @@
   "content_type": "paper"
  },
  {
-  "n": 56,
+  "n": 53,
   "id": "obo-foundry-identifier-policy-global-uniqueness-no-reuse-and-persistence-as-a-pr",
   "title": "OBO Foundry Identifier Policy: global uniqueness, no reuse, and persistence as a provider obligation",
   "url": "https://obofoundry.org/id-policy.html",
@@ -504,7 +477,7 @@
   "content_type": "policy"
  },
  {
-  "n": 57,
+  "n": 54,
   "id": "obo-foundry-principle-19-stability-of-term-meaning-referent-stability-obsoletion",
   "title": "OBO Foundry Principle 19: Stability of Term Meaning (referent stability, obsoletion mechanics, replaced_by vs consider)",
   "url": "https://obofoundry.org/principles/fp-019-term-stability.html",
@@ -513,7 +486,7 @@
   "content_type": "policy"
  },
  {
-  "n": 58,
+  "n": 55,
   "id": "obo-foundry-principle-4-versioning-version-iris-release-immutability-perpetual-r",
   "title": "OBO Foundry Principle 4: Versioning (version IRIs, release immutability, perpetual resolvability)",
   "url": "https://obofoundry.org/principles/fp-004-versioning.html",
@@ -522,7 +495,7 @@
   "content_type": "policy"
  },
  {
-  "n": 59,
+  "n": 56,
   "id": "ontology-evolution-vs-ontology-versioning-change-management-as-the-core-task-kle",
   "title": "Ontology evolution vs ontology versioning: change management as the core task (Klein, Fensel, Noy, Stojanovic line)",
   "url": "https://www.researchgate.net/publication/37538421_Change_Management_The_Core_Task_of_Ontology_Versioning_and_Evolution",
@@ -531,7 +504,7 @@
   "content_type": "paper"
  },
  {
-  "n": 60,
+  "n": 57,
   "id": "owl-versioning-vocabulary-versioniri-priorversion-backwardcompatiblewith-owldepr",
   "title": "OWL versioning vocabulary: versionIRI, priorVersion, backwardCompatibleWith, owl:deprecated",
   "url": "https://www.w3.org/2007/OWL/wiki/Ontology_Versions",
@@ -540,7 +513,7 @@
   "content_type": "docs"
  },
  {
-  "n": 61,
+  "n": 58,
   "id": "rahman-williams-arxiv221106500-mitigation-coverage-has-a-ceiling-set-by-the-cont",
   "title": "Rahman & Williams (arXiv:2211.06500): mitigation coverage has a ceiling set by the control catalogue, and the ceiling moves with each ATT&CK release",
   "url": "https://arxiv.org/abs/2211.06500",
@@ -549,7 +522,7 @@
   "content_type": "paper"
  },
  {
-  "n": 62,
+  "n": 59,
   "id": "saha-et-al-kitten-or-panda-two-thirds-of-attck-threat-groups-have-no-group-speci",
   "title": "Saha et al. \u2014 Kitten or Panda? Two-thirds of ATT&CK threat groups have no group-specific behaviour",
   "url": "https://arxiv.org/abs/2506.10645",
@@ -558,7 +531,7 @@
   "content_type": "paper"
  },
  {
-  "n": 63,
+  "n": 60,
   "id": "schlette-et-al-measuring-and-visualizing-cyber-threat-intelligence-quality-ijis",
   "title": "Schlette et al. \u2014 Measuring and Visualizing Cyber Threat Intelligence Quality (IJIS 2021)",
   "url": "https://link.springer.com/article/10.1007/s10207-020-00490-y",
@@ -567,7 +540,7 @@
   "content_type": "paper"
  },
  {
-  "n": 64,
+  "n": 61,
   "id": "sevenllm-arxiv-240503446-90k-samples-and-28-tasks-from-8485-reports-spanning-200",
   "title": "SEvenLLM (arXiv 2405.03446): 90k samples and 28 tasks from 8,485 reports spanning 2004-present, with no ATT&CK label spine",
   "url": "https://arxiv.org/abs/2405.03446",
@@ -576,7 +549,7 @@
   "content_type": "paper"
  },
  {
-  "n": 65,
+  "n": 62,
   "id": "shen-et-al-asia-ccs-2024-whole-graph-re-analysis-of-mitre-evaluations-shows-per",
   "title": "Shen et al. (ASIA CCS 2024): whole-graph re-analysis of MITRE Evaluations shows per-technique tallies are the wrong unit",
   "url": "https://arxiv.org/abs/2401.15878",
@@ -585,7 +558,7 @@
   "content_type": "paper"
  },
  {
-  "n": 66,
+  "n": 63,
   "id": "sok-the-mitre-attck-framework-in-research-and-practice-non-comparability-already",
   "title": "SoK: The MITRE ATT&CK Framework in Research and Practice \u2014 non-comparability already established, temporal instability not",
   "url": "https://arxiv.org/abs/2304.07411",
@@ -594,7 +567,7 @@
   "content_type": "paper"
  },
  {
-  "n": 67,
+  "n": 64,
   "id": "summiting-the-pyramid-v50-ctid-implementations-replace-techniques-as-the-coverag",
   "title": "Summiting the Pyramid v5.0 (CTID): implementations replace techniques as the coverage denominator \u2014 710 techniques map to 1,637 implementations",
   "url": "https://github.com/center-for-threat-informed-defense/summiting-the-pyramid",
@@ -603,7 +576,7 @@
   "content_type": "docs"
  },
  {
-  "n": 68,
+  "n": 65,
   "id": "synthcti-arxiv-250716852-synthesising-the-attck-long-tail-and-what-that-says-abo",
   "title": "SynthCTI (arXiv 2507.16852): synthesising the ATT&CK long tail, and what that says about catalogue-driven class imbalance",
   "url": "https://arxiv.org/abs/2507.16852",
@@ -612,7 +585,7 @@
   "content_type": "paper"
  },
  {
-  "n": 69,
+  "n": 66,
   "id": "synthetic-apts-2026-llm-agents-reproduce-documented-apt-profiles-at-55-80-precis",
   "title": "Synthetic APTs (2026): LLM agents reproduce documented APT profiles at 55-80% precision",
   "url": "https://arxiv.org/abs/2606.07158",
@@ -621,7 +594,7 @@
   "content_type": "paper"
  },
  {
-  "n": 70,
+  "n": 67,
   "id": "tesseract-eliminating-experimental-bias-in-malware-classification-across-space-a",
   "title": "TESSERACT: Eliminating Experimental Bias in Malware Classification across Space and Time",
   "url": "https://arxiv.org/abs/1807.07838",
@@ -630,7 +603,7 @@
   "content_type": "paper"
  },
  {
-  "n": 71,
+  "n": 68,
   "id": "the-cti-echo-chamber-vendor-fragmentation-as-the-confounder-the-drift-thesis-mus",
   "title": "The CTI Echo Chamber \u2014 vendor fragmentation as the confounder the drift thesis must separate",
   "url": "https://arxiv.org/abs/2602.17458",
@@ -639,7 +612,7 @@
   "content_type": "paper"
  },
  {
-  "n": 72,
+  "n": 69,
   "id": "tomczak-et-al-2018-gene-ontology-evolution-changes-the-interpretation-of-biologi",
   "title": "Tomczak et al. (2018): Gene Ontology evolution changes the interpretation of biological experiments",
   "url": "https://www.nature.com/articles/s41598-018-23395-2",
@@ -648,7 +621,7 @@
   "content_type": "paper"
  },
  {
-  "n": 73,
+  "n": 70,
   "id": "transcend-and-transcendent-conformal-evaluation-and-rejection-under-concept-drif",
   "title": "Transcend and Transcendent: Conformal Evaluation and Rejection under Concept Drift",
   "url": "https://arxiv.org/abs/2010.03856",
@@ -657,7 +630,7 @@
   "content_type": "paper"
  },
  {
-  "n": 74,
+  "n": 71,
   "id": "ttpdrill-acsac-2017-the-pre-sub-technique-baseline-everyone-still-compares-again",
   "title": "TTPDrill (ACSAC 2017): the pre-sub-technique baseline everyone still compares against",
   "url": "https://dl.acm.org/doi/10.1145/3134600.3134646",
@@ -666,7 +639,7 @@
   "content_type": "paper"
  },
  {
-  "n": 75,
+  "n": 72,
   "id": "ttphunter-ttpxhunter-50-then-193-ttp-classes-no-declared-attck-release",
   "title": "TTPHunter / TTPXHunter: 50 then 193 TTP classes, no declared ATT&CK release",
   "url": "https://arxiv.org/abs/2403.03267",
@@ -675,7 +648,7 @@
   "content_type": "paper"
  },
  {
-  "n": 76,
+  "n": 73,
   "id": "ttprint-arxiv-260525836-tram-clean-fork-and-verification-against-official-attck",
   "title": "TTPrint (arXiv 2605.25836): TRAM-Clean fork and verification against official ATT&CK descriptions",
   "url": "https://arxiv.org/abs/2605.25836",
@@ -684,7 +657,7 @@
   "content_type": "paper"
  },
  {
-  "n": 77,
+  "n": 74,
   "id": "virkud-et-al-usenix-security-2024-attck-coverage-is-not-comparable-across-produc",
   "title": "Virkud et al. (USENIX Security 2024): ATT&CK coverage is not comparable across products \u2014 recomputed from the public artefact",
   "url": "https://www.usenix.org/conference/usenixsecurity24/presentation/virkud",
@@ -693,7 +666,7 @@
   "content_type": "paper"
  },
  {
-  "n": 78,
+  "n": 75,
   "id": "when-benchmarks-age-quantifying-answer-key-decay-in-static-benchmarks",
   "title": "When Benchmarks Age: quantifying answer-key decay in static benchmarks",
   "url": "https://arxiv.org/abs/2510.07238",
@@ -702,7 +675,7 @@
   "content_type": "paper"
  },
  {
-  "n": 79,
+  "n": 76,
   "id": "zibak-et-al-threat-intelligence-quality-dimensions-for-research-and-practice-dtr",
   "title": "Zibak et al. \u2014 Threat Intelligence Quality Dimensions for Research and Practice (DTRAP 2022)",
   "url": "https://dl.acm.org/doi/full/10.1145/3484202",
@@ -711,7 +684,7 @@
   "content_type": "paper"
  },
  {
-  "n": 80,
+  "n": 77,
   "id": "attck-is-an-ontology-not-a-taxonomy-the-definitional-defence-and-the-ontology-ev",
   "title": "'ATT&CK is an ontology, not a taxonomy' \u2014 the definitional defence and the ontology-evolution prior-art objection",
   "url": "https://www.tripwire.com/state-of-security/attck-structure-ontology",
@@ -720,7 +693,16 @@
   "content_type": "blog"
  },
  {
-  "n": 81,
+  "n": 78,
+  "id": "attck-v19-retires-defense-evasion-tactic-reassignment-at-scale-and-the-industrys",
+  "title": "ATT&CK v19 retires Defense Evasion: tactic reassignment at scale, and the industry's rapid-migration rebuttal",
+  "url": "https://medium.com/mitre-attack/attack-v19-ff329cb65d66",
+  "tier": "practitioner",
+  "summary": "v19 (28 Apr 2026) split TA0005 Defense Evasion into Stealth and Defense Impairment (TA0112), forcing rule remapping \u2014 a 1:N semantic re-cut revoked-by cannot express, yet absorbed by vendors within days.",
+  "content_type": "blog"
+ },
+ {
+  "n": 79,
   "id": "dettct-omits-the-attck-version-from-generated-navigator-layers-by-default-and-st",
   "title": "DeTT&CT omits the ATT&CK version from generated Navigator layers by default, and stamps its own build constant when it does not",
   "url": "https://github.com/rabobank-cdc/DeTTECT",
@@ -729,7 +711,7 @@
   "content_type": "docs"
  },
  {
-  "n": 82,
+  "n": 80,
   "id": "forrester-a-100-attck-evaluations-claim-is-a-red-flag-selective-presentation-unr",
   "title": "Forrester: a 100% ATT&CK Evaluations claim is a red flag \u2014 selective presentation, unrealistic configuration, competition framing",
   "url": "https://www.forrester.com/blogs/dont-trust-vendor-claims-about-getting-100-on-the-mitre-attck-evaluations",
@@ -738,7 +720,7 @@
   "content_type": "blog"
  },
  {
-  "n": 83,
+  "n": 81,
   "id": "how-coverage-layers-are-actually-built-ad-hoc-scoring-schemes-over-a-data-source",
   "title": "How coverage layers are actually built: ad hoc scoring schemes over a data-source mapping that is itself version-dependent",
   "url": "https://blog.reconinfosec.com/automating-coverage-analysis-with-att-ck-navigator",
@@ -747,16 +729,7 @@
   "content_type": "blog"
  },
  {
-  "n": 84,
-  "id": "practitioner-evidence-on-coverage-claim-fragility-red-canary-remapping-cost-elas",
-  "title": "Practitioner evidence on coverage-claim fragility: Red Canary remapping cost, Elastic v19 remap docs, and the counting-rules-not-coverage critique",
-  "url": "https://redcanary.com/blog/threat-detection/mitre-sub-techniques/",
-  "tier": "practitioner",
-  "summary": "Red Canary painstakingly remapped thousands of behavioural analytics after sub-techniques; vendors still ship v19 remap docs; and coverage heatmaps are criticised as counting tagged rules rather than protection - a metric that moves whenever the ID space moves.",
-  "content_type": "blog"
- },
- {
-  "n": 85,
+  "n": 82,
   "id": "vendor-attck-coverage-claims-100-of-what-exactly-and-the-five-ways-a-coverage-nu",
   "title": "Vendor ATT&CK coverage claims: '100% of what, exactly?' and the five ways a coverage number is padded",
   "url": "https://www.attackiq.com/2026/03/10/what-does-mitre-attack-coverage-really-mean/",
@@ -765,7 +738,7 @@
   "content_type": "blog"
  },
  {
-  "n": 86,
+  "n": 83,
   "id": "vmray-stix-and-taxii-explained-why-a-valid-feed-still-might-not-be-usable",
   "title": "VMRay \u2014 STIX and TAXII Explained: Why a Valid Feed Still Might Not Be Usable",
   "url": "https://www.vmray.com/stix-taxii-explianed/",
@@ -774,7 +747,7 @@
   "content_type": "article"
  },
  {
-  "n": 87,
+  "n": 84,
   "id": "practitioner-critique-the-attck-heatmap-counts-rules-not-coverage-and-three-inco",
   "title": "Practitioner critique: the ATT&CK heatmap counts rules, not coverage, and three incompatible denominators now circulate",
   "url": "https://dev.to/chrisray/your-attck-heatmap-is-counting-rules-not-coverage-2gh3",

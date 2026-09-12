@@ -5,16 +5,17 @@ id: the-revoked-by-crosswalk-is-a-function-but-not-a-bijection-149-edges-8-many-
 tags:
 - attack-ontology-drift-cti-85bc51
 - attack-versioning
+- quarantined-metadata-mismatch
 created: '2026-09-12T13:24:13.989718Z'
+updated: '2026-09-12T13:45:46.217209Z'
 source: https://github.com/mitre-attack/attack-stix-data
-status: draft
+status: deprecated
 type: note
 tier: ground_truth
 content_type: dataset
-deprecated: false
-summary: 'Forward migration is mechanical and total, backward migration is provably
-  lossy: 8 targets absorb 12 predecessor IDs, 3 chains need transitive closure to
-  a fixed point, and 12 deprecated techniques have no successor at all.'
+deprecated: true
+summary: 'QUARANTINED: front matter and body describe different sources; excluded
+  from the corpus (see data/results/e15_vault_integrity.json).'
 ---
 
 ## What this is

@@ -9,6 +9,11 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+def _vkey(v: str) -> tuple:
+    """Version ordering. Plain string comparison puts "9.0" above "19.2"."""
+    return tuple(int(x) for x in v.split("."))
+
+
 ROOT = Path(__file__).resolve().parents[1]
 RES = ROOT / "data" / "results"
 TAG = "attack-ontology-drift-cti-85bc51"
@@ -148,7 +153,7 @@ def main() -> None:
                  f"rank-1 changed: {'yes' if r['rank1_changed_naive'] else 'no'}.")
     L.append("")
 
-    tgt = max(r["w"] for r in e6["portfolios"])
+    tgt = max((r["w"] for r in e6["portfolios"]), key=_vkey)
     L += [f"## 8. Coverage claims under a frozen capability (re-measured at v{tgt})", ""]
     for r in e6["portfolios"]:
         if r["w"] == tgt and r["relation"] == "mitigates" and \

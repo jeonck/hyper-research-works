@@ -1,0 +1,314 @@
+{
+ "factorial": [
+  {
+   "v": "1.0",
+   "rho": 0.0,
+   "trials": 1199,
+   "contemporaneous": 0.6697247706422018,
+   "naive": 0.23102585487906588,
+   "normalized": 0.4245204336947456,
+   "drift_penalty": 0.4386989157631359,
+   "norm_gain": 0.19349457881567975,
+   "recovery": 0.44106463878327
+  },
+  {
+   "v": "1.0",
+   "rho": 0.1,
+   "trials": 1200,
+   "contemporaneous": 0.6108333333333333,
+   "naive": 0.195,
+   "normalized": 0.36833333333333335,
+   "drift_penalty": 0.41583333333333333,
+   "norm_gain": 0.17333333333333334,
+   "recovery": 0.41683366733466937
+  },
+  {
+   "v": "1.0",
+   "rho": 0.2,
+   "trials": 1200,
+   "contemporaneous": 0.595,
+   "naive": 0.2025,
+   "normalized": 0.3441666666666667,
+   "drift_penalty": 0.39249999999999996,
+   "norm_gain": 0.14166666666666666,
+   "recovery": 0.3609341825902336
+  },
+  {
+   "v": "1.0",
+   "rho": 0.4,
+   "trials": 1200,
+   "contemporaneous": 0.47583333333333333,
+   "naive": 0.1475,
+   "normalized": 0.23916666666666667,
+   "drift_penalty": 0.32833333333333337,
+   "norm_gain": 0.09166666666666667,
+   "recovery": 0.27918781725888325
+  },
+  {
+   "v": "6.0",
+   "rho": 0.0,
+   "trials": 1200,
+   "contemporaneous": 0.6575,
+   "naive": 0.18166666666666667,
+   "normalized": 0.4125,
+   "drift_penalty": 0.47583333333333333,
+   "norm_gain": 0.2308333333333333,
+   "recovery": 0.48511383537653235
+  },
+  {
+   "v": "6.0",
+   "rho": 0.1,
+   "trials": 1200,
+   "contemporaneous": 0.5958333333333333,
+   "naive": 0.185,
+   "normalized": 0.3858333333333333,
+   "drift_penalty": 0.41083333333333333,
+   "norm_gain": 0.2008333333333333,
+   "recovery": 0.4888438133874239
+  },
+  {
+   "v": "6.0",
+   "rho": 0.2,
+   "trials": 1200,
+   "contemporaneous": 0.5675,
+   "naive": 0.16916666666666666,
+   "normalized": 0.32916666666666666,
+   "drift_penalty": 0.3983333333333333,
+   "norm_gain": 0.16,
+   "recovery": 0.40167364016736407
+  },
+  {
+   "v": "6.0",
+   "rho": 0.4,
+   "trials": 1200,
+   "contemporaneous": 0.43416666666666665,
+   "naive": 0.1225,
+   "normalized": 0.21833333333333332,
+   "drift_penalty": 0.31166666666666665,
+   "norm_gain": 0.09583333333333333,
+   "recovery": 0.3074866310160428
+  },
+  {
+   "v": "12.0",
+   "rho": 0.0,
+   "trials": 1200,
+   "contemporaneous": 0.8083333333333333,
+   "naive": 0.7916666666666666,
+   "normalized": 0.7966666666666666,
+   "drift_penalty": 0.01666666666666672,
+   "norm_gain": 0.0050000000000000044,
+   "recovery": 0.2999999999999993
+  },
+  {
+   "v": "12.0",
+   "rho": 0.1,
+   "trials": 1200,
+   "contemporaneous": 0.78,
+   "naive": 0.7575,
+   "normalized": 0.7633333333333333,
+   "drift_penalty": 0.022500000000000075,
+   "norm_gain": 0.005833333333333357,
+   "recovery": 0.25925925925925947
+  },
+  {
+   "v": "12.0",
+   "rho": 0.2,
+   "trials": 1200,
+   "contemporaneous": 0.6708333333333333,
+   "naive": 0.6525,
+   "normalized": 0.6583333333333333,
+   "drift_penalty": 0.018333333333333313,
+   "norm_gain": 0.005833333333333357,
+   "recovery": 0.31818181818181984
+  },
+  {
+   "v": "12.0",
+   "rho": 0.4,
+   "trials": 1200,
+   "contemporaneous": 0.48333333333333334,
+   "naive": 0.4691666666666667,
+   "normalized": 0.47583333333333333,
+   "drift_penalty": 0.01416666666666666,
+   "norm_gain": 0.006666666666666654,
+   "recovery": 0.470588235294117
+  },
+  {
+   "v": "18.0",
+   "rho": 0.0,
+   "trials": 1200,
+   "contemporaneous": 0.855,
+   "naive": 0.8425,
+   "normalized": 0.855,
+   "drift_penalty": 0.012499999999999956,
+   "norm_gain": 0.012499999999999956,
+   "recovery": 1.0
+  },
+  {
+   "v": "18.0",
+   "rho": 0.1,
+   "trials": 1200,
+   "contemporaneous": 0.7675,
+   "naive": 0.7625,
+   "normalized": 0.7691666666666667,
+   "drift_penalty": 0.0050000000000000044,
+   "norm_gain": 0.00666666666666671,
+   "recovery": 1.3333333333333408
+  },
+  {
+   "v": "18.0",
+   "rho": 0.2,
+   "trials": 1200,
+   "contemporaneous": 0.6908333333333333,
+   "naive": 0.68,
+   "normalized": 0.6908333333333333,
+   "drift_penalty": 0.01083333333333325,
+   "norm_gain": 0.01083333333333325,
+   "recovery": 1.0
+  },
+  {
+   "v": "18.0",
+   "rho": 0.4,
+   "trials": 1200,
+   "contemporaneous": 0.5,
+   "naive": 0.49,
+   "normalized": 0.5,
+   "drift_penalty": 0.010000000000000009,
+   "norm_gain": 0.010000000000000009,
+   "recovery": 1.0
+  }
+ ],
+ "stratified": [
+  {
+   "v": "12.0",
+   "n_groups": 123,
+   "groups_with_unique_technique": 40,
+   "specificity_fraction": 0.3252032520325203,
+   "all": {
+    "drift_penalty": 0.017333333333333333,
+    "ci": [
+     0.007333333333333333,
+     0.027333333333333334
+    ],
+    "n": 1500
+   },
+   "group_has_none": {
+    "drift_penalty": 0.008946322067594433,
+    "ci": [
+     -0.0009940357852882703,
+     0.019880715705765408
+    ],
+    "n": 1006
+   },
+   "group_has_a_unique_technique": {
+    "drift_penalty": 0.03441295546558704,
+    "ci": [
+     0.010121457489878543,
+     0.058704453441295545
+    ],
+    "n": 494
+   }
+  },
+  {
+   "v": "16.0",
+   "n_groups": 149,
+   "groups_with_unique_technique": 46,
+   "specificity_fraction": 0.3087248322147651,
+   "all": {
+    "drift_penalty": 0.014,
+    "ci": [
+     0.007333333333333333,
+     0.021333333333333333
+    ],
+    "n": 1500
+   },
+   "group_has_none": {
+    "drift_penalty": 0.004916420845624385,
+    "ci": [
+     -0.0009832841691248771,
+     0.010816125860373648
+    ],
+    "n": 1017
+   },
+   "group_has_a_unique_technique": {
+    "drift_penalty": 0.033126293995859216,
+    "ci": [
+     0.016563146997929608,
+     0.049689440993788817
+    ],
+    "n": 483
+   }
+  },
+  {
+   "v": "18.0",
+   "n_groups": 161,
+   "groups_with_unique_technique": 48,
+   "specificity_fraction": 0.2981366459627329,
+   "all": {
+    "drift_penalty": 0.012,
+    "ci": [
+     0.006666666666666667,
+     0.018
+    ],
+    "n": 1500
+   },
+   "group_has_none": {
+    "drift_penalty": 0.006730769230769231,
+    "ci": [
+     0.0019230769230769232,
+     0.0125
+    ],
+    "n": 1040
+   },
+   "group_has_a_unique_technique": {
+    "drift_penalty": 0.02391304347826087,
+    "ci": [
+     0.010869565217391304,
+     0.0391304347826087
+    ],
+    "n": 460
+   }
+  }
+ ],
+ "archival_control": [
+  {
+   "v": "1.0",
+   "backprojected_self_consistent": 0.668,
+   "archival_self_consistent": 0.9693333333333334,
+   "archival_against_modern": 0.15866666666666668,
+   "obs_size_backprojected": 7.542666666666666,
+   "obs_size_archival": 9.246666666666666
+  },
+  {
+   "v": "6.0",
+   "backprojected_self_consistent": 0.6626666666666666,
+   "archival_self_consistent": 0.9,
+   "archival_against_modern": 0.19266666666666668,
+   "obs_size_backprojected": 8.435333333333332,
+   "obs_size_archival": 9.810666666666666
+  },
+  {
+   "v": "7.0",
+   "backprojected_self_consistent": 0.7813333333333333,
+   "archival_self_consistent": 0.8973333333333333,
+   "archival_against_modern": 0.63,
+   "obs_size_backprojected": 9.546,
+   "obs_size_archival": 9.92
+  },
+  {
+   "v": "12.0",
+   "backprojected_self_consistent": 0.8366666666666667,
+   "archival_self_consistent": 0.856,
+   "archival_against_modern": 0.75,
+   "obs_size_backprojected": 9.890666666666666,
+   "obs_size_archival": 10.0
+  },
+  {
+   "v": "18.0",
+   "backprojected_self_consistent": 0.8406666666666667,
+   "archival_self_consistent": 0.846,
+   "archival_against_modern": 0.8226666666666667,
+   "obs_size_backprojected": 9.985333333333333,
+   "obs_size_archival": 10.0
+  }
+ ]
+}

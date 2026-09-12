@@ -5,17 +5,17 @@ id: ctid-attck-sync-institutional-admission-that-version-drift-invalidates-depen
 tags:
 - attack-ontology-drift-cti-85bc51
 - attack-versioning
+- quarantined-metadata-mismatch
 created: '2026-09-12T13:24:45.006240Z'
+updated: '2026-09-12T13:45:44.668406Z'
 source: https://ctid.mitre.org/projects/attack-sync/
-status: draft
+status: deprecated
 type: note
 tier: institutional
 content_type: docs
-deprecated: false
-summary: MITRE's own centre states dependent projects are pinned to whatever ATT&CK
-  version was current at development time and quickly become out-of-date; ATT&CK Sync
-  flags affected mappings but publishes no quantification of corpus impact or analytic
-  performance change.
+deprecated: true
+summary: 'QUARANTINED: front matter and body describe different sources; excluded
+  from the corpus (see data/results/e15_vault_integrity.json).'
 ---
 
 ## What this is

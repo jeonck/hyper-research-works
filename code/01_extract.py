@@ -79,6 +79,13 @@ def version_key(v: str) -> tuple:
 
 
 def release_files(domain: str) -> list[tuple[str, Path]]:
+    """Stable releases only.
+
+    The repository also ships pre-release bundles (Mobile 11.0-beta, 11.1-beta,
+    11.2-beta). They are excluded: they were never the published vocabulary any
+    CTI artefact could have been authored against. 109 bundles are published in
+    total; 106 are stable and analysed here.
+    """
     d = REPO / domain
     out = []
     for p in d.glob(f"{domain}-*.json"):

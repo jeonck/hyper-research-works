@@ -5,17 +5,17 @@ id: mitres-sub-technique-release-announcement-and-the-jsoncsv-crosswalks-abstrac
 tags:
 - attack-ontology-drift-cti-85bc51
 - attack-versioning
+- quarantined-metadata-mismatch
 created: '2026-09-12T13:24:27.887783Z'
+updated: '2026-09-12T13:45:45.210075Z'
 source: https://medium.com/mitre-attack/attack-with-sub-techniques-is-now-just-attack-8fc20997d8de
-status: draft
+status: deprecated
 type: note
 tier: institutional
 content_type: blog
-deprecated: false
-summary: MITRE framed sub-techniques as fixing technique scope discrepancies and shipped
-  JSON/CSV crosswalks it later had to refine to reduce human intervention and text
-  parsing - the publisher-sanctioned precedent for version pinning plus explicit mapping
-  artefacts.
+deprecated: true
+summary: 'QUARANTINED: front matter and body describe different sources; excluded
+  from the corpus (see data/results/e15_vault_integrity.json).'
 ---
 
 ## What this is

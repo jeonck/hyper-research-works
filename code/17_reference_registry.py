@@ -36,12 +36,20 @@ def main() -> None:
             data = data.get("notes", [data])
         for d in data:
             rec = {k: d.get(k) for k in
-                   ("id", "title", "source", "tier", "content_type", "summary")}
+                   ("id", "title", "source", "tier", "content_type", "summary",
+                    "status")}
             rec["tags"] = d.get("tags") or []
             notes.append(rec)
     # This study's own measurement notes are not external references: they are
     # cited in the manuscript as its own tables and sections. Keep them in a
     # separate index so a drafter never turns "our Table 3" into a citation.
+    # quarantined notes (front matter and body describe different sources) and
+    # anything deprecated are excluded outright: a corpus this paper draws on
+    # must not contain an entry whose provenance is known to be wrong
+    notes = [n for n in notes
+             if (n.get("status") or "") != "deprecated"
+             and "quarantined-metadata-mismatch" not in (n.get("tags") or [])]
+
     internal = [n for n in notes
                 if {"measurement", "methodology"} & set(n.get("tags") or [])]
     external = [n for n in notes if n not in internal]

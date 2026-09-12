@@ -170,29 +170,79 @@ def resolve_chain(aid: str, revoked_map: dict[str, str], max_hops: int = 10) -> 
     return cur
 
 
-def normalize(ids: set[str], target: Snapshot, *, rollup: bool = True) -> set[str]:
-    """Map a set of ATT&CK technique IDs onto a target release.
+@dataclass
+class NormalizationResult:
+    """What ATT&CK-Norm returns: a set is not enough to report honestly.
 
-    1. transitive revoked-by resolution (uses the target release's revocation graph)
-    2. drop identifiers that are deprecated or absent in the target
-    3. optional roll-up of orphaned sub-technique IDs to their surviving parent
+    kept          identifiers that resolved to a live identifier one-for-one
+    merged        target identifier -> the several predecessors that landed on it;
+                  the cardinality a set silently destroys
+    dropped       identifiers with no live successor: a deprecation without a
+                  replacement, which no amount of identifier arithmetic repairs
+    demoted       resolutions that changed abstraction level (a top-level
+                  technique landing on a sub-technique, or the reverse); these
+                  succeed mechanically and change what the artefact asserts
+    rolled_up     identifiers recovered only by climbing to a surviving parent
     """
-    rev = target.revoked_by()
-    sub = target.sub_of()
-    live = target.live_tech()
-    out: set[str] = set()
-    for aid in ids:
+    kept: dict[str, str] = field(default_factory=dict)
+    merged: dict[str, list[str]] = field(default_factory=dict)
+    dropped: list[str] = field(default_factory=list)
+    demoted: dict[str, str] = field(default_factory=dict)
+    rolled_up: dict[str, str] = field(default_factory=dict)
+
+    @property
+    def ids(self) -> set[str]:
+        return set(self.kept.values())
+
+    def summary(self) -> dict:
+        return {"input": len(self.kept) + len(self.dropped), "kept": len(self.kept),
+                "distinct_after": len(self.ids),
+                "merge_targets": len(self.merged),
+                "absorbed_by_merges": sum(len(v) for v in self.merged.values()),
+                "dropped": len(self.dropped), "demoted": len(self.demoted),
+                "rolled_up": len(self.rolled_up)}
+
+
+def normalize_with_ledger(ids: set[str], target: Snapshot, *,
+                          rollup: bool = False) -> NormalizationResult:
+    """Map identifiers onto a target release and report what that cost.
+
+    1. transitive revoked-by resolution against the target's revocation graph
+    2. identifiers that are deprecated or absent in the target are DROPPED and
+       counted, never silently discarded
+    3. roll-up to a surviving parent is off by default: ATT&CK does not orphan
+       sub-techniques in practice (the branch fires 3 times in 12,027 resolutions
+       across every domain and major release), so the path buys nothing while
+       being able to fabricate a parent-level assertion the artefact never made
+    """
+    rev, sub, live = target.revoked_by(), target.sub_of(), target.live_tech()
+    res = NormalizationResult()
+    landing: dict[str, list[str]] = {}
+    for aid in sorted(ids):
         cur = resolve_chain(aid, rev)
-        if cur in live:
-            out.add(cur)
-            continue
-        if rollup:
+        if cur not in live and rollup:
             parent = sub.get(cur) or (cur.split(".")[0] if "." in cur else None)
-            if parent:
-                parent = resolve_chain(parent, rev)
-                if parent in live:
-                    out.add(parent)
-    return out
+            if parent and resolve_chain(parent, rev) in live:
+                cur = resolve_chain(parent, rev)
+                res.rolled_up[aid] = cur
+        if cur in live:
+            res.kept[aid] = cur
+            landing.setdefault(cur, []).append(aid)
+            if ("." in aid) != ("." in cur):
+                res.demoted[aid] = cur
+        else:
+            res.dropped.append(aid)
+    res.merged = {t: srcs for t, srcs in landing.items() if len(srcs) > 1}
+    return res
+
+
+def normalize(ids: set[str], target: Snapshot, *, rollup: bool = False) -> set[str]:
+    """Set-valued convenience wrapper. Prefer `normalize_with_ledger`.
+
+    A bare set cannot say how many identifiers were merged away or dropped, and
+    reporting only the set is the reporting failure this study is about.
+    """
+    return normalize_with_ledger(ids, target, rollup=rollup).ids
 
 
 def jaccard(a: set, b: set) -> float:

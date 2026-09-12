@@ -22,7 +22,7 @@
   ],
   "status": "running",
   "started_at": "2026-09-12T13:11:58.666198+00:00",
-  "updated_at": "2026-09-12T13:29:43.367360+00:00",
+  "updated_at": "2026-09-12T13:44:17.395729+00:00",
   "budget_usd": null,
   "blocked_on": null,
   "steps": {
@@ -41,6 +41,14 @@
     "4": {
       "status": "done",
       "finished_at": "2026-09-12T13:29:43.366875+00:00"
+    },
+    "5": {
+      "status": "done",
+      "finished_at": "2026-09-12T13:44:17.158443+00:00"
+    },
+    "6": {
+      "status": "done",
+      "finished_at": "2026-09-12T13:44:17.395275+00:00"
     }
   },
   "chapters": {},

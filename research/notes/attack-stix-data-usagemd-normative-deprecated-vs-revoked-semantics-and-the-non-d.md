@@ -5,17 +5,17 @@ id: attack-stix-data-usagemd-normative-deprecated-vs-revoked-semantics-and-the-n
 tags:
 - attack-ontology-drift-cti-85bc51
 - attack-versioning
+- quarantined-metadata-mismatch
 created: '2026-09-12T13:24:14.261165Z'
+updated: '2026-09-12T13:45:45.980977Z'
 source: https://github.com/mitre-attack/attack-stix-data/blob/master/USAGE.md
-status: draft
+status: deprecated
 type: note
 tier: ground_truth
 content_type: docs
-deprecated: false
-summary: 'MITRE''s normative guide: revoked = replaced with a revoked-by pointer,
-  deprecated = withdrawn with no replacement, both retained in the bundle for backward
-  compatibility with filtering left to the consumer; the unversioned bundle is a moving
-  target.'
+deprecated: true
+summary: 'QUARANTINED: front matter and body describe different sources; excluded
+  from the corpus (see data/results/e15_vault_integrity.json).'
 ---
 
 ## What this is

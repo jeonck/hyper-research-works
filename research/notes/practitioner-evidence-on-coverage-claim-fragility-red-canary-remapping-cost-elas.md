@@ -5,17 +5,17 @@ id: practitioner-evidence-on-coverage-claim-fragility-red-canary-remapping-cost-
 tags:
 - attack-ontology-drift-cti-85bc51
 - coverage-claims
+- quarantined-metadata-mismatch
 created: '2026-09-12T13:24:45.273243Z'
+updated: '2026-09-12T13:45:44.397322Z'
 source: https://redcanary.com/blog/threat-detection/mitre-sub-techniques/
-status: draft
+status: deprecated
 type: note
 tier: practitioner
 content_type: blog
-deprecated: false
-summary: Red Canary painstakingly remapped thousands of behavioural analytics after
-  sub-techniques; vendors still ship v19 remap docs; and coverage heatmaps are criticised
-  as counting tagged rules rather than protection - a metric that moves whenever the
-  ID space moves.
+deprecated: true
+summary: 'QUARANTINED: front matter and body describe different sources; excluded
+  from the corpus (see data/results/e15_vault_integrity.json).'
 ---
 
 ## What this is

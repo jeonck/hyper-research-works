@@ -79,15 +79,18 @@ the same back-projected observation; only the oracle sees the full modern set):
 - mitigation leaderboard frozen at v17.0: Kendall tau 0.976 naive, 1.000 normalized; rank-1 changed: yes.
 - mitigation leaderboard frozen at v18.0: Kendall tau 0.978 naive, 0.998 normalized; rank-1 changed: no.
 
-## 8. Coverage claims under a frozen capability (re-measured at v9.0)
+## 8. Coverage claims under a frozen capability (re-measured at v19.0)
 
-- frozen at v6.0: claimed 97.0%, naive 21.9%, normalized 43.1%; identifier artefact 21.2 pp.
+- frozen at v6.0: claimed 97.0%, naive 17.4%, normalized 33.9%; identifier artefact 16.5 pp.
+- frozen at v10.0: claimed 90.5%, naive 71.3%, normalized 72.9%; identifier artefact 1.6 pp.
+- frozen at v17.0: claimed 84.7%, naive 80.2%, normalized 82.2%; identifier artefact 2.0 pp.
+- frozen at v18.0: claimed 84.2%, naive 81.1%, normalized 83.2%; identifier artefact 2.2 pp.
 
 Prevalence-weighted (answering the long-tail objection):
 - frozen at v6.0: artefact +16.50 pp unweighted, +20.01 pp prevalence-weighted.
 - frozen at v10.0: artefact +1.58 pp unweighted, +1.43 pp prevalence-weighted.
 - frozen at v18.0: artefact +2.15 pp unweighted, +1.57 pp prevalence-weighted.
-- the fifteen most-referenced techniques carry 0.285 of all `uses` edges at v9.0.
+- the fifteen most-referenced techniques carry 0.285 of all `uses` edges at v19.0.
 
 ## 9. Deployed corpora
 

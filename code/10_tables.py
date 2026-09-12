@@ -9,6 +9,11 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+def _vkey(v: str) -> tuple:
+    """Version ordering. Plain string comparison puts "9.0" above "19.2"."""
+    return tuple(int(x) for x in v.split("."))
+
+
 ROOT = Path(__file__).resolve().parents[1]
 RES = ROOT / "data" / "results"
 TAB = ROOT / "paper" / "tables"
@@ -125,7 +130,7 @@ def main() -> None:
     w("t7_robustness.md", "\n".join(rows))
 
     # T8 coverage
-    tgt = max(r["w"] for r in e6["portfolios"])
+    tgt = max((r["w"] for r in e6["portfolios"]), key=_vkey)
     rows = [f"| Capability frozen at | Portfolio | Claimed then | Naive at v{tgt} | "
             f"Normalized at v{tgt} | Identifier artefact (pp) |",
             "|---|---|---|---|---|---|"]

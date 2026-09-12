@@ -5,16 +5,17 @@ id: attck-v19-announcement-defense-evasion-split-into-stealth-and-impair-defense
 tags:
 - attack-ontology-drift-cti-85bc51
 - attack-versioning
+- quarantined-metadata-mismatch
 created: '2026-09-12T13:24:44.679743Z'
+updated: '2026-09-12T13:45:44.953309Z'
 source: https://medium.com/mitre-attack/attack-v19-ff329cb65d66
-status: draft
+status: deprecated
 type: note
 tier: institutional
 content_type: blog
-deprecated: false
-summary: v19 (28 Apr 2026) dissolved TA0005 into Stealth and Impair Defenses and elevated
-  T1562 from technique to tactic - a cross-layer promotion that no ID crosswalk can
-  express - while shipping genuine new AI/social-engineering content in the same release.
+deprecated: true
+summary: 'QUARANTINED: front matter and body describe different sources; excluded
+  from the corpus (see data/results/e15_vault_integrity.json).'
 ---
 
 ## What this is

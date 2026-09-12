@@ -1,0 +1,99 @@
+{
+ "checked": 112,
+ "flagged": [
+  {
+   "id": "practitioner-evidence-on-coverage-claim-fragility-red-canary-remapping-cost-elas",
+   "title": "Practitioner evidence on coverage-claim fragility: Red Canary remapping cost, Elastic v19 remap docs, and the counting-rules-not-coverage critique",
+   "source": "https://redcanary.com/blog/threat-detection/mitre-sub-techniques/",
+   "title_token_overlap": 0.0,
+   "body_hosts": [],
+   "host_conflict": false,
+   "body_head": "## What this is *IncreTTP: An Incremental TTPs Classification Model* (Springer, chapter DOI 10.1007/978-3-032-23450-6_2). The only work located in this batch that treats **ATT&CK version updates as the primary problem** rather than as an im"
+  },
+  {
+   "id": "ctid-attck-sync-institutional-admission-that-version-drift-invalidates-dependent",
+   "title": "CTID ATT&CK Sync: institutional admission that version drift invalidates dependent projects, but tooling not measurement",
+   "source": "https://ctid.mitre.org/projects/attack-sync/",
+   "title_token_overlap": 0.0,
+   "body_hosts": [],
+   "host_conflict": false,
+   "body_head": "## What this is Md Nazmul Haque et al., *Beyond Single Reports: Evaluating Automated ATT&CK Technique Extraction in Multi-Report Campaign Settings*, arXiv:2604.07470 (2026). The largest comparative evaluation of ATT&CK technique extractors "
+  },
+  {
+   "id": "attck-v19-announcement-defense-evasion-split-into-stealth-and-impair-defenses-t1",
+   "title": "ATT&CK v19 announcement: Defense Evasion split into Stealth and Impair Defenses, T1562 promoted technique-to-tactic",
+   "source": "https://medium.com/mitre-attack/attack-v19-ff329cb65d66",
+   "title_token_overlap": 0.0,
+   "body_hosts": [],
+   "host_conflict": false,
+   "body_head": "## What this is Mayoral-Vilches et al. (Alias Robotics and collaborators), *Synthetic APTs: the Collapse of TTP-Based Attribution*, arXiv:2606.07158 (2026). An adversarial-validity attack on the core premise of TTP-based attribution.  ## Wh"
+  },
+  {
+   "id": "mitres-sub-technique-release-announcement-and-the-jsoncsv-crosswalks-abstraction",
+   "title": "MITRE's sub-technique release announcement and the JSON/CSV crosswalks: abstraction correction, not intelligence growth",
+   "source": "https://medium.com/mitre-attack/attack-with-sub-techniques-is-now-just-attack-8fc20997d8de",
+   "title_token_overlap": 0.182,
+   "body_hosts": [],
+   "host_conflict": false,
+   "body_head": "## What this is Rani, Saha, Conti et al., *Chasing the Shadows: TTPs in Action to Attribute Advanced Persistent Threats*, arXiv:2409.16400 (2024). Introduces **CAPTAIN** (Comprehensive Advanced Persistent Threat AttrIbutioN), the current re"
+  },
+  {
+   "id": "mitre-attck-changelog-version-history-and-release-cadence-semiannual-majors-iner",
+   "title": "MITRE ATT&CK changelog, version history and release cadence: semiannual majors, inert minors, and out-of-band agile Group/Software updates",
+   "source": "https://attack.mitre.org/resources/changelog.html",
+   "title_token_overlap": 0.133,
+   "body_hosts": [],
+   "host_conflict": false,
+   "body_head": "## What this is Two linked systems from the same group: **TTPHunter** (Rani et al., ACSW 2023, DOI 10.1145/3579375.3579391) and its successor **TTPXHunter** (arXiv:2403.03267; published in ACM *Digital Threats: Research and Practice*, DOI 1"
+  },
+  {
+   "id": "diff_stix-official-change-taxonomy-eight-change-classes-including-patches-and-un",
+   "title": "diff_stix official change taxonomy: eight change classes including patches and unintended version changes",
+   "source": "https://github.com/mitre-attack/mitreattack-python/blob/master/mitreattack/diffStix/README.md",
+   "title_token_overlap": 0.0,
+   "body_hosts": [],
+   "host_conflict": false,
+   "body_head": "## What this is Husari, Al-Shaer, Ahmed, Chu, Niu, *TTPDrill: Automatic and Accurate Extraction of Threat Actions from Unstructured Text of CTI Sources*, **ACSAC 2017** (DOI 10.1145/3134600.3134646). The earliest widely cited TTP-extraction"
+  },
+  {
+   "id": "attack-stix-data-usagemd-normative-deprecated-vs-revoked-semantics-and-the-non-d",
+   "title": "attack-stix-data USAGE.md: normative deprecated-vs-revoked semantics and the non-destructive retirement contract",
+   "source": "https://github.com/mitre-attack/attack-stix-data/blob/master/USAGE.md",
+   "title_token_overlap": 0.1,
+   "body_hosts": [],
+   "host_conflict": false,
+   "body_head": "## What this is Audit of **AttacKG** (Li, Zheng, Li, Wang, Chen, *AttacKG: Constructing Knowledge-enhanced Attack Graphs from Cyber Threat Intelligence Reports*, ESORICS 2022), cloned at `/home/user/ext/Knowledge-enhanced-Attack-Graph`. Att"
+  },
+  {
+   "id": "the-revoked-by-crosswalk-is-a-function-but-not-a-bijection-149-edges-8-many-to-o",
+   "title": "The revoked-by crosswalk is a function but not a bijection: 149 edges, 8 many-to-one merges, 3 multi-hop chains, 12 unmappable deprecations",
+   "source": "https://github.com/mitre-attack/attack-stix-data",
+   "title_token_overlap": 0.071,
+   "body_hosts": [],
+   "host_conflict": false,
+   "body_head": "## What this is Audit of **tumeteor/mitre-ttp-mapping** (cloned at `/home/user/ext/mitre-ttp-mapping`), the dataset release accompanying Nguyen, \u0160rndi\u0107 & Neth, *Noise Contrastive Estimation-based Matching Framework for Low-resource Security"
+  },
+  {
+   "id": "attck-v19-defense-evasion-split-measured-294-of-active-techniques-changed-tactic",
+   "title": "ATT&CK v19 Defense Evasion split measured: 29.4% of active techniques changed tactic, T1562 family revoked 3-to-1 into T1685",
+   "source": "https://github.com/mitre-attack/attack-stix-data",
+   "title_token_overlap": 0.214,
+   "body_hosts": [
+    "attack.mitre.org"
+   ],
+   "host_conflict": true,
+   "body_head": "## What this is Audit of **TRAM** (Threat Report ATT&CK Mapper), the Center for Threat-Informed Defense's reference TTP-extraction system. Cloned at `/home/user/ext/tram` (HEAD `f29793d`).  ## Version declaration \u2014 TRAM does it right, and t"
+  },
+  {
+   "id": "tram-repo-audit-declared-attck-v131-19-of-shipped-attack-patterns-are-tombstones",
+   "title": "TRAM repo audit: declared ATT&CK v13.1, 19% of shipped attack-patterns are tombstones, 50-class trained vocabulary",
+   "source": "https://github.com/center-for-threat-informed-defense/tram",
+   "title_token_overlap": 0.364,
+   "body_hosts": [
+    "attack.mitre.org"
+   ],
+   "host_conflict": true,
+   "body_head": "## What this is Audit of **TRAM** (Threat Report ATT&CK Mapper), the Center for Threat-Informed Defense's reference TTP-extraction system. Cloned at `/home/user/ext/tram` (HEAD `f29793d`).  ## Version declaration \u2014 TRAM does it right, and t"
+  }
+ ]
+}

@@ -5,17 +5,17 @@ id: mitre-attck-changelog-version-history-and-release-cadence-semiannual-majors-
 tags:
 - attack-ontology-drift-cti-85bc51
 - attack-versioning
+- quarantined-metadata-mismatch
 created: '2026-09-12T13:24:27.612541Z'
+updated: '2026-09-12T13:45:45.471301Z'
 source: https://attack.mitre.org/resources/changelog.html
-status: draft
+status: deprecated
 type: note
 tier: institutional
 content_type: docs
-deprecated: false
-summary: Official cadence is twice-yearly majors with minors carrying only corrections;
-  deprecation is an editorial scope judgement not evidence behaviour ceased; agile
-  out-of-band Group/Software/Campaign updates mean a release tag alone no longer pins
-  the dataset.
+deprecated: true
+summary: 'QUARANTINED: front matter and body describe different sources; excluded
+  from the corpus (see data/results/e15_vault_integrity.json).'
 ---
 
 ## What this is
