@@ -78,11 +78,30 @@ def main() -> None:
                         })
             prev, prev_version = cur, r.version
 
+    # how often does the protocol's roll-up branch actually have anything to do?
+    rollup_fired = rollup_checked = 0
+    for dom in DOMAINS:
+        rels = ad.releases(con, dom)
+        tw = ad.load_snapshot(con, dom, rels[-1].version)
+        trev, tsub, tlive = tw.revoked_by(), tw.sub_of(), tw.live_tech()
+        for r in ad.major_releases(con, dom):
+            snap = ad.load_snapshot(con, dom, r.version)
+            for aid in snap.live_tech():
+                rollup_checked += 1
+                cur = ad.resolve_chain(aid, trev)
+                if cur in tlive:
+                    continue
+                parent = tsub.get(cur) or (cur.split(".")[0] if "." in cur else None)
+                if parent and ad.resolve_chain(parent, trev) in tlive:
+                    rollup_fired += 1
+
     tactic_renames = [r for r in recycled if r["otype"] == TACTIC]
     result = {
         "tactic_revocation_edges": tactic_revocations,
         "total_revocation_edges": total_revocations,
         "revocation_arity": arity,
+        "rollup_branch_fired": rollup_fired,
+        "rollup_resolutions_checked": rollup_checked,
         "renamed_in_place_total": len(recycled),
         "renamed_in_place_tactics": tactic_renames,
         "renamed_in_place_techniques_sample": [r for r in recycled
@@ -96,6 +115,8 @@ def main() -> None:
               f"{a['sources_with_multiple_targets']} one-to-many splits, "
               f"{a['targets_absorbing_multiple']} many-to-one merges "
               f"(max {a['max_predecessors_absorbed']} absorbed)", file=sys.stderr)
+    print(f"  roll-up branch fired {rollup_fired} times in {rollup_checked} resolutions",
+          file=sys.stderr)
     print(f"  tactics renamed in place (identifier retained, object not retired): "
           f"{len(tactic_renames)}", file=sys.stderr)
     for r in tactic_renames:

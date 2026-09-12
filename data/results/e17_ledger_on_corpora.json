@@ -1,0 +1,76 @@
+{
+ "ctibench-ate": {
+  "labels_before": 120,
+  "labels_after": 113,
+  "classes_lost_to_merges": 0,
+  "kept": 113,
+  "dropped": 7,
+  "demoted": 0,
+  "merge_targets": 0,
+  "absorbed_by_merges": 0,
+  "label_instances": 397,
+  "instances_in_a_merged_class": 0,
+  "instances_in_a_merged_class_share": 0.0,
+  "largest_merge": [
+   null,
+   0
+  ]
+ },
+ "rcatt": {
+  "labels_before": 215,
+  "labels_after": 199,
+  "classes_lost_to_merges": 8,
+  "kept": 207,
+  "dropped": 8,
+  "demoted": 88,
+  "merge_targets": 7,
+  "absorbed_by_merges": 15,
+  "label_instances": 6235,
+  "instances_in_a_merged_class": 584,
+  "instances_in_a_merged_class_share": 0.09366479550922213,
+  "largest_merge": [
+   [
+    "enterprise-attack",
+    "T1573"
+   ],
+   3
+  ]
+ },
+ "tram-bootstrap": {
+  "labels_before": 537,
+  "labels_after": 503,
+  "classes_lost_to_merges": 34,
+  "kept": 537,
+  "dropped": 0,
+  "demoted": 28,
+  "merge_targets": 28,
+  "absorbed_by_merges": 62,
+  "label_instances": 25770,
+  "instances_in_a_merged_class": 3800,
+  "instances_in_a_merged_class_share": 0.1474582848273186,
+  "largest_merge": [
+   [
+    "enterprise-attack",
+    "T1573"
+   ],
+   4
+  ]
+ },
+ "tram2": {
+  "labels_before": 50,
+  "labels_after": 50,
+  "classes_lost_to_merges": 0,
+  "kept": 50,
+  "dropped": 0,
+  "demoted": 1,
+  "merge_targets": 0,
+  "absorbed_by_merges": 0,
+  "label_instances": 5143,
+  "instances_in_a_merged_class": 0,
+  "instances_in_a_merged_class_share": 0.0,
+  "largest_merge": [
+   null,
+   0
+  ]
+ }
+}

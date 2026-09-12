@@ -21,7 +21,7 @@ REPORT = ROOT / "research" / "notes" / f"final_report_{TAG}.md"
 RESULTS = ROOT / "data" / "results"
 TABLES = ROOT / "paper" / "tables"
 
-NUM = re.compile(r"(?<![\w.])(\d+\.\d+|\d{2,})(?![\w])")
+NUM = re.compile(r"(?<![\w.,])(\d{1,3}(?:,\d{3})+|\d+\.\d+|\d{2,})(?![\w,]\d)")
 # numbers that are structural rather than measured
 IGNORE_CONTEXT = re.compile(
     r"(Table|Figure|Section|v\d|ATT&CK v|\[\d|20\d\d|T\d{4}|TA\d{4}|S\d{4})", re.I)
@@ -41,7 +41,7 @@ def haystack() -> set[str]:
                 continue
             # the prose may round, scale to a percentage, or drop a trailing zero
             for cand in (f, f * 100, f / 100):
-                for nd in (0, 1, 2, 3):
+                for nd in (0, 1, 2, 3, 4):
                     out.add(f"{cand:.{nd}f}")
                     out.add(f"{cand:.{nd}f}".rstrip("0").rstrip("."))
     for p in sorted(RESULTS.glob("*.json")):
@@ -64,7 +64,7 @@ def main() -> int:
         if line.startswith("|"):        # tables are copied from the generators
             continue
         for m in NUM.finditer(line):
-            v = m.group(1)
+            v = m.group(1).replace(",", "")
             if v in known or v in seen:
                 continue
             ctx = line[max(0, m.start() - 45):m.end() + 45]

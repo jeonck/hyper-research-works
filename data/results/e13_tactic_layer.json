@@ -24,6 +24,8 @@
    "max_predecessors_absorbed": 1
   }
  },
+ "rollup_branch_fired": 3,
+ "rollup_resolutions_checked": 12027,
  "renamed_in_place_total": 102,
  "renamed_in_place_tactics": [
   {
