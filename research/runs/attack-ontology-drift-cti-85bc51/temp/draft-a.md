@@ -279,33 +279,28 @@ described in enough detail to be rebuilt.
 
 We clone MITRE's `attack-stix-data` repository, which publishes every ATT&CK release as an
 immutable STIX 2.1 bundle at a stable path [1]. Its index enumerates 109 versioned bundle
-entries across the three domains, 41 Enterprise, 41 Mobile and 27 ICS. Our extraction
-materialises 106 distinct domain-release pairs: 41 Enterprise, 38 Mobile, 27 ICS. The
-three-entry difference falls entirely at Mobile v11.0 to v11.2, where the published Mobile
-sequence steps from v10.1 to v11.3. We report both counts rather than quietly adopting the
-convenient one, because the point of this paper is that undeclared denominators are how
-measurements go wrong.
+entries across three domains — 41 Enterprise, 41 Mobile, 27 ICS. Our extraction materialises
+106 distinct domain-release pairs: 41 Enterprise, 38 Mobile, 27 ICS. The three-entry difference
+falls entirely at Mobile v11.0 to v11.2, where the published Mobile sequence steps from v10.1
+to v11.3. We report both counts rather than quietly adopting the convenient one, because the
+subject of this paper is what undeclared denominators do to a measurement.
 
-Each bundle is parsed into a SQLite database with four tables. `releases` records the domain,
-version string, ordinal and release date. `objects` records, per domain and version, every
-STIX object's identifier, type, ATT&CK identifier, name, sub-technique flag, revoked and
-deprecated flags, `x_mitre_version`, creation and modification timestamps, the
-comma-joined kill-chain phase shortnames, the platform list, and SHA-256 digests and character
-lengths of the description and detection fields. `descriptions` retains the full text of both
-fields so that token-level similarity can be computed after the fact. `relationships` records
-every typed edge with its source and target STIX references. Storing digests alongside full
-text lets an "edited or not" indicator be computed exactly and cheaply while leaving the
-similarity computation exact rather than approximate.
+Each bundle is parsed into a SQLite database of four tables. `releases` records domain,
+version, ordinal and release date. `objects` records, per domain and version, each STIX
+object's identifier, type, ATT&CK identifier, name, sub-technique flag, revoked and deprecated
+flags, `x_mitre_version`, timestamps, the comma-joined kill-chain phase shortnames, the
+platform list, and SHA-256 digests and lengths of the description and detection fields.
+`descriptions` retains both fields in full so that token-level similarity is computed exactly
+rather than approximated from digests. `relationships` records every typed edge with its source
+and target references.
 
-Release-level analyses use **major releases only**: one release per major version, taken as
-the `.0` release or, where that does not exist, the earliest available release of that major
-version. This yields 19 Enterprise, 19 Mobile and 12 ICS analysis points. The reason is
-comparability of transitions: ATT&CK's patch releases are irregular in cadence and in scope,
-and mixing them into a per-transition series would make "per release" mean different things
-in different eras. The deployed-corpus validity analysis in Section 9 deliberately does the
-opposite and uses every published release, because there the question is which release a
-given label file could have been written against, and excluding patch releases would bias
-that answer.
+Release-level analyses use **major releases only**: one release per major version, taken as the
+`.0` release or the earliest available release of that major version. This yields 19
+Enterprise, 19 Mobile and 12 ICS analysis points, and it makes "per release" mean one thing
+across eras, which mixing in irregular patch releases would not. The deployed-corpus analysis of
+Section 9 deliberately does the opposite and uses every published release, because there the
+question is which release a label file could have been written against, and excluding patch
+releases would bias the answer.
 
 **Table 1.** The release corpus. Major releases are the analysis points for churn, survival
 and drift; all releases are used for the label-validity analysis of Section 9.
@@ -319,121 +314,107 @@ and drift; all releases are used for the label-validity analysis of Section 9.
 ### 5.2 Definitions of the measured quantities
 
 **Live technique set.** `L_v` is the set of ATT&CK identifiers of `attack-pattern` objects in
-release `v` with both the revoked and deprecated flags false. Every count of "techniques" in
-this paper is `|L_v|` unless stated otherwise, and every coverage denominator is `|L_v|` at
-the release at which the coverage is being stated.
+release `v` with both the revoked and deprecated flags false. Every technique count below is
+`|L_v|`, and every coverage denominator is `|L_v|` at the release the coverage is stated
+against.
 
-**Identifier Jaccard.** For consecutive majors `a → b`, `J(L_a, L_b) = |L_a ∩ L_b| / |L_a ∪ L_b|`.
-A technique that is present in `b` but flagged revoked is not in `L_b`, so a revocation
-lowers `J` exactly as a deletion would; this is the intended behaviour, because a revoked
-identifier is unusable as a label even though it is still present in the file.
+**Identifier Jaccard.** For consecutive majors, `J(L_a, L_b) = |L_a ∩ L_b| / |L_a ∪ L_b|`. A
+revoked technique is absent from `L_b` even though its object remains in the file, so a
+revocation lowers `J` exactly as a deletion would — intended, because a revoked identifier is
+unusable as a label.
 
-**Survival and recoverability.** For a source release `v` and target `w`, survival is
-`|{t ∈ L_v : t ∈ L_w}| / |L_v|`. An identifier is *recoverable* at `w` if it is revoked or
-absent at `w` and following `revoked-by` edges transitively from it (at most ten hops, cycle-safe)
-terminates at a member of `L_w`. Half-life is the first target release at which survival falls
-below 0.5, reported with the elapsed years from the source release date; "not reached" means
-survival never fell to 0.5 through v19.0.
+**Survival and recoverability.** Survival from `v` to `w` is `|{t ∈ L_v : t ∈ L_w}| / |L_v|`. An
+identifier is *recoverable* at `w` if it is revoked or absent there and following `revoked-by`
+edges transitively (at most ten hops, cycle-safe) terminates in `L_w`. Half-life is the first
+target release at which survival falls below 0.5, reported with elapsed years; "not reached"
+means it never did through v19.0.
 
-**Semantic drift.** For identifiers live in both `v` and `w`, "description edited" is
-inequality of the SHA-256 digests of the description strings. Token similarity is the Jaccard
-index over the sets of lowercased alphanumeric tokens extracted by the regular expression
-`[a-z0-9]+`; a *substantial rewrite* is token Jaccard below 0.8. The 0.8 cut is a convention
-and we report the full mean-similarity series alongside it so that a reader who prefers a
-different cut can read the consequence off the distribution rather than take ours on trust.
-Set Jaccard over bags of words is a crude similarity, and it is deliberately crude: it is
-monotone in shared vocabulary, requires no model, and cannot be accused of importing an
-embedding's own drift into a measurement of drift.
+**Semantic drift.** For identifiers live in both releases, "description edited" is inequality
+of the SHA-256 digests of the description strings. Token similarity is the Jaccard index over
+sets of lowercased alphanumeric tokens matched by `[a-z0-9]+`; a *substantial rewrite* is token
+Jaccard below 0.8. The threshold is a convention, so we report the full mean-similarity series
+beside it. Set Jaccard over bags of words is deliberately crude: it is monotone in shared
+vocabulary, needs no model, and cannot import an embedding's own drift into a measurement of
+drift.
 
-**Version-metadata reliability.** For every pair of consecutive major releases we take the
-techniques live in both and cross-tabulate "description text changed" against
-"`x_mitre_version` incremented". Treating a version increment as a detector of a text change
-gives precision = (text changed and bumped) / (all bumped) and recall = (text changed and
-bumped) / (all text changed). These are the only two numbers needed to say whether a consumer
-can use the version field to decide what to re-read.
+**Version-metadata reliability.** For each consecutive major pair we take the techniques live
+in both and cross-tabulate "description text changed" against "`x_mitre_version` incremented".
+Treating an increment as a detector of text change gives precision = (changed and bumped) /
+(all bumped) and recall = (changed and bumped) / (all changed) — the two numbers that decide
+whether a consumer can use the version field to know what to re-read.
 
-**Growth decomposition.** For consecutive majors `a → b`, every group-to-technique `uses`
-edge present in `b` and absent in `a` is assigned to exactly one cause, tested in this order:
-*new actor* if the group is not in `a`; *revocation re-mapping* if some technique already
-credited to that group in `a` resolves transitively through `b`'s revocation graph onto this
-technique; *sub-technique refinement* if the technique is new in `b` and its parent was
-already credited to that group in `a`; *new technique intelligence* if the technique is new in
-`b` and is not such a refinement; and *genuine new intelligence* if both endpoints existed in
-`a` and were simply not linked. The *bookkeeping share* is (refinement + re-mapping) divided
-by all new edges for pre-existing groups. The ordering of the tests is a modelling choice and
-it is conservative in the direction that matters: re-mapping is tested before refinement, so
-an edge that could be read either way is charged to bookkeeping. New actors are excluded from
-the denominator because a newly documented intrusion set is unambiguously new intelligence
-and including it would flatter the intelligence share.
+**Growth decomposition.** Every group-to-technique `uses` edge present in `b` and absent in `a`
+is assigned one cause, tested in this order: *new actor* if the group is absent from `a`;
+*revocation re-mapping* if a technique already credited to that group in `a` resolves
+transitively onto this one in `b`; *sub-technique refinement* if the technique is new in `b`
+and its parent was already credited to the group; *new technique intelligence* if it is new in
+`b` and not such a refinement; *genuine new intelligence* if both endpoints existed in `a`
+unlinked. The *bookkeeping share* is (refinement + re-mapping) over all new edges for
+pre-existing groups. Test order is a modelling choice, conservative in the direction that
+matters: re-mapping is tested first, so an ambiguous edge is charged to bookkeeping. New actors
+are excluded from the denominator because a newly documented intrusion set is unambiguously new
+intelligence.
 
 ### 5.3 The four downstream experiments
 
-All four share one principle: the adversary intelligence is held fixed and only the
-vocabulary is varied. This is what makes the contrasts attributable to the instrument.
+All four hold the adversary intelligence fixed and vary only the vocabulary, which is what makes
+the contrasts attributable to the instrument.
 
-**Attribution (Section 7.1).** The analysis release is `w` = v19.0 throughout. For a legacy
-vocabulary `v`, every *modern* group profile is back-projected into `v`'s vocabulary by a map
-built once per pair: a modern technique maps to itself if it is live at `v`; else to the
-pre-revocation identifier that resolves onto it, taking the lexicographically first if several
-do; else to the nearest ancestor under `⊑_w` that is live at `v`, climbing at most five hops;
-else it is dropped as a behaviour with no `v`-era expression. The candidate universe is the
-groups present in both releases with at least `k` techniques at `w` and at least two at `v`.
-Each of 500 trials samples a group uniformly, samples `k` = 10 techniques from its modern
-profile, and scores four conditions over identical draws and an identical candidate set:
-*back-projected* (the `v`-vocabulary observation against `v`-vocabulary profiles),
-*naive* (the `v`-vocabulary observation against modern profiles), *ATT&CK-Norm* (the
-observation projected forward, then against modern profiles) and *oracle* (the modern
-observation against modern profiles). Scoring is IDF-weighted cosine over technique sets with
-IDF computed within the condition's own profile set; ties break on a fixed group ordering.
-The **drift penalty** is back-projected minus naive in top-1 accuracy; **recovery** is
-(ATT&CK-Norm − naive) / (back-projected − naive). Confidence intervals are paired bootstrap
-over trials with 2,000 resamples. A fifth *historical* condition draws from the real archival
-`v`-era profile and is reported as a diagnostic, because it mixes drift with genuine
-intelligence change and therefore cannot serve as the control.
+**Attribution (Section 7.1).** The analysis release is v19.0 throughout. For a legacy vocabulary
+`v`, every *modern* group profile is back-projected into `v` by a map built once per pair: a
+modern technique maps to itself if live at `v`; else to the pre-revocation identifier that
+resolves onto it, lexicographically first if several do; else to the nearest ancestor under
+`⊑_w` live at `v`, climbing at most five hops; else it is dropped as a behaviour with no
+`v`-era expression. The candidate universe is groups present in both releases with at least `k`
+techniques at `w` and two at `v`. Each of 500 trials samples a group uniformly, samples `k` = 10
+techniques from its modern profile, and scores four conditions over identical draws and an
+identical candidate set: *back-projected* (`v`-vocabulary observation against `v`-vocabulary
+profiles), *naive* (`v`-vocabulary observation against modern profiles), *ATT&CK-Norm*
+(observation projected forward, then against modern profiles), and *oracle* (modern observation
+against modern profiles). Scoring is IDF-weighted cosine over technique sets, IDF computed
+within each condition's own profile set, ties broken on a fixed group ordering. The **drift
+penalty** is back-projected minus naive top-1 accuracy; **recovery** is (ATT&CK-Norm − naive) /
+(back-projected − naive); intervals are paired bootstrap over trials with 2,000 resamples. A
+fifth *historical* condition draws from the real archival `v`-era profile and is reported only
+as a diagnostic, because it mixes drift with genuine intelligence change.
 
-Two properties of this design must be stated before the results rather than after. The
-back-projected condition is not a v-era system; it is 2026 intelligence transcribed into an
-older vocabulary, and Section 11 quantifies the gap. And because the observation is drawn
-from the profile, recall is perfect by construction, which inflates every absolute accuracy.
-Absolute accuracies here are internal-consistency scores inside one curator's graph and must
-never be read as attribution performance.
+Two properties must be stated before the results rather than after. The back-projected condition
+is not a v-era system; it is 2026 intelligence transcribed into an older vocabulary, and Section
+11 quantifies the gap. And because observations are drawn from the profile, recall is perfect by
+construction. Absolute accuracies are internal-consistency scores inside one curator's graph and
+are never statements about attribution performance.
 
-**Coverage (Section 7.2).** A defender's capability is frozen at release `v` as the set of
-live techniques reachable by `mitigates` (or `detects`) edges in that release — a
-capability that by construction does not change afterwards. Its coverage is then recomputed
-against v19.0 both naively (raw identifiers intersected with the modern live set, over the
-modern denominator) and after normalization. Portfolios with fewer than 20 techniques are
-excluded. A random-portfolio sweep repeats the exercise with 500 random 30% samples of each
-release's live set to give the distribution of the artefact independently of what MITRE
-happened to write mitigations for.
+**Coverage (Section 7.2).** A capability is frozen at release `v` as the live techniques
+reachable by `mitigates` (or `detects`) edges there, and by construction never changes again.
+Its coverage is recomputed against v19.0 naively (raw identifiers against the modern live set,
+over the modern denominator) and after normalization. Portfolios below 20 techniques are
+excluded. A sweep of 500 random 30% samples of each release's live set gives the distribution of
+the artefact independently of what MITRE happened to write mitigations for.
 
-**Conclusion instability (Sections 7.3 and 7.5).** Two conclusion-level readouts are computed
-on top of the same machinery: the fraction of attribution trials in which the *named actor*
-differs between conditions, decomposed by whether the changed verdict is now wrong and whether
-a correct verdict was lost; and, for mitigations, the Kendall tau between the ranking of
-mitigations by the number of techniques they address at the frozen release and the ranking of
-the same mitigation set re-measured at v19.0, with the identity of the top-ranked mitigation
-tracked separately.
+**Conclusion instability (Sections 7.3 and 7.5).** Two conclusion-level readouts sit on the same
+machinery: the share of attribution trials in which the *named actor* differs between
+conditions, decomposed by whether the new verdict is wrong and whether a correct one was lost;
+and, for mitigations, the Kendall tau between the ranking of mitigations by techniques addressed
+at the frozen release and the same set re-measured at v19.0, with the top-ranked mitigation's
+identity tracked separately.
 
-**Label validity (Section 9).** Four deployed corpora are parsed directly from their own
-label files rather than from their papers. Every distinct identifier is checked for liveness
-at every published release of the domain the artefact assigns it, or of any domain where the
-artefact declares none. The *best-fit release* maximises the share of distinct identifiers
-that are live; the *provenance interval* is the set of releases at which **every** identifier
-is simultaneously live, and an empty interval is the diagnostic finding that the artefact
-mixes mutually exclusive vocabularies.
+**Label validity (Section 9).** Four deployed corpora are parsed from their own label files, not
+their papers. Every distinct identifier is checked for liveness at every published release of
+the domain the artefact assigns it, or of any domain where it declares none. The *best-fit
+release* maximises the share of distinct identifiers live; the *provenance interval* is the set
+of releases at which **every** identifier is simultaneously live, and an empty interval is the
+diagnostic that the artefact mixes mutually exclusive vocabularies.
 
 ### 5.4 Reproducibility and evidence tiers
 
-Every number in Sections 6 to 9 is produced by a script in `code/` from the public bundles and
-public label files, and the pipeline runs end to end from one shell script. Results are
-written as JSON and the tables in this paper are generated from those files, not transcribed.
-Three evidence tiers are used and marked throughout. Tier A is our own measurement and
-artefacts we read in full from local clones, stated plainly. Tier B is secondary literature
-reachable in this environment only through search summaries; it is attributed as reported and
-never quoted. Tier C is an audited absence, always stated with the bound of the search that
-found it. Section 11 reports one integrity incident inside our own evidence corpus and what
-we did about it.
+Every number in Sections 6 to 9 is produced by a script in `code/` from public bundles and
+public label files; the pipeline runs end to end from one shell script, writes JSON, and the
+tables here are generated from that JSON rather than transcribed. Three evidence tiers are
+marked throughout: Tier A, our own measurements and artefacts read in full from local clones,
+stated plainly; Tier B, secondary literature reachable here only through search summaries,
+attributed as reported and never quoted; Tier C, audited absences, always stated with the bound
+of the search that found them. Section 11 reports one integrity incident inside our own evidence
+corpus and what we did about it.
 
 ## 6. Measuring Ontology Drift in ATT&CK
 

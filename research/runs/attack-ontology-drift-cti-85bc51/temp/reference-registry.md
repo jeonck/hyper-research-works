@@ -11,7 +11,7 @@ measurement, citing the measurement note, or not made at all.
 | 2 | ground_truth | AttacKG repo audit: ATT&CK ontology frozen as a 2021-08-31 HTML scrape, parent-only templates, unvalidated non | https://github.com/li-zhenyuan/Knowledge-enhanced-Attack-Graph |
 | 3 | ground_truth | B2 synthesis: six TTP systems, five different ATT&CK ontologies, two declared versions | https://github.com/center-for-threat-informed-defense/tram |
 | 4 | ground_truth | CTI-Bench data audit: v15-era vocabulary hard-coded into prompts, sub-techniques erased, attribution task unla | https://github.com/maveryn/cti-bench |
-| 5 | ground_truth | CTID ATT&CK Sync | what it publishes, read from the repository:https://github.com/center-for-threat-informed-defense/attack-sync |
+| 5 | ground_truth | CTID ATT&CK Sync: what it publishes, read from the repository | https://github.com/center-for-threat-informed-defense/attack-sync |
 | 6 | ground_truth | Measured: 4.3x label-space growth between CTIBench and AthenaBench is ~96% pre-existing catalogue, only 6 new  | https://github.com/Athena-Software-Group/athenabench |
 | 7 | ground_truth | MITRE's own change taxonomy, read from diffStix source | https://github.com/mitre-attack/mitreattack-python |
 | 8 | ground_truth | rcATT repo audit: a 2019-era flat ATT&CK label space, half of it revoked by v13 | https://github.com/vlegoy/rcATT |

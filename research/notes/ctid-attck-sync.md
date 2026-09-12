@@ -1,11 +1,11 @@
 ---
-title: CTID ATT&CK Sync
+title: "CTID ATT&CK Sync: what it publishes, read from the repository"
 id: ctid-attck-sync
 tags:
 - attack-ontology-drift-cti-85bc51
 - primary-artefact
 created: '2026-09-12T13:47:48.916480Z'
-source: ' what it publishes, read from the repository:https://github.com/center-for-threat-informed-defense/attack-sync'
+source: https://github.com/center-for-threat-informed-defense/attack-sync
 status: draft
 type: note
 tier: ground_truth

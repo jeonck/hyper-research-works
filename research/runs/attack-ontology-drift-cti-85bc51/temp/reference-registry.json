@@ -38,8 +38,8 @@
  {
   "n": 5,
   "id": "ctid-attck-sync",
-  "title": "CTID ATT&CK Sync",
-  "url": "what it publishes, read from the repository:https://github.com/center-for-threat-informed-defense/attack-sync",
+  "title": "CTID ATT&CK Sync: what it publishes, read from the repository",
+  "url": "https://github.com/center-for-threat-informed-defense/attack-sync",
   "tier": "ground_truth",
   "summary": "Primary-artefact replacement for a quarantined note",
   "content_type": "docs"
