@@ -26,17 +26,31 @@ randomness that is not seeded (`SEED = 20260912`).
 | `09_robustness.py` | E5b scorer/profile robustness, E2b half-life |
 | `11_backprojection_diag.py` | E5c back-projection information loss |
 | `12_case_v19.py` | E8 blast radius of the v19.0 revocation wave |
-| `07_figures.py`, `10_tables.py` | every figure and table in the paper |
+| `12_case_v19.py` | E8 blast radius of the v19.0 revocation wave |
+| `13_version_declaration.py` | E9 whether deployed corpora declare an ATT&CK release |
+| `14_conclusion_flips.py` | E10 attribution verdict instability and leaderboard reordering |
+| `15_prevalence_weighted.py` | E6b prevalence-weighted coverage drift |
+| `18_version_metadata.py` | E11 is `x_mitre_version` a usable change signal |
+| `19_temporal_structure.py` | E12 staleness clocks, recurrence hazard, leading indicators |
+| `23_tactic_layer.py` | E13 the tactic layer and the arity of the revocation relation |
+| `24_noise_and_stratification.py` | E14 noise factorial, specificity stratification, archival control |
+| `25_vault_integrity.py` | E15 corpus integrity check over the evidence notes |
+| `07_figures.py`, `10_tables.py`, `16_evidence_digest.py` | every figure, table and quoted number in the paper |
 | `attackdrift.py` | shared loading, lineage and the ATT&CK-Norm implementation |
 
 Run them in order with `bash code/run_all.sh`.
 
 ## ATT&CK-Norm
 
-The normalization protocol evaluated in the paper is `attackdrift.normalize`:
-transitive `revoked-by` resolution against the target release, removal of
-identifiers that are deprecated or absent there, and an optional roll-up of
-orphaned sub-technique identifiers to a surviving parent. It is deliberately
-small — the point of the paper is that this much is enough to repair a
-measurable share of the damage, and that the remainder is not repairable by
-identifier arithmetic at all.
+The normalization protocol evaluated in the paper is
+`attackdrift.normalize_with_ledger`: transitive `revoked-by` resolution against
+the target release, identifiers that are deprecated or absent there dropped and
+counted rather than silently discarded, and a residual ledger reporting what was
+kept, merged, demoted across abstraction levels, and dropped.
+
+Roll-up to a surviving parent is **off by default**. The branch fires three
+times in 12,027 resolutions across every domain and major release, so it buys
+nothing measurable while being able to fabricate a parent-level assertion the
+artefact never made. `normalize()` remains as a set-returning convenience
+wrapper, but reporting only the set is the reporting failure this study is
+about.
