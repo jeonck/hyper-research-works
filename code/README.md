@@ -40,7 +40,7 @@ randomness that is not seeded (`SEED = 20260912`).
 | `27_to_latex.py` | LaTeX export for journal submission |
 | `28_number_provenance.py` | every number in the prose traced back to a computed result |
 | `31_sources_section.py`, `32_cite_pairs.py` | the reference list, and the citation-sentence pairs the cite-check verifies |
-| `33_build_web.py` | the reading edition of the manuscript as a single web page |
+| `33_build_web.py` | the reading edition of the manuscript as a single web page; `WEB_OUT` and `WEB_FIG_PREFIX` target it at `docs/` for GitHub Pages |
 | `attackdrift.py` | shared loading, lineage and the ATT&CK-Norm implementation |
 
 Run them in order with `bash code/run_all.sh`.

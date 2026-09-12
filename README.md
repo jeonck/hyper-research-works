@@ -11,11 +11,29 @@ manuscript, and a four-critic panel then audited the manuscript itself. Several
 of the study's headline claims were corrected or narrowed by that process, and
 the record of those corrections is kept in `research/runs/`.
 
+## Reading it
+
+The paper is published as a web page from `docs/`:
+**https://jeonck.github.io/hyper-research-works/**
+
+If that link 404s, GitHub Pages has not been switched on for the repository yet.
+It is one setting, once: **Settings → Pages → Source: Deploy from a branch →
+Branch `main`, folder `/docs` → Save**. Every later push that changes `docs/`
+republishes the site on its own.
+
+To rebuild the page after editing the manuscript:
+
+```bash
+WEB_OUT=docs/index.html WEB_FIG_PREFIX=figures/ .venv/bin/python code/33_build_web.py
+cp paper/figures/*.png docs/figures/
+```
+
 ## Layout
 
 | Path | What is there |
 |---|---|
-| `paper/` | the manuscript's figures and tables |
+| `paper/` | the manuscript's figures, tables and LaTeX source |
+| `docs/` | the reading edition served by GitHub Pages |
 | `research/notes/final_report_attack-ontology-drift-cti-85bc51.md` | the manuscript |
 | `research/runs/attack-ontology-drift-cti-85bc51/` | the full pipeline record: decomposition, contradiction graph, loci, the four investigators' committed positions, the reconciliation, the three drafts, the critic findings and the patch log |
 | `research/notes/` | the evidence corpus, one note per source |
