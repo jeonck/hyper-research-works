@@ -106,12 +106,21 @@ def main() -> int:
         if buf:
             body.append(table(buf))
             buf = []
+        if line.startswith("# ") and not line.startswith("## "):
+            # the manuscript's H1 is its title; the preamble already carries it
+            continue
         if line.startswith("### "):
             body.append(r"\subsection{" + inline(line[4:]) + "}")
         elif line.startswith("## "):
-            title = line[3:]
-            title = re.sub(r"^\d+\.\s*", "", title)
-            body.append(r"\section{" + inline(title) + "}")
+            title = re.sub(r"^\d+\.\s*", "", line[3:])
+            if title.strip().lower() == "abstract":
+                body.append(r"\begin{abstract}")
+                body.append("%ABSTRACT_OPEN%")
+            elif "%ABSTRACT_OPEN%" in body:
+                body.append(r"\end{abstract}")
+                body.append(r"\section{" + inline(title) + "}")
+            else:
+                body.append(r"\section{" + inline(title) + "}")
         elif not line.strip():
             body.append("")
         else:
@@ -127,7 +136,11 @@ def main() -> int:
     if buf:
         body.append(table(buf))
     OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(PREAMBLE + "\n".join(body) + "\n\\end{document}\n")
+    text = "\n".join(body).replace("%ABSTRACT_OPEN%", "")
+    # close the abstract if the manuscript ended inside it
+    if text.count(r"\begin{abstract}") > text.count(r"\end{abstract}"):
+        text += "\n" + r"\end{abstract}"
+    OUT.write_text(PREAMBLE + text + "\n\\end{document}\n")
     print(f"wrote {OUT} ({len(body)} lines, {len(seen_fig)} figures placed)")
     return 0
 

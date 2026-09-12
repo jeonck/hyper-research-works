@@ -59,3 +59,181 @@ Two artefacts are **version-comparable** when both have been projected onto one 
 Placed in the experimental-methodology tradition, ontology drift damages validity in four distinguishable ways. *Construct validity*: after O6 the same label denotes a different behaviour, so the construct measured is not the construct the labels name. *Internal validity*: after O4 or O5 a profile's cardinality and granularity change under migration, so measured breadth falls with no change in the intelligence. *External validity*: after O1 the denominator of any coverage claim grows, and a capability unchanged in the world reports a falling number. *Conclusion validity*: if the effect were confined to scores the response would be an error bar; Section 7 shows it reaches the named actor, the top-ranked mitigation and the pass/fail verdict. The control is not a better algorithm. It is declaration plus projection.
 
 Because a study of drift is unusually exposed to its own subject, we commit in advance to four requirements and audit them in Section 11. **R1**, the contrast must hold everything constant except the vocabulary. **R2**, a stated noise model, since holding a nuisance term at zero establishes separability and says nothing about additivity. **R3**, a declared closure boundary, since if observation, profile, ground truth and migration map all come from one curator the absolute levels are internal-consistency scores. **R4**, a named falsifier.
+
+## 5. Data and Methodology
+
+We clone MITRE's `attack-stix-data` repository, which publishes every release as an immutable STIX 2.1 bundle at a stable path [1]. Its index enumerates 109 versioned bundle entries, 41 Enterprise, 41 Mobile and 27 ICS; our extraction materialises 106 domain-release pairs, 41 Enterprise, 38 Mobile and 27 ICS. The three-entry difference falls entirely at Mobile v11.0 to v11.2, entries the published Mobile sequence skips as it steps from v10.1 to v11.3, and which are excluded as pre-release placeholders. We report both counts rather than quietly adopting the convenient one, because undeclared denominators are how measurements go wrong. Each bundle is parsed into a relational store recording, per domain and release, every object's identifiers, flags, `x_mitre_version`, timestamps, kill-chain phases, platforms and the full text plus SHA-256 digests of description and detection fields, together with every typed relationship.
+
+Release-level analyses use **major releases only**: one release per major version, the `.0` release or the earliest available release of that version, giving 19 Enterprise, 19 Mobile and 12 ICS analysis points. Patch releases are irregular in cadence and scope, and mixing them in would make a per-release transition mean different things in different eras. The deployed-corpus analysis of Section 9 deliberately does the opposite and uses every published release, because there the question is which release a label file could have been written against, and excluding patch releases would bias that answer.
+
+**Table 1.** The release corpus. Major releases are the analysis points for churn, survival and drift; all releases are used for the label-validity analysis of Section 9.
+
+| Domain | Releases analysed (major / all) | First | Last |
+|---|---|---|---|
+| Enterprise | 19 / 41 | v1.0 (2018-01-17) | v19.0 (2026-04-28) |
+| Mobile | 19 / 38 | v1.0 (2018-01-17) | v19.0 (2026-04-28) |
+| Ics | 12 / 27 | v8.0 (2020-10-27) | v19.0 (2026-04-28) |
+
+The live set is the `attack-pattern` objects with both retirement flags false, and it is the denominator of every coverage claim. Identifier Jaccard is computed over consecutive majors, with a revoked identifier treated as absent because a revoked identifier is unusable as a label even though the object is retained. An identifier is *recoverable* at a target if transitive `revoked-by` closure from it, cycle-safe and bounded at ten hops, terminates in the live set. Semantic drift is measured on identifier-stable techniques only: description edited is inequality of digests, similarity is the Jaccard index over lowercased alphanumeric token sets, and a *substantial rewrite* is token similarity below 0.8. The cut is a convention and we report the mean-similarity series alongside it. Set Jaccard over bags of words is deliberately crude: it is monotone in shared vocabulary, requires no model, and cannot import an embedding's own drift into a measurement of drift. Growth decomposition assigns each newly added group-technique edge to exactly one cause, tested in a fixed order — new actor, revocation re-mapping, sub-technique refinement, new technique, genuine new intelligence — with re-mapping tested before refinement so that an ambiguous edge is charged to bookkeeping.
+
+Four downstream experiments share one principle: the adversary intelligence is held fixed and only the vocabulary varies, which satisfies R1 and makes every contrast attributable to the instrument. **Attribution.** The analysis release is v19.0 throughout. Modern group profiles are back-projected into a legacy vocabulary by a map built once per pair: a modern technique maps to itself if live at the legacy release, else to the pre-revocation identifier resolving onto it, else to the nearest live ancestor within five hops, else it is dropped as a behaviour with no expression in that era. Each of 500 trials samples a group, draws k = 10 techniques from its modern profile, and scores four conditions over identical draws: *back-projected* (labelled *contemporaneous* in the released results files), *naive*, *ATT&CK-Norm* and *oracle*. Scoring is IDF-weighted cosine; the drift penalty is back-projected minus naive top-1 accuracy; recovery is the share of that penalty returned by normalization; intervals are paired bootstrap with 2,000 resamples. Robustness sweeps three scorers and two profile definitions (Table 7). **Coverage.** A capability is frozen at a release as the techniques reachable by `mitigates` edges there and re-measured at v19.0 naively and after normalization, with a 500-sample random-portfolio sweep and a prevalence-weighted variant. **Conclusion instability.** The same machinery is read out at verdict level and as Kendall tau over mitigation rankings. **Label validity.** Four deployed corpora are parsed from their own label files rather than from their papers, and every identifier is checked for liveness at every published release; the *provenance interval* is the set of releases at which every identifier is simultaneously live, and an empty interval means the artefact mixes mutually exclusive vocabularies.
+
+Every number in Sections 6 to 9 is produced by scripts in `code/` from public bundles and public label files and runs end to end from one shell script; tables are generated from the result files rather than transcribed. Three evidence tiers are marked throughout. Tier A is our own measurement and artefacts read in full from local clones. Tier B is secondary literature reachable in this environment only through search summaries, attributed as reported and never quoted. Tier C is an audited absence, stated with the bound of the search that found it.
+
+## 6. Measuring Ontology Drift in ATT&CK
+
+### 6.1 Two clocks, not one
+
+**Figure 1.** Live technique count across Enterprise releases, with per-release additions, revocations and description rewrites on a shared time axis.
+
+**Table 2.** Per-release Enterprise churn across consecutive major releases. Rewrite and tactic columns count only techniques live in both releases; `J(ID)` is the identifier Jaccard; edges are group-to-technique `uses` edges.
+
+| Transition | Date | Live | Added | Revoked | Deprecated | Renamed | Desc. rewritten | Detection rewritten | Tactic changed | J(ID) | Edges +/- |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| v1.0→v2.0 | 2018-04-18 | 219 | 31 | 0 | 0 | 2 | 28 | 0 | 5 | 0.858 | +135/−0 |
+| v2.0→v3.0 | 2018-10-23 | 223 | 4 | 0 | 0 | 1 | 219 | 218 | 4 | 0.982 | +285/−0 |
+| v3.0→v4.0 | 2019-04-30 | 244 | 21 | 0 | 0 | 1 | 27 | 10 | 1 | 0.914 | +237/−2 |
+| v4.0→v5.0 | 2019-07-19 | 244 | 0 | 0 | 0 | 0 | 2 | 0 | 0 | 1.000 | +100/−0 |
+| v5.0→v6.0 | 2019-10-23 | 266 | 22 | 0 | 0 | 2 | 60 | 24 | 2 | 0.917 | +102/−0 |
+| v6.0→v7.0 | 2020-03-31 | 428 | 302 | 129 | 11 | 17 | 106 | 60 | 10 | 0.222 | +1235/−750 |
+| v7.0→v8.0 | 2020-10-27 | 525 | 97 | 0 | 0 | 3 | 34 | 17 | 0 | 0.815 | +102/−2 |
+| v8.0→v9.0 | 2021-04-29 | 552 | 27 | 0 | 0 | 6 | 149 | 52 | 5 | 0.951 | +642/−2 |
+| v9.0→v10.0 | 2021-10-21 | 566 | 15 | 0 | 1 | 2 | 76 | 66 | 0 | 0.972 | +312/−1 |
+| v10.0→v11.0 | 2022-04-25 | 576 | 12 | 2 | 0 | 9 | 151 | 44 | 0 | 0.976 | +288/−1 |
+| v11.0→v12.0 | 2022-10-25 | 594 | 18 | 0 | 0 | 2 | 50 | 0 | 0 | 0.970 | +252/−0 |
+| v12.0→v13.0 | 2023-04-25 | 607 | 13 | 0 | 0 | 1 | 87 | 13 | 0 | 0.979 | +112/−16 |
+| v13.0→v14.0 | 2023-10-31 | 625 | 18 | 0 | 0 | 1 | 41 | 2 | 6 | 0.971 | +178/−1 |
+| v14.0→v15.0 | 2024-04-23 | 637 | 12 | 0 | 0 | 3 | 98 | 4 | 0 | 0.981 | +208/−34 |
+| v15.0→v16.0 | 2024-10-31 | 656 | 19 | 0 | 0 | 1 | 61 | 0 | 0 | 0.971 | +417/−14 |
+| v16.0→v17.0 | 2025-04-22 | 679 | 24 | 1 | 0 | 5 | 79 | 5 | 2 | 0.963 | +313/−558 |
+| v17.0→v18.0 | 2025-10-28 | 691 | 12 | 0 | 0 | 2 | 49 | 583 | 0 | 0.983 | +328/−11 |
+| v18.0→v19.0 | 2026-04-28 | 697 | 23 | 17 | 0 | 4 | 41 | 0 | 198 | 0.944 | +270/−86 |
+
+Read the identifier column alone and the episodic reading is irresistible: one transition, v6.0 to v7.0, has an identifier Jaccard of 0.222, adds 302 techniques, revokes 129, deprecates 11 and rewrites the group-technique graph by removing 750 edges and adding 1,235. The next largest drop in eight years is 0.944, at the most recent transition. Read any other column and the episodic reading collapses. Description rewrites among surviving techniques never fall below 27 and reach 151 at v10.0 to v11.0, a transition whose identifier Jaccard is 0.976. Detection rewrites are burstier and larger: 583 of 691 surviving techniques had their detection guidance rewritten between v17.0 and v18.0, a transition any identifier-keyed diff would report as one of the quietest in ATT&CK's history. The tactic column, empty or near-empty for sixteen transitions, reads 198 at the most recent one. This is the two-clock structure, and stating it precisely is the first result: a slow episodic referential clock and a fast continuous intensional clock, so that any risk statement reporting one without the other is wrong by a factor that depends on which column the reader happened to look at.
+
+### 6.2 Survival: the concession, measured
+
+**Figure 2.** Identifier survival curves by source release to v19.0, with the recoverable fraction under transitive `revoked-by` closure overlaid.
+
+**Table 3.** Identifier survival to v19.0 by source release. Recoverable counts revoked or absent identifiers whose transitive closure terminates at a live identifier.
+
+| Source release | Date | Identifiers | Live at v19.0 | Survival | Revoked | Deprecated | Recoverable | Half-life |
+|---|---|---|---|---|---|---|---|---|
+| v1.0 | 2018-01-17 | 188 | 77 | 0.410 | 100 | 11 | 100 | v7.0 (2.2 y) |
+| v2.0 | 2018-04-18 | 219 | 97 | 0.443 | 111 | 11 | 111 | v7.0 (2.0 y) |
+| v3.0 | 2018-10-23 | 223 | 100 | 0.448 | 112 | 11 | 112 | v7.0 (1.4 y) |
+| v4.0 | 2019-04-30 | 244 | 113 | 0.463 | 120 | 11 | 120 | v7.0 (0.9 y) |
+| v5.0 | 2019-07-19 | 244 | 113 | 0.463 | 120 | 11 | 120 | v7.0 (0.7 y) |
+| v6.0 | 2019-10-23 | 266 | 126 | 0.474 | 129 | 11 | 129 | v7.0 (0.4 y) |
+| v7.0 | 2020-03-31 | 428 | 415 | 0.970 | 12 | 1 | 12 | not reached |
+| v8.0 | 2020-10-27 | 525 | 511 | 0.973 | 13 | 1 | 13 | not reached |
+| v9.0 | 2021-04-29 | 552 | 538 | 0.975 | 13 | 1 | 13 | not reached |
+| v10.0 | 2021-10-21 | 566 | 551 | 0.973 | 15 | 0 | 15 | not reached |
+| v11.0 | 2022-04-25 | 576 | 563 | 0.977 | 13 | 0 | 13 | not reached |
+| v12.0 | 2022-10-25 | 594 | 581 | 0.978 | 13 | 0 | 13 | not reached |
+| v13.0 | 2023-04-25 | 607 | 593 | 0.977 | 14 | 0 | 14 | not reached |
+| v14.0 | 2023-10-31 | 625 | 609 | 0.974 | 16 | 0 | 16 | not reached |
+| v15.0 | 2024-04-23 | 637 | 621 | 0.975 | 16 | 0 | 16 | not reached |
+| v16.0 | 2024-10-31 | 656 | 640 | 0.976 | 16 | 0 | 16 | not reached |
+| v17.0 | 2025-04-22 | 679 | 663 | 0.976 | 16 | 0 | 16 | not reached |
+| v18.0 | 2025-10-28 | 691 | 674 | 0.975 | 17 | 0 | 17 | not reached |
+| v19.0 | 2026-04-28 | 697 | 697 | 1.000 | 0 | 0 | 0 | not reached |
+
+The recoverable column equals the revoked column in every Enterprise row and the absent count is zero in every row. Recomputing from the v19.2 bundle gives 858 `attack-pattern` objects — 697 live, 149 revoked, 12 deprecated — and 149 `revoked-by` edges from 149 distinct sources. Every revoked Enterprise technique has exactly one successor and none dangle. We concede this without qualification, because conceding it is what makes the remaining argument non-trivial [1].
+
+The concession has a precise scope and each boundary of that scope is a finding. It is Enterprise-only: in Mobile, 34 survival rows record identifiers absent rather than tombstoned, and all 76 ATT&CK identifiers of Mobile v1.0 are simply gone from v3.0 onward with no successor edge of any kind. The relation is never one-to-many, so a split is representable only as a set of merges onto whichever survivor the curator judges narrowest; eight Enterprise targets absorb 20 predecessor identifiers, the largest absorbing five. And retirement routinely crosses abstraction levels: of the 149 edges, 119 map a top-level technique onto a sub-technique, 13 top onto top, 10 sub onto sub, and 7 promote a sub-technique to a parent. A crosswalk that resolves in one hop, reports complete success and silently narrows the extension of the original assertion is not a broken crosswalk. It is a 1:1 relation doing what a 1:1 relation can do in a situation that needs more, which is why the remedy in Section 10 is borrowed from a framework that already separates exact from inexact successors [54].
+
+The tactic layer is worse, because it has no retirement relation at all: across all three domains and every release our extraction finds 5,599 revocation edges and zero of them involve a tactic object. Between v18.1 and v19.2 the object carrying TA0005 keeps its UUID and identifier while its name changes from Defense Evasion to Stealth, its shortname from `defense-evasion` to `stealth`, and its `x_mitre_version` stays at 1.0; TA0112 Defense Impairment is minted alongside it, and T1562 is retired into the new arrangement [78]. Any analytic joining on TA0005 across that boundary compares two different concepts with no revocation, no version increment and nothing to follow. This is the edit that OBO Foundry's stability principle exists to forbid: a changed referent requires a new identifier [54].
+
+### 6.3 Intensional drift, and why ATT&CK cannot signal it
+
+**Figure 3.** Silent semantic drift among identifier-stable techniques: share with edited descriptions and share substantially rewritten, by source release, measured at v19.0.
+
+**Table 4.** Semantic drift among techniques live at both the source release and v19.0. Token Jaccard is over lowercased alphanumeric token sets of the description; a substantial rewrite is below 0.8.
+
+| Source release | ID-stable techniques | Description edited | Mean token Jaccard | Substantial rewrite (J<0.8) |
+|---|---|---|---|---|
+| v1.0 | 77 | 1.000 | 0.345 | 1.000 |
+| v2.0 | 97 | 1.000 | 0.373 | 1.000 |
+| v3.0 | 100 | 0.960 | 0.553 | 0.830 |
+| v4.0 | 113 | 0.965 | 0.548 | 0.841 |
+| v5.0 | 113 | 0.965 | 0.548 | 0.841 |
+| v6.0 | 126 | 0.968 | 0.569 | 0.817 |
+| v7.0 | 415 | 0.749 | 0.808 | 0.386 |
+| v8.0 | 511 | 0.767 | 0.830 | 0.337 |
+| v9.0 | 538 | 0.645 | 0.849 | 0.310 |
+| v10.0 | 551 | 0.593 | 0.866 | 0.278 |
+| v11.0 | 563 | 0.465 | 0.895 | 0.208 |
+| v12.0 | 581 | 0.439 | 0.906 | 0.189 |
+| v13.0 | 593 | 0.386 | 0.928 | 0.140 |
+| v14.0 | 609 | 0.366 | 0.938 | 0.123 |
+| v15.0 | 621 | 0.275 | 0.956 | 0.087 |
+| v16.0 | 640 | 0.211 | 0.969 | 0.062 |
+| v17.0 | 663 | 0.124 | 0.985 | 0.024 |
+| v18.0 | 674 | 0.061 | 0.997 | 0.003 |
+
+Table 4 must be read as a function of elapsed time, not of release quality: the v18.0 row is low because one transition separates it from the analysis release. The right reading is cohort decay. Of the 415 techniques live at v7.0 and still live at v19.0, 0.749 have edited descriptions and 0.386 are rewritten past the substantial threshold, at mean similarity 0.808; for the v11.0 cohort, 0.465, 0.208 and 0.895; for v15.0, 0.275, 0.087 and 0.956. These are identifiers whose survival over the same interval is 0.977 and 0.975. The instrument keeps the scale markings and moves what they mean. Converted to a practitioner's clock, for every Enterprise cohort from v7.0 onward the time to 10% hard identifier staleness is never, while the time to 10% substantive staleness — gone, substantially rewritten, or reassigned to a different tactic — is 0.50 to 2.01 years with a median of 1.51, and 0.99 to 2.01 years with a median of 1.52 when tactic changes and revocations are excluded so that the recent re-cut cannot be blamed. Semantic half-life is 4.5 to 6.1 years. A pinned post-2020 label set has an infinite identifier half-life and an eighteen-month first-10% semantic staleness schedule, simultaneously.
+
+Could a consumer detect this from the bundles? ATT&CK carries `x_mitre_version` on every object, and the natural assumption is that a change in meaning is announced there. It is not.
+
+**Table 13.** Text change versus version increment for techniques live in both releases of a consecutive major pair, Enterprise.
+
+| Transition | Techniques live in both | Text changed, version bumped | Text changed, no bump | Bump, no text change | Neither |
+|---|---|---|---|---|---|
+| v1.0→v2.0 | 188 | 0 | 28 | 0 | 160 |
+| v2.0→v3.0 | 219 | 0 | 219 | 0 | 0 |
+| v3.0→v4.0 | 223 | 15 | 12 | 7 | 189 |
+| v4.0→v5.0 | 244 | 0 | 2 | 0 | 242 |
+| v5.0→v6.0 | 244 | 53 | 7 | 12 | 172 |
+| v6.0→v7.0 | 126 | 94 | 12 | 0 | 20 |
+| v7.0→v8.0 | 428 | 26 | 8 | 46 | 348 |
+| v8.0→v9.0 | 525 | 55 | 94 | 64 | 312 |
+| v9.0→v10.0 | 551 | 73 | 3 | 98 | 377 |
+| v10.0→v11.0 | 564 | 114 | 37 | 31 | 382 |
+| v11.0→v12.0 | 576 | 47 | 3 | 31 | 495 |
+| v12.0→v13.0 | 594 | 81 | 6 | 58 | 449 |
+| v13.0→v14.0 | 607 | 38 | 3 | 80 | 486 |
+| v14.0→v15.0 | 625 | 73 | 25 | 46 | 481 |
+| v15.0→v16.0 | 637 | 56 | 5 | 104 | 472 |
+| v16.0→v17.0 | 655 | 79 | 0 | 304 | 272 |
+| v17.0→v18.0 | 679 | 45 | 4 | 17 | 613 |
+| v18.0→v19.0 | 674 | 22 | 19 | 179 | 454 |
+| **All** | **8359** | **871** | **487** | **1077** | **5924** |
+
+Over 8,359 carried-over pairs, 1,358 (0.162) had their description rewritten; 487 of those (0.359) carried no version increment, and 1,077 version increments carried no text change at all. As a detector of description change, `x_mitre_version` has precision 0.447 and recall 0.641: a consumer who re-reads every technique whose version increased does nearly half the work for nothing and still misses over a third of the changes. MITRE's own tooling knows this — `diffStix` defines a distinct change class for objects patched while the version stayed the same, and annotates unintended version changes as a historical defect it defends against [34, 48] — while the published consumer contract offers a binary current-or-retired filter and no expression for a surviving object whose meaning moved [1]. The gap is architectural, not an oversight. This is the paper's central negative result and the answer to the strongest practical objection in the field: the advice to pin a release is correct and insufficient. Pinning fixes identity, not intension, and no signal in the published data reliably tells a consumer when intension has moved.
+
+### 6.4 How much of ATT&CK's growth is intelligence?
+
+**Figure 4.** Per-transition decomposition of new group-technique edges for pre-existing groups into genuine new intelligence, new technique, sub-technique refinement and revocation re-mapping.
+
+**Table 5.** Knowledge-growth decomposition, Enterprise. Edges for groups newly added to ATT&CK are excluded from the denominator; bookkeeping share is refinement plus re-mapping over all new edges for pre-existing groups.
+
+| Transition | New edges (pre-existing groups) | Genuine new intel | New technique | Sub-technique refinement | Revocation re-mapping | Bookkeeping share |
+|---|---|---|---|---|---|---|
+| v1.0→v2.0 | 36 | 12 | 24 | 0 | 0 | 0.000 |
+| v2.0→v3.0 | 123 | 121 | 2 | 0 | 0 | 0.000 |
+| v3.0→v4.0 | 144 | 134 | 10 | 0 | 0 | 0.000 |
+| v4.0→v5.0 | 33 | 33 | 0 | 0 | 0 | 0.000 |
+| v5.0→v6.0 | 30 | 21 | 9 | 0 | 0 | 0.000 |
+| v6.0→v7.0 | 1059 | 78 | 187 | 390 | 404 | 0.750 |
+| v7.0→v8.0 | 81 | 57 | 24 | 0 | 0 | 0.000 |
+| v8.0→v9.0 | 285 | 270 | 11 | 4 | 0 | 0.014 |
+| v9.0→v10.0 | 187 | 183 | 3 | 1 | 0 | 0.005 |
+| v10.0→v11.0 | 231 | 223 | 4 | 0 | 4 | 0.017 |
+| v11.0→v12.0 | 43 | 39 | 2 | 2 | 0 | 0.047 |
+| v12.0→v13.0 | 71 | 39 | 5 | 27 | 0 | 0.380 |
+| v13.0→v14.0 | 48 | 44 | 3 | 1 | 0 | 0.021 |
+| v14.0→v15.0 | 100 | 62 | 4 | 34 | 0 | 0.340 |
+| v15.0→v16.0 | 182 | 164 | 4 | 14 | 0 | 0.077 |
+| v16.0→v17.0 | 134 | 95 | 10 | 9 | 20 | 0.216 |
+| v17.0→v18.0 | 123 | 105 | 13 | 5 | 0 | 0.041 |
+| v18.0→v19.0 | 164 | 72 | 15 | 0 | 77 | 0.470 |
+| **All transitions** | **3074** | **1752** | **330** | **487** | **505** | **0.323** |
+
+Across all Enterprise transitions 5,516 group-technique edges are added, of which 2,442 belong to groups newly added to ATT&CK. Of the remaining 3,074, 1,752 are genuine new intelligence about a pre-existing pairing, 330 credit a group with a newly minted technique, 487 are sub-technique refinements of an edge the group already had, and 505 restate an edge whose technique was revoked and replaced. The bookkeeping share is 992/3074 = 0.323. The headline conceals a heavy tail, and the tail is the point: the restructuring transition is 0.750 bookkeeping over 1,059 edges, eight transitions are below 0.05, but v12.0 to v13.0 is 0.380 over 71 edges, v14.0 to v15.0 is 0.340 over 100, and the most recent transition is 0.470 over 164 edges, the highest share since the restructuring and driven entirely by 77 revocation re-mappings. A reader who plots ATT&CK's edge count as a curve of accumulating adversary knowledge is reading a curve that is roughly a third bookkeeping overall and nearly half bookkeeping in the release that shipped four months before this analysis. Evidence from the benchmark side points the same way: the 4.3x label-space growth between one LLM CTI benchmark generation and its successor is roughly 96% pre-existing catalogue, with only six genuinely new entries [6].
+
+### 6.5 Recurrence: a hazard, not a wound
+
+The episodic reading of Table 2 has one defence left, that the 2020 restructuring was singular and is finished. Extending the measurement to all three domains refutes it. Five major transitions in the corpus have identifier Jaccard below 0.80: Mobile v2.0 to v3.0 (J = 0.000), Enterprise v6.0 to v7.0 (0.222), ICS v8.0 to v9.0 (0.778), Mobile v10.0 to v11.3 (0.268) and ICS v18.0 to v19.0 (0.698). That is 5 events in 47 transitions, a hazard of 0.106 per major transition, one event per 4.41 domain-years over 22.05 observed domain-years — roughly one restructuring somewhere in ATT&CK every 1.5 calendar years. Two matter more than their Jaccard suggests. Mobile's 2018 event is the most destructive in the corpus and predates the Enterprise restructuring: all 128 STIX identifiers are preserved while all 76 ATT&CK identifiers vanish, with zero of the 76 recoverable, making it invisible to STIX-keyed tooling and uncrosswalkable by any mechanism MITRE publishes. And the ICS event is happening now, introducing sub-techniques for the first time — 0 at v18.1, 18 at v19.0 — six years after Enterprise made the same move, with all nine remaps recoverable. So the two-clock model is not a story about one bad year: the referential clock is episodic and recurrent across domains, and the intensional clock never stopped.
+
+Can a consumer see one coming? Testing leading indicators over 17 lagged Enterprise pairs by Spearman correlation with 20,000-shuffle permutation tests, the largest coefficient is detection-field edits at ρ = +0.377, p = 0.134, and nothing else comes close; the largest anywhere in the three-domain panel, ICS renames at ρ = +0.733, has p = 0.054 on n = 10. Technique-level hazard modelling is worse than null: the 131 techniques doomed at v7.0 had been edited *less* than the survivors in the preceding release, on description edits (0.168 against 0.336) and on version bumps (0.176 against 0.372). Restructuring waves are not forecastable from the public bundles, which removes the option of a triggered response and means any protocol that helps must be standing rather than event-driven. The most recent wave shows what standing exposure looks like: 17 live techniques revoked between v18.1 and v19.2, a blast radius on the v18.1 graph of 84 group-technique edges, 155 software-technique edges, 47 mitigations and 17 detection relationships, 52 of 168 group profiles losing at least one identifier, and T1562.001 ranked 33 of 599 techniques by `uses` edges in the release it left.
