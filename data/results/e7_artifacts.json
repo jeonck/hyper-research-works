@@ -1,0 +1,1483 @@
+{
+ "ctibench-ate": {
+  "n_unique_ids": 120,
+  "n_label_instances": 397,
+  "n_subtechnique_ids": 0,
+  "domains_declared": [
+   "enterprise-attack",
+   "mobile-attack"
+  ],
+  "ids_without_declared_domain": 0,
+  "curve": [
+   {
+    "version": "1.0",
+    "date": "2018-01-17",
+    "live": 44,
+    "present": 44,
+    "live_frac": 0.36666666666666664,
+    "unknown": 76
+   },
+   {
+    "version": "2.0",
+    "date": "2018-04-18",
+    "live": 48,
+    "present": 48,
+    "live_frac": 0.4,
+    "unknown": 72
+   },
+   {
+    "version": "3.0",
+    "date": "2018-10-23",
+    "live": 64,
+    "present": 64,
+    "live_frac": 0.5333333333333333,
+    "unknown": 56
+   },
+   {
+    "version": "4.0",
+    "date": "2019-04-30",
+    "live": 71,
+    "present": 71,
+    "live_frac": 0.5916666666666667,
+    "unknown": 49
+   },
+   {
+    "version": "5.0",
+    "date": "2019-07-19",
+    "live": 71,
+    "present": 71,
+    "live_frac": 0.5916666666666667,
+    "unknown": 49
+   },
+   {
+    "version": "5.1",
+    "date": "2019-07-27",
+    "live": 71,
+    "present": 71,
+    "live_frac": 0.5916666666666667,
+    "unknown": 49
+   },
+   {
+    "version": "5.2",
+    "date": "2019-07-27",
+    "live": 71,
+    "present": 71,
+    "live_frac": 0.5916666666666667,
+    "unknown": 49
+   },
+   {
+    "version": "6.0",
+    "date": "2019-10-23",
+    "live": 79,
+    "present": 79,
+    "live_frac": 0.6583333333333333,
+    "unknown": 41
+   },
+   {
+    "version": "6.1",
+    "date": "2019-11-21",
+    "live": 79,
+    "present": 79,
+    "live_frac": 0.6583333333333333,
+    "unknown": 41
+   },
+   {
+    "version": "6.2",
+    "date": "2019-12-02",
+    "live": 79,
+    "present": 79,
+    "live_frac": 0.6583333333333333,
+    "unknown": 41
+   },
+   {
+    "version": "6.3",
+    "date": "2020-03-09",
+    "live": 79,
+    "present": 79,
+    "live_frac": 0.6583333333333333,
+    "unknown": 41
+   },
+   {
+    "version": "7.0",
+    "date": "2020-03-31",
+    "live": 99,
+    "present": 99,
+    "live_frac": 0.825,
+    "unknown": 21
+   },
+   {
+    "version": "7.1",
+    "date": "2020-07-13",
+    "live": 99,
+    "present": 99,
+    "live_frac": 0.825,
+    "unknown": 21
+   },
+   {
+    "version": "7.2",
+    "date": "2020-07-15",
+    "live": 99,
+    "present": 99,
+    "live_frac": 0.825,
+    "unknown": 21
+   },
+   {
+    "version": "8.0",
+    "date": "2020-10-27",
+    "live": 101,
+    "present": 101,
+    "live_frac": 0.8416666666666667,
+    "unknown": 19
+   },
+   {
+    "version": "8.1",
+    "date": "2020-11-12",
+    "live": 101,
+    "present": 101,
+    "live_frac": 0.8416666666666667,
+    "unknown": 19
+   },
+   {
+    "version": "8.2",
+    "date": "2021-01-27",
+    "live": 101,
+    "present": 101,
+    "live_frac": 0.8416666666666667,
+    "unknown": 19
+   },
+   {
+    "version": "9.0",
+    "date": "2021-04-29",
+    "live": 101,
+    "present": 101,
+    "live_frac": 0.8416666666666667,
+    "unknown": 19
+   },
+   {
+    "version": "10.0",
+    "date": "2021-10-21",
+    "live": 102,
+    "present": 102,
+    "live_frac": 0.85,
+    "unknown": 18
+   },
+   {
+    "version": "10.1",
+    "date": "2021-11-10",
+    "live": 102,
+    "present": 102,
+    "live_frac": 0.85,
+    "unknown": 18
+   },
+   {
+    "version": "11.0",
+    "date": "2022-04-25",
+    "live": 102,
+    "present": 102,
+    "live_frac": 0.85,
+    "unknown": 18
+   },
+   {
+    "version": "11.1",
+    "date": "2022-05-11",
+    "live": 102,
+    "present": 102,
+    "live_frac": 0.85,
+    "unknown": 18
+   },
+   {
+    "version": "11.2",
+    "date": "2022-05-24",
+    "live": 102,
+    "present": 102,
+    "live_frac": 0.85,
+    "unknown": 18
+   },
+   {
+    "version": "11.3",
+    "date": "2022-07-07",
+    "live": 112,
+    "present": 112,
+    "live_frac": 0.9333333333333333,
+    "unknown": 8
+   },
+   {
+    "version": "12.0",
+    "date": "2022-10-25",
+    "live": 112,
+    "present": 112,
+    "live_frac": 0.9333333333333333,
+    "unknown": 8
+   },
+   {
+    "version": "12.1",
+    "date": "2022-11-08",
+    "live": 112,
+    "present": 112,
+    "live_frac": 0.9333333333333333,
+    "unknown": 8
+   },
+   {
+    "version": "13.0",
+    "date": "2023-04-25",
+    "live": 112,
+    "present": 112,
+    "live_frac": 0.9333333333333333,
+    "unknown": 8
+   },
+   {
+    "version": "13.1",
+    "date": "2023-05-09",
+    "live": 112,
+    "present": 112,
+    "live_frac": 0.9333333333333333,
+    "unknown": 8
+   },
+   {
+    "version": "14.0",
+    "date": "2023-10-31",
+    "live": 113,
+    "present": 113,
+    "live_frac": 0.9416666666666667,
+    "unknown": 7
+   },
+   {
+    "version": "14.1",
+    "date": "2023-11-14",
+    "live": 113,
+    "present": 113,
+    "live_frac": 0.9416666666666667,
+    "unknown": 7
+   },
+   {
+    "version": "15.0",
+    "date": "2024-04-23",
+    "live": 113,
+    "present": 113,
+    "live_frac": 0.9416666666666667,
+    "unknown": 7
+   },
+   {
+    "version": "15.1",
+    "date": "2024-05-02",
+    "live": 113,
+    "present": 113,
+    "live_frac": 0.9416666666666667,
+    "unknown": 7
+   },
+   {
+    "version": "16.0",
+    "date": "2024-10-31",
+    "live": 113,
+    "present": 113,
+    "live_frac": 0.9416666666666667,
+    "unknown": 7
+   },
+   {
+    "version": "16.1",
+    "date": "2024-11-12",
+    "live": 113,
+    "present": 113,
+    "live_frac": 0.9416666666666667,
+    "unknown": 7
+   },
+   {
+    "version": "17.0",
+    "date": "2025-04-22",
+    "live": 113,
+    "present": 113,
+    "live_frac": 0.9416666666666667,
+    "unknown": 7
+   },
+   {
+    "version": "17.1",
+    "date": "2025-05-06",
+    "live": 113,
+    "present": 113,
+    "live_frac": 0.9416666666666667,
+    "unknown": 7
+   },
+   {
+    "version": "18.0",
+    "date": "2025-10-28",
+    "live": 113,
+    "present": 113,
+    "live_frac": 0.9416666666666667,
+    "unknown": 7
+   },
+   {
+    "version": "18.1",
+    "date": "2025-11-13",
+    "live": 113,
+    "present": 113,
+    "live_frac": 0.9416666666666667,
+    "unknown": 7
+   },
+   {
+    "version": "19.0",
+    "date": "2026-04-28",
+    "live": 112,
+    "present": 113,
+    "live_frac": 0.9333333333333333,
+    "unknown": 7
+   },
+   {
+    "version": "19.1",
+    "date": "2026-05-12",
+    "live": 112,
+    "present": 113,
+    "live_frac": 0.9333333333333333,
+    "unknown": 7
+   },
+   {
+    "version": "19.2",
+    "date": "2026-08-05",
+    "live": 112,
+    "present": 113,
+    "live_frac": 0.9333333333333333,
+    "unknown": 7
+   }
+  ],
+  "best_fit_version": "14.0",
+  "best_fit_date": "2023-10-31",
+  "best_fit_live_frac": 0.9416666666666667,
+  "fully_consistent_releases": [],
+  "invalid_at_newest": 8,
+  "invalid_at_newest_frac": 0.06666666666666667,
+  "invalid_label_instances_frac": 0.020151133501259445,
+  "repairable_by_revocation_chain": 1,
+  "unrepairable": 7,
+  "newest_version": "19.2",
+  "newest_date": "2026-08-05",
+  "examples_invalid": [
+   "T1404",
+   "T1406",
+   "T1562",
+   "T1577",
+   "T1628",
+   "T1630",
+   "T1643",
+   "T1655"
+  ]
+ },
+ "rcatt": {
+  "n_unique_ids": 215,
+  "n_label_instances": 6235,
+  "n_subtechnique_ids": 0,
+  "domains_declared": [],
+  "ids_without_declared_domain": 215,
+  "curve": [
+   {
+    "version": "1.0",
+    "date": "2018-01-17",
+    "live": 162,
+    "present": 162,
+    "live_frac": 0.7534883720930232,
+    "unknown": 53
+   },
+   {
+    "version": "2.0",
+    "date": "2018-04-18",
+    "live": 193,
+    "present": 193,
+    "live_frac": 0.8976744186046511,
+    "unknown": 22
+   },
+   {
+    "version": "3.0",
+    "date": "2018-10-23",
+    "live": 197,
+    "present": 197,
+    "live_frac": 0.9162790697674419,
+    "unknown": 18
+   },
+   {
+    "version": "4.0",
+    "date": "2019-04-30",
+    "live": 215,
+    "present": 215,
+    "live_frac": 1.0,
+    "unknown": 0
+   },
+   {
+    "version": "5.0",
+    "date": "2019-07-19",
+    "live": 215,
+    "present": 215,
+    "live_frac": 1.0,
+    "unknown": 0
+   },
+   {
+    "version": "5.1",
+    "date": "2019-07-27",
+    "live": 215,
+    "present": 215,
+    "live_frac": 1.0,
+    "unknown": 0
+   },
+   {
+    "version": "5.2",
+    "date": "2019-07-27",
+    "live": 215,
+    "present": 215,
+    "live_frac": 1.0,
+    "unknown": 0
+   },
+   {
+    "version": "6.0",
+    "date": "2019-10-23",
+    "live": 215,
+    "present": 215,
+    "live_frac": 1.0,
+    "unknown": 0
+   },
+   {
+    "version": "6.1",
+    "date": "2019-11-21",
+    "live": 215,
+    "present": 215,
+    "live_frac": 1.0,
+    "unknown": 0
+   },
+   {
+    "version": "6.2",
+    "date": "2019-12-02",
+    "live": 215,
+    "present": 215,
+    "live_frac": 1.0,
+    "unknown": 0
+   },
+   {
+    "version": "6.3",
+    "date": "2020-03-09",
+    "live": 215,
+    "present": 215,
+    "live_frac": 1.0,
+    "unknown": 0
+   },
+   {
+    "version": "7.0",
+    "date": "2020-03-31",
+    "live": 108,
+    "present": 215,
+    "live_frac": 0.5023255813953489,
+    "unknown": 0
+   },
+   {
+    "version": "7.1",
+    "date": "2020-07-13",
+    "live": 108,
+    "present": 215,
+    "live_frac": 0.5023255813953489,
+    "unknown": 0
+   },
+   {
+    "version": "7.2",
+    "date": "2020-07-15",
+    "live": 108,
+    "present": 215,
+    "live_frac": 0.5023255813953489,
+    "unknown": 0
+   },
+   {
+    "version": "8.0",
+    "date": "2020-10-27",
+    "live": 108,
+    "present": 215,
+    "live_frac": 0.5023255813953489,
+    "unknown": 0
+   },
+   {
+    "version": "8.1",
+    "date": "2020-11-12",
+    "live": 108,
+    "present": 215,
+    "live_frac": 0.5023255813953489,
+    "unknown": 0
+   },
+   {
+    "version": "8.2",
+    "date": "2021-01-27",
+    "live": 108,
+    "present": 215,
+    "live_frac": 0.5023255813953489,
+    "unknown": 0
+   },
+   {
+    "version": "9.0",
+    "date": "2021-04-29",
+    "live": 108,
+    "present": 215,
+    "live_frac": 0.5023255813953489,
+    "unknown": 0
+   },
+   {
+    "version": "10.0",
+    "date": "2021-10-21",
+    "live": 108,
+    "present": 215,
+    "live_frac": 0.5023255813953489,
+    "unknown": 0
+   },
+   {
+    "version": "10.1",
+    "date": "2021-11-10",
+    "live": 108,
+    "present": 215,
+    "live_frac": 0.5023255813953489,
+    "unknown": 0
+   },
+   {
+    "version": "11.0",
+    "date": "2022-04-25",
+    "live": 108,
+    "present": 215,
+    "live_frac": 0.5023255813953489,
+    "unknown": 0
+   },
+   {
+    "version": "11.1",
+    "date": "2022-05-11",
+    "live": 108,
+    "present": 215,
+    "live_frac": 0.5023255813953489,
+    "unknown": 0
+   },
+   {
+    "version": "11.2",
+    "date": "2022-05-24",
+    "live": 108,
+    "present": 215,
+    "live_frac": 0.5023255813953489,
+    "unknown": 0
+   },
+   {
+    "version": "11.3",
+    "date": "2022-07-07",
+    "live": 108,
+    "present": 215,
+    "live_frac": 0.5023255813953489,
+    "unknown": 0
+   },
+   {
+    "version": "12.0",
+    "date": "2022-10-25",
+    "live": 108,
+    "present": 215,
+    "live_frac": 0.5023255813953489,
+    "unknown": 0
+   },
+   {
+    "version": "12.1",
+    "date": "2022-11-08",
+    "live": 108,
+    "present": 215,
+    "live_frac": 0.5023255813953489,
+    "unknown": 0
+   },
+   {
+    "version": "13.0",
+    "date": "2023-04-25",
+    "live": 108,
+    "present": 215,
+    "live_frac": 0.5023255813953489,
+    "unknown": 0
+   },
+   {
+    "version": "13.1",
+    "date": "2023-05-09",
+    "live": 108,
+    "present": 215,
+    "live_frac": 0.5023255813953489,
+    "unknown": 0
+   },
+   {
+    "version": "14.0",
+    "date": "2023-10-31",
+    "live": 108,
+    "present": 215,
+    "live_frac": 0.5023255813953489,
+    "unknown": 0
+   },
+   {
+    "version": "14.1",
+    "date": "2023-11-14",
+    "live": 108,
+    "present": 215,
+    "live_frac": 0.5023255813953489,
+    "unknown": 0
+   },
+   {
+    "version": "15.0",
+    "date": "2024-04-23",
+    "live": 108,
+    "present": 215,
+    "live_frac": 0.5023255813953489,
+    "unknown": 0
+   },
+   {
+    "version": "15.1",
+    "date": "2024-05-02",
+    "live": 108,
+    "present": 215,
+    "live_frac": 0.5023255813953489,
+    "unknown": 0
+   },
+   {
+    "version": "16.0",
+    "date": "2024-10-31",
+    "live": 108,
+    "present": 215,
+    "live_frac": 0.5023255813953489,
+    "unknown": 0
+   },
+   {
+    "version": "16.1",
+    "date": "2024-11-12",
+    "live": 108,
+    "present": 215,
+    "live_frac": 0.5023255813953489,
+    "unknown": 0
+   },
+   {
+    "version": "17.0",
+    "date": "2025-04-22",
+    "live": 108,
+    "present": 215,
+    "live_frac": 0.5023255813953489,
+    "unknown": 0
+   },
+   {
+    "version": "17.1",
+    "date": "2025-05-06",
+    "live": 108,
+    "present": 215,
+    "live_frac": 0.5023255813953489,
+    "unknown": 0
+   },
+   {
+    "version": "18.0",
+    "date": "2025-10-28",
+    "live": 108,
+    "present": 215,
+    "live_frac": 0.5023255813953489,
+    "unknown": 0
+   },
+   {
+    "version": "18.1",
+    "date": "2025-11-13",
+    "live": 108,
+    "present": 215,
+    "live_frac": 0.5023255813953489,
+    "unknown": 0
+   },
+   {
+    "version": "19.0",
+    "date": "2026-04-28",
+    "live": 108,
+    "present": 215,
+    "live_frac": 0.5023255813953489,
+    "unknown": 0
+   },
+   {
+    "version": "19.1",
+    "date": "2026-05-12",
+    "live": 108,
+    "present": 215,
+    "live_frac": 0.5023255813953489,
+    "unknown": 0
+   },
+   {
+    "version": "19.2",
+    "date": "2026-08-05",
+    "live": 108,
+    "present": 215,
+    "live_frac": 0.5023255813953489,
+    "unknown": 0
+   }
+  ],
+  "best_fit_version": "4.0",
+  "best_fit_date": "2019-04-30",
+  "best_fit_live_frac": 1.0,
+  "fully_consistent_releases": [
+   "4.0",
+   "5.0",
+   "5.1",
+   "5.2",
+   "6.0",
+   "6.1",
+   "6.2",
+   "6.3"
+  ],
+  "invalid_at_newest": 107,
+  "invalid_at_newest_frac": 0.49767441860465117,
+  "invalid_label_instances_frac": 0.38011226944667204,
+  "repairable_by_revocation_chain": 99,
+  "unrepairable": 8,
+  "newest_version": "19.2",
+  "newest_date": "2026-08-05",
+  "examples_invalid": [
+   "T1002",
+   "T1004",
+   "T1009",
+   "T1013",
+   "T1015",
+   "T1019",
+   "T1022",
+   "T1023",
+   "T1024",
+   "T1026",
+   "T1028",
+   "T1031",
+   "T1032",
+   "T1034",
+   "T1035",
+   "T1038",
+   "T1042",
+   "T1043",
+   "T1044",
+   "T1045"
+  ]
+ },
+ "tram-bootstrap": {
+  "n_unique_ids": 537,
+  "n_label_instances": 25770,
+  "n_subtechnique_ids": 344,
+  "domains_declared": [],
+  "ids_without_declared_domain": 537,
+  "curve": [
+   {
+    "version": "1.0",
+    "date": "2018-01-17",
+    "live": 102,
+    "present": 102,
+    "live_frac": 0.18994413407821228,
+    "unknown": 435
+   },
+   {
+    "version": "2.0",
+    "date": "2018-04-18",
+    "live": 123,
+    "present": 123,
+    "live_frac": 0.22905027932960895,
+    "unknown": 414
+   },
+   {
+    "version": "3.0",
+    "date": "2018-10-23",
+    "live": 126,
+    "present": 126,
+    "live_frac": 0.2346368715083799,
+    "unknown": 411
+   },
+   {
+    "version": "4.0",
+    "date": "2019-04-30",
+    "live": 139,
+    "present": 139,
+    "live_frac": 0.25884543761638734,
+    "unknown": 398
+   },
+   {
+    "version": "5.0",
+    "date": "2019-07-19",
+    "live": 139,
+    "present": 139,
+    "live_frac": 0.25884543761638734,
+    "unknown": 398
+   },
+   {
+    "version": "5.1",
+    "date": "2019-07-27",
+    "live": 139,
+    "present": 139,
+    "live_frac": 0.25884543761638734,
+    "unknown": 398
+   },
+   {
+    "version": "5.2",
+    "date": "2019-07-27",
+    "live": 139,
+    "present": 139,
+    "live_frac": 0.25884543761638734,
+    "unknown": 398
+   },
+   {
+    "version": "6.0",
+    "date": "2019-10-23",
+    "live": 147,
+    "present": 147,
+    "live_frac": 0.2737430167597765,
+    "unknown": 390
+   },
+   {
+    "version": "6.1",
+    "date": "2019-11-21",
+    "live": 147,
+    "present": 147,
+    "live_frac": 0.2737430167597765,
+    "unknown": 390
+   },
+   {
+    "version": "6.2",
+    "date": "2019-12-02",
+    "live": 147,
+    "present": 147,
+    "live_frac": 0.2737430167597765,
+    "unknown": 390
+   },
+   {
+    "version": "6.3",
+    "date": "2020-03-09",
+    "live": 147,
+    "present": 147,
+    "live_frac": 0.2737430167597765,
+    "unknown": 390
+   },
+   {
+    "version": "7.0",
+    "date": "2020-03-31",
+    "live": 387,
+    "present": 418,
+    "live_frac": 0.7206703910614525,
+    "unknown": 119
+   },
+   {
+    "version": "7.1",
+    "date": "2020-07-13",
+    "live": 387,
+    "present": 418,
+    "live_frac": 0.7206703910614525,
+    "unknown": 119
+   },
+   {
+    "version": "7.2",
+    "date": "2020-07-15",
+    "live": 387,
+    "present": 418,
+    "live_frac": 0.7206703910614525,
+    "unknown": 119
+   },
+   {
+    "version": "8.0",
+    "date": "2020-10-27",
+    "live": 442,
+    "present": 473,
+    "live_frac": 0.8230912476722533,
+    "unknown": 64
+   },
+   {
+    "version": "8.1",
+    "date": "2020-11-12",
+    "live": 442,
+    "present": 473,
+    "live_frac": 0.8230912476722533,
+    "unknown": 64
+   },
+   {
+    "version": "8.2",
+    "date": "2021-01-27",
+    "live": 446,
+    "present": 477,
+    "live_frac": 0.8305400372439479,
+    "unknown": 60
+   },
+   {
+    "version": "9.0",
+    "date": "2021-04-29",
+    "live": 465,
+    "present": 496,
+    "live_frac": 0.8659217877094972,
+    "unknown": 41
+   },
+   {
+    "version": "10.0",
+    "date": "2021-10-21",
+    "live": 477,
+    "present": 508,
+    "live_frac": 0.888268156424581,
+    "unknown": 29
+   },
+   {
+    "version": "10.1",
+    "date": "2021-11-10",
+    "live": 477,
+    "present": 508,
+    "live_frac": 0.888268156424581,
+    "unknown": 29
+   },
+   {
+    "version": "11.0",
+    "date": "2022-04-25",
+    "live": 483,
+    "present": 516,
+    "live_frac": 0.8994413407821229,
+    "unknown": 21
+   },
+   {
+    "version": "11.1",
+    "date": "2022-05-11",
+    "live": 483,
+    "present": 516,
+    "live_frac": 0.8994413407821229,
+    "unknown": 21
+   },
+   {
+    "version": "11.2",
+    "date": "2022-05-24",
+    "live": 483,
+    "present": 516,
+    "live_frac": 0.8994413407821229,
+    "unknown": 21
+   },
+   {
+    "version": "11.3",
+    "date": "2022-07-07",
+    "live": 483,
+    "present": 516,
+    "live_frac": 0.8994413407821229,
+    "unknown": 21
+   },
+   {
+    "version": "12.0",
+    "date": "2022-10-25",
+    "live": 496,
+    "present": 529,
+    "live_frac": 0.9236499068901304,
+    "unknown": 8
+   },
+   {
+    "version": "12.1",
+    "date": "2022-11-08",
+    "live": 496,
+    "present": 529,
+    "live_frac": 0.9236499068901304,
+    "unknown": 8
+   },
+   {
+    "version": "13.0",
+    "date": "2023-04-25",
+    "live": 504,
+    "present": 537,
+    "live_frac": 0.9385474860335196,
+    "unknown": 0
+   },
+   {
+    "version": "13.1",
+    "date": "2023-05-09",
+    "live": 504,
+    "present": 537,
+    "live_frac": 0.9385474860335196,
+    "unknown": 0
+   },
+   {
+    "version": "14.0",
+    "date": "2023-10-31",
+    "live": 504,
+    "present": 537,
+    "live_frac": 0.9385474860335196,
+    "unknown": 0
+   },
+   {
+    "version": "14.1",
+    "date": "2023-11-14",
+    "live": 504,
+    "present": 537,
+    "live_frac": 0.9385474860335196,
+    "unknown": 0
+   },
+   {
+    "version": "15.0",
+    "date": "2024-04-23",
+    "live": 504,
+    "present": 537,
+    "live_frac": 0.9385474860335196,
+    "unknown": 0
+   },
+   {
+    "version": "15.1",
+    "date": "2024-05-02",
+    "live": 504,
+    "present": 537,
+    "live_frac": 0.9385474860335196,
+    "unknown": 0
+   },
+   {
+    "version": "16.0",
+    "date": "2024-10-31",
+    "live": 504,
+    "present": 537,
+    "live_frac": 0.9385474860335196,
+    "unknown": 0
+   },
+   {
+    "version": "16.1",
+    "date": "2024-11-12",
+    "live": 504,
+    "present": 537,
+    "live_frac": 0.9385474860335196,
+    "unknown": 0
+   },
+   {
+    "version": "17.0",
+    "date": "2025-04-22",
+    "live": 503,
+    "present": 537,
+    "live_frac": 0.9366852886405959,
+    "unknown": 0
+   },
+   {
+    "version": "17.1",
+    "date": "2025-05-06",
+    "live": 503,
+    "present": 537,
+    "live_frac": 0.9366852886405959,
+    "unknown": 0
+   },
+   {
+    "version": "18.0",
+    "date": "2025-10-28",
+    "live": 503,
+    "present": 537,
+    "live_frac": 0.9366852886405959,
+    "unknown": 0
+   },
+   {
+    "version": "18.1",
+    "date": "2025-11-13",
+    "live": 503,
+    "present": 537,
+    "live_frac": 0.9366852886405959,
+    "unknown": 0
+   },
+   {
+    "version": "19.0",
+    "date": "2026-04-28",
+    "live": 494,
+    "present": 537,
+    "live_frac": 0.9199255121042831,
+    "unknown": 0
+   },
+   {
+    "version": "19.1",
+    "date": "2026-05-12",
+    "live": 494,
+    "present": 537,
+    "live_frac": 0.9199255121042831,
+    "unknown": 0
+   },
+   {
+    "version": "19.2",
+    "date": "2026-08-05",
+    "live": 494,
+    "present": 537,
+    "live_frac": 0.9199255121042831,
+    "unknown": 0
+   }
+  ],
+  "best_fit_version": "13.0",
+  "best_fit_date": "2023-04-25",
+  "best_fit_live_frac": 0.9385474860335196,
+  "fully_consistent_releases": [],
+  "invalid_at_newest": 43,
+  "invalid_at_newest_frac": 0.08007448789571694,
+  "invalid_label_instances_frac": 0.02483507954986418,
+  "repairable_by_revocation_chain": 43,
+  "unrepairable": 0,
+  "newest_version": "19.2",
+  "newest_date": "2026-08-05",
+  "examples_invalid": [
+   "T1002",
+   "T1013",
+   "T1019",
+   "T1022",
+   "T1023",
+   "T1024",
+   "T1031",
+   "T1032",
+   "T1045",
+   "T1050",
+   "T1053.001",
+   "T1060",
+   "T1063",
+   "T1065",
+   "T1070.001",
+   "T1070.002",
+   "T1076",
+   "T1079",
+   "T1081",
+   "T1086"
+  ]
+ },
+ "tram2": {
+  "n_unique_ids": 50,
+  "n_label_instances": 5143,
+  "n_subtechnique_ids": 24,
+  "domains_declared": [],
+  "ids_without_declared_domain": 50,
+  "curve": [
+   {
+    "version": "1.0",
+    "date": "2018-01-17",
+    "live": 22,
+    "present": 22,
+    "live_frac": 0.44,
+    "unknown": 28
+   },
+   {
+    "version": "2.0",
+    "date": "2018-04-18",
+    "live": 25,
+    "present": 25,
+    "live_frac": 0.5,
+    "unknown": 25
+   },
+   {
+    "version": "3.0",
+    "date": "2018-10-23",
+    "live": 25,
+    "present": 25,
+    "live_frac": 0.5,
+    "unknown": 25
+   },
+   {
+    "version": "4.0",
+    "date": "2019-04-30",
+    "live": 25,
+    "present": 25,
+    "live_frac": 0.5,
+    "unknown": 25
+   },
+   {
+    "version": "5.0",
+    "date": "2019-07-19",
+    "live": 25,
+    "present": 25,
+    "live_frac": 0.5,
+    "unknown": 25
+   },
+   {
+    "version": "5.1",
+    "date": "2019-07-27",
+    "live": 25,
+    "present": 25,
+    "live_frac": 0.5,
+    "unknown": 25
+   },
+   {
+    "version": "5.2",
+    "date": "2019-07-27",
+    "live": 25,
+    "present": 25,
+    "live_frac": 0.5,
+    "unknown": 25
+   },
+   {
+    "version": "6.0",
+    "date": "2019-10-23",
+    "live": 25,
+    "present": 25,
+    "live_frac": 0.5,
+    "unknown": 25
+   },
+   {
+    "version": "6.1",
+    "date": "2019-11-21",
+    "live": 25,
+    "present": 25,
+    "live_frac": 0.5,
+    "unknown": 25
+   },
+   {
+    "version": "6.2",
+    "date": "2019-12-02",
+    "live": 25,
+    "present": 25,
+    "live_frac": 0.5,
+    "unknown": 25
+   },
+   {
+    "version": "6.3",
+    "date": "2020-03-09",
+    "live": 25,
+    "present": 25,
+    "live_frac": 0.5,
+    "unknown": 25
+   },
+   {
+    "version": "7.0",
+    "date": "2020-03-31",
+    "live": 49,
+    "present": 49,
+    "live_frac": 0.98,
+    "unknown": 1
+   },
+   {
+    "version": "7.1",
+    "date": "2020-07-13",
+    "live": 49,
+    "present": 49,
+    "live_frac": 0.98,
+    "unknown": 1
+   },
+   {
+    "version": "7.2",
+    "date": "2020-07-15",
+    "live": 49,
+    "present": 49,
+    "live_frac": 0.98,
+    "unknown": 1
+   },
+   {
+    "version": "8.0",
+    "date": "2020-10-27",
+    "live": 49,
+    "present": 49,
+    "live_frac": 0.98,
+    "unknown": 1
+   },
+   {
+    "version": "8.1",
+    "date": "2020-11-12",
+    "live": 49,
+    "present": 49,
+    "live_frac": 0.98,
+    "unknown": 1
+   },
+   {
+    "version": "8.2",
+    "date": "2021-01-27",
+    "live": 50,
+    "present": 50,
+    "live_frac": 1.0,
+    "unknown": 0
+   },
+   {
+    "version": "9.0",
+    "date": "2021-04-29",
+    "live": 50,
+    "present": 50,
+    "live_frac": 1.0,
+    "unknown": 0
+   },
+   {
+    "version": "10.0",
+    "date": "2021-10-21",
+    "live": 50,
+    "present": 50,
+    "live_frac": 1.0,
+    "unknown": 0
+   },
+   {
+    "version": "10.1",
+    "date": "2021-11-10",
+    "live": 50,
+    "present": 50,
+    "live_frac": 1.0,
+    "unknown": 0
+   },
+   {
+    "version": "11.0",
+    "date": "2022-04-25",
+    "live": 50,
+    "present": 50,
+    "live_frac": 1.0,
+    "unknown": 0
+   },
+   {
+    "version": "11.1",
+    "date": "2022-05-11",
+    "live": 50,
+    "present": 50,
+    "live_frac": 1.0,
+    "unknown": 0
+   },
+   {
+    "version": "11.2",
+    "date": "2022-05-24",
+    "live": 50,
+    "present": 50,
+    "live_frac": 1.0,
+    "unknown": 0
+   },
+   {
+    "version": "11.3",
+    "date": "2022-07-07",
+    "live": 50,
+    "present": 50,
+    "live_frac": 1.0,
+    "unknown": 0
+   },
+   {
+    "version": "12.0",
+    "date": "2022-10-25",
+    "live": 50,
+    "present": 50,
+    "live_frac": 1.0,
+    "unknown": 0
+   },
+   {
+    "version": "12.1",
+    "date": "2022-11-08",
+    "live": 50,
+    "present": 50,
+    "live_frac": 1.0,
+    "unknown": 0
+   },
+   {
+    "version": "13.0",
+    "date": "2023-04-25",
+    "live": 50,
+    "present": 50,
+    "live_frac": 1.0,
+    "unknown": 0
+   },
+   {
+    "version": "13.1",
+    "date": "2023-05-09",
+    "live": 50,
+    "present": 50,
+    "live_frac": 1.0,
+    "unknown": 0
+   },
+   {
+    "version": "14.0",
+    "date": "2023-10-31",
+    "live": 50,
+    "present": 50,
+    "live_frac": 1.0,
+    "unknown": 0
+   },
+   {
+    "version": "14.1",
+    "date": "2023-11-14",
+    "live": 50,
+    "present": 50,
+    "live_frac": 1.0,
+    "unknown": 0
+   },
+   {
+    "version": "15.0",
+    "date": "2024-04-23",
+    "live": 50,
+    "present": 50,
+    "live_frac": 1.0,
+    "unknown": 0
+   },
+   {
+    "version": "15.1",
+    "date": "2024-05-02",
+    "live": 50,
+    "present": 50,
+    "live_frac": 1.0,
+    "unknown": 0
+   },
+   {
+    "version": "16.0",
+    "date": "2024-10-31",
+    "live": 50,
+    "present": 50,
+    "live_frac": 1.0,
+    "unknown": 0
+   },
+   {
+    "version": "16.1",
+    "date": "2024-11-12",
+    "live": 50,
+    "present": 50,
+    "live_frac": 1.0,
+    "unknown": 0
+   },
+   {
+    "version": "17.0",
+    "date": "2025-04-22",
+    "live": 49,
+    "present": 50,
+    "live_frac": 0.98,
+    "unknown": 0
+   },
+   {
+    "version": "17.1",
+    "date": "2025-05-06",
+    "live": 49,
+    "present": 50,
+    "live_frac": 0.98,
+    "unknown": 0
+   },
+   {
+    "version": "18.0",
+    "date": "2025-10-28",
+    "live": 49,
+    "present": 50,
+    "live_frac": 0.98,
+    "unknown": 0
+   },
+   {
+    "version": "18.1",
+    "date": "2025-11-13",
+    "live": 49,
+    "present": 50,
+    "live_frac": 0.98,
+    "unknown": 0
+   },
+   {
+    "version": "19.0",
+    "date": "2026-04-28",
+    "live": 48,
+    "present": 50,
+    "live_frac": 0.96,
+    "unknown": 0
+   },
+   {
+    "version": "19.1",
+    "date": "2026-05-12",
+    "live": 48,
+    "present": 50,
+    "live_frac": 0.96,
+    "unknown": 0
+   },
+   {
+    "version": "19.2",
+    "date": "2026-08-05",
+    "live": 48,
+    "present": 50,
+    "live_frac": 0.96,
+    "unknown": 0
+   }
+  ],
+  "best_fit_version": "8.2",
+  "best_fit_date": "2021-01-27",
+  "best_fit_live_frac": 1.0,
+  "fully_consistent_releases": [
+   "8.2",
+   "9.0",
+   "10.0",
+   "10.1",
+   "11.0",
+   "11.1",
+   "11.2",
+   "11.3",
+   "12.0",
+   "12.1",
+   "13.0",
+   "13.1",
+   "14.0",
+   "14.1",
+   "15.0",
+   "15.1",
+   "16.0",
+   "16.1"
+  ],
+  "invalid_at_newest": 2,
+  "invalid_at_newest_frac": 0.04,
+  "invalid_label_instances_frac": 0.032860198327824226,
+  "repairable_by_revocation_chain": 2,
+  "unrepairable": 0,
+  "newest_version": "19.2",
+  "newest_date": "2026-08-05",
+  "examples_invalid": [
+   "T1562.001",
+   "T1574.002"
+  ]
+ }
+}
