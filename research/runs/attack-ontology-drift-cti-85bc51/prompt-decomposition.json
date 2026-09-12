@@ -1,0 +1,75 @@
+{
+  "sub_questions": [
+    "What forms does ontology drift take in the MITRE ATT&CK knowledge base (additions, deprecations, revocations, sub-technique restructuring, tactic reassignment, silent description rewriting), and how large is each across the full public release history?",
+    "How stable are ATT&CK technique identifiers over time, and what is the survival/half-life profile of an identifier minted at release V when read at release W?",
+    "Do identifiers that remain valid nonetheless change meaning (silent semantic drift), and by how much?",
+    "What fraction of apparent growth in ATT&CK's adversary knowledge (group-to-technique edges) is genuine new intelligence versus ontology bookkeeping (sub-technique refinement, revocation re-mapping)?",
+    "How much accuracy does TTP-based threat-actor attribution lose when a CTI artefact written in release V's vocabulary is consumed by a knowledge base at release W, holding the underlying intelligence constant?",
+    "How much do detection/mitigation coverage claims change when the capability is frozen but the ontology moves?",
+    "How valid are the ATT&CK labels in real, widely used CTI corpora and benchmarks today, and can their authoring version be inferred when undeclared?",
+    "What normalization protocol restores cross-version comparability, how much of the damage does it repair, and where does it provably fail?",
+    "What reporting discipline should CTI papers, benchmarks and vendor claims adopt so results remain interpretable across ATT&CK releases?",
+    "How does this position against existing work on CTI quality, ATT&CK-based analytics, LLM CTI benchmarks, TTP extraction and attribution, and concept drift in security machine learning, and what must an SCI-level contribution here demonstrate?"
+  ],
+  "entities": [
+    {"name": "MITRE ATT&CK (Enterprise, Mobile, ICS)", "type": "knowledge base", "required_fields": ["release history", "object types", "revocation and deprecation semantics", "sub-technique hierarchy"]},
+    {"name": "ATT&CK STIX 2.1 release corpus", "type": "dataset", "required_fields": ["coverage", "provenance", "versioning"]},
+    {"name": "TTP-based threat-actor attribution", "type": "downstream task", "required_fields": ["method", "drift sensitivity", "normalization effect"]},
+    {"name": "CTI benchmarks and training corpora (CTIBench, TRAM, rcATT)", "type": "artefact family", "required_fields": ["label vintage", "label validity", "repairability"]},
+    {"name": "Detection and mitigation coverage claims", "type": "downstream task", "required_fields": ["denominator drift", "identifier artefact"]},
+    {"name": "ATT&CK-Norm normalization protocol", "type": "contribution", "required_fields": ["definition", "recovery rate", "failure modes"]},
+    {"name": "Concept drift in security machine learning", "type": "related literature", "required_fields": ["distinction from ontology drift"]}
+  ],
+  "required_formats": [
+    "journal manuscript structure with numbered sections",
+    "quantitative results tables",
+    "figures referenced by number",
+    "explicit threats-to-validity section",
+    "reproducibility statement"
+  ],
+  "required_sections": [
+    "## Abstract",
+    "## 8. Threats to Validity"
+  ],
+  "required_section_headings": [
+    "## Abstract",
+    "## 1. Introduction",
+    "## 2. Background: ATT&CK as a Versioned Ontology",
+    "## 3. Related Work",
+    "## 4. Problem Formalization and Drift Taxonomy",
+    "## 5. Data and Methodology",
+    "## 6. Measuring Ontology Drift in ATT&CK",
+    "## 7. Downstream Impact of Drift on CTI Analytics",
+    "## 8. ATT&CK-Norm: A Version-Normalization Protocol",
+    "## 9. Label Validity of Deployed CTI Corpora",
+    "## 10. Discussion and Reporting Discipline for CTI Research",
+    "## 11. Threats to Validity",
+    "## 12. Conclusion"
+  ],
+  "time_horizons": ["2018-01 to 2026-08 (full public ATT&CK release history)"],
+  "time_periods": [
+    {"period": "ATT&CK v1.0", "type": "release", "primary_source": "enterprise-attack-1.0.json STIX bundle", "issuer": "MITRE"},
+    {"period": "ATT&CK v7.0", "type": "release", "primary_source": "enterprise-attack-7.0.json STIX bundle (sub-technique restructuring)", "issuer": "MITRE"},
+    {"period": "ATT&CK v19.0", "type": "release", "primary_source": "enterprise-attack-19.0.json STIX bundle (T1562 family revocation)", "issuer": "MITRE"},
+    {"period": "ATT&CK v19.2", "type": "release", "primary_source": "enterprise-attack-19.2.json STIX bundle (newest release analysed)", "issuer": "MITRE"}
+  ],
+  "scope_conditions": [
+    "ATT&CK specifically, not CTI ontologies in general, though findings are framed for versioned security ontologies broadly",
+    "public STIX releases only; the ATT&CK website's rendered content is out of scope",
+    "downstream tasks limited to attribution, benchmark/training labels and coverage claims",
+    "the contribution must be an empirical measurement study plus a protocol, at SCI-journal standard"
+  ],
+  "pipeline_tier": "full",
+  "response_format": "argumentative",
+  "citation_style": "inline",
+  "levers": {
+    "register": "analyze",
+    "register_confidence": "high",
+    "domain_notes": "Sourcing: primary artefacts first — the ATT&CK STIX release bundles themselves, benchmark label files and tool source cloned from public GitHub, and this run's own measurement outputs under data/results/, which are ground_truth tier. Peer-reviewed and arXiv literature is reachable only through the WebSearch tool in this environment, so secondary literature enters at summary fidelity and must be marked as such; never present a search summary as a verbatim quotation. Evidence norms: a measured number computed from the release corpus outranks any vendor or survey claim; a claim about a specific benchmark must be checked against that benchmark's own label file, not its paper. Recency: ATT&CK releases through v19.2 (August 2026) matter directly; CTI-benchmark literature from 2024 onward is the live comparison set.",
+    "inference_depth": "deep",
+    "rationale": {
+      "register": "the query asks how large an effect is, what fraction of growth is bookkeeping, and what protocol restores comparability — evaluation-shaped throughout",
+      "inference_depth": "the central claims are not stated anywhere in the literature and must be inferred from the release corpus itself; secondary sources are reachable only in summary form"
+    }
+  }
+}
