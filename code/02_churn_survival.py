@@ -109,7 +109,9 @@ def main() -> None:
                 if not stable:
                     continue
                 changed, sims, big = 0, [], 0
-                for t in stable:
+                # iterate in a fixed order: set iteration order changes the
+                # summation order and moves the last digit of the mean
+                for t in sorted(stable):
                     if a.tech[t]["desc_sha"] != b.tech[t]["desc_sha"]:
                         changed += 1
                     ta = tokens(desc_a.get(t))
@@ -125,7 +127,7 @@ def main() -> None:
                     "id_stable": len(stable),
                     "desc_changed": changed,
                     "desc_changed_frac": changed / len(stable),
-                    "mean_token_jaccard": sum(sims) / len(sims) if sims else None,
+                    "mean_token_jaccard": (sum(sorted(sims)) / len(sims)) if sims else None,
                     "substantial_rewrites": big,
                     "substantial_frac": big / len(sims) if sims else None,
                 })
