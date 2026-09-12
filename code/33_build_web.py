@@ -10,14 +10,18 @@ from __future__ import annotations
 
 import html
 import json
+import os
 import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 TAG = "attack-ontology-drift-cti-85bc51"
 SRC = ROOT / "research" / "notes" / f"final_report_{TAG}.md"
-OUT = Path("/tmp/claude-0/-home-user-hyper-research-works/"
-           "aa6e0fd0-b155-51a6-ad4a-ebbe528f3807/scratchpad/web/paper.html")
+OUT = Path(os.environ.get(
+    "WEB_OUT",
+    "/tmp/claude-0/-home-user-hyper-research-works/"
+    "aa6e0fd0-b155-51a6-ad4a-ebbe528f3807/scratchpad/web/paper.html"))
+FIG_PREFIX = os.environ.get("WEB_FIG_PREFIX", "")
 RESULTS = ROOT / "data" / "results"
 
 FIG_FILES = {
@@ -123,7 +127,7 @@ def build_body(md: str) -> tuple[str, list[tuple[str, str, str]]]:
         if fig:
             n = int(fig.group(1))
             cap = inline(" ".join(fig.group(2).split()))
-            src = FIG_FILES.get(n, "")
+            src = FIG_PREFIX + FIG_FILES.get(n, "")
             out.append(
                 f'<figure class="fig" id="fig-{n}">'
                 f'<img src="{src}" alt="Figure {n}" loading="lazy" width="1920" height="760">'
