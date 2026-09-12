@@ -22,6 +22,22 @@
    "mitreattack-python": 4,
    "navigator": 8,
    "dettect": 57
+  },
+  "by_group": {
+   "mitre_repositories": {
+    "layers": 12,
+    "declaring": 5,
+    "annotations": 2678,
+    "dead": 173,
+    "dead_share": 0.06460044809559373
+   },
+   "third_party": {
+    "layers": 57,
+    "declaring": 0,
+    "annotations": 2143,
+    "dead": 744,
+    "dead_share": 0.3471768548763416
+   }
   }
  },
  "layers": [

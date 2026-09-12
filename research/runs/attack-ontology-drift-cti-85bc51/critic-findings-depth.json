@@ -1,0 +1,89 @@
+{
+  "critic_type": "depth",
+  "findings": [
+    {
+      "severity": "critical",
+      "location": "8.1 The protocol, and what it returns — \"removing every rank-1 flip in the corpus and introducing none\"",
+      "issue": "The draft asserts normalization removes every rank-1 mitigation flip, but the results file records a rank-1 flip that survives normalization at v6.0, and the same field also falsifies Section 7.5's claim that the top mitigation flips at both v17.0 and v18.0.",
+      "evidence": "data/results/e10_conclusion_flips.json, coverage_rankings: v=6.0 has rank1_changed_naive=true AND rank1_changed_normalized=true; v=18.0 has rank1_changed_naive=false. Naive rank-1 flips occur at v5.0, v6.0, v16.0, v17.0 only; normalization clears three of four. interim-L4.md §3 states it correctly: \"three of four naive rank-1 flips vanish and none are introduced\".",
+      "recommendation": "Correct both sentences to the four-flip / three-cleared count from the file, name v6.0 as the flip normalization does not repair, and in 7.5 replace the v17/v18 pairing with the two releases the file actually flags (v16.0 and v17.0). The unrepaired v6.0 flip strengthens rather than weakens the section's argument and should be used as such."
+    },
+    {
+      "severity": "critical",
+      "location": "7.3 Separability and additivity — \"At ρ = 0.4 the v1.0 penalty falls from 43.9 to 32.0 points and the v6.0 penalty from 47.6 to 30.8\"",
+      "issue": "Three of the four ρ=0.4 figures and the recovery-decay figure in this paragraph match neither the released results file nor the interim audit, and the recovery error understates the degradation the paragraph is arguing for.",
+      "evidence": "data/results/e14_noise_stratification.json, factorial: v=1.0 ρ=0.4 drift_penalty=0.3283 (32.8 pp, not 32.0), recovery=0.2792 (not 0.34); v=6.0 ρ=0.4 drift_penalty=0.3117 (31.2 pp, not 30.8); v=12.0 ρ=0 0.0167 → ρ=0.4 0.0142 and v=18.0 0.0125 → 0.0100 (not \"1.6 and 1.5\"). The scratch run temp/l2-audit-noise-factorial.json gives 0.3417 / 0.3167 / recovery 0.3049 — also not the draft's numbers.",
+      "recommendation": "Re-key every figure in this paragraph to e14_noise_stratification.json and state which of the two runs the paper reports. The recovery correction (0.44 → 0.28, not 0.34) makes the paragraph's own point harder, and the corrected v12/v18 endpoints must replace the Table-6 values that appear to have been substituted for the factorial cells."
+    },
+    {
+      "severity": "critical",
+      "location": "7.2 Attribution — \"Eleven of the twelve post-restructuring rows have intervals excluding zero at k = 10\"",
+      "issue": "The count is wrong against its own source file: two post-restructuring rows have bootstrap intervals straddling zero and a third has a lower bound of exactly zero, so the correct count is nine or ten of twelve.",
+      "evidence": "data/results/e5_attribution.json, k=10 rows, drift_penalty_ci: v=11.0 [-0.006, +0.032], v=14.0 [-0.004, +0.032], v=16.0 [0.000, +0.024]. The nine rows strictly excluding zero are v7.0, v8.0, v9.0, v10.0, v12.0, v13.0, v15.0, v17.0, v18.0.",
+      "recommendation": "Fix the count and say which releases are the exceptions. Reporting the two null rows by name is more credible than the inflated tally and is consistent with the paper's own concession posture."
+    },
+    {
+      "severity": "major",
+      "location": "5. Data and Methodology — \"robustness sweeps three scorers and two profile definitions (Table 7)\"",
+      "issue": "The whole sensitivity analysis is compressed to one parenthetical pointing at a table that does not exist in the report, while the released file shows the headline penalty is strongly dependent on profile definition and on k — including a modern condition where the effect disappears.",
+      "evidence": "data/results/e5b_e2b_robustness.json, attribution_robustness (30 cells): with include_software=false the v7.0 drift_penalty falls from 0.053 to 0.013 and v18.0 from 0.023 to 0.003; at v1.0 contemporaneous_top1 ranges 0.24 (overlap, with software) to 0.88 (idf-cosine, without). data/results/e5_attribution.json k=20: v=18.0 drift_penalty_top1=0.002, ci [-0.004, +0.010]. Tables 7, 8 and 12 are cited in Sections 4, 5 and 9 but no such tables appear in the draft.",
+      "recommendation": "Give the sensitivity its own numbers in-text: the range of the modern penalty across scorer and profile definition, and the fact that it is null at k=20 for v18.0. Either restore the missing Table 7 or repoint the reference; do the same for the Table 8 and Table 12 references that currently point at nothing."
+    },
+    {
+      "severity": "major",
+      "location": "7.6 Coverage claims — \"A capability frozen at v6.0 claimed 97.0% coverage at the time and reads 17.4% at v19.0\"",
+      "issue": "The study ran a second, detection-coverage arm that the report never mentions, even though the query asks specifically about detection coverage claims and the paper's framing promises both.",
+      "evidence": "data/results/e6_coverage.json, portfolios: 45 records with relation=\"detects\" (v10.0–v18.0 frozen, re-measured at v19.0) alongside 171 with relation=\"mitigates\". Example rows: v=10.0 coverage_at_v 0.919 → naive 0.725 / normalized 0.740; v=18.0 coverage_at_v 1.000 → naive 0.967 / normalized 0.989 (artefact 2.15 pp). Section 5 defines the frozen capability using `mitigates` edges only.",
+      "recommendation": "Report the detects arm alongside the mitigates arm and extend the Section 5 specification to define it (edge type, why the release range starts at v10.0). If the arm is being deliberately excluded, say so and why — silent omission of a released experiment is the reporting failure the paper is about."
+    },
+    {
+      "severity": "major",
+      "location": "9. Label Validity of Deployed CTI Corpora — \"5 declare an ATT&CK release and all five carry the same value; the 69 layers hold 4,821 technique annotations of which 917 (0.190) are not live at v19.2\"",
+      "issue": "The pooled figure hides the stratification that actually makes the adoption argument, and the 'same value' clause is false against the file.",
+      "evidence": "data/results/e16_layer_adoption.json: summary.declared_values = [\"17\", \"17.0\"] (two spellings, not one value). By repository: dettect n=57, declaring=0, 744 of 2,143 annotations dead (0.347); navigator n=8, declaring=2, 113 of 1,032 dead (0.110); mitreattack-python n=4, declaring=3, 60 of 1,646 dead (0.037). All five declaring layers are MITRE's own sample/test fixtures. interim-L1.md §3 makes the same stratification independently (57 published vendor layers, zero declaring, 34.5% dead).",
+      "recommendation": "Replace the pooled 0.190 with the stratified contrast: the third-party vendor layers that never declare a release carry roughly nine times the dead-annotation rate of MITRE's own dated fixtures. Also fix the 'same value' clause — the two spellings are direct evidence for the Section 10 point that a release string alone is an insufficient pin."
+    },
+    {
+      "severity": "major",
+      "location": "7.5 Conclusions move, not just scores — \"has its named actor changed by the modern knowledge base in 0.722 of observations, and in 0.712 the new name is wrong\"",
+      "issue": "The draft invokes the Gene Ontology bar (conclusions moving, not scores) but reports only the aggregate flip rate, which cannot distinguish a correct verdict being destroyed from one wrong verdict being replaced by another — and the results file records exactly that decomposition.",
+      "evidence": "data/results/e10_conclusion_flips.json, attribution_verdicts: v=1.0 was_right_now_changed_frac=0.444 and both_wrong_but_different_actor_frac=0.268; v=6.0 0.516 and 0.258; v=12.0 0.028 and 0.026; v=18.0 0.016 and 0.006. The same records also carry top10_membership_changed_naive / _normalized for the mitigation leaderboard (v6.0: 3 → 1), which is unreported.",
+      "recommendation": "State the true→false component separately from the false→false component at both a legacy and a modern release. The true→false rate is the number that meets the Gene Ontology bar the paragraph cites; the aggregate does not. Add the top-10 membership change as the decision-relevant readout alongside Kendall tau."
+    },
+    {
+      "severity": "major",
+      "location": "7.2 Attribution — \"The penalty arises because the crosswalk is applied to a coarse vocabulary, so what it returns is correct and less discriminative than what a modern analyst would have written, which is exactly the O4 defect priced\"",
+      "issue": "The O4 mechanism is asserted from the shape of the result rather than measured, when the results file carries a per-row field that isolates the granularity component of the penalty and therefore distinguishes O4 from O1 and O3 by evidence instead of definition.",
+      "evidence": "data/results/e5_attribution.json, field granularity_loss_top1 (k=10): v=1.0 0.216 against a total penalty of 0.422; v=6.0 0.166 of 0.462; v=7.0 0.052 of 0.070; v=13.0 0.004; v=18.0 -0.002. The same field at k=5 and k=20 shows the component shrinking as k grows (v1.0: 0.264 at k=5, 0.162 at k=20).",
+      "recommendation": "Price the O4 component numerically here and carry it back to Section 4, where the six operators are currently separated only by definition. Roughly half the legacy penalty being attributable to granularity loss, decaying to zero in the modern regime, is the evidence that the operator taxonomy is empirical."
+    },
+    {
+      "severity": "major",
+      "location": "8.1 The protocol, and what it returns — \"On post-restructuring artefacts it recovers a fraction of a penalty that is already small, and its gain interval spans zero in most modern conditions\"",
+      "issue": "Two gestures ('a fraction', 'most modern conditions') where the study computed exact values, and Section 12's \"buys under a point on modern artefacts\" is the same unstated number.",
+      "evidence": "interim-L4.md §3, computed from data/results/e5_attribution.json: mean top-1 normalization gain is +20.1 points for pre-v7 artefacts and +0.77 points post-v7, with the gain's 95% CI including zero in 23 of 36 post-v7 conditions. Per-row norm_gain_ci fields in e5_attribution.json support the count.",
+      "recommendation": "Substitute the two measured quantities (+20.1 pp legacy, +0.77 pp modern, 23 of 36 conditions with a zero-spanning interval) for the qualitative hedges here and in the Conclusion. The exact counts make the self-critique stronger than the hedge does."
+    },
+    {
+      "severity": "major",
+      "location": "8.2 Six defects, measured — \"the roll-up branch is dead. Climbing to a surviving parent when an identifier has no successor fires 3 times in 12,027 resolutions\"",
+      "issue": "The draft cites a static count of branch firings where an actual ablation exists — the attribution experiment was re-run with the branch on and off — and omits the structural reason the branch can never fire, which is what makes the defect a finding rather than an anecdote.",
+      "evidence": "interim-L4.md §3: rollup=True vs rollup=False over 54 conditions × 500 trials (27,000 trials) gives top-1 identical to three decimals with a paired bootstrap CI on (rollup − drop) of [+0.000, +0.000]; zero firings across 18 archival release profile sets and 37,447 label instances in the four CTI corpora; reason given is that every unrepairable identifier is a top-level deprecation with no parent (5–7 per release, 0 at v17–v18). data/results/e13_tactic_layer.json: rollup_branch_fired=3, rollup_resolutions_checked=12027.",
+      "recommendation": "Report the ablation result and its zero-width interval alongside the 3/12,027 count, and give the structural reason (ATT&CK never orphans a sub-technique; deprecations without successors are top-level). That converts 'it bought nothing' from an assertion into a measured null."
+    },
+    {
+      "severity": "major",
+      "location": "8.3 Two worked counter-examples — \"`normalize({T1562})` against v19.2 returns `{T1685}` in one hop, drops nothing, and reports success\"",
+      "issue": "The counter-example is stated on a singleton set, so it demonstrates a wrong answer but not the internal-validity claim Section 4 makes for O4 — that measured profile breadth falls with no change in the intelligence — and a named worked instance of exactly that exists.",
+      "evidence": "interim-L4.md §2: G0059 Magic Hound asserts {T1562, T1562.001, T1562.002, T1562.004} at v18.1 and normalizes to {T1685, T1685.001, T1686} at v19.2 — four documented behaviours become three, purely as bookkeeping. Three groups (G0059, G1043 BlackByte, G1045) assert the generic parent. data/results/e8_case_v19.json replacements confirm T1562→T1685, T1562.001→T1685, T1562.002→T1685.001, T1562.004→T1686.",
+      "recommendation": "Extend the counter-example to the named multi-identifier profile so the cardinality collapse is shown on a real intrusion set, and link it explicitly to the O4 internal-validity claim in Section 4, which currently has no instance behind it."
+    },
+    {
+      "severity": "minor",
+      "location": "7.6 Coverage claims — \"makes the artefact larger, not smaller: 20.0 points against 16.5 at v6.0, and 1.57 against 2.15 at v18.0\"",
+      "issue": "The generalisation is contradicted by the second figure in its own sentence (the weighted artefact is smaller at v18.0), and the file holds a stronger, unused prevalence result that would support the long-tail rebuttal the paragraph is trying to make.",
+      "evidence": "data/results/e6b_prevalence.json, rows: weighted_artefact_pp exceeds unweighted only for v1.0–v6.0 (20.01 vs 16.50 at v6.0) and is smaller for every modern row (v17.0 1.54 vs 2.01; v18.0 1.57 vs 2.15). The unused result is weighted_naive against unweighted_naive at modern releases: 0.672 vs 0.802 at v17.0 and 0.673 vs 0.811 at v18.0 — a frozen modern capability covers far less of the prevalence mass than of the technique count.",
+      "recommendation": "Split the claim by era rather than asserting it generally, and use the weighted-versus-unweighted naive coverage gap at v17/v18 as the long-tail rebuttal, since it shows churn concentrating on high-prevalence techniques rather than the tail."
+    }
+  ]
+}

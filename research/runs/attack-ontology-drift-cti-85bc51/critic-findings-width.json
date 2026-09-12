@@ -1,0 +1,75 @@
+{
+  "critic_type": "width",
+  "findings": [
+    {
+      "severity": "critical",
+      "location": "## 3. Related Work — \"a 2025 survey sets the bar a contribution must clear [47]\"",
+      "issue": "The query's final clause — \"identify what an SCI-level contribution in this space must demonstrate\" — is answered nowhere in the draft except by that one relative clause, while the corpus carries an explicit, adversarially derived six-item bar (separable effect size against inter-rater and intra-version confusability variance; head-on defeat of the bookkeeping rebuttal; frequency weighting by observed prevalence; stratification by identifiability; separation of adversary vs source/reporting vs ontology drift; an executable normalization protocol that flips at least one published result).",
+      "evidence": "vault note mitre-attck-state-of-the-art-and-way-forward-acm-csur-2025-the-novelty-bar-an-sc (registry #47); supporting items registry #74, #20, #59, #68, #49",
+      "recommendation": "State the bar explicitly and audit this paper against each item, including the two it does not clear — the prevalence weighting is documentation-derived rather than telemetry-derived, and no published CTI result is reproduced and flipped under ATT&CK-Norm. Place it where the contribution is claimed (end of Section 3 or Section 10), not as a new section."
+    },
+    {
+      "severity": "critical",
+      "location": "## 7.6 Coverage claims — \"The weight here is documentation prevalence, not telemetry prevalence, and Section 11 states what that does not settle\"; and ## 11 — \"untested for the alert stream, which would need telemetry we cannot reach\"",
+      "issue": "The draft declares telemetry prevalence unreachable and never cites CTID's Sightings Ecosystem, the two-year pooled multi-organisation telemetry programme the corpus holds (353 techniques sighted, top 15 carrying >80% of events across 9 of 14 tactics) — which is both the strongest published form of the long-tail objection and the one dataset that would discipline the frequency-weighting claim; MITRE's own five-way bias taxonomy (novelty, visibility, producer, victim, availability) from the same source is likewise absent from Section 6.4, where it is the institutional framing of the bookkeeping-versus-intelligence question the query asks.",
+      "evidence": "registry #49 (uncited), vault note mitres-own-bias-taxonomy-and-the-sightings-ecosystem-top-15-techniques-are-80-of",
+      "recommendation": "Name the published prevalence concentration as the sharpest form of the long-tail objection in 7.6, say how the documentation-weighted result relates to it and what it cannot settle, and cite the bias taxonomy in 6.4 as the maintainer's own account of why report-derived growth misleads. Soften or qualify the Section 11 claim that telemetry is unreachable."
+    },
+    {
+      "severity": "major",
+      "location": "## 9. Label Validity of Deployed CTI Corpora — \"**Table 9.** Label validity of four deployed CTI corpora\"",
+      "issue": "The four-corpus sample is never defended and is not the sample the corpus supports: the vault holds in-run ground-truth repo audits of AthenaBench (500 ATE items, 70.4% sub-technique gold labels, 161 parents, no ATT&CK release declared anywhere in the repository), AttacKG (ontology frozen as a 2021-08-31 HTML scrape, 185 parent-only IDs), and tumeteor/mitre-ttp-mapping (519 labels over 23,007 occurrences), plus a cross-artefact synthesis reporting the systemic headline 2 of 6 systems declare a version and 0 of 6 declare a granularity policy, and untouched training-set corpora (SEvenLLM, CTIArena/CTIConnect).",
+      "evidence": "registry #3 (B2 synthesis), #2, #6, #10, #61, #29; vault notes b2-synthesis-six-ttp-systems-five-different-attck-ontologies-two-declared-versio, athenabench-gold-label-forensics-500-single-label-ate-items-70-sub-techniques-v1, attackg-repo-audit-attck-ontology-frozen-as-a-2021-08-31-html-scrape-parent-only",
+      "recommendation": "Defend the sample explicitly — say why these four carry machine-checkable label files and what the other audited artefacts add — and pull the 2-of-6 / 0-of-6 systemic figures and the AthenaBench-vs-CTIBench 57-technique parent overlap into Section 9 or 10, since the latter is the measurement that proves the granularity addendum the draft currently asserts without evidence."
+    },
+    {
+      "severity": "major",
+      "location": "## 7.1 What the experiments hold fixed — \"Section 6 measures the instrument. This section measures what reading it through the wrong edition costs.\"",
+      "issue": "Sections 6.1-6.4, 7, 8 and 9 are Enterprise-only and nowhere is this stated as a scope decision or listed in Section 11, even though the study materialises 38 Mobile and 27 ICS release pairs and the query asks about the knowledge base as a whole; the Mobile and ICS evidence is also under-used where it is strongest — Mobile v1.0-v3.0 is where the identifier-accounting concession actually fails (76 ATT&CK identifiers gone, zero recoverable, invisible to STIX-keyed tooling) and ICS is undergoing the sub-technique re-cut right now, the same operator Section 7.2 prices at 37-48 points on Enterprise.",
+      "evidence": "draft Section 5 (106 domain-release pairs), Section 6.2, Section 6.5; registry #36 (uncited) and vault note evidence-driven-analysis-of-threat-information-sharing-challenges-for-ics-arxiv",
+      "recommendation": "State the Enterprise-only scope of Sections 7-9 as a declared boundary in 7.1 and again in Section 11, and add a forward-looking sentence projecting the measured Enterprise re-cut penalty onto ICS consumers now crossing the same boundary, and the Mobile failure onto the completeness concession."
+    },
+    {
+      "severity": "major",
+      "location": "## 5. Data and Methodology — \"**Coverage.** A capability is frozen at a release as the techniques reachable by `mitigates` edges there\"",
+      "issue": "The query names detection coverage claims alongside mitigation ones, but the only detection-side evidence is the Navigator layer scan; the draft never measures or even names the second versioned artefact every real detection-coverage layer is built from — ATT&CK's technique-to-data-source mapping, remodelled into data components at v10 — so a whole ontology layer that carries its own drift is outside the measurement and outside the taxonomy of Section 4.",
+      "evidence": "registry #81 (cited only for ad hoc scoring), #79, #64; vault note how-coverage-layers-are-actually-built-ad-hoc-scoring-schemes-over-a-data-source",
+      "recommendation": "Say plainly that the coverage experiment uses the mitigation catalogue as the capability proxy, and add the data-source/data-component layer as a named, unmeasured second drift surface — in Section 4's operator discussion or Section 11 — with the v10 remodelling as the concrete instance."
+    },
+    {
+      "severity": "major",
+      "location": "## 10. Discussion and Reporting Discipline for CTI Research — \"**One.** The artefact declares its ATT&CK domain, the exact release, and the bundle hash.\"",
+      "issue": "The four-line discipline assumes that declaring a release achieves one, while the corpus holds a measured counter-example: tumeteor/mitre-ttp-mapping declares a v12.0 remap and still carries 208 of 23,007 dead label occurrences, concentrated entirely in one inherited split at 3.6% including identifiers revoked five releases before the declared target, so a declaration without a liveness assertion is not enough.",
+      "evidence": "registry #10, #3; vault notes tumeteormitre-ttp-mapping-audit-a-declared-v120-remap-that-still-leaks-pre-v7-, b2-synthesis-six-ttp-systems-five-different-attck-ontologies-two-declared-versio",
+      "recommendation": "Add the liveness assertion as an explicit requirement of the discipline — every label must resolve to a non-revoked, non-deprecated object in the declared release, with unmappable labels reported — and cite the declared-but-unachieved case as why the declaration alone is insufficient."
+    },
+    {
+      "severity": "major",
+      "location": "## 9. Label Validity of Deployed CTI Corpora — \"A documentation scan of the three corpora's own repositories finds zero ATT&CK version declarations across 19 files (Table 12).\"",
+      "issue": "The adoption evidence carrying the paper's central empirical premise is thinner than the corpus allows and its table is missing: Table 12 is referenced twice (here and in Section 4) and Tables 7, 8, 10 and 11 are referenced and absent, while the sharpest available instance goes uncited — MITRE's own Navigator repository ships six of eight sample layers with no ATT&CK version field at all, in layer format 3.0 which has no field capable of recording one, so 2018 ATTACKcon annotations silently re-render against v19 through two undeclared rewrites.",
+      "evidence": "registry #18 (uncited), #15, #16; vault note audit-six-of-eight-sample-layers-shipped-in-mitres-own-navigator-repository-carr",
+      "recommendation": "Bring the reference implementation's own version-orphaned sample layers into the adoption paragraph as the strongest instance, and make the referenced-but-absent tables either present or unreferenced — Table 12 in particular, since two claims lean on it."
+    },
+    {
+      "severity": "minor",
+      "location": "## 3. Related Work — \"Four literatures bear on this problem and none of them measures it.\"",
+      "issue": "The query enumerates five literatures and the draft collapses TTP extraction, LLM CTI benchmarks and attribution into one paragraph, which leaves TTP-based threat-actor attribution — the first analytic the question names — with roughly three sentences of positioning against a corpus that holds an attribution survey, a TTP-sequence system, the identifiability bound and the synthetic-APT result.",
+      "evidence": "registry #12, #23, #59, #66, #71, #72, #44; query.md lines 15-18",
+      "recommendation": "Split or at least signpost attribution as its own strand so the paper is positioned against each of the five literatures the question names, in proportion to attribution's prominence in it."
+    },
+    {
+      "severity": "minor",
+      "location": "## 3. Related Work — \"None of these frameworks names the reference vocabulary's edition as a dimension.\"",
+      "issue": "The audited absence is bounded only over the general CTI-quality literature and never touches the domain-specific branch, where the corpus has a 2026 Computers & Security measurement of ICS/OT threat-information sharing that diagnoses insufficient standardization at the level of format and governance rather than vocabulary versioning and calls for domain-specific CTI methodologies — the closest thing in the corpus to an independent confirmation of the Tier C absence.",
+      "evidence": "registry #36 (uncited); vault note evidence-driven-analysis-of-threat-information-sharing-challenges-for-ics-arxiv",
+      "recommendation": "Extend the audited absence by one sentence to cover the domain-specific branch, at the same summary fidelity the note declares, so the Tier C bound is stated over both the general and the OT-side quality literatures."
+    },
+    {
+      "severity": "minor",
+      "location": "## 6.3 Intensional drift, and why ATT&CK cannot signal it — \"Over 8,359 carried-over pairs, 1,358 (0.162) had their description rewritten\"",
+      "issue": "The headline silent-rewriting result has a dedicated ground-truth registry entry that the draft never cites, so the single most distinctive measurement in the paper carries no pointer to the artefact-level record backing it, unlike the surrounding referential results which cite [1], [34] and [48].",
+      "evidence": "registry #9 (uncited); vault note silent-technique-description-rewriting-1366-edits-over-8359-pairs-163-494-with",
+      "recommendation": "Attach the backing registry entry to the rewriting result so the reader can reach the artefact-level record, keeping the existing own-measurement framing intact."
+    }
+  ]
+}

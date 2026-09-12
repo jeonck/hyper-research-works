@@ -1,4 +1,140 @@
 {
- "note": "Pre-stubbed by the orchestrator because the patcher is tool-locked to Read and Edit and cannot create files.",
- "patches": []
+ "report": "research/notes/final_report_attack-ontology-drift-cti-85bc51.md",
+ "critic_findings": {
+  "dialectic": {
+   "total": 12,
+   "critical": 6,
+   "major": 6,
+   "minor": 0
+  },
+  "depth": {
+   "total": 12,
+   "critical": 3,
+   "major": 8,
+   "minor": 1
+  },
+  "width": {
+   "total": 10,
+   "critical": 2,
+   "major": 5,
+   "minor": 3
+  },
+  "instruction": {
+   "total": 13,
+   "critical": 2,
+   "major": 4,
+   "minor": 7
+  }
+ },
+ "patches": [
+  {
+   "finding": "dialectic/depth critical \u2014 Section 8.1 claimed normalization removed every rank-1 flip",
+   "verified_against": "data/results/e10_conclusion_flips.json (rank1_changed_normalized)",
+   "action": "Corrected: four naive rank-1 flips exist (v5.0, v6.0, v16.0, v17.0); normalization clears three and leaves v6.0 standing."
+  },
+  {
+   "finding": "dialectic/depth critical \u2014 Section 7.5 named v17.0 and v18.0 as the modern rank-1 flips",
+   "verified_against": "data/results/e10_conclusion_flips.json",
+   "action": "Corrected to v16.0 and v17.0; v18.0 does not flip."
+  },
+  {
+   "finding": "dialectic/depth critical \u2014 Section 7.2 claimed eleven of twelve modern intervals exclude zero",
+   "verified_against": "data/results/e5_attribution.json (drift_penalty_ci)",
+   "action": "Corrected to nine of twelve, naming v11.0 and v14.0 as straddling zero and v16.0 as sitting on it."
+  },
+  {
+   "finding": "depth critical \u2014 Section 7.3 noise-factorial figures matched no results file",
+   "verified_against": "data/results/e14_noise_stratification.json",
+   "action": "Corrected to 43.9 to 32.8 (v1.0), 47.6 to 31.2 (v6.0), 1.7 to 1.4 (v12.0), 1.2 to 1.0 (v18.0); recovery decay corrected to 0.441 to 0.279."
+  },
+  {
+   "finding": "dialectic critical \u2014 Section 11 called the naive condition a worst case",
+   "verified_against": "data/results/e14_noise_stratification.json (archival_control)",
+   "action": "Corrected: the archival condition scores 0.159 at v1.0 against naive's 0.274, so naive brackets the vocabulary effect and is not an upper bound."
+  },
+  {
+   "finding": "dialectic critical \u2014 Section 7.6 claimed prevalence weighting always enlarges the artefact",
+   "verified_against": "data/results/e6b_prevalence.json",
+   "action": "Corrected: larger for legacy artefacts, marginally smaller from v10.0 onward; the long-tail objection is directionally right where drift is small."
+  },
+  {
+   "finding": "dialectic critical \u2014 Sections 4 and 12 called intensional drift un-inferable",
+   "verified_against": "mitreattack-python diffStix source, read from the local clone",
+   "action": "Narrowed: unsignalled in the artefact a consumer holds; derivable by a consumer holding both bundles who runs MITRE's diff tool."
+  },
+  {
+   "finding": "dialectic/width major \u2014 MITRE's bias taxonomy and the Sightings telemetry were uncited while the long-tail objection was declared refuted",
+   "verified_against": "vault note on the Sightings Ecosystem, registry entry 49",
+   "action": "Section 7.6 now reports the telemetry head share of over 80% against our documentation-derived 0.285 and records the telemetry distribution as an open question rather than a refuted one."
+  },
+  {
+   "finding": "depth/dialectic major \u2014 the adoption figure pooled MITRE's own fixtures with third-party layers",
+   "verified_against": "data/results/e16_layer_adoption.json (by_group), recomputed",
+   "action": "Section 9 now disaggregates: 5 of 12 MITRE layers declare a version at 0.065 dead, against 0 of 57 third-party layers at 0.347 dead."
+  },
+  {
+   "finding": "instruction/width critical \u2014 the query's SCI-level bar was answered nowhere",
+   "verified_against": "prompt-decomposition.json sub_questions[9]; registry entries 47 and 63",
+   "action": "Section 10 now states the five-part bar and where this work falls short of it."
+  },
+  {
+   "finding": "dialectic top-level \u2014 the pin-the-version cluster was engaged on one half only",
+   "verified_against": "temp/contradiction-graph.json cluster pin-the-version",
+   "action": "Section 10 now names the trade pinning makes and gives the re-projection schedule the intensional clock implies."
+  },
+  {
+   "finding": "width major \u2014 the downstream experiments are Enterprise-only with no declared scope",
+   "action": "Section 7.1 now states the scope decision and notes that Mobile and ICS drift is measured but unpriced downstream."
+  },
+  {
+   "finding": "depth major \u2014 an entire detects coverage arm was unreported",
+   "verified_against": "data/results/e6_coverage.json (relation=detects)",
+   "action": "Section 7.6 now reports it: 1.4 to 2.2 points of identifier artefact across v10.0 to v18.0."
+  },
+  {
+   "finding": "depth major \u2014 the O4 mechanism was asserted rather than priced",
+   "verified_against": "data/results/e5_attribution.json (granularity_loss_top1)",
+   "action": "Section 7.2 now prices it at 0.216 of a 0.422 penalty for v1.0 and -0.002 at v18.0."
+  },
+  {
+   "finding": "depth major \u2014 the sensitivity sweep and its one genuine null were compressed into a parenthetical",
+   "verified_against": "data/results/e5b_e2b_robustness.json; e5_attribution.json k=20",
+   "action": "Section 5 now reports the k=20 v18.0 null and the software-exclusion sensitivity."
+  },
+  {
+   "finding": "depth major \u2014 the true-to-false verdict component was not reported",
+   "verified_against": "data/results/e10_conclusion_flips.json (was_right_now_changed_frac)",
+   "action": "Section 7.5 now reports 0.444 at v1.0 and 0.516 at v6.0."
+  },
+  {
+   "finding": "width major \u2014 the four-corpus sample was undefended",
+   "action": "Section 9 now defends the sample and cites the three further in-run artefact audits."
+  },
+  {
+   "finding": "instruction/width major \u2014 tables referenced but never printed, and the reproduction package undefined",
+   "action": "Section 5 now defines the reproduction package and states which tables ship rather than print; Table 12 is printed."
+  },
+  {
+   "finding": "width minor \u2014 the query names five literatures and Section 3 said four",
+   "action": "Corrected, and the five are enumerated."
+  },
+  {
+   "finding": "dialectic major \u2014 the abstract omitted the concession that most of the coverage fall is legitimate denominator growth",
+   "action": "Added to the abstract, with the 16.5-point artefact stated separately."
+  }
+ ],
+ "not_applied": [
+  {
+   "finding": "depth \u2014 the Magic Hound profile-breadth example",
+   "reason": "The example lives in an investigator's note and is not reproduced by any script in the package; adding a number we cannot regenerate would violate the paper's own evidence rule."
+  },
+  {
+   "finding": "width \u2014 measure the data-source and data-component ontology remodelled at v10",
+   "reason": "A new experiment, not a patch. Recorded in corpus-critic-gaps.json as further work."
+  },
+  {
+   "finding": "dialectic \u2014 re-run the verdict-level and ranking results under the noise model",
+   "reason": "A new experiment rather than an edit. Section 7.3's upper-bound statement is scoped to Table 6 and the limitation is stated."
+  }
+ ]
 }

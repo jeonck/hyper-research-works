@@ -1,0 +1,96 @@
+{
+  "critic_type": "instruction",
+  "findings": [
+    {
+      "severity": "critical",
+      "location": "## 10. Discussion and Reporting Discipline for CTI Research — \"For MITRE the proposals are ports, not inventions, and each has a measurement behind it.\" (nearest anchor for the missing material; the only gesture toward it is in ## 3. Related Work, \"a 2025 survey sets the bar a contribution must clear [47]\")",
+      "issue": "The second half of sub-question 10 — what an SCI-level contribution in this space must demonstrate — is absent: the manuscript never states the bar, never enumerates what such a contribution must show, and never argues that this study meets it.",
+      "evidence": "decomposition sub_questions[9] (\"...and what must an SCI-level contribution here demonstrate?\"); coverage-matrix row \"what an SCI-level contribution in this space must demonstrate | Sub-Q10; §10\"; scope_conditions[3] (\"the contribution must be an empirical measurement study plus a protocol, at SCI-journal standard\")",
+      "recommendation": "Add a closing subsection to Section 10 that cashes out the [47] gesture: state the criteria an SCI-level contribution in ATT&CK/CTI measurement must satisfy (measurement over the full release population rather than a sample, a controlled design that isolates the vocabulary term, conclusion-level rather than score-level evidence, a falsifier, a released reproduction package, and a protocol whose limits are themselves measured), and map this manuscript's four contributions onto them, conceding where it falls short."
+    },
+    {
+      "severity": "critical",
+      "location": "Throughout Sections 4–9 — e.g. ## 5. Data and Methodology \"robustness sweeps three scorers and two profile definitions (Table 7)\" and ## 9 \"finds zero ATT&CK version declarations across 19 files (Table 12)\"",
+      "issue": "Nine of the seventeen bound tables are never reproduced inline: Tables 7, 8 and 12 are referenced by fixed number with no table for the reader to consult, and Tables 10, 11, 14, 15, 16 and 17 are neither referenced nor reproduced even though their content appears as prose in Sections 6.2, 7.3, 7.4 and 7.5.",
+      "evidence": "drafting-brief \"Fixed figure and table numbering (all drafters use these, no renumbering)\" listing Tables 1–13 plus the post-depth addendum Tables 14–17; \"Tables are reproduced inline in the manuscript in markdown, under a caption of the form **Table N.** <caption>\"; decomposition required_formats[1] \"quantitative results tables\". Source files exist at research/runs/attack-ontology-drift-cti-85bc51/paper/tables/t7…t17.",
+      "recommendation": "Reproduce the nine missing tables inline under their bound numbers and captions at the point of first reference, keeping the existing numbering fixed: T7 robustness in §7.2, T8 coverage in §7.6, T10 verdict instability and T11 leaderboard flips in §7.5, T12 version declaration in §9, T14 noise factorial in §7.3, T15 specificity stratification in §7.4, T16 archival control in §7.3, T17 tactic layer in §6.2. Convert the corresponding prose runs of numbers into table references rather than repeating them."
+    },
+    {
+      "severity": "major",
+      "location": "## 12. Conclusion — \"What remains is governance, and it is four lines in an artefact header plus seven ports from an ontology-engineering literature that settled these questions decades ago.\" (and ## 10, which stays ATT&CK- and MITRE-specific throughout)",
+      "issue": "The scope condition that findings be framed for versioned security ontologies broadly is never honoured: Section 2 imports the OBO/OWL/COnto-Diff yardstick into ATT&CK but nothing exports the result outward, so CVE/CWE/CPE, CVSS, D3FEND, MISP taxonomies and other versioned security vocabularies appear only as inbound analogies.",
+      "evidence": "decomposition scope_conditions[0]: \"ATT&CK specifically, not CTI ontologies in general, though findings are framed for versioned security ontologies broadly\"",
+      "recommendation": "Add an explicit generalisation passage — in Section 10 or the Conclusion — stating which of the measured results are ATT&CK-specific and which are properties of any versioned security ontology with a 1:1 retirement relation and an unsignalled intension, naming the vocabularies already cited ([31], [32], [39]) as the transfer targets and stating the condition under which the transfer holds."
+    },
+    {
+      "severity": "major",
+      "location": "## 6. Measuring Ontology Drift in ATT&CK — Tables 2, 3, 4 and 5 are all captioned \"Enterprise\"; Mobile and ICS appear only as prose asides in §6.2 (\"in Mobile, 34 survival rows record identifiers absent\") and §6.5",
+      "issue": "The drift measurement is tabulated for Enterprise only; Mobile and ICS, which the entity definition and the coverage matrix name as in scope, are never quantified in a results table despite Section 5 stating that 19 Mobile and 12 ICS analysis points were extracted.",
+      "evidence": "decomposition entities[0] \"MITRE ATT&CK (Enterprise, Mobile, ICS)\" with required_fields \"release history\"; coverage-matrix row \"ontology drift in the MITRE ATT&CK knowledge base | Scope check: OK — all three domains (Enterprise, Mobile, ICS), not Enterprise only\"",
+      "recommendation": "Either extend Tables 2–5 with Mobile and ICS summary rows (or add a per-domain summary table under the next free bound number), or declare the Enterprise-only restriction explicitly in Section 5 with its reason and log it in Section 11 as a stated closure boundary. Do not leave the restriction implicit."
+    },
+    {
+      "severity": "major",
+      "location": "## 7.6 Coverage claims — \"A capability is frozen at a release as the techniques reachable by `mitigates` edges there\" (Section 5) and \"A capability frozen at v6.0 claimed 97.0% coverage at the time and reads 17.4% at v19.0\"",
+      "issue": "The query's \"detection/mitigation coverage claims\" is answered on the mitigation half only: the frozen-capability experiment uses the `mitigates` relation exclusively, and the `detects` relation is never used as a coverage denominator, so detection coverage claims are argued by analogy rather than measured.",
+      "evidence": "decomposition sub_questions[5] and entities[4] \"Detection and mitigation coverage claims\" with required_fields [\"denominator drift\", \"identifier artefact\"]; coverage-matrix row \"detection/mitigation coverage claims | Sub-Q6 | OK — both relations measured (mitigates and detects)\"",
+      "recommendation": "Report the frozen-capability experiment for the `detects`/data-component relation alongside `mitigates` — at minimum the denominator drift and the naive-versus-normalized gap for a detection-relation portfolio — or state plainly in Section 5 and Section 11 that only the mitigation relation was instrumented and what that leaves untested. The Section 9 Navigator-layer result is adjacent evidence, not a substitute."
+    },
+    {
+      "severity": "major",
+      "location": "## 5. Data and Methodology — \"Every number in Sections 6 to 9 is produced by scripts in `code/` from public bundles and label files, runs end to end from one shell script\"; \"reproduction package\" also appears in the Table 13 and Table 5 captions",
+      "issue": "There is no reproducibility statement as a distinct, labelled artefact: reproducibility is asserted in one methodology sentence, and the \"reproduction package\" invoked twice as the home of omitted per-transition rows is never defined, located or made available.",
+      "evidence": "decomposition required_formats[4] \"reproducibility statement\"",
+      "recommendation": "Give the manuscript a dedicated reproducibility statement — a labelled paragraph at the end of Section 5 or immediately before the Sources section — that names the code and data artefacts, the exact bundle provenance and pin used, the seeds and bootstrap counts, what the reproduction package contains, and how it is obtained. Make every \"reproduction package\" reference resolve to it."
+    },
+    {
+      "severity": "minor",
+      "location": "## 11. Threats to Validity — \"Three narrower limits. The back-projection is a synthetic transcription…\"",
+      "issue": "Two declared scope conditions are never stated anywhere in the manuscript: that only public STIX releases are in scope with the ATT&CK website's rendered content excluded, and that downstream tasks are deliberately limited to attribution, benchmark/training labels and coverage claims.",
+      "evidence": "decomposition scope_conditions[1] \"public STIX releases only; the ATT&CK website's rendered content is out of scope\" and scope_conditions[2] \"downstream tasks limited to attribution, benchmark/training labels and coverage claims\"",
+      "recommendation": "State both boundaries explicitly — the STIX-only corpus boundary in Section 5 where the clone is described, and the three-task downstream restriction in Section 11 with a sentence on which CTI analytics (hunting, sequence reasoning, alert triage) are therefore untested here."
+    },
+    {
+      "severity": "minor",
+      "location": "## 10. Discussion and Reporting Discipline for CTI Research — \"Two addenda follow from the measurements. A benchmark also declares its granularity policy… A vendor coverage claim also publishes the denominator's cardinality\"",
+      "issue": "Sub-question 9 names three audiences — CTI papers, benchmarks and vendor claims — and the section gives benchmarks and vendors a named addendum each while the papers leg is left to the generic four lines, so the audience the query puts first gets the least specific discipline.",
+      "evidence": "decomposition sub_questions[8] \"What reporting discipline should CTI papers, benchmarks and vendor claims adopt so results remain interpretable across ATT&CK releases?\"; coverage-matrix row \"reporting discipline | Sub-Q9 (§10)\"",
+      "recommendation": "Add a third addendum aimed at papers and their reviewers: what a methods section must record about the release used, what a cross-paper comparison must project onto, and what a venue or artefact-evaluation committee can mechanically check — parallel in form to the benchmark and vendor addenda already present."
+    },
+    {
+      "severity": "minor",
+      "location": "## 3. Related Work — \"a successor line grew from 691 to 1,860 QA pairs under one identifier and the same nine-task taxonomy [29]\"",
+      "issue": "CTIArena, named verbatim in the query as one of two benchmarks to position against, is never named in the body; it appears only obliquely as \"a successor line\" and in the Sources entry title.",
+      "evidence": "query \"LLM CTI benchmarks (CTIBench, CTIArena and successors)\"; coverage-matrix row \"LLM CTI benchmarks (CTIBench, CTIArena and successors) | Sub-Q10; Sub-Q7; §3\"",
+      "recommendation": "Name CTIArena (and its CTIConnect successor) explicitly at that sentence so every benchmark the query names by name is discoverable by name in the text."
+    },
+    {
+      "severity": "minor",
+      "location": "## 7.5 Conclusions move, not just scores — \"**Figure 8.** Attribution verdict instability by artefact vocabulary…\" appearing before \"**Figure 6.** Reported coverage under a capability frozen at each release…\" in ## 7.6",
+      "issue": "Figure captions are not introduced in numeric order within Section 7 (Figure 8 precedes Figure 6), and the table sequence jumps from Table 4 to Table 13 and back to Table 5, so a reader following fixed numbers encounters them out of sequence.",
+      "evidence": "drafting-brief \"Figures are referenced by number and given a caption of the form **Figure N.** <caption> at the point of first reference\"; decomposition required_formats[2] \"figures referenced by number\"",
+      "recommendation": "With the missing tables restored, reorder the material within Sections 6 and 7 so first references run in numeric order, or add a forward-pointer sentence at each out-of-sequence caption. Do not renumber — the numbering is bound by the drafting brief."
+    },
+    {
+      "severity": "minor",
+      "location": "Whole document — body word count is 10,603 words excluding the Sources section",
+      "issue": "The body exceeds the bound length envelope, and restoring the nine missing tables will push it further, so the overage needs to be absorbed by compression rather than ignored.",
+      "evidence": "drafting-brief \"Length and citations — 5,000–10,000 words in the body. Aim for roughly 9,000.\"",
+      "recommendation": "Recover the overage where prose currently recites number runs that the restored tables will carry — the cohort-decay recitation in §6.3, the stratified interval list in §7.4, the noise-factorial figures in §7.3 and the coverage series in §7.6 — replacing each with a table reference plus the one number the argument turns on."
+    },
+    {
+      "severity": "minor",
+      "location": "## 2. Background: ATT&CK as a Versioned Ontology — \"ATT&CK organises adversary behaviour into tactics, techniques and sub-techniques and links them to intrusion sets, software, mitigations and data components.\"",
+      "issue": "The entity's required \"object types\" field is discharged in a single clause with no statement of which STIX object types the corpus actually materialises or which are load-bearing downstream, leaving the reader to infer the object model from scattered later mentions of `attack-pattern`, `uses` edges and `revoked-by`.",
+      "evidence": "decomposition entities[0] required_fields includes \"object types\"; entities[1] \"ATT&CK STIX 2.1 release corpus\" required_fields [\"coverage\", \"provenance\", \"versioning\"]",
+      "recommendation": "Expand that opening into a short explicit object-model paragraph naming the STIX types extracted and the relationship types used, so Section 5's relational store and every later join (group-technique `uses`, `mitigates`, `revoked-by`, kill-chain phases) has a declared referent."
+    },
+    {
+      "severity": "minor",
+      "location": "## 9. Label Validity of Deployed CTI Corpora — \"Two of the four corpora can be dated precisely from their labels alone… so an undeclared artefact's release can be bounded by inspection [8, 10]\"",
+      "issue": "Sub-question 7 asks whether the authoring version can be inferred when undeclared, and the section demonstrates it on four corpora without stating the method's general reliability — no accuracy, no failure rate, no statement of when the interval is empty by construction rather than by error.",
+      "evidence": "decomposition sub_questions[6] \"...and can their authoring version be inferred when undeclared?\"; entities[3] required_field \"label vintage\"",
+      "recommendation": "Commit to an answer rather than an existence proof: state under what label-set size and sub-technique density the provenance interval is narrow enough to be useful, what the empty-interval verdict does and does not prove, and whether the two datable corpora are representative — the argumentative register requires a position here, not four case studies."
+    }
+  ]
+}

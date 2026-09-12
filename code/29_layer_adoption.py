@@ -93,6 +93,23 @@ def main() -> None:
     declaring = [l for l in with_ann if l["declares_attack_version"]]
     total_ann = sum(l["annotations"] for l in with_ann)
     total_dead = sum(l["dead_at_newest"] for l in with_ann)
+    # MITRE's own fixtures and third-party published layers behave differently
+    # enough that the pooled number hides the finding
+    groups = {"mitre_repositories": [l for l in with_ann
+                                     if l["repo"] in {"navigator", "mitreattack-python"}],
+              "third_party": [l for l in with_ann
+                              if l["repo"] not in {"navigator", "mitreattack-python"}]}
+    by_group = {}
+    for gname, g in groups.items():
+        ann = sum(l["annotations"] for l in g)
+        dead = sum(l["dead_at_newest"] for l in g)
+        by_group[gname] = {
+            "layers": len(g),
+            "declaring": sum(1 for l in g if l["declares_attack_version"]),
+            "annotations": ann, "dead": dead,
+            "dead_share": dead / ann if ann else 0.0,
+        }
+
     summary = {
         "layers_found": len(layers),
         "layers_with_annotations": len(with_ann),
@@ -106,9 +123,13 @@ def main() -> None:
         "annotations_recoverable": sum(l["recoverable"] for l in with_ann),
         "newest_releases": {d: r["release"] for d, r in newest.items()},
         "by_repository": dict(by_repo),
+        "by_group": by_group,
     }
     (OUT / "e16_layer_adoption.json").write_text(
         json.dumps({"summary": summary, "layers": layers}, indent=1))
+    for gname, g in by_group.items():
+        print(f"  {gname}: {g['layers']} layers, {g['declaring']} declaring, "
+              f"{g['dead']}/{g['annotations']} dead ({g['dead_share']:.3f})", file=sys.stderr)
     for k, v in summary.items():
         print(f"  {k}: {v}", file=sys.stderr)
     print(f"wrote {OUT/'e16_layer_adoption.json'}", file=sys.stderr)

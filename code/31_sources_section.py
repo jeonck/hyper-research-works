@@ -19,7 +19,7 @@ REGISTRY = ROOT / "research" / "runs" / TAG / "temp" / "reference-registry.json"
 CITE = re.compile(r"\[(\d+(?:\s*,\s*\d+)*)\]")
 
 
-def shorten(title: str, limit: int = 90) -> str:
+def shorten(title: str, limit: int = 58) -> str:
     title = " ".join(title.split())
     if len(title) <= limit:
         return title
@@ -39,11 +39,9 @@ def main() -> int:
         return 1
 
     lines = ["", "## Sources", "",
-             "Entries are numbered as in this study's reference registry; only entries",
-             "cited in the text are listed. Sources marked as read in full were obtained",
-             "from local clones of the named repositories; the remainder were reachable",
-             "in this environment only through search summaries and are attributed as",
-             "reported rather than quoted.", ""]
+             "Numbered as in this study's reference registry; only cited entries are listed.",
+             "Repository sources were read in full from local clones; the rest were reachable",
+             "here only as search summaries and are attributed as reported, never quoted.", ""]
     for n in cited:
         e = registry[n]
         url = (e.get("url") or "").strip()

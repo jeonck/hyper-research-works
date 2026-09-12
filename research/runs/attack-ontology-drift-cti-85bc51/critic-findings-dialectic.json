@@ -1,0 +1,89 @@
+{
+ "critic_type": "dialectic",
+ "findings": [
+  {
+   "severity": "critical",
+   "location": "Section 8.1 The protocol, and what it returns — \"moves mitigation-ranking tau from 0.665 to 0.968 at v6.0, removing every rank-1 flip in the corpus and introducing none\"",
+   "issue": "The draft resolves the normalization-value question by asserting a clean sweep that its own results file contradicts: v6.0 is the one row where normalization does NOT restore the top-ranked mitigation, so the corpus has four naive rank-1 flips (v5.0, v6.0, v16.0, v17.0) of which normalization fixes three and leaves the v6.0 flip standing — and v6.0 is the very row the sentence cites.",
+   "evidence": "data/results/e10_conclusion_flips.json, coverage_rankings: v6.0 has rank1_changed_naive=true AND rank1_changed_normalized=true; v5.0/v16.0/v17.0 flip naively and are repaired. interim-L4.md states it correctly as \"three of four naive rank-1 flips vanish and none are introduced\".",
+   "recommendation": "Narrow the claim to three of four flips repaired and name v6.0 as the residual case; the surviving flip is evidence for the draft's own thesis that identifier arithmetic does not restore conclusions, so the correction strengthens rather than weakens Section 8."
+  },
+  {
+   "severity": "critical",
+   "location": "Section 7.2 Attribution — \"Eleven of the twelve post-restructuring rows have intervals excluding zero at k = 10, and the effect is directional in all of them.\"",
+   "issue": "This is the sentence that carries the draft's central claim that the modern drift penalty is real and not zero, and the study's own bootstrap intervals do not support it: two rows straddle zero outright and a third touches it, so the count is nine (at most ten) of twelve, not eleven.",
+   "evidence": "data/results/e5_attribution.json, k=10 rows: v11.0 drift_penalty_ci [-0.006, 0.032], v14.0 [-0.004, 0.032], v16.0 [0.000, 0.024]; the remaining nine post-v7.0 rows exclude zero.",
+   "recommendation": "Correct the count and state which releases straddle zero, keeping the directional-in-all-twelve observation as the weaker but accurate supporting claim; do not let the corrected count be buried in a parenthesis, since the field's default position is that this effect is zero."
+  },
+  {
+   "severity": "critical",
+   "location": "Section 11 Threats to Validity — \"The naive condition is a uniform worst case — a real artefact mixes granularities, so a real pipeline sits between naive and back-projected rather than at naive.\"",
+   "issue": "The draft states as a limitation that naive bounds the real world from below, while the experiment contains a fifth condition — real archival group profiles scored against the modern knowledge base — that scores BELOW naive at every single release, and that condition is omitted from Table 6 and from the whole of Section 7.",
+   "evidence": "data/results/e5_attribution.json, k=10: historical_top1 vs naive_top1 is 0.160 vs 0.274 (v1.0), 0.178 vs 0.222 (v6.0), 0.766 vs 0.820 (v12.0), 0.838 vs 0.844 (v18.0); e14_noise_stratification.json archival_control gives archival_against_modern 0.159 at v1.0. interim-L2.md reports the same comparison (\"real archival artefacts do *worse* than the reconstruction\").",
+   "recommendation": "Reverse the direction of the stated limitation and surface the archival condition as a reported number: naive is not a worst case, the real archival artefact is worse, which makes the reported penalties conservative for a second and independent reason. Structural note: this belongs as a row or column in Table 6 as well as a corrected sentence in Section 11."
+  },
+  {
+   "severity": "critical",
+   "location": "Section 7.6 Coverage claims — \"Weighting each technique by the `uses` edges the release itself publishes makes the artefact larger, not smaller: 20.0 points against 16.5 at v6.0, and 1.57 against 2.15 at v18.0\"",
+   "issue": "The sentence announces a general refutation of the long-tail objection while the second number it supplies refutes the sentence: prevalence weighting shrinks the artefact in every release from v10.0 onward, so the long-tail objection survives intact in exactly the modern regime the paper says is the live problem.",
+   "evidence": "data/results/e6b_prevalence.json: weighted_artefact_pp vs unweighted_artefact_pp is 17.14/12.63 (v1.0) and 20.01/16.50 (v6.0) but 1.43/1.58 (v10.0), 1.54/1.87 (v14.0-v16.0), 1.54/2.01 (v17.0), 1.57/2.15 (v18.0) — weighted is smaller in 9 of 18 rows and in every post-v9.0 row. interim-L2.md: \"converging to ~1.4-2.2 pp both ways afterwards\".",
+   "recommendation": "Restrict the refutation to the pre-restructuring regime and state plainly that in the modern regime prevalence weighting reduces the artefact, i.e. the long-tail objection is answered for legacy artefacts and conceded for modern ones; the T1562.001 rank-33 example should be repositioned as an existence proof rather than as evidence of a general pattern."
+  },
+  {
+   "severity": "critical",
+   "location": "Section 4 Problem Formalization — \"O6 is unsignalled, because its only candidate marker, the object version field, operates at precision 0.447 and recall 0.641\"; and Section 12 — \"Its semantic accounting does not exist, and cannot be inferred from the metadata it publishes\"",
+   "issue": "The draft straw-mans the strongest artefact-level rebuttal in its own corpus by treating `x_mitre_version` as the only candidate signal for intensional drift, when MITRE's diffStix — read in full from a local clone, cited by the draft as [34, 48] — diffs old and new description strings line by line and renders a `description_change_table` into the per-release changelogs published on attack.mitre.org, so description rewrites are computed and published rather than unsignalled.",
+   "evidence": "Vault note `diffstix-mitres-own-machine-readable-ontology-drift-ledger-and-the-errors-it-def` (primary source code, read locally): \"description rewrites are not silent... emits a rendered description_change_table... Semantic edits that leave the T-ID and version untouched are still caught as `patches`\"; contradiction-graph.json cluster `solved-bookkeeping`, side_a.",
+   "recommendation": "Narrow the claim from \"unsignalled\" to the defensible version the evidence supports — the signal exists only as a pairwise, human-rendered, release-to-release changelog, is not a persistent per-object property a consumer can test on a pinned artefact, and requires chaining N-1 diffs to carry an artefact forward — and say so where O6 is defined rather than only implying it via the consumer-contract argument in Section 6.3."
+  },
+  {
+   "severity": "critical",
+   "location": "Section 7.5 Conclusions move, not just scores — \"Modern tau is high but not one: 0.976 at v17.0 and 0.978 at v18.0, and at both of those the top-ranked mitigation changes identity under naive matching while normalization holds it in place.\"",
+   "issue": "The draft's only concrete demonstration that drift moves a modern conclusion in the ranking task is half false: v18.0 shows no naive rank-1 change at all, so the paired example does not exist as described.",
+   "evidence": "data/results/e10_conclusion_flips.json: v18.0 rank1_changed_naive=false; the modern naive rank-1 flips are v16.0 and v17.0.",
+   "recommendation": "Replace the v17.0/v18.0 pairing with the two releases that actually flip (v16.0 and v17.0) and keep v18.0 only as a tau-below-one observation; the modern conclusion-instability claim must rest on the releases where the flip is in the data."
+  },
+  {
+   "severity": "major",
+   "location": "Section 7.6 Coverage claims — \"The long-tail objection applies here and fails on measurement. If drift landed only on rarely used techniques, a prevalence-weighted number would barely move.\"",
+   "issue": "The draft states the long-tail objection in its weakest form, attributes it to no one, and never reports the number that actually makes it strong — MITRE's own Sightings Ecosystem telemetry, where 15 of 353 sighted techniques carry over 80% of observed events, against the draft's own documentation-prevalence head share of 0.285.",
+   "evidence": "Vault note `mitres-own-bias-taxonomy-and-the-sightings-ecosystem-top-15-techniques-are-80-of` (institutional, first-party, not quarantined): \"of 353 unique techniques sighted, the top 15 accounted for over 80% of events\"; contradiction-graph.json cluster `long-tail`, side_a sources CTID Sightings Ecosystem; corpus-critic-gaps.json lists telemetry prevalence as an open gap.",
+   "recommendation": "State the objection at full strength with its source and its 80%/top-15 figure before answering it, and make explicit that the draft's rebuttal is measured on a 0.285 head share while the telemetry head share is above 0.80 — i.e. the two quantities differ by more than a factor of two in the objection's favour, which changes how much the Section 11 caveat is carrying."
+  },
+  {
+   "severity": "major",
+   "location": "Section 6.4 How much of ATT&CK's growth is intelligence? — \"1,752 are genuine new intelligence about a pre-existing pairing... a bookkeeping share of 992/3074 = 0.323\"",
+   "issue": "The draft treats the residual of its own five-way assignment as verified adversary intelligence and never engages the two published counter-positions the corpus holds: that MITRE itself names novelty, visibility, producer, victim and availability bias in the reporting that feeds ATT&CK and warns that report-derived prevalence \"might give deceiving answers\", and that the additions-versus-bookkeeping split is already computable with `attack-changelog --old-version X --new-version Y`.",
+   "evidence": "Vault notes `mitres-own-bias-taxonomy-and-the-sightings-ecosystem-top-15-techniques-are-80-of` (both rebuttals stated explicitly, including \"a paper whose contribution is 'we counted what fraction of ATT&CK growth is genuine' risks being a re-run of a MITRE-supplied tool\") and `diffstix-mitres-own-machine-readable-ontology-drift-ledger-and-the-errors-it-def`.",
+   "recommendation": "Add a qualifier that the genuine-intelligence category is a residual defined by exclusion rather than a verified class, that it inherits MITRE's own documented reporting biases so 0.323 is a lower bound on the non-intelligence share, and a sentence distinguishing this edge-level causal decomposition from diffStix's object-level buckets so the novelty claim is stated rather than assumed."
+  },
+  {
+   "severity": "major",
+   "location": "Section 9 Label Validity — \"across 69 ATT&CK Navigator layer files in the cloned public repositories, 5 declare an ATT&CK release and all five carry the same value; the 69 layers hold 4,821 technique annotations of which 917 (0.190) are not live at v19.2\"",
+   "issue": "The draft softens, without saying so, the committed position that both L1 and the cross-locus reconciliation called the single load-bearing empirical fact: pooling MITRE's own test fixtures in with published vendor layers halves the damage figure and obscures that every one of the five declaring layers is a MITRE fixture, so the true adoption rate among published coverage artefacts is zero, not 5 of 69.",
+   "evidence": "interim-L1.md §3: \"of DeTT&CT's 57 published vendor threat-report layers... zero declare an ATT&CK content version\" and \"2,143 technique annotations, of which 739 (34.5%) name an identifier that is revoked or deprecated in v19.2\"; comparisons.md: \"That single measurement does more work than any of the release-level churn statistics\"; data/results/e16_layer_adoption.json by_repository {dettect: 57, navigator: 8, mitreattack-python: 4}.",
+   "recommendation": "Report the vendor-layer stratum alongside the pooled figure — 57 published vendor layers, zero declarations, 739 of 2,143 annotations (0.345) dead — and state that the five declaring layers are MITRE's own fixtures; the pooled number may stay, but it must not be the only one."
+  },
+  {
+   "severity": "major",
+   "location": "Section 7.3 Separability and additivity — \"recovery at v1.0 falls from 0.44 to 0.34 as ρ goes from 0 to 0.4 — so the remedy is worth less under realistic noise than under ideal conditions\"",
+   "issue": "The draft understates by a third the degradation of its own remedy under the noise model it commits to in R2, reporting 0.34 where the factorial gives 0.279, and similarly rounds the attenuated penalties down (32.0 and 30.8 against measured 32.8 and 31.2) — every rounding runs in the direction that flatters the protocol.",
+   "evidence": "data/results/e14_noise_stratification.json, factorial: v1.0 recovery 0.441 (ρ=0) → 0.279 (ρ=0.4); v1.0 drift_penalty 0.4387 → 0.3283; v6.0 0.4758 → 0.3117. interim-L2.md reports the same degradation as 0.44 → 0.30.",
+   "recommendation": "Correct the recovery figure to the measured value and state the degradation as a fraction (normalization loses roughly a third of its recovery at ρ=0.4), so the concession that the remedy is weak is priced at its measured size rather than a softened one."
+  },
+  {
+   "severity": "major",
+   "location": "Section 7.3 Separability and additivity — \"a sibling sub-technique, its parent, or another technique in the same tactic, which is the confusion structure reported for real extractors [20]\"",
+   "issue": "The draft borrows [20]'s confusion structure as an independent nuisance term while never engaging that same source's rival explanation — that intra-version confusability and cross-version drift are the same phenomenon observed at different times, because sub-technique restructuring is precisely what manufactures semantically adjacent technique pairs — so modelling the two as separable additive terms assumes the point in dispute.",
+   "evidence": "Vault note `beyond-single-reports-intra-version-technique-confusability-as-a-rival-explanati`: \"the two effects are entangled: sub-technique restructuring is *exactly* what creates semantically adjacent technique pairs, so 'confusability' and 'drift' are the same phenomenon observed at different times. The thesis must either disentangle them or explicitly reframe drift as the *cause* of the confusability\"; same note reports the extraction ceiling of 78.6%/54.9% F1 that bounds what any normalization on such labels can deliver.",
+   "recommendation": "Add the entanglement objection explicitly and take the reframing the source itself recommends — drift as the generator of the confusability structure rather than an independent term added to it — and note that the ~55-79% F1 extraction ceiling bounds the value of normalization independently of its intension-blindness."
+  },
+  {
+   "severity": "major",
+   "location": "Abstract — \"a frozen capability that claimed 97.0% coverage reads 17.4% at v19.0\"",
+   "issue": "The abstract presents the 97.0-to-17.4 collapse as a headline drift harm, while Section 7.6 concedes that most of that fall is legitimate denominator growth under O1 and puts the actual drift artefact at 16.5 points — the concession is made in the body and quietly not applied where the number is most likely to be read and quoted.",
+   "evidence": "Section 7.6 of the draft: \"Most of that fall is not artefact. A growing denominator is O1 doing exactly what it should... The artefact is the gap between naive and normalized re-measurement... 16.5 points at v6.0\"; data/results/e6_coverage.json portfolios.",
+   "recommendation": "Attach the qualifier to the abstract sentence so the 17.4% figure travels with the fact that the drift-attributable component is 16.5 points and the remainder is genuine catalogue growth; the same discipline the paper demands of vendor coverage claims applies to its own abstract."
+  }
+ ]
+}
