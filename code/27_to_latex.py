@@ -34,6 +34,8 @@ FIGURES = {
     7: ("fig7_artifact_validity", "Label-validity curves for four deployed CTI corpora."),
     8: ("fig8_conclusion_flips", "Attribution verdict instability, and mitigation "
         "leaderboard reordering."),
+    9: ("fig9_two_clocks", "The two clocks: the intensional clock at a common two-year "
+        "horizon per cohort, and the five restructuring events across the three domains."),
 }
 
 PREAMBLE = r"""\documentclass[11pt,a4paper]{article}
