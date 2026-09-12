@@ -106,6 +106,24 @@ def staleness(con) -> dict:
     return out
 
 
+def event_anatomy(con, domain: str, frm: str, to: str) -> dict:
+    """For a restructuring event: what survived at the STIX layer versus the
+    ATT&CK-identifier layer, and how much the published crosswalk recovers."""
+    a = ad.load_snapshot(con, domain, frm)
+    b = ad.load_snapshot(con, domain, to)
+    la, lb = a.live_tech(), b.live_tech()
+    rev = b.revoked_by()
+    return {
+        "domain": domain, "from": frm, "to": to,
+        "live_from": len(la), "live_to": len(lb),
+        "identifiers_shared": len(la & lb),
+        "stix_objects_from": len(a.by_stix),
+        "stix_objects_preserved": len(set(a.by_stix) & set(b.by_stix)),
+        "revocation_edges_at_target": len(rev),
+        "recoverable": sum(1 for t in la if ad.resolve_chain(t, rev) in lb),
+    }
+
+
 def recurrence(e123: dict) -> dict:
     events, transitions, domain_years = [], 0, 0.0
     for dom, v in e123.items():
@@ -175,9 +193,12 @@ def leading_indicators(e123: dict) -> dict:
 def main() -> None:
     con = ad.connect()
     e123 = json.loads((OUT / "e1_e2_e3.json").read_text())
+    rec = recurrence(e123)
+    rec["anatomy"] = [event_anatomy(con, e["domain"], e["from"], e["to"])
+                      for e in rec["events"]]
     result = {
         "staleness_clocks": staleness(con),
-        "recurrence": recurrence(e123),
+        "recurrence": rec,
         "leading_indicators": leading_indicators(e123),
     }
     (OUT / "e12_temporal_structure.json").write_text(json.dumps(result, indent=1))
@@ -188,10 +209,12 @@ def main() -> None:
           f"({r['hazard_per_transition']:.3f} per transition); "
           f"{r['observed_domain_years']:.1f} observed domain-years, one event per "
           f"{r['years_per_event']:.1f} domain-years", file=sys.stderr)
-    for e in r["events"]:
+    for e, an in zip(r["events"], r["anatomy"]):
         print(f"  {e['domain']:18} v{e['from']}→v{e['to']} {e['date']} "
-              f"J={e['jaccard']:.3f} revoked={e['revoked']} deprecated={e['deprecated']} "
-              f"vanished={e['vanished']}", file=sys.stderr)
+              f"J={e['jaccard']:.3f} | identifiers {an['live_from']}→{an['live_to']}, "
+              f"{an['identifiers_shared']} shared, {an['recoverable']} recoverable | "
+              f"STIX objects {an['stix_objects_preserved']}/{an['stix_objects_from']} "
+              f"preserved", file=sys.stderr)
     ent = result["staleness_clocks"]["enterprise-attack"]
     print("\nEnterprise substantive-rewrite clock (years to 10% / 25% / 50%):", file=sys.stderr)
     for row in ent:

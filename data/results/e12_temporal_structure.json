@@ -2989,7 +2989,69 @@
   "n_transitions": 47,
   "hazard_per_transition": 0.10638297872340426,
   "observed_domain_years": 22.053388090349074,
-  "years_per_event": 4.410677618069815
+  "years_per_event": 4.410677618069815,
+  "anatomy": [
+   {
+    "domain": "enterprise-attack",
+    "from": "6.0",
+    "to": "7.0",
+    "live_from": 266,
+    "live_to": 428,
+    "identifiers_shared": 126,
+    "stix_objects_from": 1023,
+    "stix_objects_preserved": 1023,
+    "revocation_edges_at_target": 132,
+    "recoverable": 255
+   },
+   {
+    "domain": "mobile-attack",
+    "from": "2.0",
+    "to": "3.0",
+    "live_from": 76,
+    "live_to": 66,
+    "identifiers_shared": 0,
+    "stix_objects_from": 128,
+    "stix_objects_preserved": 128,
+    "revocation_edges_at_target": 15,
+    "recoverable": 0
+   },
+   {
+    "domain": "mobile-attack",
+    "from": "10.0",
+    "to": "11.3",
+    "live_from": 92,
+    "live_to": 107,
+    "identifiers_shared": 42,
+    "stix_objects_from": 241,
+    "stix_objects_preserved": 241,
+    "revocation_edges_at_target": 53,
+    "recoverable": 78
+   },
+   {
+    "domain": "ics-attack",
+    "from": "8.0",
+    "to": "9.0",
+    "live_from": 81,
+    "live_to": 79,
+    "identifiers_shared": 70,
+    "stix_objects_from": 171,
+    "stix_objects_preserved": 171,
+    "revocation_edges_at_target": 0,
+    "recoverable": 70
+   },
+   {
+    "domain": "ics-attack",
+    "from": "18.0",
+    "to": "19.0",
+    "live_from": 83,
+    "live_to": 97,
+    "identifiers_shared": 74,
+    "stix_objects_from": 451,
+    "stix_objects_preserved": 451,
+    "revocation_edges_at_target": 11,
+    "recoverable": 83
+   }
+  ]
  },
  "leading_indicators": {
   "enterprise-attack": {
