@@ -33,8 +33,11 @@ def fig1_growth_churn(e123):
     ch = e["churn"]
     x = [c["to_date"][:7] for c in ch]
     fig, ax = plt.subplots(2, 1, figsize=(6.4, 4.2), sharex=True)
-    ax[0].plot([ch[0]["from_date"][:7]] + x, [ch[0]["live_from"]] + [c["live_to"] for c in ch],
-               "o-", color=C["a"], ms=3, lw=1.4, label="live techniques")
+    idx0 = list(range(len(ch)))
+    ax[0].plot(idx0, [c["live_to"] for c in ch], "o-", color=C["a"], ms=3, lw=1.4,
+               label="live techniques")
+    ax[0].annotate(f"v{ch[0]['from']}: {ch[0]['live_from']}", xy=(0, ch[0]["live_to"]),
+                   xytext=(0.4, ch[0]["live_to"] - 60), fontsize=6, color=C["a"])
     ax[0].set_ylabel("live techniques")
     ax[0].legend(loc="upper left")
     w = 0.38
