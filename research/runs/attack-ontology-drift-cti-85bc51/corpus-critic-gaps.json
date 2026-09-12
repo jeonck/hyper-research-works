@@ -1,0 +1,15 @@
+{
+ "question": "What source would overturn the thesis?",
+ "overturning_evidence": "A representative sample of published CTI artefacts in which a majority carry a resolvable ATT&CK release pin AND mechanically applying revoked-by forward from that pin reproduces an independently authored current-version mapping to within inter-analyst agreement. If migration were that faithful and that common, the residual gaps would be a footnote and this paper would be a reporting-discipline note rather than a threat-to-validity finding.",
+ "gaps_closed_in_this_wave": [
+  {"gap": "MITRE's own change taxonomy was known only through a re-summarised account.", "closed_by": "Read diffStix's class definitions directly from the cloned source."},
+  {"gap": "CTID ATT&CK Sync's published outputs were unsourced below summary level.", "closed_by": "Cloned the repository and read the README and the shipped machine-readable changelog sample."},
+  {"gap": "The revocation-arity and tactic-layer claims rested on a quarantined note.", "closed_by": "Recomputed from the release bundles in code/23_tactic_layer.py."}
+ ],
+ "gaps_remaining": [
+  {"gap": "Telemetry prevalence.", "detail": "The prevalence weighting uses documented `uses` edges, a cumulative documentation stock, not an alert stream. The sightings telemetry that would test the long-tail objection on its own data is not reachable in this environment.", "effect": "Stated as a limitation; the long-tail objection is refuted for the written CTI corpus and left untested for the alert stream."},
+  {"gap": "Full text of the secondary literature.", "detail": "The egress proxy blocks publisher sites and preprint servers, so positioning claims rest on search summaries.", "effect": "No verbatim quotation is asserted from an unread source, and every such claim is attributed as reported rather than verified."},
+  {"gap": "A double-labelled incident corpus.", "detail": "Measuring the drift term and the inter-analyst noise term simultaneously, from outside MITRE's own edges, requires two analysts labelling the same intrusions under two releases. No such corpus exists publicly.", "effect": "Named as the experiment that would close the study's central residual threat."},
+  {"gap": "Whether the largest comparative extraction evaluation re-baselines its systems onto a common release before comparing.", "detail": "Unresolved; the relevant note was quarantined and the paper is not reachable in full text.", "effect": "Not claimed in the manuscript."}
+ ]
+}

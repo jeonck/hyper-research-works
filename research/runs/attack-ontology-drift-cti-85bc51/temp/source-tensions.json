@@ -1,0 +1,22 @@
+[
+ {"tension": "MITRE's tooling names silent rewriting and treats its own version metadata as unreliable, while the consumer-facing contract offers only a binary current/retired filter.",
+  "side_a": "diffStix defines a `patches` class for objects changed without a version increment and annotates `other_version_changes` as unintended.",
+  "side_b": "USAGE.md's published consumer helper drops revoked and deprecated objects and says nothing about surviving objects whose meaning moved.",
+  "resolution": "Both are MITRE's. The tooling knows about semantic change; the contract consumers actually follow cannot express it. The manuscript uses this as evidence that the gap is architectural, not an oversight."},
+ {"tension": "CTID built ATT&CK Sync because version drift is an operational burden, yet publishes enumeration rather than impact.",
+  "side_a": "The project's own README states organisations have widespread difficulty staying in sync, which concedes the premise institutionally.",
+  "side_b": "Its machine-readable output is change lists by class; nothing in it expresses what a change costs an analytic built on the earlier release.",
+  "resolution": "The enumeration/quantification distinction is the paper's opening: the field has the diff and lacks the measurement."},
+ {"tension": "Published CTI quality frameworks omit vocabulary versioning entirely, while practitioners report the burden.",
+  "side_a": "The canonical quality dimensions cover accuracy, timeliness, provenance, interoperability and relevance; none is defined over the reference vocabulary.",
+  "side_b": "Practitioner accounts and the existence of migration tooling both describe version churn as a recurring cost.",
+  "resolution": "An audited absence, stated as such: the burden is felt and untheorised. The manuscript proposes the missing dimension rather than claiming nobody noticed the problem."},
+ {"tension": "Benchmark successors claim continuity of measurement while changing the label space.",
+  "side_a": "Successive benchmarks from one group report the same task under the same metric name.",
+  "side_b": "Their gold label spaces differ in granularity and overlap only partially at parent level, and neither declares an ATT&CK release.",
+  "resolution": "Comparability across benchmark generations is asserted, not established. This is the concrete harm the reporting contract is designed to prevent."},
+ {"tension": "Drift is small in the modern regime, yet concentrated exactly where attribution is possible.",
+  "side_a": "Post-2020 identifier survival exceeds 0.97 and the aggregate modern drift penalty is one to two points.",
+  "side_b": "Stratified by whether a group has any unique technique, the modern penalty is two-and-a-half to seven times larger on the identifiable groups.",
+  "resolution": "Report both. A small average over a population that is mostly non-identifiable hides a material effect on the subset that carries the task."}
+]
