@@ -20,9 +20,9 @@
     "15",
     "16"
   ],
-  "status": "running",
+  "status": "done",
   "started_at": "2026-09-12T13:11:58.666198+00:00",
-  "updated_at": "2026-09-12T16:48:33.865018+00:00",
+  "updated_at": "2026-09-12T16:49:21.455393+00:00",
   "budget_usd": null,
   "blocked_on": null,
   "steps": {
@@ -106,5 +106,10 @@
     "register": "analyze",
     "inference_depth": "deep",
     "domain_notes": "Sourcing: primary artefacts first \u2014 the ATT&CK STIX release bundles themselves, benchmark label files and tool source cloned from public GitHub, and this run's own measurement outputs under data/results/, which are ground_truth tier. Peer-reviewed and arXiv literature is reachable only through the WebSearch tool in this environment, so secondary literature enters at summary fidelity and must be marked as such; never present a search summary as a verbatim quotation. Evidence norms: a measured number computed from the release corpus outranks any vendor or survey claim; a claim about a specific benchmark must be checked against that benchmark's own label file, not its paper. Recency: ATT&CK releases through v19.2 (August 2026) matter directly; CTI-benchmark literature from 2024 onward is the live comparison set."
+  },
+  "verify": {
+    "passed": true,
+    "at": "2026-09-12T16:49:21.454895+00:00",
+    "failed_checks": []
   }
 }

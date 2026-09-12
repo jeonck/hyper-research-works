@@ -16,3 +16,5 @@
 {"at": "2026-09-12T16:38:18.013389+00:00", "type": "step", "step": "14.5", "status": "done", "chapter": null}
 {"at": "2026-09-12T16:38:18.222175+00:00", "type": "step", "step": "15", "status": "done", "chapter": null}
 {"at": "2026-09-12T16:48:33.864839+00:00", "type": "step", "step": "16", "status": "done", "chapter": null}
+{"at": "2026-09-12T16:48:49.117940+00:00", "type": "finish", "passed": false, "failed_checks": ["cite-check-resolved"]}
+{"at": "2026-09-12T16:49:21.455290+00:00", "type": "finish", "passed": true, "failed_checks": []}

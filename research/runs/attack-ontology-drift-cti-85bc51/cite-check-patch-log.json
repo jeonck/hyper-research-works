@@ -1,0 +1,47 @@
+{
+ "step": "14.5 cite-check patch pass",
+ "report": "research/notes/final_report_attack-ontology-drift-cti-85bc51.md",
+ "findings_received": 14,
+ "findings_applied": 14,
+ "findings_rejected": 0,
+ "critical_resolutions": [
+  {
+   "citation": 78,
+   "verdict": "misattributed",
+   "where": "Section 6.2, the TA0005 rename-in-place sentence",
+   "resolution": "The object-level facts \u2014 the retained UUID and identifier, the shortname change, the object version staying at 1.0, and the T1562 revocation \u2014 are now attributed to this study's extraction of the v18.1 and v19.2 bundles. The release announcement is cited only for the tactic separation it actually reports, which is what the cited note supports.",
+   "verified_by": "code/23_tactic_layer.py, data/results/e13_tactic_layer.json"
+  },
+  {
+   "citation": 78,
+   "verdict": "misattributed",
+   "where": "Section 1, the closing sentence on the v19 release",
+   "resolution": "Split the sourcing: the tactic separation and its date are attributed to the announcement as reported; the rename-in-place and the T1562 arity are attributed to our reading of the bundles, with a forward reference to Section 6.2.",
+   "verified_by": "code/23_tactic_layer.py"
+  },
+  {
+   "citation": 63,
+   "verdict": "misattributed",
+   "where": "Section 3, the ATT&CK-based analytics paragraph",
+   "resolution": "The claim that the systematization flags temporal instability is removed. The sentence now says what the source says: it frames non-comparability as heterogeneity of implementation across vendors and papers, not as instability of the ontology over time.",
+   "verified_by": "the vault note behind registry entry 63"
+  }
+ ],
+ "other_resolutions": [
+  "Registry 47 and 63: the superlative 'most-cited instability' is replaced by what the two systematizations support.",
+  "Registry 61: the no-declared-release assertion is restated as an absence we could not settle, with the bound of the search.",
+  "Registry 17: the tactic-ordering drift surface is restated as this study's argument, with the citation identifying the benchmark only.",
+  "Registry 58, twice: the mitigation ceiling is attributed as reported and unverified.",
+  "Registry 10: the TRAM 2 liveness window now points at Table 9 rather than at an audit of a different corpus.",
+  "Registry 59 and 66: the one-third specificity figure and the LLM-agent precision range are attributed as reported.",
+  "Registry 1: the immutability claim is separated from the retirement-contract citation.",
+  "Registry 16 and 15: layer-format optionality is attributed to the format specification; the upgrade-path citation now covers the upgrade path.",
+  "Registry 19: the AVClass analogy is weakened from the same operation to a shared normalization ancestry."
+ ],
+ "post_patch_verification": {
+  "citation_pairs": 152,
+  "dangling_citations": 0,
+  "numbers_in_prose_without_a_computed_source": 1,
+  "note": "The single unmatched number is the Sightings telemetry head share, which is an external claim explicitly attributed to its source rather than a measurement of ours."
+ }
+}
