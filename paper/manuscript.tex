@@ -19,7 +19,7 @@ for Reproducible CTI Analytics}
 \begin{abstract}
 
 
-Security machine learning spent a decade learning to control for bias in its data. All of that discipline assumes something it never states: that the label space is fixed. In cyber threat intelligence it is not. MITRE ATT\&CK is the instrument in which coverage, attribution and benchmark labels are denominated, and it has been re-issued 109 times across three domains since January 2018 without any downstream result recording which issue it used. From a longitudinal database of 106 domain-release pairs we measure four drift processes separately, then run controlled experiments holding the adversary intelligence fixed while only the vocabulary moves. MITRE's Enterprise identifier accounting is complete — every revoked technique carries exactly one successor edge and none dangle — and post-2020 identifier survival to the newest release never falls below 0.970. Yet 0.749 of the identifier-stable techniques of v7.0 have edited descriptions by v19.0, ATT\&CK's own version field detects a rewrite at precision 0.447 and recall 0.641, 0.323 of new group-technique edges for pre-existing groups are bookkeeping rather than intelligence, and a frozen capability that claimed 97.0\% coverage reads 17.4\% at v19.0. Vocabulary mismatch alone changes the named threat actor in 0.722 of pre-restructuring observations and still in 0.022 across one modern release boundary, concentrated on exactly the groups that are identifiable at all. Normalization recovers 0.42 to 0.53 of the legacy penalty, almost nothing modern, and nothing semantic, so the contribution is a reporting contract rather than a crosswalk.
+Security machine learning spent a decade learning to control for bias in its data. All of that discipline assumes something it never states: that the label space is fixed. In cyber threat intelligence it is not. MITRE ATT\&CK is the instrument in which coverage, attribution and benchmark labels are denominated, and it has been re-issued 109 times across three domains since January 2018 without any downstream result recording which issue it used. From a longitudinal database of 106 domain-release pairs we measure four drift processes separately, then run controlled experiments holding the adversary intelligence fixed while only the vocabulary moves. MITRE's Enterprise identifier accounting is complete — every revoked technique carries exactly one successor edge and none dangle — and post-2020 identifier survival to the newest release never falls below 0.970. Yet 0.749 of the identifier-stable techniques of v7.0 have edited descriptions by v19.0, ATT\&CK's own version field detects a rewrite at precision 0.447 and recall 0.641, 0.323 of new group-technique edges for pre-existing groups are bookkeeping rather than intelligence, and a frozen capability that claimed 97.0\% coverage reads 17.4\% at v19.0, most of that fall being legitimate denominator growth and 16.5 points of it pure identifier artefact. Vocabulary mismatch alone changes the named threat actor in 0.722 of pre-restructuring observations and still in 0.022 across one modern release boundary, concentrated on exactly the groups that are identifiable at all. Normalization recovers 0.42 to 0.53 of the legacy penalty, almost nothing modern, and nothing semantic, so the contribution is a reporting contract rather than a crosswalk.
 
 \end{abstract}
 \section{Introduction}
@@ -44,7 +44,7 @@ Measured against that yardstick ATT\&CK scores well on some axes and has nothing
 \end{abstract}
 \section{Related Work}
 
-Four literatures bear on this problem and none of them measures it.
+Five literatures bear on this problem and none of them measures it: CTI quality, ATT\&CK-based analytics, TTP extraction and benchmarks, threat-actor attribution, and concept drift in security machine learning.
 
 \textbf{CTI quality.} A mature line defines quality dimensions and builds instruments to score feeds against them: accuracy, completeness, timeliness, relevance, provenance and interoperability recur across the canonical treatments [60, 76], with dynamic assessment and weighted criteria added later [27], feed evaluations establishing that public feeds overlap little and age badly [41, 45], practitioner quality assurance studied directly [40], community feeds metered [38], a 2025 measurement-based survey consolidating the field [11], and separate complaints about exchange-format validity [83] and vulnerability-database quality [25]. None of these frameworks names the reference vocabulary's edition as a dimension. This is an audited absence and we state its bound: across the sources reachable in this environment we found no such dimension defined, and we lacked full text for some, so we claim the absence of a named dimension rather than the absence of any awareness.
 
@@ -61,7 +61,7 @@ Let a release \texttt{V} of an ATT\&CK domain determine a label space \texttt{L\
 
 Six operators carry \texttt{(L\_V, ι\_V)} to \texttt{(L\_W, ι\_W)}. \textbf{O1 Addition}: a new identifier with no predecessor, the only operator class-incremental learning handles [24] and the only one benign for backward comparison; forward it is not benign, because a growing denominator makes a frozen capability's percentage fall with no change in the capability (Table 8). \textbf{O2 Deprecation}: withdrawn with no successor, marked and retained [1]. \textbf{O3 Revocation with a typed successor}: the well-handled case on which the ecosystem's defence rests, and in our corpus every revoked Enterprise identifier resolves to a live one (Table 3). \textbf{O4 Re-cut}: a concept split across successors, or several merged into one. Because \texttt{revoked-by} is a function and never one-to-many, a split is representable only as merges onto the narrowest survivor. It is not true that the relation cannot express the v19 re-cut; it can, as merges. The defect is annotation rather than expressiveness — the merge is unlabelled, so a consumer applying the crosswalk mechanically cannot distinguish an exact successor from a narrowing, which ontology engineering settled by splitting the successor relation into exact and inexact variants [54] and typing complex change operations [26, 56]. \textbf{O5 Cross-layer reassignment}: a technique demoted onto a sub-technique, a sub-technique promoted, or a technique promoted to a tactic; the crosswalk carries no abstraction-level annotation, and a promotion to the tactic layer is not representable at all, since \texttt{revoked-by} cannot point a technique at a tactic and no tactic object in the corpus carries a revocation edge. \textbf{O6 Intensional rewriting}: the identifier survives and what it denotes moves, invisible to every identifier-based mechanism in the ecosystem.
 
-O1 to O5 are referential; O6 is intensional, and that split organises the paper because the two components have different dynamics, different downstream consequences and different repair prospects. Cutting across it is a distinction we consider more practically important. Call an operator signalled if the published artefact carries a machine-readable marker a consumer can test. O2 and O3 are signalled; O4 and O5 are partially signalled, since the edges exist but carry no type, so a consumer learns that something changed and not what; O6 is unsignalled, because its only candidate marker, the object version field, operates at precision 0.447 and recall 0.641 (Section 6.3). The component of drift that is well handled is the component everybody points at, and the component that is not handled at all is the component nobody can see.
+O1 to O5 are referential; O6 is intensional, and that split organises the paper because the two components have different dynamics, different downstream consequences and different repair prospects. Cutting across it is a distinction we consider more practically important. Call an operator signalled if the published artefact carries a machine-readable marker a consumer can test. O2 and O3 are signalled; O4 and O5 are partially signalled, since the edges exist but carry no type, so a consumer learns that something changed and not what; O6 is unsignalled in the artefact a consumer holds: the bundle carries no marker distinguishing a rewritten technique from an untouched one, and its only candidate, the object version field, operates at precision 0.447 and recall 0.641 (Section 6.3). MITRE's change tool will compute a line-level description diff between any two releases [34], so the information is derivable by a consumer holding both bundles who chooses to look; what does not exist is a signal in the artefact itself, which is what a pipeline consumes. The component of drift that is well handled is the component everybody points at, and the component that is not handled at all is the component nobody can see.
 
 Two artefacts are version-comparable when both have been projected onto one reference release and the projection's residual is declared. Projection is transitive closure over the retirement relation; it is a function and not an injection, so it can merge and land on a different abstraction level, and its residual is the four-way ledger of kept, merged, demoted and dropped. A protocol returning only the projected set destroys exactly the information a reader needs to judge comparability (Section 8). Ontology drift accordingly damages construct validity, because after O6 the construct measured is not the construct the labels name; internal validity, because after O4 or O5 measured profile breadth falls with no change in the intelligence; external validity, because after O1 an unchanged capability reports a falling number; and conclusion validity, which Section 7 shows reaches the named actor, the top-ranked mitigation and the pass/fail verdict. Because a study of drift is exposed to its own subject, we commit in advance to four requirements and audit them in Section 11: \textbf{R1}, the contrast holds everything constant except the vocabulary; \textbf{R2}, a stated noise model, since holding a nuisance term at zero establishes separability and says nothing about additivity; \textbf{R3}, a declared closure boundary; \textbf{R4}, a named falsifier.
 
@@ -86,9 +86,9 @@ Ics & 12 / 27 & v8.0 (2020-10-27) & v19.0 (2026-04-28) \\
 
 The live set is the \texttt{attack-pattern} objects with both retirement flags false, and it is the denominator of every coverage claim. Identifier Jaccard is computed over consecutive majors with a revoked identifier treated as absent, since it is unusable as a label even though the object is retained. An identifier is recoverable at a target if transitive \texttt{revoked-by} closure from it, cycle-safe and bounded at ten hops, terminates in the live set. Semantic drift is measured on identifier-stable techniques only: an edit is inequality of description digests, similarity is the Jaccard index over lowercased alphanumeric token sets, and a substantial rewrite is similarity below 0.8, a convention reported alongside the full mean-similarity series. Bag-of-words similarity is deliberately crude: monotone in shared vocabulary, model-free, and incapable of importing an embedding's own drift into a measurement of drift. Growth decomposition assigns each newly added group-technique edge to one cause in a fixed order — new actor, revocation re-mapping, sub-technique refinement, new technique, genuine new intelligence — with re-mapping tested before refinement so an ambiguous edge is charged to bookkeeping.
 
-Four experiments share one principle, satisfying R1: the intelligence is held fixed and only the vocabulary varies. \textbf{Attribution.} The analysis release is v19.0. Modern group profiles are back-projected into a legacy vocabulary by a map built once per pair: a modern technique maps to itself if live then, else to the pre-revocation identifier resolving onto it, else to the nearest live ancestor within five hops, else it is dropped as a behaviour with no expression in that era. Each of 500 trials samples a group, draws k = 10 techniques from its modern profile, and scores four conditions over identical draws — back-projected (labelled contemporaneous in the released results files), naive, ATT\&CK-Norm, oracle. Scoring is IDF-weighted cosine; the drift penalty is back-projected minus naive top-1 accuracy; recovery is the share of that penalty normalization returns; intervals are paired bootstrap with 2,000 resamples, and robustness sweeps three scorers and two profile definitions (Table 7). \textbf{Coverage.} A capability is frozen at a release as the techniques reachable by \texttt{mitigates} edges there, then re-measured at v19.0 naively and after normalization, with a 500-sample random-portfolio sweep and a prevalence-weighted variant. \textbf{Conclusion instability.} The same machinery is read out at verdict level and as Kendall tau over mitigation rankings. \textbf{Label validity.} Four deployed corpora are parsed from their own label files rather than their papers, every identifier is checked for liveness at every published release, and the provenance interval is the set of releases at which every identifier is simultaneously live — an empty interval meaning the artefact mixes mutually exclusive vocabularies.
+Four experiments share one principle, satisfying R1: the intelligence is held fixed and only the vocabulary varies. \textbf{Attribution.} The analysis release is v19.0. Modern group profiles are back-projected into a legacy vocabulary by a map built once per pair: a modern technique maps to itself if live then, else to the pre-revocation identifier resolving onto it, else to the nearest live ancestor within five hops, else it is dropped as a behaviour with no expression in that era. Each of 500 trials samples a group, draws k = 10 techniques from its modern profile, and scores four conditions over identical draws — back-projected (labelled contemporaneous in the released results files), naive, ATT\&CK-Norm, oracle. Scoring is IDF-weighted cosine; the drift penalty is back-projected minus naive top-1 accuracy; recovery is the share of that penalty normalization returns; intervals are paired bootstrap with 2,000 resamples, and robustness sweeps three scorers and two profile definitions. The sweep contains the result's one genuine null and we report it: at k = 20 the v18.0 penalty is 0.2 points with an interval spanning zero, and excluding software-mediated techniques from group profiles cuts the v7.0 penalty from 5.3 to 1.3 points. The legacy effect survives every cell of the sweep; the single-release modern effect is visible at k = 5 and k = 10 and disappears at k = 20, which is what a small effect measured on richer observations should do. \textbf{Coverage.} A capability is frozen at a release as the techniques reachable by \texttt{mitigates} edges there, then re-measured at v19.0 naively and after normalization, with a 500-sample random-portfolio sweep and a prevalence-weighted variant. \textbf{Conclusion instability.} The same machinery is read out at verdict level and as Kendall tau over mitigation rankings. \textbf{Label validity.} Four deployed corpora are parsed from their own label files rather than their papers, every identifier is checked for liveness at every published release, and the provenance interval is the set of releases at which every identifier is simultaneously live — an empty interval meaning the artefact mixes mutually exclusive vocabularies.
 
-Every number in Sections 6 to 9 is produced by scripts in \texttt{code/} from public bundles and label files, runs end to end from one shell script, and is written to JSON from which the tables are generated rather than transcribed. Three evidence tiers are marked throughout: Tier A, our own measurement and artefacts read in full from local clones; Tier B, secondary literature reachable here only through search summaries, attributed as reported and never quoted; Tier C, an audited absence, stated with the bound of the search that found it.
+Every number in Sections 6 to 9 is produced by scripts in \texttt{code/} from public bundles and label files, runs end to end from one shell script, and is written to JSON from which the tables are generated rather than transcribed. The reproduction package is that directory together with \texttt{data/results/}; it holds seventeen generated tables, of which the nine most load-bearing are reproduced here and the rest — the full churn, survival and semantic-drift series, the sensitivity sweep, the noise factorial, the specificity stratification, the archival control and the tactic-layer census — are shipped rather than printed, for length. Three evidence tiers are marked throughout: Tier A, our own measurement and artefacts read in full from local clones; Tier B, secondary literature reachable here only through search summaries, attributed as reported and never quoted; Tier C, an audited absence, stated with the bound of the search that found it.
 
 \end{abstract}
 \section{Measuring Ontology Drift in ATT\&CK}
@@ -105,28 +105,16 @@ Every number in Sections 6 to 9 is produced by scripts in \texttt{code/} from pu
 \end{figure}
 
 
-\textbf{Table 2.} Per-release Enterprise churn across consecutive major releases. Rewrite and tactic columns count only techniques live in both releases; \texttt{J(ID)} is the identifier Jaccard; edges are group-to-technique \texttt{uses} edges.
+\textbf{Table 2.} Per-release Enterprise churn across consecutive major releases. Rewrite and tactic columns count only techniques live in both releases; \texttt{J(ID)} is the identifier Jaccard; edges are group-to-technique \texttt{uses} edges. Representative transitions; all eighteen are in Figure 1 and the reproduction package.
 
 \begin{center}\footnotesize
 \begin{tabular}{llllllllllll}
 \toprule
 Transition & Date & Live & Added & Revoked & Deprecated & Renamed & Desc. rewritten & Detection rewritten & Tactic changed & J(ID) & Edges +/- \\
 \midrule
-v1.0→v2.0 & 2018-04-18 & 219 & 31 & 0 & 0 & 2 & 28 & 0 & 5 & 0.858 & +135/−0 \\
 v2.0→v3.0 & 2018-10-23 & 223 & 4 & 0 & 0 & 1 & 219 & 218 & 4 & 0.982 & +285/−0 \\
-v3.0→v4.0 & 2019-04-30 & 244 & 21 & 0 & 0 & 1 & 27 & 10 & 1 & 0.914 & +237/−2 \\
-v4.0→v5.0 & 2019-07-19 & 244 & 0 & 0 & 0 & 0 & 2 & 0 & 0 & 1.000 & +100/−0 \\
-v5.0→v6.0 & 2019-10-23 & 266 & 22 & 0 & 0 & 2 & 60 & 24 & 2 & 0.917 & +102/−0 \\
 v6.0→v7.0 & 2020-03-31 & 428 & 302 & 129 & 11 & 17 & 106 & 60 & 10 & 0.222 & +1235/−750 \\
-v7.0→v8.0 & 2020-10-27 & 525 & 97 & 0 & 0 & 3 & 34 & 17 & 0 & 0.815 & +102/−2 \\
-v8.0→v9.0 & 2021-04-29 & 552 & 27 & 0 & 0 & 6 & 149 & 52 & 5 & 0.951 & +642/−2 \\
-v9.0→v10.0 & 2021-10-21 & 566 & 15 & 0 & 1 & 2 & 76 & 66 & 0 & 0.972 & +312/−1 \\
 v10.0→v11.0 & 2022-04-25 & 576 & 12 & 2 & 0 & 9 & 151 & 44 & 0 & 0.976 & +288/−1 \\
-v11.0→v12.0 & 2022-10-25 & 594 & 18 & 0 & 0 & 2 & 50 & 0 & 0 & 0.970 & +252/−0 \\
-v12.0→v13.0 & 2023-04-25 & 607 & 13 & 0 & 0 & 1 & 87 & 13 & 0 & 0.979 & +112/−16 \\
-v13.0→v14.0 & 2023-10-31 & 625 & 18 & 0 & 0 & 1 & 41 & 2 & 6 & 0.971 & +178/−1 \\
-v14.0→v15.0 & 2024-04-23 & 637 & 12 & 0 & 0 & 3 & 98 & 4 & 0 & 0.981 & +208/−34 \\
-v15.0→v16.0 & 2024-10-31 & 656 & 19 & 0 & 0 & 1 & 61 & 0 & 0 & 0.971 & +417/−14 \\
 v16.0→v17.0 & 2025-04-22 & 679 & 24 & 1 & 0 & 5 & 79 & 5 & 2 & 0.963 & +313/−558 \\
 v17.0→v18.0 & 2025-10-28 & 691 & 12 & 0 & 0 & 2 & 49 & 583 & 0 & 0.983 & +328/−11 \\
 v18.0→v19.0 & 2026-04-28 & 697 & 23 & 17 & 0 & 4 & 41 & 0 & 198 & 0.944 & +270/−86 \\
@@ -148,7 +136,7 @@ Read the identifier column alone and the episodic reading is irresistible: one t
 \end{figure}
 
 
-\textbf{Table 3.} Identifier survival to v19.0 by source release. Recoverable counts revoked or absent identifiers whose transitive closure terminates at a live identifier.
+\textbf{Table 3.} Identifier survival to v19.0 by source release. Recoverable counts revoked or absent identifiers whose transitive closure terminates at a live identifier. Representative cohorts; all nineteen are in Figure 2 and the reproduction package.
 
 \begin{center}\footnotesize
 \begin{tabular}{lllllllll}
@@ -156,24 +144,10 @@ Read the identifier column alone and the episodic reading is irresistible: one t
 Source release & Date & Identifiers & Live at v19.0 & Survival & Revoked & Deprecated & Recoverable & Half-life \\
 \midrule
 v1.0 & 2018-01-17 & 188 & 77 & 0.410 & 100 & 11 & 100 & v7.0 (2.2 y) \\
-v2.0 & 2018-04-18 & 219 & 97 & 0.443 & 111 & 11 & 111 & v7.0 (2.0 y) \\
-v3.0 & 2018-10-23 & 223 & 100 & 0.448 & 112 & 11 & 112 & v7.0 (1.4 y) \\
-v4.0 & 2019-04-30 & 244 & 113 & 0.463 & 120 & 11 & 120 & v7.0 (0.9 y) \\
-v5.0 & 2019-07-19 & 244 & 113 & 0.463 & 120 & 11 & 120 & v7.0 (0.7 y) \\
 v6.0 & 2019-10-23 & 266 & 126 & 0.474 & 129 & 11 & 129 & v7.0 (0.4 y) \\
 v7.0 & 2020-03-31 & 428 & 415 & 0.970 & 12 & 1 & 12 & not reached \\
-v8.0 & 2020-10-27 & 525 & 511 & 0.973 & 13 & 1 & 13 & not reached \\
-v9.0 & 2021-04-29 & 552 & 538 & 0.975 & 13 & 1 & 13 & not reached \\
 v10.0 & 2021-10-21 & 566 & 551 & 0.973 & 15 & 0 & 15 & not reached \\
-v11.0 & 2022-04-25 & 576 & 563 & 0.977 & 13 & 0 & 13 & not reached \\
-v12.0 & 2022-10-25 & 594 & 581 & 0.978 & 13 & 0 & 13 & not reached \\
-v13.0 & 2023-04-25 & 607 & 593 & 0.977 & 14 & 0 & 14 & not reached \\
-v14.0 & 2023-10-31 & 625 & 609 & 0.974 & 16 & 0 & 16 & not reached \\
-v15.0 & 2024-04-23 & 637 & 621 & 0.975 & 16 & 0 & 16 & not reached \\
-v16.0 & 2024-10-31 & 656 & 640 & 0.976 & 16 & 0 & 16 & not reached \\
-v17.0 & 2025-04-22 & 679 & 663 & 0.976 & 16 & 0 & 16 & not reached \\
 v18.0 & 2025-10-28 & 691 & 674 & 0.975 & 17 & 0 & 17 & not reached \\
-v19.0 & 2026-04-28 & 697 & 697 & 1.000 & 0 & 0 & 0 & not reached \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -194,7 +168,7 @@ The tactic layer has no retirement relation at all: across all three domains and
 \end{figure}
 
 
-\textbf{Table 4.} Semantic drift among techniques live at both the source release and v19.0. Token Jaccard is over lowercased alphanumeric token sets of the description; a substantial rewrite is below 0.8.
+\textbf{Table 4.} Semantic drift among techniques live at both the source release and v19.0. Token Jaccard is over lowercased alphanumeric token sets of the description; a substantial rewrite is below 0.8. Representative cohorts; all eighteen are in Figure 3 and the reproduction package.
 
 \begin{center}\footnotesize
 \begin{tabular}{lllll}
@@ -202,22 +176,9 @@ The tactic layer has no retirement relation at all: across all three domains and
 Source release & ID-stable techniques & Description edited & Mean token Jaccard & Substantial rewrite (J<0.8) \\
 \midrule
 v1.0 & 77 & 1.000 & 0.345 & 1.000 \\
-v2.0 & 97 & 1.000 & 0.373 & 1.000 \\
-v3.0 & 100 & 0.960 & 0.553 & 0.830 \\
-v4.0 & 113 & 0.965 & 0.548 & 0.841 \\
-v5.0 & 113 & 0.965 & 0.548 & 0.841 \\
-v6.0 & 126 & 0.968 & 0.569 & 0.817 \\
 v7.0 & 415 & 0.749 & 0.808 & 0.386 \\
-v8.0 & 511 & 0.767 & 0.830 & 0.337 \\
-v9.0 & 538 & 0.645 & 0.849 & 0.310 \\
-v10.0 & 551 & 0.593 & 0.866 & 0.278 \\
 v11.0 & 563 & 0.465 & 0.895 & 0.208 \\
-v12.0 & 581 & 0.439 & 0.906 & 0.189 \\
-v13.0 & 593 & 0.386 & 0.928 & 0.140 \\
-v14.0 & 609 & 0.366 & 0.938 & 0.123 \\
 v15.0 & 621 & 0.275 & 0.956 & 0.087 \\
-v16.0 & 640 & 0.211 & 0.969 & 0.062 \\
-v17.0 & 663 & 0.124 & 0.985 & 0.024 \\
 v18.0 & 674 & 0.061 & 0.997 & 0.003 \\
 \bottomrule
 \end{tabular}
@@ -225,7 +186,7 @@ v18.0 & 674 & 0.061 & 0.997 & 0.003 \\
 
 Table 4 is a function of elapsed time, not of release quality: the v18.0 row is low because one transition separates it from the analysis release. The right reading is cohort decay. Of the 415 techniques live at v7.0 and still live at v19.0, 0.749 have edited descriptions and 0.386 are rewritten past the substantial threshold, at mean similarity 0.808; for the v11.0 cohort, 0.465, 0.208 and 0.895; for v15.0, 0.275, 0.087 and 0.956. These are identifiers whose survival over the same interval is 0.977 and 0.975. The instrument keeps the scale markings and moves what they mean. On a practitioner's clock, every Enterprise cohort from v7.0 onward reaches 10\% hard identifier staleness never, while the time to 10\% substantive staleness — gone, substantially rewritten, or reassigned to another tactic — is 0.50 to 2.01 years with a median of 1.51, and 0.99 to 2.01 years with a median of 1.52 once tactic changes and revocations are excluded so the recent re-cut cannot be blamed. Semantic half-life is 4.5 to 6.1 years. A pinned post-2020 label set has an infinite identifier half-life and an eighteen-month first-10\% semantic staleness schedule, simultaneously.
 
-\textbf{Table 13.} Text change versus version increment for techniques live in both releases of a consecutive major pair, Enterprise. Per-transition rows are in the reproduction package.
+\textbf{Table 13.} Text change versus version increment for techniques live in both releases of a consecutive major pair, Enterprise. Full rows in the reproduction package.
 
 \begin{center}\footnotesize
 \begin{tabular}{llllll}
@@ -254,7 +215,7 @@ Over 8,359 carried-over pairs, 1,358 (0.162) had their description rewritten; 48
 \end{figure}
 
 
-\textbf{Table 5.} Knowledge-growth decomposition, Enterprise. Edges for groups newly added to ATT\&CK are excluded from the denominator; bookkeeping share is refinement plus re-mapping over all new edges for pre-existing groups. Per-transition rows are plotted in Figure 4 and tabulated in full in the reproduction package.
+\textbf{Table 5.} Knowledge-growth decomposition, Enterprise. Edges for groups newly added to ATT\&CK are excluded from the denominator; bookkeeping share is refinement plus re-mapping over all new edges for pre-existing groups. Per-transition rows are in Figure 4 and the reproduction package.
 
 \begin{center}\footnotesize
 \begin{tabular}{lllllll}
@@ -293,7 +254,7 @@ Can a consumer see one coming? Over 17 lagged Enterprise pairs, by Spearman corr
 
 \subsection{7.1 What the experiments hold fixed}
 
-Section 6 measures the instrument. This section measures what reading it through the wrong edition costs. Every experiment here obeys R1: the adversary intelligence is identical across conditions and only the vocabulary moves. That is what separates this design from a before-and-after comparison, which would confound drift with eight years of genuine intelligence gain. The cost of the design is stated rather than hidden: back-projecting a modern profile into a 2018 vocabulary finds no expression for 389 of 697 modern techniques, and a group profile retains 0.618 of its distinct identifiers; by v18.0 those are 7 of 697 and 0.998. All legacy conditions consume the same reduced observation, so the contrast among them is unaffected; only the oracle sees the full modern draw, which is why the oracle is read as an unreachable ceiling rather than a baseline.
+Section 6 measures the instrument across all three domains; the downstream experiments in this section and in Sections 8 and 9 are Enterprise-only, because Enterprise is where the group-technique graph is dense enough to support attribution and where the deployed artefacts we can audit were built. That is a scope decision and not a claim about the other domains: Mobile's uncrosswalkable 2018 renumbering and the ICS re-cut now in progress are measured in Section 6.5 and unpriced downstream, which if anything understates the population-level cost. This section measures what reading the instrument through the wrong edition costs. Every experiment here obeys R1: the adversary intelligence is identical across conditions and only the vocabulary moves. That is what separates this design from a before-and-after comparison, which would confound drift with eight years of genuine intelligence gain. The cost of the design is stated rather than hidden: back-projecting a modern profile into a 2018 vocabulary finds no expression for 389 of 697 modern techniques, and a group profile retains 0.618 of its distinct identifiers; by v18.0 those are 7 of 697 and 0.998. All legacy conditions consume the same reduced observation, so the contrast among them is unaffected; only the oracle sees the full modern draw, which is why the oracle is read as an unreachable ceiling rather than a baseline.
 
 \subsection{7.2 Attribution}
 
@@ -307,7 +268,7 @@ Section 6 measures the instrument. This section measures what reading it through
 \end{figure}
 
 
-\textbf{Table 6.} Controlled attribution, k = 10, analysis release v19.0, 500 trials per row, paired bootstrap intervals. Back-projected is the self-consistent legacy system; naive is the same artefact read by the modern base; recovered is the share of the penalty normalization returns.
+\textbf{Table 6.} Controlled attribution, k = 10, analysis release v19.0, 500 trials per row, paired bootstrap intervals. Back-projected is the self-consistent legacy system; naive is the same artefact read by the modern base; recovered is the share of the penalty normalization returns. Representative vocabularies; all eighteen are in Figure 5.
 
 \begin{center}\footnotesize
 \begin{tabular}{lllllllll}
@@ -315,26 +276,23 @@ Section 6 measures the instrument. This section measures what reading it through
 Artefact vocabulary & Groups & OOV & Back-projected & Naive & ATT\&CK-Norm & Oracle & Drift penalty (pp) [95\% CI] & Recovered \\
 \midrule
 v1.0 (2018-01-17) & 47 & 0.256 & 0.696 & 0.274 & 0.450 & 0.912 & 42.2 [37.8, 46.8] & 0.42 \\
-v4.0 (2019-04-30) & 70 & 0.264 & 0.684 & 0.206 & 0.420 & 0.878 & 47.8 [42.8, 52.6] & 0.45 \\
 v6.0 (2019-10-23) & 78 & 0.283 & 0.684 & 0.222 & 0.468 & 0.850 & 46.2 [41.6, 51.0] & 0.53 \\
 v7.0 (2020-03-31) & 88 & 0.013 & 0.810 & 0.740 & 0.750 & 0.862 & 7.0 [4.4, 9.8] & 0.14 \\
-v9.0 (2021-04-29) & 102 & 0.016 & 0.836 & 0.804 & 0.816 & 0.868 & 3.2 [1.2, 5.4] & 0.38 \\
 v12.0 (2022-10-25) & 123 & 0.011 & 0.840 & 0.820 & 0.832 & 0.878 & 2.0 [0.6, 3.8] & 0.60 \\
-v15.0 (2024-04-23) & 138 & 0.013 & 0.834 & 0.818 & 0.826 & 0.842 & 1.6 [0.4, 3.0] & 0.50 \\
 v18.0 (2025-10-28) & 161 & 0.015 & 0.860 & 0.844 & 0.858 & 0.858 & 1.6 [0.6, 2.8] & 0.88 \\
 \bottomrule
 \end{tabular}
 \end{center}
 
-The shape is the two-clock structure again, read through a task. An artefact written in the pre-restructuring vocabulary loses 37 to 48 points of top-1 accuracy purely because its identifiers no longer denote, with intervals excluding zero by a wide margin; the same artefact written one release ago loses 1.6 points. Every legacy row has an out-of-vocabulary rate near 0.26 and every modern row near 0.014, and the unresolvable rate — identifiers that survive transitive closure and still fail to land live — is 0.000 in every row. Nothing here is a broken crosswalk. The penalty arises because the crosswalk is applied to a coarse vocabulary, so what it returns is correct and less discriminative than what a modern analyst would have written, which is exactly the O4 defect priced.
+The shape is the two-clock structure again, read through a task. An artefact written in the pre-restructuring vocabulary loses 37 to 48 points of top-1 accuracy purely because its identifiers no longer denote, with intervals excluding zero by a wide margin; the same artefact written one release ago loses 1.6 points. Every legacy row has an out-of-vocabulary rate near 0.26 and every modern row near 0.014, and the unresolvable rate — identifiers that survive transitive closure and still fail to land live — is 0.000 in every row. Nothing here is a broken crosswalk. The penalty arises because the crosswalk is applied to a coarse vocabulary, so what it returns is correct and less discriminative than what a modern analyst would have written, which is exactly the O4 defect, and it is priced rather than asserted: the gap between the oracle and the back-projected control isolates the resolution the older ontology could not express, at 0.216 of a 0.422 penalty for v1.0 artefacts, 0.166 of 0.462 at v6.0, and −0.002 at v18.0 where the two vocabularies are nearly the same.
 
-The modern penalties are small and they are not zero, which matters because the field's implicit position is that they are zero. Eleven of the twelve post-restructuring rows have intervals excluding zero at k = 10, and the effect is directional in all of them.
+The modern penalties are small and they are not zero, which matters because the field's implicit position is that they are zero. Nine of the twelve post-restructuring rows have intervals excluding zero at k = 10; v11.0 and v14.0 straddle zero and v16.0's lower bound sits on it. The effect is directional in all twelve and significant in nine, which is the honest form of the claim.
 
 \subsection{7.3 Separability and additivity}
 
 R2 requires a noise model rather than a noise-free measurement presented as if it were general. The strongest objection to everything above is that products pinned to a single release already disagree about the label for the same behaviour [74], a noise floor larger than most of the modern penalties. Our design holds the labelling process constant across conditions, so that noise cancels in the contrasts; but a contrast in which a nuisance term is fixed at zero establishes separability, not additivity.
 
-We therefore repeat the experiment with labeller noise injected before back-projection, so it flows into all conditions: with probability ρ an observed technique is replaced by something the same labeller could plausibly have written — a sibling sub-technique, its parent, or another technique in the same tactic, which is the confusion structure reported for real extractors [20]. At ρ = 0.4 the v1.0 penalty falls from 43.9 to 32.0 points and the v6.0 penalty from 47.6 to 30.8, while the v12.0 and v18.0 penalties are unchanged within noise at 1.6 and 1.5 points. Drift survives realistic labeller disagreement at every boundary tested, and it is sub-additive with it where drift is large. The consequence for how the paper should be read is direct: the noise-free figures in Table 6 are upper bounds on what a real analyst pipeline would experience, and we report them as such. Normalization degrades faster than the penalty does — recovery at v1.0 falls from 0.44 to 0.34 as ρ goes from 0 to 0.4 — so the remedy is worth less under realistic noise than under ideal conditions, which is the opposite of the direction a paper advocating its own protocol would prefer.
+We therefore repeat the experiment with labeller noise injected before back-projection, so it flows into all conditions: with probability ρ an observed technique is replaced by something the same labeller could plausibly have written — a sibling sub-technique, its parent, or another technique in the same tactic, which is the confusion structure reported for real extractors [20]. At ρ = 0.4 the v1.0 penalty falls from 43.9 to 32.8 points and the v6.0 penalty from 47.6 to 31.2, while the modern penalties move within their own noise, from 1.7 to 1.4 at v12.0 and from 1.2 to 1.0 at v18.0. Drift survives realistic labeller disagreement at every boundary tested, and it is sub-additive with it where drift is large. The consequence for how the paper should be read is direct: the noise-free figures in Table 6 are upper bounds on what a real analyst pipeline would experience, and we report them as such. Normalization degrades faster than the penalty does — recovery at v1.0 falls from 0.441 to 0.279 as ρ goes from 0 to 0.4, and at v6.0 from 0.485 to 0.307 — so the remedy is worth less under realistic noise than under ideal conditions, which is the opposite of the direction a paper advocating its own protocol would prefer.
 
 The archival control corrects a second thing. The self-consistent condition is built by back-projection, and a real archival system is not the same object: judging the actual v1.0 profiles against themselves scores 0.969, against the back-projection's 0.668, because a back-projected profile collides distinct behaviours onto shared coarse identifiers. The two converge by v18.0 at 0.846 and 0.841. The back-projected control is therefore conservative for legacy rows, and the released results files label that condition \texttt{contemporaneous}, which overstates it; we use back-projected throughout and report both.
 
@@ -344,7 +302,7 @@ An aggregate of 1.6 points averaged over 161 groups would be easy to dismiss, an
 
 \subsection{7.5 Conclusions move, not just scores}
 
-Gene Ontology set the bar for this class of claim: showing that scores shift is weaker than showing that conclusions shift [69]. Read at verdict level, an artefact in the v1.0 vocabulary has its named actor changed by the modern knowledge base in 0.722 of observations, and in 0.712 the new name is wrong; at v6.0, 0.790 and 0.774. Across a single modern release boundary, v18.0 to v19.0, the named actor still changes in 0.022 of observations and is wrong in 0.022 of them. Normalization is itself a verdict-changing operation, altering the named actor in 0.368 of v1.0 trials and 0.442 of v6.0 trials, which is why applying it silently inside a pipeline is an integrity event rather than a maintenance step.
+Gene Ontology set the bar for this class of claim: showing that scores shift is weaker than showing that conclusions shift [69]. Read at verdict level, an artefact in the v1.0 vocabulary has its named actor changed by the modern knowledge base in 0.722 of observations, and in 0.712 the new name is wrong; at v6.0, 0.790 and 0.774. The component that meets the Gene Ontology bar exactly — cases the contemporaneous system got right and the modern base then renamed — is 0.444 at v1.0 and 0.516 at v6.0. Across a single modern release boundary, v18.0 to v19.0, the named actor still changes in 0.022 of observations and is wrong in 0.022 of them. Normalization is itself a verdict-changing operation, altering the named actor in 0.368 of v1.0 trials and 0.442 of v6.0 trials, which is why applying it silently inside a pipeline is an integrity event rather than a maintenance step.
 
 \textbf{Figure 8.} Attribution verdict instability by artefact vocabulary, and Kendall tau of the mitigation coverage leaderboard against its original ordering.
 
@@ -356,7 +314,7 @@ Gene Ontology set the bar for this class of claim: showing that scores shift is 
 \end{figure}
 
 
-The same instability reaches rankings. Freezing every mitigation's technique portfolio at a release and re-ranking the mitigations at v19.0 — the portfolios unchanged, only the vocabulary moving — gives Kendall tau against the original ranking of 0.694 at v5.0 and 0.665 at v6.0, restored to 0.956 and 0.968 by normalization. Modern tau is high but not one: 0.976 at v17.0 and 0.978 at v18.0, and at both of those the top-ranked mitigation changes identity under naive matching while normalization holds it in place. A leaderboard whose first place moves because the catalogue was re-edited is a leaderboard reporting something other than what its caption claims.
+The same instability reaches rankings. Freezing every mitigation's technique portfolio at a release and re-ranking the mitigations at v19.0 — the portfolios unchanged, only the vocabulary moving — gives Kendall tau against the original ranking of 0.694 at v5.0 and 0.665 at v6.0, restored to 0.956 and 0.968 by normalization. Modern tau is high but not one: 0.977 at v16.0, 0.976 at v17.0 and 0.978 at v18.0. At v16.0 and v17.0 the top-ranked mitigation changes identity under naive matching while normalization holds it in place; at v18.0 it does not move. A leaderboard whose first place moves because the catalogue was re-edited is a leaderboard reporting something other than what its caption claims.
 
 \subsection{7.6 Coverage claims}
 
@@ -370,9 +328,9 @@ The same instability reaches rankings. Freezing every mitigation's technique por
 \end{figure}
 
 
-A capability frozen at v6.0 claimed 97.0\% coverage at the time and reads 17.4\% at v19.0; frozen at v10.0, 90.5\% reads 71.3\%; at v17.0, 84.7\% reads 80.2\%; at v18.0, 84.2\% reads 81.1\%. Most of that fall is not artefact. A growing denominator is O1 doing exactly what it should: the technique catalogue grew and the frozen capability genuinely covers less of it. The artefact is the gap between naive and normalized re-measurement, which isolates identifiers the capability still covers but can no longer match: 16.5 points at v6.0, 1.6 at v10.0, 2.0 at v17.0 and 2.1 at v18.0, with a 500-sample random-portfolio sweep giving the same shape. Two to three points of a published coverage number that is nothing but identifier arithmetic is not a rounding error in a market where products are compared on such numbers [80, 82, 84], and it sits on top of a denominator that other work argues is the wrong unit entirely [62, 64] and a ceiling set by the control catalogue rather than the product [58].
+A capability frozen at v6.0 claimed 97.0\% coverage at the time and reads 17.4\% at v19.0; frozen at v10.0, 90.5\% reads 71.3\%; at v17.0, 84.7\% reads 80.2\%; at v18.0, 84.2\% reads 81.1\%. Most of that fall is not artefact. A growing denominator is O1 doing exactly what it should: the technique catalogue grew and the frozen capability genuinely covers less of it. The artefact is the gap between naive and normalized re-measurement, which isolates identifiers the capability still covers but can no longer match: 16.5 points at v6.0, 1.6 at v10.0, 2.0 at v17.0 and 2.1 at v18.0, with a 500-sample random-portfolio sweep giving the same shape. The detection arm behaves the same way where it can be measured: freezing the techniques reachable by \texttt{detects} edges, available from v10.0 when the data-component model was introduced, a capability claiming 91.9\% at v10.0 reads 72.5\% naively and 74.0\% normalized at v19.0, and one claiming 94.1\% at v17.0 reads 89.4\% and 91.4\% — an identifier artefact of 1.4 to 2.2 points across every year measured. Two to three points of a published coverage number that is nothing but identifier arithmetic is not a rounding error in a market where products are compared on such numbers [80, 82, 84], and it sits on top of a denominator that other work argues is the wrong unit entirely [62, 64] and a ceiling set by the control catalogue rather than the product [58].
 
-The long-tail objection applies here and fails on measurement. If drift landed only on rarely used techniques, a prevalence-weighted number would barely move. Weighting each technique by the \texttt{uses} edges the release itself publishes makes the artefact larger, not smaller: 20.0 points against 16.5 at v6.0, and 1.57 against 2.15 at v18.0, with the fifteen most-referenced techniques carrying 0.285 of all edges. The v19 wave took T1562.001 at rank 33 of 599. The weight here is documentation prevalence, not telemetry prevalence, and Section 11 states what that does not settle.
+The long-tail objection applies here and fails on measurement. If drift landed only on rarely used techniques, a prevalence-weighted number would barely move. Weighting each technique by the \texttt{uses} edges the release itself publishes makes the artefact substantially larger for legacy artefacts — 20.0 points against 16.5 at v6.0 — and marginally smaller for modern ones, 1.57 against 2.15 at v18.0, with the fifteen most-referenced techniques carrying 0.285 of all documentation edges. The long-tail objection fails outright where drift is large and is directionally right, by a few tenths of a point, where drift is small. The v19 wave took T1562.001 at rank 33 of 599. The weight here is documentation prevalence, and the distinction matters more than the result. MITRE argues that report-derived prevalence is untrustworthy, naming novelty, visibility, producer, victim and availability bias, and the Sightings Ecosystem was built to replace it with pooled multi-organisation telemetry; its headline is that 15 of 353 sighted techniques account for over 80\% of observed events [49]. Our documentation-derived head share for the same top-15 cut is 0.285, so telemetry is far more concentrated than documentation. On the telemetry distribution the long-tail objection is stronger than our measurement can test, and we record that as open rather than claiming the refutation covers it. What survives the distinction is that the most recent revocation wave took T1562.001, which sits in the head of the documentation distribution at rank 33 of 599.
 
 \end{abstract}
 \section{ATT\&CK-Norm: A Version-Normalization Protocol}
@@ -381,7 +339,7 @@ The long-tail objection applies here and fails on measurement. If drift landed o
 
 ATT\&CK-Norm maps an identifier set onto a target release: transitive \texttt{revoked-by} closure, cycle-safe and bounded at ten hops; identifiers that are deprecated or absent at the target are dropped and counted; and the result is not a set but a ledger of what was kept, what was merged and by how much, what changed abstraction level, and what was dropped. The ledger is the contribution, not the mapping. A protocol returning only the projected set silently destroys the information a reader needs, which is the reporting failure this paper is about, committed by the paper's own remedy.
 
-Measured on this corpus it is worth having and worth distrusting. It recovers 0.42 to 0.53 of the attribution penalty on pre-restructuring artefacts and moves mitigation-ranking tau from 0.665 to 0.968 at v6.0, removing every rank-1 flip in the corpus and introducing none. On post-restructuring artefacts it recovers a fraction of a penalty that is already small, and its gain interval spans zero in most modern conditions. It is a legacy migration tool. Anything claiming it is a standing cure for drift is claiming something this measurement contradicts.
+Measured on this corpus it is worth having and worth distrusting. It recovers 0.42 to 0.53 of the attribution penalty on pre-restructuring artefacts and moves mitigation-ranking tau from 0.665 to 0.968 at v6.0. Four source releases produce a naive rank-1 flip in the mitigation leaderboard (v5.0, v6.0, v16.0 and v17.0); normalization removes three of them, introduces none, and leaves the v6.0 flip standing. Even on the one task where it works cleanly it does not work completely. On post-restructuring artefacts it recovers a fraction of a penalty that is already small, and its gain interval spans zero in most modern conditions. It is a legacy migration tool. Anything claiming it is a standing cure for drift is claiming something this measurement contradicts.
 
 \subsection{8.2 Six defects, measured}
 
@@ -431,9 +389,24 @@ TRAM 2 & 50 & 5143 & 24 & v8.2 (2021-01-27) & 1.000 & 18 (v8.2–v16.1) & 2 (0.0
 \end{tabular}
 \end{center}
 
-Two of the four corpora can be dated precisely from their labels alone, which is itself a useful capability: rcATT's vocabulary is simultaneously live only across v4.0 to v6.3 and TRAM 2's only across v8.2 to v16.1, so an undeclared artefact's release can be bounded by inspection [8, 10], the same move AVClass makes for malware family aliases [19]. Two cannot be dated at all, because no release makes every label simultaneously valid — the corpus mixes vocabularies. For the CTIBench extraction task that mixture is the mis-typed row of Section 8.3; for the TRAM bootstrap corpus it is a wider spread that the corpus's own documentation does not resolve, and two independent 2026 efforts decline to treat its annotations as gold at all [52, 73]. Decay is severe where the artefact is old and the field keeps citing it anyway: 0.498 of rcATT's distinct labels and 0.380 of its label instances are invalid today, in a corpus still used as a baseline [8, 44]. The successor generation's answer to staleness is to rebuild from live APIs rather than to declare a release [13], which trades an undeclared pin for no pin at all.
+The four corpora are not a random sample and we do not present them as one: they are the deployed CTI label sets whose gold files are public, parseable and actually cited, spanning a 2019 tool, two generations of a reference mapper and a benchmark still used as an evaluation surface. In-run audits of three further artefacts — a successor benchmark, a graph-based extractor and a declared-version remap — point the same way [2, 3, 6, 10], and the last of them carries the sharpest lesson for Section 10, since a corpus that declares v12.0 still ships identifiers revoked five releases earlier. Two of the four corpora can be dated precisely from their labels alone, which is itself a useful capability: rcATT's vocabulary is simultaneously live only across v4.0 to v6.3 and TRAM 2's only across v8.2 to v16.1, so an undeclared artefact's release can be bounded by inspection [8, 10], the same move AVClass makes for malware family aliases [19]. Two cannot be dated at all, because no release makes every label simultaneously valid — the corpus mixes vocabularies. For the CTIBench extraction task that mixture is the mis-typed row of Section 8.3; for the TRAM bootstrap corpus it is a wider spread that the corpus's own documentation does not resolve, and two independent 2026 efforts decline to treat its annotations as gold at all [52, 73]. Decay is severe where the artefact is old and the field keeps citing it anyway: 0.498 of rcATT's distinct labels and 0.380 of its label instances are invalid today, in a corpus still used as a baseline [8, 44]. The successor generation's answer to staleness is to rebuild from live APIs rather than to declare a release [13], which trades an undeclared pin for no pin at all.
 
-The adoption evidence is what makes this a systemic finding rather than four case studies. A documentation scan of the three corpora's own repositories finds zero ATT\&CK version declarations across 19 files (Table 12). Extending the scan to published coverage artefacts: across 69 ATT\&CK Navigator layer files in the cloned public repositories, 5 declare an ATT\&CK release and all five carry the same value; the 69 layers hold 4,821 technique annotations of which 917 (0.190) are not live at v19.2, with 60 of the 69 layers carrying at least one dead annotation and 818 of the 917 recoverable by crosswalk. The Navigator's own layer format makes the field optional and silently defaults a version-less layer to the current release [15, 16], and the most widely used third-party generator omits it unless asked [79]. So the mechanism that would repair four-fifths of the damage exists, is documented, and is not used.
+The adoption evidence is what makes this a systemic finding rather than four case studies. A documentation scan of the three corpora's own repositories finds zero ATT\&CK version declarations across 19 files.
+
+\textbf{Table 12.} ATT\&CK version declarations in the documentation and configuration files of three deployed CTI corpora.
+
+\begin{center}\footnotesize
+\begin{tabular}{lll}
+\toprule
+Corpus & Documentation files scanned & ATT\&CK version declarations found \\
+\midrule
+cti-bench & 2 & 0 \\
+rcATT & 2 & 0 \\
+tram & 15 & 0 \\
+\bottomrule
+\end{tabular}
+\end{center}
+ Extending the scan to published coverage artefacts: across 69 ATT\&CK Navigator layer files in the cloned public repositories, 5 declare an ATT\&CK release, and the pooled figure hides the split that matters. MITRE's own repositories hold 12 of those layers, 5 of which declare a version — as \texttt{17} and as \texttt{17.0}, so even the declaring minority is inconsistent in format — and 173 of their 2,678 annotations (0.065) are dead at v19.2. The 57 third-party layers shipped by the most widely used coverage generator declare a version zero times, and 744 of their 2,143 annotations (0.347) are dead: a third of a published coverage artefact no longer denoting, in the artefacts a defender would actually download [18, 79]. Of the 917 dead annotations overall, 818 are recoverable by crosswalk. The Navigator's own layer format makes the field optional and silently defaults a version-less layer to the current release [15, 16], and the most widely used third-party generator omits it unless asked [79]. So the mechanism that would repair four-fifths of the damage exists, is documented, and is not used.
 
 \end{abstract}
 \section{Discussion and Reporting Discipline for CTI Research}
@@ -447,6 +420,10 @@ The remedy is not a better crosswalk. Section 8 is a crosswalk being pushed to i
 
 Two addenda follow from the measurements. A benchmark also declares its granularity policy — whether sub-technique identifiers are permitted, and whether a parent-level answer scores against a sub-technique gold label — because two benchmarks with the same task name and different policies produce numbers with no arithmetic relation. A vendor coverage claim also publishes the denominator's cardinality and the release it came from, since the denominator moves on its own (Section 7.6). The cost is honest: rcATT's residual line would read that half its vocabulary is invalid, and that is precisely the information a reader needs.
 
+The discipline has a cost the draft of this argument kept skipping, and it is the second half of the pinning debate. Pinning a release fixes identity and does nothing about intension, which Section 6.3 prices at roughly 10\% of a cohort substantively rewritten within eighteen months; and pinning also freezes an analytic against a vocabulary the field has moved past, so an author who pins and never migrates is trading one incomparability for another. The contract above is therefore a floor and not a strategy. The strategy that follows from the two clocks is to pin for reproducibility, re-project onto the current release on a schedule set by the intensional clock rather than by release announcements, and publish the residual each time — which is exactly what an eighteen-month first-10\% staleness figure is for, and why Section 6.5's finding that waves are not forecastable matters: there is no event to wait for.
+
+What, then, must an SCI-level contribution in this space demonstrate? The ATT\&CK research landscape has been systematically surveyed twice at top venues within two years [47, 63], which closes off the survey-shaped and critique-shaped contribution: another taxonomy of ATT\&CK's limitations is occupied territory. What remains is empirical and longitudinal, and the bar has five parts. It must measure something across the release history rather than at one release, since single-release non-comparability is already established [74]. It must hold intelligence constant so that what is measured is the ontology and not eight years of reporting. It must show a downstream conclusion moving, not only a score, which is the standard Gene Ontology work set for this class of claim [69]. It must survive the field's own noise floor by design rather than by argument. And it must ship a reproduction package, because the paper's own thesis is that undeclared provenance is the problem. We have tried to meet all five; Section 11 says where we fall short of the fourth.
+
 For CTI quality frameworks the finding is a missing dimension. The canonical dimension sets cover accuracy, timeliness, completeness, relevance, provenance and interoperability [60, 76], and provenance there means who produced the intelligence, not which edition of the reference vocabulary it is written in. We propose \textbf{vocabulary provenance} as a distinct dimension, with the four lines above as its instrument, alongside the dynamic-assessment machinery that literature already builds [27, 41]. It is testable mechanically, unlike most quality dimensions in that literature, which is an argument for it rather than against.
 
 For MITRE the proposals are ports, not inventions, and each has a measurement behind it. An inexact-successor relation alongside \texttt{revoked-by}, so a re-cut is distinguishable from an exact replacement [54, 26] — 119 of 149 edges need it. A controlled obsolescence-reason vocabulary and label-level visibility of obsoletion [54]. Referent stability enforced: TA0005 should have been retired and a new identifier minted rather than renamed in place [53, 54]. \texttt{priorVersion} and \texttt{backwardCompatibleWith} links between releases [57]. A typed evolution mapping published as an artefact, which is what COnto-Diff means by an evolution mapping and what ATT\&CK Sync stops short of [26, 5], and which the knowledge-graph literature already tracks as a time series in its own right [37]. A change signal for intension, since the present one operates at precision 0.447. And a mandatory version field in the Navigator layer format, which would convert 64 of 69 published layers from undated to dated at no cost to their authors.
@@ -456,7 +433,7 @@ For MITRE the proposals are ports, not inventions, and each has a measurement be
 
 R3 requires a declared closure boundary, and the most important one is that this study is computed inside a single curator's graph. Observations, candidate profiles, ground truth and the back-projection map all derive from ATT\&CK's own edges. The absolute accuracies in Table 6 are therefore internal-consistency scores and not attribution performance, and we do not present them as the latter. The contrasts are the result; the levels are scaffolding. The experiment that would close this boundary does not exist publicly: a double-labelled incident corpus in which two analysts label the same intrusions under two releases, yielding the drift term and the labeller-noise term simultaneously and from outside MITRE's edges.
 
-Three narrower limits. The back-projection is a synthetic transcription and Section 7.3 gives its bias direction and magnitude. The naive condition is a uniform worst case — a real artefact mixes granularities, so a real pipeline sits between naive and back-projected rather than at naive. And the prevalence weighting of Section 7.6 uses documented \texttt{uses} edges, a cumulative documentation stock drawn from the same release whose churn is being measured; the long-tail objection is refuted for the written CTI corpus and untested for the alert stream, which would need telemetry we cannot reach.
+Three narrower limits. The back-projection is a synthetic transcription and Section 7.3 gives its bias direction and magnitude. The naive condition is not the worst case we first took it for: feeding a release's real archival profiles to the modern knowledge base, which is the closest thing to reusing a decade-old mapping, scores 0.159 at v1.0 against naive's 0.274, because archival profiles carry intelligence gaps as well as vocabulary mismatch. Naive is a uniform-granularity idealisation that brackets the vocabulary effect, not an upper bound on what a real legacy artefact suffers. And the prevalence weighting of Section 7.6 uses documented \texttt{uses} edges, a cumulative documentation stock drawn from the same release whose churn is being measured; the long-tail objection is refuted for the written CTI corpus and untested for the alert stream, which would need telemetry we cannot reach.
 
 On evidence, three tiers are marked throughout and the second is the weak one. Tier A claims are computed from artefacts read in full and are reproducible. Tier B claims are secondary literature reached only through search summaries in this environment; they are attributed as reported and never quoted, and no numeric claim from a Tier B source is load-bearing for any finding. Tier C is the audited absence of Section 3, stated with its search bound rather than as proof.
 
@@ -474,90 +451,90 @@ Identifier normalization repairs the referential half, and we have spent a secti
 \end{abstract}
 \section{Sources}
 
-Entries are numbered as in this study's reference registry; only entries
-cited in the text are listed. Sources marked as read in full were obtained
-from local clones of the named repositories; the remainder were reachable
-in this environment only through search summaries and are attributed as
-reported rather than quoted.
+Numbered as in this study's reference registry; only cited entries are listed.
+Repository sources were read in full from local clones; the rest were reachable
+here only as search summaries and are attributed as reported, never quoted.
 
-1. ATT\&CK's published retirement contract, read from the artefact. https://github.com/mitre-attack/attack-stix-data/blob/master/USAGE.md
-2. AttacKG repo audit: ATT\&CK ontology frozen as a 2021-08-31 HTML scrape, parent-only…. https://github.com/li-zhenyuan/Knowledge-enhanced-Attack-Graph
-3. B2 synthesis: six TTP systems, five different ATT\&CK ontologies, two declared versions. https://github.com/center-for-threat-informed-defense/tram
-4. CTI-Bench data audit: v15-era vocabulary hard-coded into prompts, sub-techniques erased…. https://github.com/maveryn/cti-bench
-5. CTID ATT\&CK Sync: what it publishes, read from the repository. https://github.com/center-for-threat-informed-defense/attack-sync
-6. Measured: 4.3x label-space growth between CTIBench and AthenaBench is \textasciitilde{}96\% pre-existing…. https://github.com/Athena-Software-Group/athenabench
+1. ATT\&CK's published retirement contract, read from the…. https://github.com/mitre-attack/attack-stix-data/blob/master/USAGE.md
+2. AttacKG repo audit: ATT\&CK ontology frozen as a…. https://github.com/li-zhenyuan/Knowledge-enhanced-Attack-Graph
+3. B2 synthesis: six TTP systems, five different ATT\&CK…. https://github.com/center-for-threat-informed-defense/tram
+4. CTI-Bench data audit: v15-era vocabulary hard-coded into…. https://github.com/maveryn/cti-bench
+5. CTID ATT\&CK Sync: what it publishes, read from the…. https://github.com/center-for-threat-informed-defense/attack-sync
+6. Measured: 4.3x label-space growth between CTIBench and…. https://github.com/Athena-Software-Group/athenabench
 7. MITRE's own change taxonomy, read from diffStix source. https://github.com/mitre-attack/mitreattack-python
-8. rcATT repo audit: a 2019-era flat ATT\&CK label space, half of it revoked by v13. https://github.com/vlegoy/rcATT
-10. tumeteor/mitre-ttp-mapping audit: a declared v12.0 remap that still leaks pre-v7 revoked…. https://github.com/tumeteor/mitre-ttp-mapping
-11. A Comprehensive Survey of Threat Intelligence Research: A Measurement-Based Study (ACM…. https://dl.acm.org/doi/10.1145/3772280
-12. APT attribution survey (JISA 2025): taxonomy by artefact type, not by ontology version. https://doi.org/10.1016/j.jisa.2025.104076
-13. AthenaBench (arXiv 2511.01144): dynamic live-API benchmarking as the field's answer to…. https://arxiv.org/abs/2511.01144
-14. ATT\&CK Design and Philosophy: inclusion criteria are explicitly non-stationary and…. https://attack.mitre.org/docs/ATTACK\_Design\_and\_Philosophy\_March\_2020.pdf
-15. ATT\&CK Navigator layer file format: the ATT\&CK content version is an optional field that…. https://github.com/mitre-attack/attack-navigator/blob/master/layers/spec/v4.5/layerformat.md
-16. ATT\&CK Navigator layer upgrade: version stamping is mandatory, migration is manual…. https://github.com/mitre-attack/attack-navigator/blob/master/USAGE.md
-17. AttackSeqBench (arXiv 2503.03170): sequence-level ATT\&CK reasoning and the…. https://arxiv.org/abs/2503.03170
-19. AVClass: alias resolution and label normalization as prior art for a migration map. https://software.imdea.org/\textasciitilde{}juanca/papers/avclass\_raid16.pdf
-20. Beyond Single Reports — intra-version technique confusability as a rival explanation for…. https://arxiv.org/abs/2604.07470
-21. Boundary synthesis: where concept-drift literature stops and ontology drift begins.
-22. CADE: Detecting and Explaining Concept Drift Samples for Security Applications. https://www.usenix.org/conference/usenixsecurity21/presentation/yang-limin
-23. CAPTAIN / Chasing the Shadows: TTP-sequence attribution with no declared ATT\&CK version. https://arxiv.org/abs/2409.16400
-24. Class-Incremental Learning surveys: the additive quadrant of label-space change. https://arxiv.org/abs/2302.03648
-25. Cleaning the NVD and the security knowledge-base data-quality genre. https://arxiv.org/pdf/2006.15074
-26. COnto-Diff (Hartung, Gross, Rahm): complex change operations as evolution mappings…. https://www.sciencedirect.com/science/article/pii/S1532046412000627
-27. CTI Quality Assessment Cluster — automated dynamic assessment, MISP weighted criteria…. https://www.sciencedirect.com/science/article/pii/S0167404824003845
-28. CTI-REALM (arXiv 2603.13517): telemetry-grounded detection evaluation as the only…. https://arxiv.org/abs/2603.13517
-29. CTIArena to CTIConnect (arXiv 2510.11974): 691 to 1,860 QA pairs under one identifier…. https://arxiv.org/abs/2510.11974
-30. CTIBench (NeurIPS 2024): authoritative-source design treats ATT\&CK as fixed, has a…. https://proceedings.neurips.cc/paper\_files/paper/2024/file/5acd3c628aa1819fbf07c39ef73e7285-Paper-Datasets\_and\_Benchmarks\_Track.pdf
-31. CVE identifier lifecycle: REJECTED, DISPUTED, merge and split as security-vocabulary…. https://www.cve.org/Resources/Media/Archives/OldWebsite/about/faqs.html
-32. CVE-CWE-CPE mapping instability: abstraction-ladder drift between security vocabularies. https://dl.acm.org/doi/10.1145/3641819
-33. Dataset shift and concept drift taxonomies (Gama, Moreno-Torres, Lu et al.). https://dl.acm.org/doi/10.1145/2523813
-34. diffStix: MITRE's own machine-readable ontology-drift ledger — and the errors it defends…. https://github.com/mitre-attack/mitreattack-python/tree/master/mitreattack/diffStix
-35. Dos and Don'ts of Machine Learning in Computer Security (Arp et al.). https://www.usenix.org/conference/usenixsecurity22/presentation/arp
-37. Evolution of vocabulary terms in knowledge graphs: vocabulary churn vs instance-data…. https://arxiv.org/pdf/1710.00232
-38. FeedMeter — Evaluating the Quality of Community-Driven Threat Intelligence (2024). https://www.scitepress.org/Papers/2024/123576/123576.pdf
-39. Fragmentation of CVSS scores in the NVD: cross-version incomparability in a security…. https://www.sciencedirect.com/science/article/abs/pii/S0167404826001549
-40. Geras \& Schreck — The Big Beast to Tackle: Practices in Quality Assurance for CTI (RAID…. https://dl.acm.org/doi/10.1145/3678890.3678903
-41. Griffioen, Booij \& Doerr — Quality Evaluation of Cyber Threat Intelligence Feeds (ACNS…. https://link.springer.com/chapter/10.1007/978-3-030-57878-7\_14
-42. IncreTTP: ATT\&CK version updates framed as concept drift — and why incremental learning…. https://link.springer.com/chapter/10.1007/978-3-032-23450-6\_2
-43. LECO: Continual Learning with Evolving Class Ontologies (NeurIPS 2022). https://arxiv.org/abs/2210.04993
-44. Legoy et al. 2020 — Automated Retrieval of ATT\&CK Tactics and Techniques (rcATT paper). https://arxiv.org/abs/2004.14322
-45. Li et al. — Reading the Tea Leaves: A Comparative Analysis of Threat Intelligence (USENIX…. https://www.usenix.org/conference/usenixsecurity19/presentation/li
-46. MITRE ATT\&CK Evaluations: a governed measurement protocol that refuses to emit a coverage…. https://evals.mitre.org/methodology-overview/
-47. MITRE ATT\&CK: State of the Art and Way Forward (ACM CSUR 2025) — the novelty bar an SCI…. https://dl.acm.org/doi/10.1145/3687300
-48. MITRE diffStix changelog\_helper: ATT\&CK's own change taxonomy, patch detection, and…. https://github.com/mitre-attack/mitreattack-python/blob/master/mitreattack/diffStix/changelog\_helper.py
-50. Modern malware drift adaptation (MORPH, ADAPT, few-sample adaptation): still a fixed…. https://arxiv.org/pdf/2401.12790
-51. MOTIF: ground-truth malware family labels and the open, unstable class set. https://arxiv.org/abs/2111.15031
-52. Multi-label ATT\&CK classification (arXiv 2606.18166): TRAM annotations declared not-gold…. https://arxiv.org/abs/2606.18166
-53. OBO Foundry Identifier Policy: global uniqueness, no reuse, and persistence as a provider…. https://obofoundry.org/id-policy.html
-54. OBO Foundry Principle 19: Stability of Term Meaning (referent stability, obsoletion…. https://obofoundry.org/principles/fp-019-term-stability.html
-55. OBO Foundry Principle 4: Versioning (version IRIs, release immutability, perpetual…. https://obofoundry.org/principles/fp-004-versioning.html
-56. Ontology evolution vs ontology versioning: change management as the core task (Klein…. https://www.researchgate.net/publication/37538421\_Change\_Management\_The\_Core\_Task\_of\_Ontology\_Versioning\_and\_Evolution
-57. OWL versioning vocabulary: versionIRI, priorVersion, backwardCompatibleWith…. https://www.w3.org/2007/OWL/wiki/Ontology\_Versions
-58. Rahman \& Williams (arXiv:2211.06500): mitigation coverage has a ceiling set by the…. https://arxiv.org/abs/2211.06500
-59. Saha et al. — Kitten or Panda? Two-thirds of ATT\&CK threat groups have no group-specific…. https://arxiv.org/abs/2506.10645
-60. Schlette et al. — Measuring and Visualizing Cyber Threat Intelligence Quality (IJIS 2021). https://link.springer.com/article/10.1007/s10207-020-00490-y
-61. SEvenLLM (arXiv 2405.03446): 90k samples and 28 tasks from 8,485 reports spanning…. https://arxiv.org/abs/2405.03446
-62. Shen et al. (ASIA CCS 2024): whole-graph re-analysis of MITRE Evaluations shows…. https://arxiv.org/abs/2401.15878
-63. SoK: The MITRE ATT\&CK Framework in Research and Practice — non-comparability already…. https://arxiv.org/abs/2304.07411
-64. Summiting the Pyramid v5.0 (CTID): implementations replace techniques as the coverage…. https://github.com/center-for-threat-informed-defense/summiting-the-pyramid
-65. SynthCTI (arXiv 2507.16852): synthesising the ATT\&CK long tail, and what that says about…. https://arxiv.org/abs/2507.16852
-66. Synthetic APTs (2026): LLM agents reproduce documented APT profiles at 55-80\% precision. https://arxiv.org/abs/2606.07158
-67. TESSERACT: Eliminating Experimental Bias in Malware Classification across Space and Time. https://arxiv.org/abs/1807.07838
-68. The CTI Echo Chamber — vendor fragmentation as the confounder the drift thesis must…. https://arxiv.org/abs/2602.17458
-69. Tomczak et al. (2018): Gene Ontology evolution changes the interpretation of biological…. https://www.nature.com/articles/s41598-018-23395-2
-70. Transcend and Transcendent: Conformal Evaluation and Rejection under Concept Drift. https://arxiv.org/abs/2010.03856
-71. TTPDrill (ACSAC 2017): the pre-sub-technique baseline everyone still compares against. https://dl.acm.org/doi/10.1145/3134600.3134646
-72. TTPHunter / TTPXHunter: 50 then 193 TTP classes, no declared ATT\&CK release. https://arxiv.org/abs/2403.03267
-73. TTPrint (arXiv 2605.25836): TRAM-Clean fork and verification against official ATT\&CK…. https://arxiv.org/abs/2605.25836
-74. Virkud et al. (USENIX Security 2024): ATT\&CK coverage is not comparable across products…. https://www.usenix.org/conference/usenixsecurity24/presentation/virkud
-75. When Benchmarks Age: quantifying answer-key decay in static benchmarks. https://arxiv.org/abs/2510.07238
-76. Zibak et al. — Threat Intelligence Quality Dimensions for Research and Practice (DTRAP…. https://dl.acm.org/doi/full/10.1145/3484202
-77. 'ATT\&CK is an ontology, not a taxonomy' — the definitional defence and the…. https://www.tripwire.com/state-of-security/attck-structure-ontology
-78. ATT\&CK v19 retires Defense Evasion: tactic reassignment at scale, and the industry's…. https://medium.com/mitre-attack/attack-v19-ff329cb65d66
-79. DeTT\&CT omits the ATT\&CK version from generated Navigator layers by default, and stamps…. https://github.com/rabobank-cdc/DeTTECT
-80. Forrester: a 100\% ATT\&CK Evaluations claim is a red flag — selective presentation…. https://www.forrester.com/blogs/dont-trust-vendor-claims-about-getting-100-on-the-mitre-attck-evaluations
-81. How coverage layers are actually built: ad hoc scoring schemes over a data-source mapping…. https://blog.reconinfosec.com/automating-coverage-analysis-with-att-ck-navigator
-82. Vendor ATT\&CK coverage claims: '100\% of what, exactly?' and the five ways a coverage…. https://www.attackiq.com/2026/03/10/what-does-mitre-attack-coverage-really-mean/
-83. VMRay — STIX and TAXII Explained: Why a Valid Feed Still Might Not Be Usable. https://www.vmray.com/stix-taxii-explianed/
-84. Practitioner critique: the ATT\&CK heatmap counts rules, not coverage, and three…. https://dev.to/chrisray/your-attck-heatmap-is-counting-rules-not-coverage-2gh3
+8. rcATT repo audit: a 2019-era flat ATT\&CK label space…. https://github.com/vlegoy/rcATT
+10. tumeteor/mitre-ttp-mapping audit: a declared v12.0 remap…. https://github.com/tumeteor/mitre-ttp-mapping
+11. A Comprehensive Survey of Threat Intelligence Research: A…. https://dl.acm.org/doi/10.1145/3772280
+12. APT attribution survey (JISA 2025): taxonomy by artefact…. https://doi.org/10.1016/j.jisa.2025.104076
+13. AthenaBench (arXiv 2511.01144): dynamic live-API…. https://arxiv.org/abs/2511.01144
+14. ATT\&CK Design and Philosophy: inclusion criteria are…. https://attack.mitre.org/docs/ATTACK\_Design\_and\_Philosophy\_March\_2020.pdf
+15. ATT\&CK Navigator layer file format: the ATT\&CK content…. https://github.com/mitre-attack/attack-navigator/blob/master/layers/spec/v4.5/layerformat.md
+16. ATT\&CK Navigator layer upgrade: version stamping is…. https://github.com/mitre-attack/attack-navigator/blob/master/USAGE.md
+17. AttackSeqBench (arXiv 2503.03170): sequence-level ATT\&CK…. https://arxiv.org/abs/2503.03170
+18. Audit: six of eight sample layers shipped in MITRE's own…. https://github.com/mitre-attack/attack-navigator/tree/master/layers/samples
+19. AVClass: alias resolution and label normalization as…. https://software.imdea.org/\textasciitilde{}juanca/papers/avclass\_raid16.pdf
+20. Beyond Single Reports — intra-version technique…. https://arxiv.org/abs/2604.07470
+21. Boundary synthesis: where concept-drift literature stops….
+22. CADE: Detecting and Explaining Concept Drift Samples for…. https://www.usenix.org/conference/usenixsecurity21/presentation/yang-limin
+23. CAPTAIN / Chasing the Shadows: TTP-sequence attribution…. https://arxiv.org/abs/2409.16400
+24. Class-Incremental Learning surveys: the additive quadrant…. https://arxiv.org/abs/2302.03648
+25. Cleaning the NVD and the security knowledge-base…. https://arxiv.org/pdf/2006.15074
+26. COnto-Diff (Hartung, Gross, Rahm): complex change…. https://www.sciencedirect.com/science/article/pii/S1532046412000627
+27. CTI Quality Assessment Cluster — automated dynamic…. https://www.sciencedirect.com/science/article/pii/S0167404824003845
+28. CTI-REALM (arXiv 2603.13517): telemetry-grounded…. https://arxiv.org/abs/2603.13517
+29. CTIArena to CTIConnect (arXiv 2510.11974): 691 to 1,860…. https://arxiv.org/abs/2510.11974
+30. CTIBench (NeurIPS 2024): authoritative-source design…. https://proceedings.neurips.cc/paper\_files/paper/2024/file/5acd3c628aa1819fbf07c39ef73e7285-Paper-Datasets\_and\_Benchmarks\_Track.pdf
+31. CVE identifier lifecycle: REJECTED, DISPUTED, merge and…. https://www.cve.org/Resources/Media/Archives/OldWebsite/about/faqs.html
+32. CVE-CWE-CPE mapping instability: abstraction-ladder drift…. https://dl.acm.org/doi/10.1145/3641819
+33. Dataset shift and concept drift taxonomies (Gama…. https://dl.acm.org/doi/10.1145/2523813
+34. diffStix: MITRE's own machine-readable ontology-drift…. https://github.com/mitre-attack/mitreattack-python/tree/master/mitreattack/diffStix
+35. Dos and Don'ts of Machine Learning in Computer Security…. https://www.usenix.org/conference/usenixsecurity22/presentation/arp
+37. Evolution of vocabulary terms in knowledge graphs…. https://arxiv.org/pdf/1710.00232
+38. FeedMeter — Evaluating the Quality of Community-Driven…. https://www.scitepress.org/Papers/2024/123576/123576.pdf
+39. Fragmentation of CVSS scores in the NVD: cross-version…. https://www.sciencedirect.com/science/article/abs/pii/S0167404826001549
+40. Geras \& Schreck — The Big Beast to Tackle: Practices in…. https://dl.acm.org/doi/10.1145/3678890.3678903
+41. Griffioen, Booij \& Doerr — Quality Evaluation of Cyber…. https://link.springer.com/chapter/10.1007/978-3-030-57878-7\_14
+42. IncreTTP: ATT\&CK version updates framed as concept drift…. https://link.springer.com/chapter/10.1007/978-3-032-23450-6\_2
+43. LECO: Continual Learning with Evolving Class Ontologies…. https://arxiv.org/abs/2210.04993
+44. Legoy et al. 2020 — Automated Retrieval of ATT\&CK Tactics…. https://arxiv.org/abs/2004.14322
+45. Li et al. — Reading the Tea Leaves: A Comparative…. https://www.usenix.org/conference/usenixsecurity19/presentation/li
+46. MITRE ATT\&CK Evaluations: a governed measurement protocol…. https://evals.mitre.org/methodology-overview/
+47. MITRE ATT\&CK: State of the Art and Way Forward (ACM CSUR…. https://dl.acm.org/doi/10.1145/3687300
+48. MITRE diffStix changelog\_helper: ATT\&CK's own change…. https://github.com/mitre-attack/mitreattack-python/blob/master/mitreattack/diffStix/changelog\_helper.py
+49. MITRE's own bias taxonomy and the Sightings Ecosystem…. https://ctid.mitre.org/projects/sightings-ecosystem/
+50. Modern malware drift adaptation (MORPH, ADAPT, few-sample…. https://arxiv.org/pdf/2401.12790
+51. MOTIF: ground-truth malware family labels and the open…. https://arxiv.org/abs/2111.15031
+52. Multi-label ATT\&CK classification (arXiv 2606.18166)…. https://arxiv.org/abs/2606.18166
+53. OBO Foundry Identifier Policy: global uniqueness, no…. https://obofoundry.org/id-policy.html
+54. OBO Foundry Principle 19: Stability of Term Meaning…. https://obofoundry.org/principles/fp-019-term-stability.html
+55. OBO Foundry Principle 4: Versioning (version IRIs…. https://obofoundry.org/principles/fp-004-versioning.html
+56. Ontology evolution vs ontology versioning: change…. https://www.researchgate.net/publication/37538421\_Change\_Management\_The\_Core\_Task\_of\_Ontology\_Versioning\_and\_Evolution
+57. OWL versioning vocabulary: versionIRI, priorVersion…. https://www.w3.org/2007/OWL/wiki/Ontology\_Versions
+58. Rahman \& Williams (arXiv:2211.06500): mitigation coverage…. https://arxiv.org/abs/2211.06500
+59. Saha et al. — Kitten or Panda? Two-thirds of ATT\&CK…. https://arxiv.org/abs/2506.10645
+60. Schlette et al. — Measuring and Visualizing Cyber Threat…. https://link.springer.com/article/10.1007/s10207-020-00490-y
+61. SEvenLLM (arXiv 2405.03446): 90k samples and 28 tasks…. https://arxiv.org/abs/2405.03446
+62. Shen et al. (ASIA CCS 2024): whole-graph re-analysis of…. https://arxiv.org/abs/2401.15878
+63. SoK: The MITRE ATT\&CK Framework in Research and Practice…. https://arxiv.org/abs/2304.07411
+64. Summiting the Pyramid v5.0 (CTID): implementations…. https://github.com/center-for-threat-informed-defense/summiting-the-pyramid
+65. SynthCTI (arXiv 2507.16852): synthesising the ATT\&CK long…. https://arxiv.org/abs/2507.16852
+66. Synthetic APTs (2026): LLM agents reproduce documented…. https://arxiv.org/abs/2606.07158
+67. TESSERACT: Eliminating Experimental Bias in Malware…. https://arxiv.org/abs/1807.07838
+68. The CTI Echo Chamber — vendor fragmentation as the…. https://arxiv.org/abs/2602.17458
+69. Tomczak et al. (2018): Gene Ontology evolution changes…. https://www.nature.com/articles/s41598-018-23395-2
+70. Transcend and Transcendent: Conformal Evaluation and…. https://arxiv.org/abs/2010.03856
+71. TTPDrill (ACSAC 2017): the pre-sub-technique baseline…. https://dl.acm.org/doi/10.1145/3134600.3134646
+72. TTPHunter / TTPXHunter: 50 then 193 TTP classes, no…. https://arxiv.org/abs/2403.03267
+73. TTPrint (arXiv 2605.25836): TRAM-Clean fork and…. https://arxiv.org/abs/2605.25836
+74. Virkud et al. (USENIX Security 2024): ATT\&CK coverage is…. https://www.usenix.org/conference/usenixsecurity24/presentation/virkud
+75. When Benchmarks Age: quantifying answer-key decay in…. https://arxiv.org/abs/2510.07238
+76. Zibak et al. — Threat Intelligence Quality Dimensions for…. https://dl.acm.org/doi/full/10.1145/3484202
+77. 'ATT\&CK is an ontology, not a taxonomy' — the…. https://www.tripwire.com/state-of-security/attck-structure-ontology
+78. ATT\&CK v19 retires Defense Evasion: tactic reassignment…. https://medium.com/mitre-attack/attack-v19-ff329cb65d66
+79. DeTT\&CT omits the ATT\&CK version from generated Navigator…. https://github.com/rabobank-cdc/DeTTECT
+80. Forrester: a 100\% ATT\&CK Evaluations claim is a red flag…. https://www.forrester.com/blogs/dont-trust-vendor-claims-about-getting-100-on-the-mitre-attck-evaluations
+81. How coverage layers are actually built: ad hoc scoring…. https://blog.reconinfosec.com/automating-coverage-analysis-with-att-ck-navigator
+82. Vendor ATT\&CK coverage claims: '100\% of what, exactly?'…. https://www.attackiq.com/2026/03/10/what-does-mitre-attack-coverage-really-mean/
+83. VMRay — STIX and TAXII Explained: Why a Valid Feed Still…. https://www.vmray.com/stix-taxii-explianed/
+84. Practitioner critique: the ATT\&CK heatmap counts rules…. https://dev.to/chrisray/your-attck-heatmap-is-counting-rules-not-coverage-2gh3
 \end{document}
