@@ -1,0 +1,104 @@
+[
+ {
+  "cluster_id": "solved-bookkeeping",
+  "fight": "Is ATT&CK version drift an already-solved bookkeeping problem, or a live threat to the validity of CTI analytics?",
+  "side_a": {
+   "position": "Solved. MITRE publishes immutable per-release bundles, typed revoked-by edges, retains deprecated objects so dependent workflows do not break, ships diffStix to compute per-release change sets including description diffs, mandates a version stamp in Navigator layers, and funds ATT&CK Sync to flag affected mappings. A consumer who pins a release and applies the crosswalk is fine.",
+   "sources": ["attack-stix-data USAGE.md", "mitreattack-python diffStix", "attack-navigator USAGE.md", "CTID ATT&CK Sync"],
+   "evidence_type": "primary artefacts, read in full from local clones"
+  },
+  "side_b": {
+   "position": "Not solved. The apparatus is real but incomplete in three measurable ways: revoked-by is 1:1 and cannot express the v19 1:N re-cut of Defense Evasion; diffStix's own other_version_changes bucket is documented as unintended, and x_mitre_version is an unreliable change detector; Navigator's migration is manual, irreversible and writes no provenance, so a migrated coverage claim launders its own history. ATT&CK Sync is tooling that flags affected mappings and publishes no impact quantification.",
+   "sources": ["E2/E5/E10 measurements", "diffStix source", "Navigator USAGE.md", "CTID ATT&CK Sync"],
+   "evidence_type": "measurement plus primary artefacts"
+  },
+  "evidence_quality_delta": "Both sides rest on the same primary artefacts. Side B additionally carries measurement: the apparatus exists and is still not used — 0 ATT&CK-version declarations across 19 documentation files in three deployed corpora — and where it is used it is insufficient (a declared v12 remap still carrying dead labels).",
+  "scope_overlap": "Genuine disagreement about sufficiency, not about facts. Side A is right that the mechanism exists; side B is right that its coverage is partial and its adoption near-zero.",
+  "decision_relevance": "high"
+ },
+ {
+  "cluster_id": "variance-dominance",
+  "fight": "Is ontology drift material next to the labelling noise that exists at a single pinned version?",
+  "side_a": {
+   "position": "Noise dominates. EDR vendors detecting the same behaviour assign disjoint ATT&CK labels within one pinned release, and most ATT&CK groups have no group-specific technique at all, so TTP attribution is weakly identifiable before drift is considered. Drift is a second-order term on a first-order problem.",
+   "sources": ["Virkud et al., USENIX Security 2024", "Saha et al. 2026 (34% of groups have a group-specific technique)"],
+   "evidence_type": "empirical, secondary (summary fidelity)"
+  },
+  "side_b": {
+   "position": "Separable and additive. The controlled experiment holds the labelling process fixed — every condition draws from the same ATT&CK data — so inter-labeller noise is constant across conditions and cancels in the contrasts. Non-identifiability is absorbed by the contemporaneous baseline, which is itself far below 100%. What remains is attributable to vocabulary alone, and it changes the named actor in 72-79% of pre-restructuring observations and in 2.2% even across a single release boundary.",
+   "sources": ["E5", "E10a"],
+   "evidence_type": "controlled experiment, primary"
+  },
+  "evidence_quality_delta": "Side B's evidence is a controlled design that neutralises side A's confounder by construction; side A's evidence is stronger about the absolute difficulty of attribution, which side B concedes.",
+  "scope_overlap": "Both right, differently scoped: noise bounds absolute accuracy, drift bounds comparability across time. The paper must state that it measures the second and does not claim the first is small.",
+  "decision_relevance": "high"
+ },
+ {
+  "cluster_id": "long-tail",
+  "fight": "Does drift land on techniques anyone actually reports, or only on the long tail?",
+  "side_a": {
+   "position": "Long tail only. Observed sightings are dominated by a short head of techniques, so churn among rarely used identifiers barely moves any frequency-weighted number.",
+   "sources": ["CTID Sightings Ecosystem"],
+   "evidence_type": "institutional, summary fidelity"
+  },
+  "side_b": {
+   "position": "The head is hit too. Repeating the frozen-capability experiment with techniques weighted by documented prevalence makes the artefact larger, not smaller (17.1-20.0 pp for pre-restructuring portfolios against 12.6-16.5 pp unweighted). The most recent revocation wave took T1562.001, the 33rd most referenced technique in the release it left.",
+   "sources": ["E6b", "E8"],
+   "evidence_type": "measurement, primary"
+  },
+  "evidence_quality_delta": "Side B is direct measurement, but on documentation prevalence rather than telemetry prevalence — the Sightings telemetry is not accessible in this environment, so side A's premise is not tested on its own data.",
+  "scope_overlap": "Partially scoped apart: documentation prevalence and telemetry prevalence are different quantities. This limitation must be stated rather than argued away.",
+  "decision_relevance": "high"
+ },
+ {
+  "cluster_id": "one-time-trauma",
+  "fight": "Was the damage a one-off event in 2020, or is it ongoing?",
+  "side_a": {
+   "position": "One-off. Identifier survival since v7.0 is above 0.97 to the present and no post-restructuring cohort has lost half its identifiers. The catastrophic numbers all trace to a single release.",
+   "sources": ["E2", "E2b half-life"],
+   "evidence_type": "measurement, primary — and it is our own"
+  },
+  "side_b": {
+   "position": "Ongoing but bursty. v19.0 revoked 17 live techniques including the entire T1562 family, touching 84 group edges, 155 software edges and 52 of 168 group profiles; v18.0 to v19.0 was 47% bookkeeping for pre-existing groups; 198 techniques changed tactic in one release; and semantic rewriting never stopped — 46.5% of v11.0's ID-stable techniques have edited descriptions by v19.0.",
+   "sources": ["E1", "E3", "E4", "E8"],
+   "evidence_type": "measurement, primary"
+  },
+  "evidence_quality_delta": "Even. Both sides are our own measurements over the same corpus, which is exactly why the paper must carry both rather than pick one.",
+  "scope_overlap": "Genuine tension in interpretation of one dataset. Resolution: identifier churn is episodic; semantic drift is continuous; a risk model must cover both.",
+  "decision_relevance": "high"
+ },
+ {
+  "cluster_id": "pin-the-version",
+  "fight": "Does pinning a release actually restore comparability?",
+  "side_a": {
+   "position": "Yes. Pin, declare, and cross-version problems disappear.",
+   "sources": ["standard practitioner advice", "Navigator version stamping"],
+   "evidence_type": "practitioner"
+  },
+  "side_b": {
+   "position": "Pinning fixes identity, not intension. Descriptions of identifier-stable techniques keep changing with no reliable signal — 494 description edits carried no version bump while 1,072 version bumps carried no text change — so a pinned analytic silently diverges from the meaning its labels now carry. Pinning also freezes the analytic against a vocabulary the field has moved past, which is the trade the paper has to name.",
+   "sources": ["E3", "B1 version-metadata audit"],
+   "evidence_type": "measurement, primary"
+  },
+  "evidence_quality_delta": "Side B has the measurement; side A has the operational simplicity.",
+  "scope_overlap": "Genuine. Pinning is necessary and insufficient.",
+  "decision_relevance": "high"
+ },
+ {
+  "cluster_id": "benchmark-comparability",
+  "fight": "Are successive CTI benchmarks measuring the same thing?",
+  "side_a": {
+   "position": "Yes — same task, same metric, same lab.",
+   "sources": ["benchmark papers as published"],
+   "evidence_type": "secondary, summary fidelity"
+  },
+  "side_b": {
+   "position": "No. CTIBench CTI-ATE carries zero sub-technique identifiers and an undeclared v15-era vocabulary; its successor is 70.4% sub-technique labels with a parent-level Jaccard of 0.26 against it. Independently, our own validity analysis finds CTIBench-ATE matches no single ATT&CK release and carries seven Mobile identifiers on rows declared Enterprise.",
+   "sources": ["B3 repo audits", "E7"],
+   "evidence_type": "primary artefact inspection on both sides"
+  },
+  "evidence_quality_delta": "Side B is artefact-level and was arrived at twice independently, by a corpus audit and by our own validity check.",
+  "scope_overlap": "No genuine overlap — side A is an assumption nobody defends explicitly once the label files are opened.",
+  "decision_relevance": "high"
+ }
+]

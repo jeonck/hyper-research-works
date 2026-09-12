@@ -227,7 +227,42 @@ def main() -> None:
     fig5_attribution(e5)
     fig6_coverage(e6)
     fig7_artifacts(e7)
+    fig8_flips(load("e10_conclusion_flips.json"))
     print("figures written to", FIG, file=sys.stderr)
+
+
+
+
+def fig8_flips(e10):  # appended: conclusion-flip figure
+    import matplotlib.pyplot as plt
+    fig, ax = plt.subplots(1, 2, figsize=(6.4, 2.4))
+    a = e10["attribution_verdicts"]
+    xs = [f"v{r['v']}" for r in a]
+    ax[0].plot(xs, [100 * r["verdict_changed_frac"] for r in a], "o-", color=C["b"],
+               ms=3, lw=1.3, label="named actor changes")
+    ax[0].plot(xs, [100 * r["verdict_changed_and_now_wrong_frac"] for r in a], "s-",
+               color=C["d"], ms=3, lw=1.3, label="changes to a wrong actor")
+    ax[0].plot(xs, [100 * r["normalization_changed_verdict_frac"] for r in a], "^-",
+               color=C["c"], ms=3, lw=1.3, label="normalization changes the verdict")
+    ax[0].set_ylabel("% of observations")
+    ax[0].tick_params(axis="x", rotation=60, labelsize=6)
+    ax[0].legend(fontsize=5.5)
+    ax[0].set_title("attribution verdicts", fontsize=7)
+
+    b = e10["coverage_rankings"]
+    xs2 = [f"v{r['v']}" for r in b]
+    ax[1].plot(xs2, [r["tau_naive"] for r in b], "v-", color=C["b"], ms=3, lw=1.3,
+               label="naive")
+    ax[1].plot(xs2, [r["tau_normalized"] for r in b], "s-", color=C["c"], ms=3, lw=1.3,
+               label="ATT&CK-Norm")
+    ax[1].set_ylabel("Kendall τ vs. original ranking")
+    ax[1].set_ylim(0.6, 1.02)
+    ax[1].tick_params(axis="x", rotation=60, labelsize=6)
+    ax[1].legend(fontsize=6)
+    ax[1].set_title("mitigation coverage leaderboard", fontsize=7)
+    fig.savefig(FIG / "fig8_conclusion_flips.pdf")
+    fig.savefig(FIG / "fig8_conclusion_flips.png")
+    plt.close(fig)
 
 
 if __name__ == "__main__":

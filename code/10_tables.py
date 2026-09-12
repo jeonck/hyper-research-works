@@ -151,6 +151,40 @@ def main() -> None:
                     f"{d['repairable_by_revocation_chain']} |")
     w("t9_artifacts.md", "\n".join(rows))
 
+    # T10 conclusion flips
+    e10 = load("e10_conclusion_flips.json")
+    rows = ["| Artefact vocabulary | Verdict changed | Changed and now wrong | "
+            "Was right, then changed | Both wrong but different actor | "
+            "Normalization changed the verdict |", "|---|---|---|---|---|---|"]
+    for r in e10["attribution_verdicts"]:
+        rows.append(f"| v{r['v']} ({r['v_date']}) | {r['verdict_changed_frac']:.3f} | "
+                    f"{r['verdict_changed_and_now_wrong_frac']:.3f} | "
+                    f"{r['was_right_now_changed_frac']:.3f} | "
+                    f"{r['both_wrong_but_different_actor_frac']:.3f} | "
+                    f"{r['normalization_changed_verdict_frac']:.3f} |")
+    w("t10_verdict_instability.md", "\n".join(rows))
+
+    rows = ["| Portfolios frozen at | Mitigations ranked | Kendall tau, naive | "
+            "Kendall tau, normalized | Top-10 members displaced (naive) | "
+            "Top-10 displaced (normalized) | Rank-1 changed |",
+            "|---|---|---|---|---|---|---|"]
+    for r in e10["coverage_rankings"]:
+        rows.append(f"| v{r['v']} ({r['v_date']}) | {r['mitigations']} | "
+                    f"{r['tau_naive']:.3f} | {r['tau_normalized']:.3f} | "
+                    f"{r['top10_membership_changed_naive']} | "
+                    f"{r['top10_membership_changed_normalized']} | "
+                    f"{'yes' if r['rank1_changed_naive'] else 'no'} |")
+    w("t11_leaderboard_flips.md", "\n".join(rows))
+
+    # T12 version declarations
+    e9 = load("e9_version_declaration.json")
+    rows = ["| Corpus | Documentation files scanned | ATT&CK version declarations found |",
+            "|---|---|---|"]
+    for name, d in e9.items():
+        rows.append(f"| {name} | {d['files_scanned']} | {d['declarations_found']} |")
+    w("t12_version_declaration.md", "\n".join(rows))
+
+
 
 if __name__ == "__main__":
     main()

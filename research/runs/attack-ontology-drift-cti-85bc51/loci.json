@@ -1,0 +1,42 @@
+{
+ "loci": [
+  {
+   "id": "L1",
+   "type": "dialectical",
+   "question": "Is ATT&CK ontology drift a solved bookkeeping problem or an unmeasured threat to validity?",
+   "why_it_matters": "The whole contribution stands or falls here. MITRE ships an apparatus; the paper must concede its reality and still show it is insufficient and unused.",
+   "fight_clusters": ["solved-bookkeeping", "pin-the-version"],
+   "source_budget": 20,
+   "must_commit": true
+  },
+  {
+   "id": "L2",
+   "type": "dialectical",
+   "question": "Is the drift effect separable from, and additive to, the labelling noise that exists at a single pinned version?",
+   "why_it_matters": "This is the strongest published objection. If drift cannot be separated from inter-labeller disagreement, the measurement means nothing.",
+   "fight_clusters": ["variance-dominance", "long-tail"],
+   "source_budget": 18,
+   "must_commit": true
+  },
+  {
+   "id": "L3",
+   "type": "empirical",
+   "question": "What is the true temporal structure of the risk — a one-time 2020 trauma, or a continuing process?",
+   "why_it_matters": "Determines whether the remedy is a one-off migration or a standing discipline, and it is the point where our own measurements pull in two directions.",
+   "fight_clusters": ["one-time-trauma"],
+   "source_budget": 16,
+   "must_commit": true
+  },
+  {
+   "id": "L4",
+   "type": "constructive",
+   "question": "What should the field actually do — and what can normalization provably not fix?",
+   "why_it_matters": "A protocol that oversells itself would repeat the error the paper diagnoses. The failure modes are as much a contribution as the gains.",
+   "fight_clusters": ["benchmark-comparability", "pin-the-version"],
+   "source_budget": 16,
+   "must_commit": true
+  }
+ ],
+ "inference_depth_revised": "deep",
+ "rationale": "Four loci, three of them dialectical or tension-bearing, derived from the ranked fight clusters in temp/contradiction-graph.json. The corpus is unusually strong on primary artefacts (MITRE's own tooling and USAGE contracts, benchmark label files, the full release history) and correspondingly weak on full-text secondary literature, so every locus is assigned to commit on artefact and measurement evidence rather than on literature consensus."
+}

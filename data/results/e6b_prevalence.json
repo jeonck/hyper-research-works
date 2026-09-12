@@ -1,0 +1,319 @@
+{
+ "rows": [
+  {
+   "v": "1.0",
+   "v_date": "2018-01-17",
+   "w": "19.0",
+   "portfolio": 183,
+   "unweighted_at_v": 0.973404255319149,
+   "unweighted_naive": 0.10760401721664276,
+   "unweighted_normalized": 0.23385939741750358,
+   "unweighted_artefact_pp": 12.625538020086083,
+   "weighted_at_v": 0.9748283752860412,
+   "weighted_naive": 0.3378290446613428,
+   "weighted_normalized": 0.5091984619934931,
+   "weighted_artefact_pp": 17.136941733215025
+  },
+  {
+   "v": "2.0",
+   "v_date": "2018-04-18",
+   "w": "19.0",
+   "portfolio": 215,
+   "unweighted_at_v": 0.9817351598173516,
+   "unweighted_naive": 0.13773314203730272,
+   "unweighted_normalized": 0.2783357245337159,
+   "unweighted_artefact_pp": 14.06025824964132,
+   "weighted_at_v": 0.9990962494351558,
+   "weighted_naive": 0.36705116829340434,
+   "weighted_normalized": 0.5550428867199053,
+   "weighted_artefact_pp": 18.799171842650104
+  },
+  {
+   "v": "3.0",
+   "v_date": "2018-10-23",
+   "w": "19.0",
+   "portfolio": 222,
+   "unweighted_at_v": 0.9955156950672646,
+   "unweighted_naive": 0.14347202295552366,
+   "unweighted_normalized": 0.28694404591104733,
+   "unweighted_artefact_pp": 14.347202295552368,
+   "weighted_at_v": 0.999689633767846,
+   "weighted_naive": 0.36805678793256436,
+   "weighted_normalized": 0.5565217391304348,
+   "weighted_artefact_pp": 18.846495119787047
+  },
+  {
+   "v": "4.0",
+   "v_date": "2019-04-30",
+   "w": "19.0",
+   "portfolio": 243,
+   "unweighted_at_v": 0.9959016393442623,
+   "unweighted_naive": 0.16212338593974174,
+   "unweighted_normalized": 0.3170731707317073,
+   "unweighted_artefact_pp": 15.494978479196556,
+   "weighted_at_v": 0.9997653683716565,
+   "weighted_naive": 0.38846495119787045,
+   "weighted_normalized": 0.5824312333629104,
+   "weighted_artefact_pp": 19.39662821650399
+  },
+  {
+   "v": "5.0",
+   "v_date": "2019-07-19",
+   "w": "19.0",
+   "portfolio": 243,
+   "unweighted_at_v": 0.9959016393442623,
+   "unweighted_naive": 0.16212338593974174,
+   "unweighted_normalized": 0.3170731707317073,
+   "unweighted_artefact_pp": 15.494978479196556,
+   "weighted_at_v": 0.999784436300927,
+   "weighted_naive": 0.38846495119787045,
+   "weighted_normalized": 0.5824312333629104,
+   "weighted_artefact_pp": 19.39662821650399
+  },
+  {
+   "v": "6.0",
+   "v_date": "2019-10-23",
+   "w": "19.0",
+   "portfolio": 258,
+   "unweighted_at_v": 0.9699248120300752,
+   "unweighted_naive": 0.17360114777618366,
+   "unweighted_normalized": 0.3385939741750359,
+   "unweighted_artefact_pp": 16.499282639885223,
+   "weighted_at_v": 0.9979625101874491,
+   "weighted_naive": 0.39142265601892934,
+   "weighted_normalized": 0.5915409642117717,
+   "weighted_artefact_pp": 20.011830819284235
+  },
+  {
+   "v": "7.0",
+   "v_date": "2020-03-31",
+   "w": "19.0",
+   "portfolio": 382,
+   "unweighted_at_v": 0.8925233644859814,
+   "unweighted_naive": 0.5294117647058824,
+   "unweighted_normalized": 0.5408895265423243,
+   "unweighted_artefact_pp": 1.1477761836441893,
+   "weighted_at_v": 0.8909600791817882,
+   "weighted_naive": 0.7777580597456374,
+   "weighted_normalized": 0.7913043478260869,
+   "weighted_artefact_pp": 1.3546288080449571
+  },
+  {
+   "v": "8.0",
+   "v_date": "2020-10-27",
+   "w": "19.0",
+   "portfolio": 477,
+   "unweighted_at_v": 0.9085714285714286,
+   "unweighted_naive": 0.6642754662840746,
+   "unweighted_normalized": 0.6771879483500718,
+   "unweighted_artefact_pp": 1.291248206599713,
+   "weighted_at_v": 0.8930065750149432,
+   "weighted_naive": 0.8169772256728779,
+   "weighted_normalized": 0.8306418219461698,
+   "weighted_artefact_pp": 1.3664596273291925
+  },
+  {
+   "v": "9.0",
+   "v_date": "2021-04-29",
+   "w": "19.0",
+   "portfolio": 501,
+   "unweighted_at_v": 0.907608695652174,
+   "unweighted_naive": 0.6987087517934003,
+   "unweighted_normalized": 0.7116212338593975,
+   "unweighted_artefact_pp": 1.291248206599713,
+   "weighted_at_v": 0.8945091913973326,
+   "weighted_naive": 0.8253771073646851,
+   "weighted_normalized": 0.8390417036379769,
+   "weighted_artefact_pp": 1.3664596273291925
+  },
+  {
+   "v": "10.0",
+   "v_date": "2021-10-21",
+   "w": "19.0",
+   "portfolio": 512,
+   "unweighted_at_v": 0.9045936395759717,
+   "unweighted_naive": 0.7130559540889526,
+   "unweighted_normalized": 0.7288378766140603,
+   "unweighted_artefact_pp": 1.5781922525107603,
+   "weighted_at_v": 0.8943573667711598,
+   "weighted_naive": 0.8311150547175392,
+   "weighted_normalized": 0.8453711919550428,
+   "weighted_artefact_pp": 1.4256137237503697
+  },
+  {
+   "v": "11.0",
+   "v_date": "2022-04-25",
+   "w": "19.0",
+   "portfolio": 520,
+   "unweighted_at_v": 0.9027777777777778,
+   "unweighted_naive": 0.727403156384505,
+   "unweighted_normalized": 0.7417503586800573,
+   "unweighted_artefact_pp": 1.4347202295552368,
+   "weighted_at_v": 0.8959977452085682,
+   "weighted_naive": 0.8320023661638568,
+   "weighted_normalized": 0.8461401952085182,
+   "weighted_artefact_pp": 1.4137829044661343
+  },
+  {
+   "v": "12.0",
+   "v_date": "2022-10-25",
+   "w": "19.0",
+   "portfolio": 535,
+   "unweighted_at_v": 0.9006734006734006,
+   "unweighted_naive": 0.7489239598278336,
+   "unweighted_normalized": 0.763271162123386,
+   "unweighted_artefact_pp": 1.4347202295552368,
+   "weighted_at_v": 0.8966127401415571,
+   "weighted_naive": 0.8363206152026028,
+   "weighted_normalized": 0.8504584442472641,
+   "weighted_artefact_pp": 1.4137829044661343
+  },
+  {
+   "v": "13.0",
+   "v_date": "2023-04-25",
+   "w": "19.0",
+   "portfolio": 547,
+   "unweighted_at_v": 0.9011532125205931,
+   "unweighted_naive": 0.7647058823529411,
+   "unweighted_normalized": 0.7804878048780488,
+   "unweighted_artefact_pp": 1.5781922525107603,
+   "weighted_at_v": 0.896546223179389,
+   "weighted_naive": 0.8444838805087252,
+   "weighted_normalized": 0.8586808636498078,
+   "weighted_artefact_pp": 1.419698314108252
+  },
+  {
+   "v": "14.0",
+   "v_date": "2023-10-31",
+   "w": "19.0",
+   "portfolio": 563,
+   "unweighted_at_v": 0.9008,
+   "unweighted_naive": 0.7847919655667145,
+   "unweighted_normalized": 0.8034433285509326,
+   "unweighted_artefact_pp": 1.8651362984218078,
+   "weighted_at_v": 0.896633693735143,
+   "weighted_naive": 0.8479148181011535,
+   "weighted_normalized": 0.8633540372670807,
+   "weighted_artefact_pp": 1.543921916592724
+  },
+  {
+   "v": "15.0",
+   "v_date": "2024-04-23",
+   "w": "19.0",
+   "portfolio": 576,
+   "unweighted_at_v": 0.9042386185243328,
+   "unweighted_naive": 0.8034433285509326,
+   "unweighted_normalized": 0.8220946915351507,
+   "unweighted_artefact_pp": 1.8651362984218078,
+   "weighted_at_v": 0.8980854197349043,
+   "weighted_naive": 0.864773735581189,
+   "weighted_normalized": 0.8802129547471162,
+   "weighted_artefact_pp": 1.543921916592724
+  },
+  {
+   "v": "16.0",
+   "v_date": "2024-10-31",
+   "w": "19.0",
+   "portfolio": 589,
+   "unweighted_at_v": 0.8978658536585366,
+   "unweighted_naive": 0.8220946915351507,
+   "unweighted_normalized": 0.8407460545193687,
+   "unweighted_artefact_pp": 1.8651362984218078,
+   "weighted_at_v": 0.8970920287375984,
+   "weighted_naive": 0.8671990535344573,
+   "weighted_normalized": 0.8826382727003845,
+   "weighted_artefact_pp": 1.543921916592724
+  },
+  {
+   "v": "17.0",
+   "v_date": "2025-04-22",
+   "w": "19.0",
+   "portfolio": 575,
+   "unweighted_at_v": 0.8468335787923417,
+   "unweighted_naive": 0.8020086083213773,
+   "unweighted_normalized": 0.8220946915351507,
+   "unweighted_artefact_pp": 2.0086083213773316,
+   "weighted_at_v": 0.689327485380117,
+   "weighted_naive": 0.6723454599230997,
+   "weighted_normalized": 0.687784679089027,
+   "weighted_artefact_pp": 1.543921916592724
+  },
+  {
+   "v": "18.0",
+   "v_date": "2025-10-28",
+   "w": "19.0",
+   "portfolio": 582,
+   "unweighted_at_v": 0.8422575976845152,
+   "unweighted_naive": 0.8106169296987088,
+   "unweighted_normalized": 0.8321377331420373,
+   "unweighted_artefact_pp": 2.152080344332855,
+   "weighted_at_v": 0.6882062808266217,
+   "weighted_naive": 0.6732919254658385,
+   "weighted_normalized": 0.6889677610174505,
+   "weighted_artefact_pp": 1.567583555161195
+  }
+ ],
+ "top15_share_of_uses_edges": 0.2845903578822834,
+ "top15": [
+  {
+   "technique": "T1105",
+   "edges": 515
+  },
+  {
+   "technique": "T1082",
+   "edges": 424
+  },
+  {
+   "technique": "T1071.001",
+   "edges": 419
+  },
+  {
+   "technique": "T1059.003",
+   "edges": 386
+  },
+  {
+   "technique": "T1083",
+   "edges": 369
+  },
+  {
+   "technique": "T1140",
+   "edges": 350
+  },
+  {
+   "technique": "T1057",
+   "edges": 318
+  },
+  {
+   "technique": "T1070.004",
+   "edges": 308
+  },
+  {
+   "technique": "T1016",
+   "edges": 285
+  },
+  {
+   "technique": "T1547.001",
+   "edges": 260
+  },
+  {
+   "technique": "T1027.013",
+   "edges": 246
+  },
+  {
+   "technique": "T1033",
+   "edges": 241
+  },
+  {
+   "technique": "T1059.001",
+   "edges": 233
+  },
+  {
+   "technique": "T1005",
+   "edges": 229
+  },
+  {
+   "technique": "T1106",
+   "edges": 228
+  }
+ ]
+}

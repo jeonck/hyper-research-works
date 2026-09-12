@@ -1,0 +1,9 @@
+[
+ {"claim": "ATT&CK distinguishes revocation (successor exists, typed by a revoked-by edge) from deprecation (no successor), and retains both classes of object in every published bundle.", "independent_voices": 3, "sources": ["attack-stix-data USAGE.md", "mitreattack-python diffStix", "our corpus extraction"]},
+ {"claim": "The March 2020 sub-technique restructuring is the single largest discontinuity in ATT&CK's history and re-identified a large share of the pre-existing technique catalogue.", "independent_voices": 4, "sources": ["MITRE sub-technique announcement", "practitioner remapping accounts", "our E1/E2", "B1 census"]},
+ {"claim": "Published CTI systems, datasets and benchmarks overwhelmingly do not declare which ATT&CK release their labels encode.", "independent_voices": 3, "sources": ["B2 audit of six TTP systems", "B3 benchmark audits", "our E9 documentation scan"]},
+ {"claim": "No established CTI quality framework names vocabulary or ontology versioning as a quality dimension.", "independent_voices": 2, "sources": ["B5 survey of the quality-dimension literature", "B6 boundary analysis of the drift literature"]},
+ {"claim": "Formal concept-drift theory is defined over a fixed label space and therefore cannot express a change in the label space itself.", "independent_voices": 2, "sources": ["dataset-shift taxonomies", "B6 boundary synthesis"]},
+ {"claim": "Ontology engineering already has the machinery ATT&CK lacks: referent stability rules, exact-versus-inexact successor relations, version IRIs and declared backward compatibility.", "independent_voices": 3, "sources": ["OBO Foundry principles (read verbatim)", "OWL versioning vocabulary", "COnto-Diff"]},
+ {"claim": "Ontology version change has already been shown to change scientific conclusions in another discipline (Gene Ontology).", "independent_voices": 1, "sources": ["Tomczak et al. 2018"]}
+]
