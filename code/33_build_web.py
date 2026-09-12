@@ -28,7 +28,7 @@ FIG_FILES = {
     1: "fig1_growth_churn.png", 2: "fig2_survival.png", 3: "fig3_semantic_drift.png",
     4: "fig4_growth_decomposition.png", 5: "fig5_attribution.png",
     6: "fig6_coverage.png", 7: "fig7_artifact_validity.png",
-    8: "fig8_conclusion_flips.png", 9: "fig9_two_clocks.png",
+    8: "fig8_conclusion_flips.png", 9: "fig9_two_clocks.png", 10: "fig10_cwe_capec.png",
 }
 
 ATTACK_ID = re.compile(r"\b(T\d{4}(?:\.\d{3})?|TA\d{4}|MOB-T\d{4})\b")

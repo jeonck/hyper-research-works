@@ -37,7 +37,8 @@ cp paper/figures/*.png docs/figures/
 | `research/notes/final_report_attack-ontology-drift-cti-85bc51.md` | the manuscript |
 | `research/runs/attack-ontology-drift-cti-85bc51/` | the full pipeline record: decomposition, contradiction graph, loci, the four investigators' committed positions, the reconciliation, the three drafts, the critic findings and the patch log |
 | `research/notes/` | the evidence corpus, one note per source |
-| `code/` | the reproduction package — see `code/README.md` |
+| `paper/annotation/` | the human-annotation instrument for the rewrite metric: codebook, blind 150-pair sample, key, protocol, and the two model-annotator pilot files |
+| `code/` | the reproduction package, including `attacknorm.py`, the residual-ledger tool — see `code/README.md` |
 | `data/results/` | every computed result, as JSON |
 
 ## Reproducing the results
@@ -47,12 +48,15 @@ git clone --depth 1 https://github.com/mitre-attack/attack-stix-data /home/user/
 git clone --depth 1 https://github.com/maveryn/cti-bench  /home/user/ext/cti-bench
 git clone --depth 1 https://github.com/vlegoy/rcATT       /home/user/ext/rcATT
 git clone --depth 1 https://github.com/center-for-threat-informed-defense/tram /home/user/ext/tram
-python -m venv .venv && .venv/bin/pip install matplotlib
+python -m venv .venv && .venv/bin/pip install matplotlib scikit-learn scipy numpy
+export ATTACK_STIX_REPO=/home/user/mitre-attack/attack-stix-data HYPER_EXT=/home/user/ext
 bash code/run_all.sh
 ```
 
 Everything is computed from public artefacts. No API keys, no network access
-beyond those clones, and every stochastic component is seeded.
+beyond those clones and the CWE / CAPEC XML archives that `38_cwe_capec_drift.py`
+downloads, and every stochastic component is seeded. The arXiv pin-rate survey
+(`39_pin_rate_survey.py`) is the one step that needs the network at run time.
 
 ## The short version of the finding
 

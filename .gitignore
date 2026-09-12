@@ -2,3 +2,5 @@
 data/attack_drift.db
 __pycache__/
 *.pyc
+.hyperresearch/hyperresearch.db-wal
+.hyperresearch/hyperresearch.db-shm

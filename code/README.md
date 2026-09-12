@@ -35,6 +35,13 @@ randomness that is not seeded (`SEED = 20260912`).
 | `23_tactic_layer.py` | E13 the tactic layer and the arity of the revocation relation |
 | `24_noise_and_stratification.py` | E14 noise factorial, specificity stratification, archival control |
 | `25_vault_integrity.py` | E15 corpus integrity check over the evidence notes |
+| `34_real_classifier.py` | E18 a trained text-to-technique classifier across eras, vocabulary drift separated from data drift |
+| `35_end_to_end_cases.py` | E19 two real systems on three real gold sets with verdict flips; named public Navigator layers re-measured |
+| `36_semantic_validation.py` | E20 rewrite-threshold sweep, convergent validity, the annotation instrument and the blind pilot |
+| `37_statistics.py` | E21 Holm / Benjamini-Hochberg over the attribution rows, Clopper-Pearson / Wilson / Poisson intervals, Mobile and ICS coverage |
+| `38_cwe_capec_drift.py` | E22 CWE and CAPEC measured on the same instrument as a same-institution control |
+| `39_pin_rate_survey.py` | E23 share of recent arXiv papers using ATT&CK identifiers that declare a release |
+| `attacknorm.py`, `test_attacknorm.py` | the residual-ledger tool of Section 8.4 and its self-check |
 | `07_figures.py`, `10_tables.py`, `16_evidence_digest.py` | every figure, table and quoted number in the paper |
 | `26_manuscript_check.py` | headings, length, citation density and quote integrity of the manuscript |
 | `27_to_latex.py` | LaTeX export for journal submission |
@@ -44,6 +51,30 @@ randomness that is not seeded (`SEED = 20260912`).
 | `attackdrift.py` | shared loading, lineage and the ATT&CK-Norm implementation |
 
 Run them in order with `bash code/run_all.sh`.
+
+## Environment
+
+The scripts read the ATT&CK clone from `$ATTACK_STIX_REPO` and the corpora from
+`$HYPER_EXT` (defaults: `/home/user/mitre-attack/attack-stix-data` and
+`/home/user/ext`). `run_all.sh` records the commit of every input repository in
+`data/results/inputs.json` so the header line of Section 10 can be filled in.
+The CWE and CAPEC XML archives are downloaded by `38_cwe_capec_drift.py` into
+`$HYPER_EXT/cwe` and `$HYPER_EXT/capec`.
+
+## attacknorm
+
+```bash
+.venv/bin/python code/attacknorm.py --input <labels.csv|layer.json|tram.json|cti-ate.tsv> \
+    [--domain enterprise-attack] [--from 6.3] [--to 19.2] [--bundle-hash] [--json out.json] [--markdown]
+.venv/bin/python code/attacknorm.py --input A.json --compare B.json --to 19.2
+.venv/bin/python code/test_attacknorm.py
+```
+
+Prints the four header lines of the reporting contract (domain and source
+release or inferred provenance interval, target release and bundle hash, the
+kept / merged / demoted / dropped ledger, and the cross-time comparability
+statement) followed by the ledger detail. A non-empty dropped list is
+information, not an error.
 
 ## ATT&CK-Norm
 

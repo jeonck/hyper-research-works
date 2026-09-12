@@ -1,0 +1,1081 @@
+{
+ "seed": 20260912,
+ "case_a": {
+  "reference_release": "19.2",
+  "pass_threshold_sample_f1": 0.5,
+  "gold_sets": {
+   "rcatt": {
+    "n_items": 1490,
+    "gold_release": "6.3",
+    "systems": {
+     "S1 (rcATT-era, v6.3)": {
+      "model_release": "6.3",
+      "scoring": "5-fold cross-fit (in-domain)",
+      "scores": {
+       "naive": {
+        "micro_f1": 0.24088601753576372,
+        "micro_precision": 0.42909987669543775,
+        "micro_recall": 0.16744186046511628,
+        "macro_f1": 0.09951852929635017,
+        "sample_f1": 0.14203546562393116,
+        "n_docs": 1490,
+        "gold_instances": 6235,
+        "pred_instances": 2433,
+        "gold_distinct": 215,
+        "docs_with_empty_gold": 0
+       },
+       "normalized": {
+        "micro_f1": 0.24342105263157895,
+        "micro_precision": 0.43397046046915727,
+        "micro_recall": 0.16915001693193363,
+        "macro_f1": 0.10065681570528358,
+        "sample_f1": 0.16416489271060264,
+        "n_docs": 1490,
+        "gold_instances": 5906,
+        "pred_instances": 2302,
+        "gold_distinct": 199,
+        "docs_with_empty_gold": 41
+       }
+      },
+      "verdicts": {
+       "fail_to_pass": 38,
+       "pass_to_fail": 5,
+       "pass_naive": 178,
+       "pass_normalized": 211
+      }
+     },
+     "S2 (TRAM-era, v13.0)": {
+      "model_release": "13.0",
+      "scoring": "direct",
+      "scores": {
+       "naive": {
+        "micro_f1": 0.04290678350203958,
+        "micro_precision": 0.3697916666666667,
+        "micro_recall": 0.022774659182036888,
+        "macro_f1": 0.020754862982515037,
+        "sample_f1": 0.05576582660783837,
+        "n_docs": 1490,
+        "gold_instances": 6235,
+        "pred_instances": 384,
+        "gold_distinct": 215,
+        "docs_with_empty_gold": 0
+       },
+       "normalized": {
+        "micro_f1": 0.06424936386768448,
+        "micro_precision": 0.5287958115183246,
+        "micro_recall": 0.03420250592617677,
+        "macro_f1": 0.04185639676305438,
+        "sample_f1": 0.11203383346670898,
+        "n_docs": 1490,
+        "gold_instances": 5906,
+        "pred_instances": 382,
+        "gold_distinct": 199,
+        "docs_with_empty_gold": 41
+       },
+       "vocab_matched": {
+        "micro_f1": 0.06692913385826772,
+        "micro_precision": 0.5989159891598916,
+        "micro_recall": 0.03544506816359262,
+        "macro_f1": 0.050651282344780287,
+        "sample_f1": 0.10259487004762007,
+        "n_docs": 1490,
+        "gold_instances": 6235,
+        "pred_instances": 369,
+        "gold_distinct": 215,
+        "docs_with_empty_gold": 0
+       }
+      },
+      "verdicts": {
+       "fail_to_pass": 85,
+       "pass_to_fail": 0,
+       "pass_naive": 79,
+       "pass_normalized": 164,
+       "pass_vocab_matched": 148,
+       "fail_to_pass_vocab_matched": 70
+      }
+     }
+    },
+    "leaderboard_order": {
+     "naive": [
+      "S1 (rcATT-era, v6.3)",
+      "S2 (TRAM-era, v13.0)"
+     ],
+     "normalized": [
+      "S1 (rcATT-era, v6.3)",
+      "S2 (TRAM-era, v13.0)"
+     ],
+     "vocab_matched": [
+      "S2 (TRAM-era, v13.0)"
+     ]
+    },
+    "order_changes": false
+   },
+   "tram": {
+    "n_items": 17177,
+    "gold_release": "13.0",
+    "systems": {
+     "S1 (rcATT-era, v6.3)": {
+      "model_release": "6.3",
+      "scoring": "direct",
+      "scores": {
+       "naive": {
+        "micro_f1": 0.020616342746698164,
+        "micro_precision": 0.2350061199510404,
+        "micro_recall": 0.010781065753270818,
+        "macro_f1": 0.011981503583387957,
+        "sample_f1": 0.010838136267489471,
+        "n_docs": 17177,
+        "gold_instances": 17809,
+        "pred_instances": 817,
+        "gold_distinct": 509,
+        "docs_with_empty_gold": 0
+       },
+       "normalized": {
+        "micro_f1": 0.05009406073636119,
+        "micro_precision": 0.5738916256157636,
+        "micro_recall": 0.0261900747484966,
+        "macro_f1": 0.03926654839384689,
+        "sample_f1": 0.02656653276668413,
+        "n_docs": 17177,
+        "gold_instances": 17793,
+        "pred_instances": 812,
+        "gold_distinct": 499,
+        "docs_with_empty_gold": 0
+       },
+       "vocab_matched": {
+        "micro_f1": 0.07714402954452196,
+        "micro_precision": 0.8053855569155447,
+        "micro_recall": 0.04051225218569142,
+        "macro_f1": 0.08478381569965596,
+        "sample_f1": 0.1086724495934486,
+        "n_docs": 17177,
+        "gold_instances": 16242,
+        "pred_instances": 817,
+        "gold_distinct": 235,
+        "docs_with_empty_gold": 1224
+       }
+      },
+      "verdicts": {
+       "fail_to_pass": 274,
+       "pass_to_fail": 0,
+       "pass_naive": 192,
+       "pass_normalized": 466,
+       "pass_vocab_matched": 1875,
+       "fail_to_pass_vocab_matched": 1683
+      }
+     },
+     "S2 (TRAM-era, v13.0)": {
+      "model_release": "13.0",
+      "scoring": "5-fold cross-fit (in-domain)",
+      "scores": {
+       "naive": {
+        "micro_f1": 0.6983967343075194,
+        "micro_precision": 0.7379508657873352,
+        "micro_recall": 0.6628670896737605,
+        "macro_f1": 0.2700821906586089,
+        "sample_f1": 0.6348899552835048,
+        "n_docs": 17177,
+        "gold_instances": 17809,
+        "pred_instances": 15997,
+        "gold_distinct": 509,
+        "docs_with_empty_gold": 0
+       },
+       "normalized": {
+        "micro_f1": 0.7001896408676069,
+        "micro_precision": 0.7405202130993419,
+        "micro_recall": 0.6640251784409599,
+        "macro_f1": 0.2723851073124919,
+        "sample_f1": 0.6363550927735593,
+        "n_docs": 17177,
+        "gold_instances": 17793,
+        "pred_instances": 15955,
+        "gold_distinct": 499,
+        "docs_with_empty_gold": 0
+       }
+      },
+      "verdicts": {
+       "fail_to_pass": 16,
+       "pass_to_fail": 0,
+       "pass_naive": 11553,
+       "pass_normalized": 11569
+      }
+     }
+    },
+    "leaderboard_order": {
+     "naive": [
+      "S2 (TRAM-era, v13.0)",
+      "S1 (rcATT-era, v6.3)"
+     ],
+     "normalized": [
+      "S2 (TRAM-era, v13.0)",
+      "S1 (rcATT-era, v6.3)"
+     ],
+     "vocab_matched": [
+      "S1 (rcATT-era, v6.3)"
+     ]
+    },
+    "order_changes": false
+   },
+   "ctibench": {
+    "n_items": 47,
+    "gold_release": "14.0",
+    "systems": {
+     "S1 (rcATT-era, v6.3)": {
+      "model_release": "6.3",
+      "scoring": "direct",
+      "scores": {
+       "naive": {
+        "micro_f1": 0.013071895424836602,
+        "micro_precision": 0.2857142857142857,
+        "micro_recall": 0.006688963210702341,
+        "macro_f1": 0.0018823529411764706,
+        "sample_f1": 0.010807159743329955,
+        "n_docs": 47,
+        "gold_instances": 299,
+        "pred_instances": 7,
+        "gold_distinct": 84,
+        "docs_with_empty_gold": 0
+       },
+       "normalized": {
+        "micro_f1": 0.013377926421404682,
+        "micro_precision": 0.2857142857142857,
+        "micro_recall": 0.00684931506849315,
+        "macro_f1": 0.0020512820512820513,
+        "sample_f1": 0.032083755488010804,
+        "n_docs": 47,
+        "gold_instances": 292,
+        "pred_instances": 7,
+        "gold_distinct": 77,
+        "docs_with_empty_gold": 1
+       },
+       "vocab_matched": {
+        "micro_f1": 0.015503875968992248,
+        "micro_precision": 0.2857142857142857,
+        "micro_recall": 0.00796812749003984,
+        "macro_f1": 0.0025806451612903226,
+        "sample_f1": 0.03267477203647416,
+        "n_docs": 47,
+        "gold_instances": 251,
+        "pred_instances": 7,
+        "gold_distinct": 61,
+        "docs_with_empty_gold": 1
+       }
+      },
+      "verdicts": {
+       "fail_to_pass": 1,
+       "pass_to_fail": 0,
+       "pass_naive": 0,
+       "pass_normalized": 1,
+       "pass_vocab_matched": 1,
+       "fail_to_pass_vocab_matched": 1
+      }
+     },
+     "S2 (TRAM-era, v13.0)": {
+      "model_release": "13.0",
+      "scoring": "direct",
+      "scores": {
+       "naive": {
+        "micro_f1": 0.01929260450160772,
+        "micro_precision": 0.25,
+        "micro_recall": 0.010033444816053512,
+        "macro_f1": 0.016203703703703703,
+        "sample_f1": 0.0182370820668693,
+        "n_docs": 47,
+        "gold_instances": 299,
+        "pred_instances": 12,
+        "gold_distinct": 84,
+        "docs_with_empty_gold": 0
+       },
+       "normalized": {
+        "micro_f1": 0.019736842105263157,
+        "micro_precision": 0.25,
+        "micro_recall": 0.010273972602739725,
+        "macro_f1": 0.017570281124497992,
+        "sample_f1": 0.039513677811550144,
+        "n_docs": 47,
+        "gold_instances": 292,
+        "pred_instances": 12,
+        "gold_distinct": 77,
+        "docs_with_empty_gold": 1
+       },
+       "vocab_matched": {
+        "micro_f1": 0.019736842105263157,
+        "micro_precision": 0.25,
+        "micro_recall": 0.010273972602739725,
+        "macro_f1": 0.017570281124497992,
+        "sample_f1": 0.039513677811550144,
+        "n_docs": 47,
+        "gold_instances": 292,
+        "pred_instances": 12,
+        "gold_distinct": 77,
+        "docs_with_empty_gold": 1
+       }
+      },
+      "verdicts": {
+       "fail_to_pass": 1,
+       "pass_to_fail": 0,
+       "pass_naive": 0,
+       "pass_normalized": 1,
+       "pass_vocab_matched": 1,
+       "fail_to_pass_vocab_matched": 1
+      }
+     }
+    },
+    "leaderboard_order": {
+     "naive": [
+      "S2 (TRAM-era, v13.0)",
+      "S1 (rcATT-era, v6.3)"
+     ],
+     "normalized": [
+      "S2 (TRAM-era, v13.0)",
+      "S1 (rcATT-era, v6.3)"
+     ],
+     "vocab_matched": [
+      "S2 (TRAM-era, v13.0)",
+      "S1 (rcATT-era, v6.3)"
+     ]
+    },
+    "order_changes": false
+   }
+  }
+ },
+ "case_b": {
+  "reference_release": "19.2",
+  "n_layers": 20,
+  "n_declaring_version": 2,
+  "layers": [
+   {
+    "file": "ext/DeTTECT/threat-actor-data/ATT&CK-Navigator-layers/20210811-Cisco-Talos/attack_cisco-talos-(quarterly-report---the-top-malware-families-and-ttps-used-in-q2-2021).json",
+    "layer": "Cisco Talos",
+    "folder": "20210811-Cisco-Talos",
+    "declared_version": null,
+    "n_distinct": 15,
+    "provenance_interval": [
+     "7.0",
+     "16.1"
+    ],
+    "n_consistent_releases": 23,
+    "dead_at_newest": 3,
+    "dead_share": 0.2,
+    "dead_ids": [
+     "T1562",
+     "T1562.001",
+     "T1574.002"
+    ],
+    "ledger": {
+     "input": 15,
+     "kept": 15,
+     "distinct_after": 14,
+     "merge_targets": 1,
+     "absorbed_by_merges": 2,
+     "dropped": 0,
+     "demoted": 1,
+     "rolled_up": 0
+    },
+    "demoted": {
+     "T1562.001": "T1685"
+    },
+    "merged": {
+     "T1685": [
+      "T1562",
+      "T1562.001"
+     ]
+    },
+    "dropped": [],
+    "catalogue_share_authored": 0.035046728971962614,
+    "catalogue_share_naive_newest": 0.01721664275466284,
+    "catalogue_share_normalized_newest": 0.020086083213773313
+   },
+   {
+    "file": "ext/DeTTECT/threat-actor-data/ATT&CK-Navigator-layers/20211028-Cisco-Talos/attack_cisco-talos-(quarterly-report---incident-response-trends-from-q3-2021).json",
+    "layer": "Cisco Talos",
+    "folder": "20211028-Cisco-Talos",
+    "declared_version": null,
+    "n_distinct": 15,
+    "provenance_interval": [
+     "7.0",
+     "18.1"
+    ],
+    "n_consistent_releases": 27,
+    "dead_at_newest": 2,
+    "dead_share": 0.13333333333333333,
+    "dead_ids": [
+     "T1562",
+     "T1562.001"
+    ],
+    "ledger": {
+     "input": 15,
+     "kept": 15,
+     "distinct_after": 14,
+     "merge_targets": 1,
+     "absorbed_by_merges": 2,
+     "dropped": 0,
+     "demoted": 1,
+     "rolled_up": 0
+    },
+    "demoted": {
+     "T1562.001": "T1685"
+    },
+    "merged": {
+     "T1685": [
+      "T1562",
+      "T1562.001"
+     ]
+    },
+    "dropped": [],
+    "catalogue_share_authored": 0.035046728971962614,
+    "catalogue_share_naive_newest": 0.018651362984218076,
+    "catalogue_share_normalized_newest": 0.020086083213773313
+   },
+   {
+    "file": "ext/DeTTECT/threat-actor-data/ATT&CK-Navigator-layers/20200922-Rapid7/attack_all_rapid7-(2020-q2-threat-report---cumulative-by-industry).json",
+    "layer": "Rapid7",
+    "folder": "20200922-Rapid7",
+    "declared_version": null,
+    "n_distinct": 28,
+    "provenance_interval": [
+     "7.0",
+     "18.1"
+    ],
+    "n_consistent_releases": 27,
+    "dead_at_newest": 3,
+    "dead_share": 0.10714285714285714,
+    "dead_ids": [
+     "T1562",
+     "T1562.001",
+     "T1562.006"
+    ],
+    "ledger": {
+     "input": 28,
+     "kept": 28,
+     "distinct_after": 26,
+     "merge_targets": 1,
+     "absorbed_by_merges": 3,
+     "dropped": 0,
+     "demoted": 2,
+     "rolled_up": 0
+    },
+    "demoted": {
+     "T1562.001": "T1685",
+     "T1562.006": "T1685"
+    },
+    "merged": {
+     "T1685": [
+      "T1562",
+      "T1562.001",
+      "T1562.006"
+     ]
+    },
+    "dropped": [],
+    "catalogue_share_authored": 0.06542056074766354,
+    "catalogue_share_naive_newest": 0.035868005738880916,
+    "catalogue_share_normalized_newest": 0.03730272596843615
+   },
+   {
+    "file": "mitre-attack/attack-navigator/layers/samples/proposed-defensive-evasion-split.json",
+    "layer": "layer",
+    "folder": "samples",
+    "declared_version": "17",
+    "n_distinct": 211,
+    "provenance_interval": [
+     "17.0",
+     "18.1"
+    ],
+    "n_consistent_releases": 4,
+    "dead_at_newest": 16,
+    "dead_share": 0.07582938388625593,
+    "dead_ids": [
+     "T1070.001",
+     "T1070.002",
+     "T1562",
+     "T1562.001",
+     "T1562.002",
+     "T1562.003",
+     "T1562.004",
+     "T1562.006",
+     "T1562.007",
+     "T1562.008",
+     "T1562.009",
+     "T1562.010",
+     "T1562.011",
+     "T1562.012",
+     "T1656",
+     "T1672"
+    ],
+    "ledger": {
+     "input": 211,
+     "kept": 211,
+     "distinct_after": 209,
+     "merge_targets": 1,
+     "absorbed_by_merges": 3,
+     "dropped": 0,
+     "demoted": 8,
+     "rolled_up": 0
+    },
+    "demoted": {
+     "T1562.001": "T1685",
+     "T1562.003": "T1690",
+     "T1562.004": "T1686",
+     "T1562.006": "T1685",
+     "T1562.009": "T1688",
+     "T1562.010": "T1689",
+     "T1656": "T1684.001",
+     "T1672": "T1684.002"
+    },
+    "merged": {
+     "T1685": [
+      "T1562",
+      "T1562.001",
+      "T1562.006"
+     ]
+    },
+    "dropped": [],
+    "catalogue_share_authored": 0.31075110456553756,
+    "catalogue_share_naive_newest": 0.2797704447632712,
+    "catalogue_share_normalized_newest": 0.2998565279770445
+   },
+   {
+    "file": "ext/DeTTECT/threat-actor-data/ATT&CK-Navigator-layers/20220223-MITRE-Engenuity/attack_mitre-engenuity-(15-most-observed-techniques).json",
+    "layer": "MITRE Engenuity",
+    "folder": "20220223-MITRE-Engenuity",
+    "declared_version": null,
+    "n_distinct": 15,
+    "provenance_interval": [
+     "7.0",
+     "18.1"
+    ],
+    "n_consistent_releases": 27,
+    "dead_at_newest": 1,
+    "dead_share": 0.06666666666666667,
+    "dead_ids": [
+     "T1562"
+    ],
+    "ledger": {
+     "input": 15,
+     "kept": 15,
+     "distinct_after": 15,
+     "merge_targets": 0,
+     "absorbed_by_merges": 0,
+     "dropped": 0,
+     "demoted": 0,
+     "rolled_up": 0
+    },
+    "demoted": {},
+    "merged": {},
+    "dropped": [],
+    "catalogue_share_authored": 0.035046728971962614,
+    "catalogue_share_naive_newest": 0.020086083213773313,
+    "catalogue_share_normalized_newest": 0.021520803443328552
+   },
+   {
+    "file": "ext/DeTTECT/threat-actor-data/ATT&CK-Navigator-layers/20220426-Cisco-Talos/attack_cisco-talos-(quarterly-report---incident-response-trends-in-q1-2022).json",
+    "layer": "Cisco Talos",
+    "folder": "20220426-Cisco-Talos",
+    "declared_version": null,
+    "n_distinct": 19,
+    "provenance_interval": [
+     "8.0",
+     "16.1"
+    ],
+    "n_consistent_releases": 20,
+    "dead_at_newest": 1,
+    "dead_share": 0.05263157894736842,
+    "dead_ids": [
+     "T1574.002"
+    ],
+    "ledger": {
+     "input": 19,
+     "kept": 19,
+     "distinct_after": 19,
+     "merge_targets": 0,
+     "absorbed_by_merges": 0,
+     "dropped": 0,
+     "demoted": 0,
+     "rolled_up": 0
+    },
+    "demoted": {},
+    "merged": {},
+    "dropped": [],
+    "catalogue_share_authored": 0.03619047619047619,
+    "catalogue_share_naive_newest": 0.02582496413199426,
+    "catalogue_share_normalized_newest": 0.027259684361549498
+   },
+   {
+    "file": "ext/DeTTECT/threat-actor-data/ATT&CK-Navigator-layers/20220726-Cisco-Talos/attack_cisco-talos-(quarterly-report---incident-response-trends-in-q2-2022).json",
+    "layer": "Cisco Talos",
+    "folder": "20220726-Cisco-Talos",
+    "declared_version": null,
+    "n_distinct": 19,
+    "provenance_interval": [
+     "8.0",
+     "16.1"
+    ],
+    "n_consistent_releases": 20,
+    "dead_at_newest": 1,
+    "dead_share": 0.05263157894736842,
+    "dead_ids": [
+     "T1574.002"
+    ],
+    "ledger": {
+     "input": 19,
+     "kept": 19,
+     "distinct_after": 19,
+     "merge_targets": 0,
+     "absorbed_by_merges": 0,
+     "dropped": 0,
+     "demoted": 0,
+     "rolled_up": 0
+    },
+    "demoted": {},
+    "merged": {},
+    "dropped": [],
+    "catalogue_share_authored": 0.03619047619047619,
+    "catalogue_share_naive_newest": 0.02582496413199426,
+    "catalogue_share_normalized_newest": 0.027259684361549498
+   },
+   {
+    "file": "ext/DeTTECT/threat-actor-data/ATT&CK-Navigator-layers/20210518-Sophos/attack_all_sophos-(top-5-techniques-observed-with-each-tactic-in-20202021).json",
+    "layer": "Sophos",
+    "folder": "20210518-Sophos",
+    "declared_version": null,
+    "n_distinct": 62,
+    "provenance_interval": null,
+    "n_consistent_releases": 0,
+    "dead_at_newest": 3,
+    "dead_share": 0.04838709677419355,
+    "dead_ids": [
+     "T1409",
+     "T1562",
+     "T1562.001"
+    ],
+    "ledger": {
+     "input": 62,
+     "kept": 61,
+     "distinct_after": 60,
+     "merge_targets": 1,
+     "absorbed_by_merges": 2,
+     "dropped": 1,
+     "demoted": 1,
+     "rolled_up": 0
+    },
+    "demoted": {
+     "T1562.001": "T1685"
+    },
+    "merged": {
+     "T1685": [
+      "T1562",
+      "T1562.001"
+     ]
+    },
+    "dropped": [
+     "T1409"
+    ],
+    "catalogue_share_authored": null,
+    "catalogue_share_naive_newest": 0.08464849354375897,
+    "catalogue_share_normalized_newest": 0.08608321377331421
+   },
+   {
+    "file": "ext/DeTTECT/threat-actor-data/ATT&CK-Navigator-layers/20210413-FireEye-Mandiant/attack_all_fireeye-mandiant---m-trends-2021.json",
+    "layer": "FireEye Mandiant - M-Trends 2021",
+    "folder": "20210413-FireEye-Mandiant",
+    "declared_version": null,
+    "n_distinct": 211,
+    "provenance_interval": [
+     "8.2",
+     "16.1"
+    ],
+    "n_consistent_releases": 18,
+    "dead_at_newest": 6,
+    "dead_share": 0.02843601895734597,
+    "dead_ids": [
+     "T1070.001",
+     "T1562",
+     "T1562.001",
+     "T1562.004",
+     "T1562.007",
+     "T1574.002"
+    ],
+    "ledger": {
+     "input": 211,
+     "kept": 211,
+     "distinct_after": 209,
+     "merge_targets": 2,
+     "absorbed_by_merges": 4,
+     "dropped": 0,
+     "demoted": 2,
+     "rolled_up": 0
+    },
+    "demoted": {
+     "T1562.001": "T1685",
+     "T1562.004": "T1686"
+    },
+    "merged": {
+     "T1685": [
+      "T1562",
+      "T1562.001"
+     ],
+     "T1574.001": [
+      "T1574.001",
+      "T1574.002"
+     ]
+    },
+    "dropped": [],
+    "catalogue_share_authored": 0.39811320754716983,
+    "catalogue_share_naive_newest": 0.29411764705882354,
+    "catalogue_share_normalized_newest": 0.2998565279770445
+   },
+   {
+    "file": "ext/DeTTECT/threat-actor-data/ATT&CK-Navigator-layers/20210421-McAfee/attack_all_mcafee-(labs-threats-report---april-2021-(top-5-per-tactic)).json",
+    "layer": "McAfee",
+    "folder": "20210421-McAfee",
+    "declared_version": null,
+    "n_distinct": 39,
+    "provenance_interval": [
+     "7.0",
+     "16.1"
+    ],
+    "n_consistent_releases": 23,
+    "dead_at_newest": 1,
+    "dead_share": 0.02564102564102564,
+    "dead_ids": [
+     "T1574.002"
+    ],
+    "ledger": {
+     "input": 39,
+     "kept": 39,
+     "distinct_after": 39,
+     "merge_targets": 0,
+     "absorbed_by_merges": 0,
+     "dropped": 0,
+     "demoted": 0,
+     "rolled_up": 0
+    },
+    "demoted": {},
+    "merged": {},
+    "dropped": [],
+    "catalogue_share_authored": 0.0911214953271028,
+    "catalogue_share_naive_newest": 0.054519368723098996,
+    "catalogue_share_normalized_newest": 0.05595408895265423
+   },
+   {
+    "file": "mitre-attack/attack-navigator/layers/samples/Bear_APT.json",
+    "layer": "*Bear APTs",
+    "folder": "samples",
+    "declared_version": "17",
+    "n_distinct": 126,
+    "provenance_interval": [
+     "7.0",
+     "18.1"
+    ],
+    "n_consistent_releases": 27,
+    "dead_at_newest": 3,
+    "dead_share": 0.023809523809523808,
+    "dead_ids": [
+     "T1070.001",
+     "T1562.001",
+     "T1562.004"
+    ],
+    "ledger": {
+     "input": 126,
+     "kept": 126,
+     "distinct_after": 126,
+     "merge_targets": 0,
+     "absorbed_by_merges": 0,
+     "dropped": 0,
+     "demoted": 2,
+     "rolled_up": 0
+    },
+    "demoted": {
+     "T1562.001": "T1685",
+     "T1562.004": "T1686"
+    },
+    "merged": {},
+    "dropped": [],
+    "catalogue_share_authored": 0.29439252336448596,
+    "catalogue_share_naive_newest": 0.17647058823529413,
+    "catalogue_share_normalized_newest": 0.18077474892395984
+   },
+   {
+    "file": "ext/DeTTECT/threat-actor-data/ATT&CK-Navigator-layers/20211001-McAfee/attack_all_mcafee-(labs-threats-report---october-2021-(top-5-per-tactic)).json",
+    "layer": "McAfee",
+    "folder": "20211001-McAfee",
+    "declared_version": null,
+    "n_distinct": 66,
+    "provenance_interval": [
+     "7.0",
+     "16.1"
+    ],
+    "n_consistent_releases": 23,
+    "dead_at_newest": 1,
+    "dead_share": 0.015151515151515152,
+    "dead_ids": [
+     "T1574.002"
+    ],
+    "ledger": {
+     "input": 66,
+     "kept": 66,
+     "distinct_after": 66,
+     "merge_targets": 0,
+     "absorbed_by_merges": 0,
+     "dropped": 0,
+     "demoted": 0,
+     "rolled_up": 0
+    },
+    "demoted": {},
+    "merged": {},
+    "dropped": [],
+    "catalogue_share_authored": 0.1542056074766355,
+    "catalogue_share_naive_newest": 0.09325681492109039,
+    "catalogue_share_normalized_newest": 0.09469153515064563
+   },
+   {
+    "file": "ext/DeTTECT/threat-actor-data/ATT&CK-Navigator-layers/20200901-Cisco-Talos/attack_all_cisco-talos---quarterly-report-incident-response-trends-in-summer-2020-(ransomware).json",
+    "layer": "Cisco Talos - quarterly report incident response trends in summer 2020",
+    "folder": "20200901-Cisco-Talos",
+    "declared_version": null,
+    "n_distinct": 11,
+    "provenance_interval": [
+     "7.0",
+     "19.2"
+    ],
+    "n_consistent_releases": 30,
+    "dead_at_newest": 0,
+    "dead_share": 0.0,
+    "dead_ids": [],
+    "ledger": {
+     "input": 11,
+     "kept": 11,
+     "distinct_after": 11,
+     "merge_targets": 0,
+     "absorbed_by_merges": 0,
+     "dropped": 0,
+     "demoted": 0,
+     "rolled_up": 0
+    },
+    "demoted": {},
+    "merged": {},
+    "dropped": [],
+    "catalogue_share_authored": 0.02570093457943925,
+    "catalogue_share_naive_newest": 0.015781922525107604,
+    "catalogue_share_normalized_newest": 0.015781922525107604
+   },
+   {
+    "file": "ext/DeTTECT/threat-actor-data/ATT&CK-Navigator-layers/20201209-Cisco-Talos/attack_all_cisco-talos-(quarterly-report---incident-response-trends-from-fall-2020).json",
+    "layer": "Cisco Talos",
+    "folder": "20201209-Cisco-Talos",
+    "declared_version": null,
+    "n_distinct": 16,
+    "provenance_interval": [
+     "7.0",
+     "19.2"
+    ],
+    "n_consistent_releases": 30,
+    "dead_at_newest": 0,
+    "dead_share": 0.0,
+    "dead_ids": [],
+    "ledger": {
+     "input": 16,
+     "kept": 16,
+     "distinct_after": 16,
+     "merge_targets": 0,
+     "absorbed_by_merges": 0,
+     "dropped": 0,
+     "demoted": 0,
+     "rolled_up": 0
+    },
+    "demoted": {},
+    "merged": {},
+    "dropped": [],
+    "catalogue_share_authored": 0.037383177570093455,
+    "catalogue_share_naive_newest": 0.02295552367288379,
+    "catalogue_share_normalized_newest": 0.02295552367288379
+   },
+   {
+    "file": "ext/DeTTECT/threat-actor-data/ATT&CK-Navigator-layers/20210206-PwC/attack_windows-linux-macos_pwc---cyber-threats-2020-a-year-in-retrospect.json",
+    "layer": "PwC - Cyber Threats 2020 A Year in Retrospect",
+    "folder": "20210206-PwC",
+    "declared_version": null,
+    "n_distinct": 26,
+    "provenance_interval": [
+     "7.0",
+     "19.2"
+    ],
+    "n_consistent_releases": 30,
+    "dead_at_newest": 0,
+    "dead_share": 0.0,
+    "dead_ids": [],
+    "ledger": {
+     "input": 26,
+     "kept": 26,
+     "distinct_after": 26,
+     "merge_targets": 0,
+     "absorbed_by_merges": 0,
+     "dropped": 0,
+     "demoted": 0,
+     "rolled_up": 0
+    },
+    "demoted": {},
+    "merged": {},
+    "dropped": [],
+    "catalogue_share_authored": 0.06074766355140187,
+    "catalogue_share_naive_newest": 0.03730272596843615,
+    "catalogue_share_normalized_newest": 0.03730272596843615
+   },
+   {
+    "file": "ext/DeTTECT/threat-actor-data/ATT&CK-Navigator-layers/20210324-Cisco-Talos/attack_all_cisco-talos-(quarterly-report---incident-response-trends-from-winter-2020-21).json",
+    "layer": "Cisco Talos",
+    "folder": "20210324-Cisco-Talos",
+    "declared_version": null,
+    "n_distinct": 16,
+    "provenance_interval": [
+     "7.0",
+     "19.2"
+    ],
+    "n_consistent_releases": 30,
+    "dead_at_newest": 0,
+    "dead_share": 0.0,
+    "dead_ids": [],
+    "ledger": {
+     "input": 16,
+     "kept": 16,
+     "distinct_after": 16,
+     "merge_targets": 0,
+     "absorbed_by_merges": 0,
+     "dropped": 0,
+     "demoted": 0,
+     "rolled_up": 0
+    },
+    "demoted": {},
+    "merged": {},
+    "dropped": [],
+    "catalogue_share_authored": 0.037383177570093455,
+    "catalogue_share_naive_newest": 0.02295552367288379,
+    "catalogue_share_normalized_newest": 0.02295552367288379
+   },
+   {
+    "file": "ext/DeTTECT/threat-actor-data/ATT&CK-Navigator-layers/20210331-RedCanary/attack_windows-linux-macos_redcanary---2021-threat-detection-report.json",
+    "layer": "RedCanary - 2021 Threat Detection Report",
+    "folder": "20210331-RedCanary",
+    "declared_version": null,
+    "n_distinct": 19,
+    "provenance_interval": [
+     "7.0",
+     "19.2"
+    ],
+    "n_consistent_releases": 30,
+    "dead_at_newest": 0,
+    "dead_share": 0.0,
+    "dead_ids": [],
+    "ledger": {
+     "input": 19,
+     "kept": 19,
+     "distinct_after": 19,
+     "merge_targets": 0,
+     "absorbed_by_merges": 0,
+     "dropped": 0,
+     "demoted": 0,
+     "rolled_up": 0
+    },
+    "demoted": {},
+    "merged": {},
+    "dropped": [],
+    "catalogue_share_authored": 0.04439252336448598,
+    "catalogue_share_naive_newest": 0.027259684361549498,
+    "catalogue_share_normalized_newest": 0.027259684361549498
+   },
+   {
+    "file": "ext/DeTTECT/threat-actor-data/ATT&CK-Navigator-layers/20210610-Cisco-Talos/attack_all_cisco-talos-(quarterly-report---incident-response-trends-from-spring-2021).json",
+    "layer": "Cisco Talos",
+    "folder": "20210610-Cisco-Talos",
+    "declared_version": null,
+    "n_distinct": 17,
+    "provenance_interval": [
+     "7.0",
+     "19.2"
+    ],
+    "n_consistent_releases": 30,
+    "dead_at_newest": 0,
+    "dead_share": 0.0,
+    "dead_ids": [],
+    "ledger": {
+     "input": 17,
+     "kept": 17,
+     "distinct_after": 17,
+     "merge_targets": 0,
+     "absorbed_by_merges": 0,
+     "dropped": 0,
+     "demoted": 0,
+     "rolled_up": 0
+    },
+    "demoted": {},
+    "merged": {},
+    "dropped": [],
+    "catalogue_share_authored": 0.0397196261682243,
+    "catalogue_share_naive_newest": 0.024390243902439025,
+    "catalogue_share_normalized_newest": 0.024390243902439025
+   },
+   {
+    "file": "ext/DeTTECT/threat-actor-data/ATT&CK-Navigator-layers/20220322-RedCanary/attack_redcanary---2022-threat-detection-report.json",
+    "layer": "RedCanary - 2022 Threat Detection Report",
+    "folder": "20220322-RedCanary",
+    "declared_version": null,
+    "n_distinct": 18,
+    "provenance_interval": [
+     "7.0",
+     "19.2"
+    ],
+    "n_consistent_releases": 30,
+    "dead_at_newest": 0,
+    "dead_share": 0.0,
+    "dead_ids": [],
+    "ledger": {
+     "input": 18,
+     "kept": 18,
+     "distinct_after": 18,
+     "merge_targets": 0,
+     "absorbed_by_merges": 0,
+     "dropped": 0,
+     "demoted": 0,
+     "rolled_up": 0
+    },
+    "demoted": {},
+    "merged": {},
+    "dropped": [],
+    "catalogue_share_authored": 0.04205607476635514,
+    "catalogue_share_naive_newest": 0.02582496413199426,
+    "catalogue_share_normalized_newest": 0.02582496413199426
+   },
+   {
+    "file": "ext/DeTTECT/threat-actor-data/ATT&CK-Navigator-layers/20221025-Cisco-Talos/attack_cisco-talos-(quarterly-report---incident-response-trends-in-q3-2022).json",
+    "layer": "Cisco Talos",
+    "folder": "20221025-Cisco-Talos",
+    "declared_version": null,
+    "n_distinct": 16,
+    "provenance_interval": [
+     "8.0",
+     "19.2"
+    ],
+    "n_consistent_releases": 27,
+    "dead_at_newest": 0,
+    "dead_share": 0.0,
+    "dead_ids": [],
+    "ledger": {
+     "input": 16,
+     "kept": 16,
+     "distinct_after": 16,
+     "merge_targets": 0,
+     "absorbed_by_merges": 0,
+     "dropped": 0,
+     "demoted": 0,
+     "rolled_up": 0
+    },
+    "demoted": {},
+    "merged": {},
+    "dropped": [],
+    "catalogue_share_authored": 0.030476190476190476,
+    "catalogue_share_naive_newest": 0.02295552367288379,
+    "catalogue_share_normalized_newest": 0.02295552367288379
+   }
+  ]
+ }
+}

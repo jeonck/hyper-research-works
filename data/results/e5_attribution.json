@@ -32,6 +32,16 @@
   ],
   "granularity_loss_top1": 0.26411290322580644,
   "recovery_top1": 0.3382352941176471,
+  "drift_penalty_p_sign": 4.330280643440687e-34,
+  "drift_penalty_discordant": [
+   143,
+   7
+  ],
+  "norm_gain_p_sign": 2.2666313270747196e-12,
+  "norm_gain_discordant": [
+   48,
+   2
+  ],
   "v": "1.0",
   "v_date": "2018-01-17",
   "w": "19.0",
@@ -70,6 +80,16 @@
   ],
   "granularity_loss_top1": 0.21600000000000008,
   "recovery_top1": 0.4170616113744076,
+  "drift_penalty_p_sign": 2.254980983106865e-58,
+  "drift_penalty_discordant": [
+   215,
+   4
+  ],
+  "norm_gain_p_sign": 1.7282743364816433e-24,
+  "norm_gain_discordant": [
+   90,
+   2
+  ],
   "v": "1.0",
   "v_date": "2018-01-17",
   "w": "19.0",
@@ -108,6 +128,16 @@
   ],
   "granularity_loss_top1": 0.16200000000000003,
   "recovery_top1": 0.6160714285714287,
+  "drift_penalty_p_sign": 1.263246226978513e-56,
+  "drift_penalty_discordant": [
+   234,
+   10
+  ],
+  "norm_gain_p_sign": 4.464290278809146e-38,
+  "norm_gain_discordant": [
+   141,
+   3
+  ],
   "v": "1.0",
   "v_date": "2018-01-17",
   "w": "19.0",
@@ -146,6 +176,16 @@
   ],
   "granularity_loss_top1": 0.1987951807228916,
   "recovery_top1": 0.3959731543624162,
+  "drift_penalty_p_sign": 1.5660589055377066e-38,
+  "drift_penalty_discordant": [
+   155,
+   6
+  ],
+  "norm_gain_p_sign": 3.469446951953614e-18,
+  "norm_gain_discordant": [
+   59,
+   0
+  ],
   "v": "2.0",
   "v_date": "2018-04-18",
   "w": "19.0",
@@ -184,6 +224,16 @@
   ],
   "granularity_loss_top1": 0.28400000000000003,
   "recovery_top1": 0.4354838709677419,
+  "drift_penalty_p_sign": 3.105944651644908e-45,
+  "drift_penalty_discordant": [
+   197,
+   11
+  ],
+  "norm_gain_p_sign": 1.737079286361358e-23,
+  "norm_gain_discordant": [
+   82,
+   1
+  ],
   "v": "2.0",
   "v_date": "2018-04-18",
   "w": "19.0",
@@ -222,6 +272,16 @@
   ],
   "granularity_loss_top1": 0.14400000000000002,
   "recovery_top1": 0.5844155844155845,
+  "drift_penalty_p_sign": 1.3147916195857517e-58,
+  "drift_penalty_discordant": [
+   241,
+   10
+  ],
+  "norm_gain_p_sign": 3.352870916839435e-37,
+  "norm_gain_discordant": [
+   138,
+   3
+  ],
   "v": "2.0",
   "v_date": "2018-04-18",
   "w": "19.0",
@@ -260,6 +320,16 @@
   ],
   "granularity_loss_top1": 0.18072289156626503,
   "recovery_top1": 0.3000000000000001,
+  "drift_penalty_p_sign": 4.974741492166966e-38,
+  "drift_penalty_discordant": [
+   157,
+   7
+  ],
+  "norm_gain_p_sign": 5.684341886080802e-14,
+  "norm_gain_discordant": [
+   45,
+   0
+  ],
   "v": "3.0",
   "v_date": "2018-10-23",
   "w": "19.0",
@@ -298,6 +368,16 @@
   ],
   "granularity_loss_top1": 0.21599999999999997,
   "recovery_top1": 0.5023696682464455,
+  "drift_penalty_p_sign": 2.019469757327016e-55,
+  "drift_penalty_discordant": [
+   218,
+   7
+  ],
+  "norm_gain_p_sign": 6.717643646022679e-31,
+  "norm_gain_discordant": [
+   107,
+   1
+  ],
   "v": "3.0",
   "v_date": "2018-10-23",
   "w": "19.0",
@@ -336,6 +416,16 @@
   ],
   "granularity_loss_top1": 0.124,
   "recovery_top1": 0.5574468085106383,
+  "drift_penalty_p_sign": 2.4615840245140257e-62,
+  "drift_penalty_discordant": [
+   242,
+   7
+  ],
+  "norm_gain_p_sign": 7.346839692639297e-40,
+  "norm_gain_discordant": [
+   131,
+   0
+  ],
   "v": "3.0",
   "v_date": "2018-10-23",
   "w": "19.0",
@@ -374,6 +464,16 @@
   ],
   "granularity_loss_top1": 0.17200000000000004,
   "recovery_top1": 0.41509433962264153,
+  "drift_penalty_p_sign": 1.418461131983934e-40,
+  "drift_penalty_discordant": [
+   166,
+   7
+  ],
+  "norm_gain_p_sign": 4.675621868843738e-19,
+  "norm_gain_discordant": [
+   67,
+   1
+  ],
   "v": "4.0",
   "v_date": "2019-04-30",
   "w": "19.0",
@@ -412,6 +512,16 @@
   ],
   "granularity_loss_top1": 0.19399999999999995,
   "recovery_top1": 0.44769874476987437,
+  "drift_penalty_p_sign": 2.510489242335496e-59,
+  "drift_penalty_discordant": [
+   251,
+   12
+  ],
+  "norm_gain_p_sign": 4.789402585702178e-30,
+  "norm_gain_discordant": [
+   109,
+   2
+  ],
   "v": "4.0",
   "v_date": "2019-04-30",
   "w": "19.0",
@@ -450,6 +560,16 @@
   ],
   "granularity_loss_top1": 0.09399999999999997,
   "recovery_top1": 0.5373134328358209,
+  "drift_penalty_p_sign": 2.259127130497156e-76,
+  "drift_penalty_discordant": [
+   271,
+   3
+  ],
+  "norm_gain_p_sign": 3.29585398809197e-42,
+  "norm_gain_discordant": [
+   145,
+   1
+  ],
   "v": "4.0",
   "v_date": "2019-04-30",
   "w": "19.0",
@@ -488,6 +608,16 @@
   ],
   "granularity_loss_top1": 0.15831663326653306,
   "recovery_top1": 0.35329341317365265,
+  "drift_penalty_p_sign": 7.630222111597842e-43,
+  "drift_penalty_discordant": [
+   174,
+   7
+  ],
+  "norm_gain_p_sign": 3.469446951953614e-18,
+  "norm_gain_discordant": [
+   59,
+   0
+  ],
   "v": "5.0",
   "v_date": "2019-07-19",
   "w": "19.0",
@@ -526,6 +656,16 @@
   ],
   "granularity_loss_top1": 0.22399999999999998,
   "recovery_top1": 0.5199999999999999,
+  "drift_penalty_p_sign": 1.8875234644428632e-59,
+  "drift_penalty_discordant": [
+   232,
+   7
+  ],
+  "norm_gain_p_sign": 1.2037062152420224e-35,
+  "norm_gain_discordant": [
+   117,
+   0
+  ],
   "v": "5.0",
   "v_date": "2019-07-19",
   "w": "19.0",
@@ -564,6 +704,16 @@
   ],
   "granularity_loss_top1": 0.15000000000000002,
   "recovery_top1": 0.602996254681648,
+  "drift_penalty_p_sign": 1.0994414899972692e-73,
+  "drift_penalty_discordant": [
+   272,
+   5
+  ],
+  "norm_gain_p_sign": 5.856989675107634e-46,
+  "norm_gain_discordant": [
+   163,
+   2
+  ],
   "v": "5.0",
   "v_date": "2019-07-19",
   "w": "19.0",
@@ -602,6 +752,16 @@
   ],
   "granularity_loss_top1": 0.18,
   "recovery_top1": 0.36734693877551017,
+  "drift_penalty_p_sign": 1.0400614991961454e-39,
+  "drift_penalty_discordant": [
+   151,
+   4
+  ],
+  "norm_gain_p_sign": 1.1102230246251565e-16,
+  "norm_gain_discordant": [
+   54,
+   0
+  ],
   "v": "6.0",
   "v_date": "2019-10-23",
   "w": "19.0",
@@ -640,6 +800,16 @@
   ],
   "granularity_loss_top1": 0.16599999999999993,
   "recovery_top1": 0.5324675324675324,
+  "drift_penalty_p_sign": 2.011548335030628e-59,
+  "drift_penalty_discordant": [
+   240,
+   9
+  ],
+  "norm_gain_p_sign": 5.924491528144329e-36,
+  "norm_gain_discordant": [
+   124,
+   1
+  ],
   "v": "6.0",
   "v_date": "2019-10-23",
   "w": "19.0",
@@ -678,6 +848,16 @@
   ],
   "granularity_loss_top1": 0.09399999999999997,
   "recovery_top1": 0.5572519083969465,
+  "drift_penalty_p_sign": 3.210897184475638e-72,
+  "drift_penalty_discordant": [
+   267,
+   5
+  ],
+  "norm_gain_p_sign": 8.35173884737591e-43,
+  "norm_gain_discordant": [
+   147,
+   1
+  ],
   "v": "6.0",
   "v_date": "2019-10-23",
   "w": "19.0",
@@ -716,6 +896,16 @@
   ],
   "granularity_loss_top1": 0.06400000000000006,
   "recovery_top1": 0.23809523809523872,
+  "drift_penalty_p_sign": 0.001913961001264397,
+  "drift_penalty_discordant": [
+   32,
+   11
+  ],
+  "norm_gain_p_sign": 0.125,
+  "norm_gain_discordant": [
+   6,
+   1
+  ],
   "v": "7.0",
   "v_date": "2020-03-31",
   "w": "19.0",
@@ -754,6 +944,16 @@
   ],
   "granularity_loss_top1": 0.051999999999999935,
   "recovery_top1": 0.14285714285714285,
+  "drift_penalty_p_sign": 1.7716986633331544e-07,
+  "drift_penalty_discordant": [
+   41,
+   6
+  ],
+  "norm_gain_p_sign": 0.266845703125,
+  "norm_gain_discordant": [
+   9,
+   4
+  ],
   "v": "7.0",
   "v_date": "2020-03-31",
   "w": "19.0",
@@ -792,6 +992,16 @@
   ],
   "granularity_loss_top1": 0.020000000000000018,
   "recovery_top1": 0.0,
+  "drift_penalty_p_sign": 2.744048833847046e-05,
+  "drift_penalty_discordant": [
+   25,
+   3
+  ],
+  "norm_gain_p_sign": 1.0,
+  "norm_gain_discordant": [
+   1,
+   1
+  ],
   "v": "7.0",
   "v_date": "2020-03-31",
   "w": "19.0",
@@ -830,6 +1040,16 @@
   ],
   "granularity_loss_top1": 0.03600000000000003,
   "recovery_top1": 0.3333333333333333,
+  "drift_penalty_p_sign": 0.07295138851623051,
+  "drift_penalty_discordant": [
+   25,
+   13
+  ],
+  "norm_gain_p_sign": 0.125,
+  "norm_gain_discordant": [
+   4,
+   0
+  ],
   "v": "8.0",
   "v_date": "2020-10-27",
   "w": "19.0",
@@ -868,6 +1088,16 @@
   ],
   "granularity_loss_top1": 0.02400000000000002,
   "recovery_top1": 0.06666666666666692,
+  "drift_penalty_p_sign": 0.013530986849218607,
+  "drift_penalty_discordant": [
+   24,
+   9
+  ],
+  "norm_gain_p_sign": 1.0,
+  "norm_gain_discordant": [
+   2,
+   1
+  ],
   "v": "8.0",
   "v_date": "2020-10-27",
   "w": "19.0",
@@ -906,6 +1136,16 @@
   ],
   "granularity_loss_top1": 0.008000000000000007,
   "recovery_top1": 0.1,
+  "drift_penalty_p_sign": 0.001953125,
+  "drift_penalty_discordant": [
+   10,
+   0
+  ],
+  "norm_gain_p_sign": 1.0,
+  "norm_gain_discordant": [
+   1,
+   0
+  ],
   "v": "8.0",
   "v_date": "2020-10-27",
   "w": "19.0",
@@ -944,6 +1184,16 @@
   ],
   "granularity_loss_top1": 0.026000000000000023,
   "recovery_top1": 0.1999999999999978,
+  "drift_penalty_p_sign": 0.00032491423189640045,
+  "drift_penalty_discordant": [
+   25,
+   5
+  ],
+  "norm_gain_p_sign": 0.125,
+  "norm_gain_discordant": [
+   4,
+   0
+  ],
   "v": "9.0",
   "v_date": "2021-04-29",
   "w": "19.0",
@@ -982,6 +1232,16 @@
   ],
   "granularity_loss_top1": 0.03200000000000003,
   "recovery_top1": 0.37499999999999784,
+  "drift_penalty_p_sign": 0.005222879350185394,
+  "drift_penalty_discordant": [
+   23,
+   7
+  ],
+  "norm_gain_p_sign": 0.03125,
+  "norm_gain_discordant": [
+   6,
+   0
+  ],
   "v": "9.0",
   "v_date": "2021-04-29",
   "w": "19.0",
@@ -1020,6 +1280,16 @@
   ],
   "granularity_loss_top1": 0.01200000000000001,
   "recovery_top1": 0.2,
+  "drift_penalty_p_sign": 0.1796875,
+  "drift_penalty_discordant": [
+   7,
+   2
+  ],
+  "norm_gain_p_sign": 1.0,
+  "norm_gain_discordant": [
+   1,
+   0
+  ],
   "v": "9.0",
   "v_date": "2021-04-29",
   "w": "19.0",
@@ -1058,6 +1328,16 @@
   ],
   "granularity_loss_top1": 0.008000000000000007,
   "recovery_top1": -0.055555555555555726,
+  "drift_penalty_p_sign": 0.0029350556433200836,
+  "drift_penalty_discordant": [
+   26,
+   8
+  ],
+  "norm_gain_p_sign": 1.0,
+  "norm_gain_discordant": [
+   2,
+   3
+  ],
   "v": "10.0",
   "v_date": "2021-10-21",
   "w": "19.0",
@@ -1096,6 +1376,16 @@
   ],
   "granularity_loss_top1": 0.04200000000000004,
   "recovery_top1": 0.25000000000000117,
+  "drift_penalty_p_sign": 0.022655844688415527,
+  "drift_penalty_discordant": [
+   18,
+   6
+  ],
+  "norm_gain_p_sign": 0.375,
+  "norm_gain_discordant": [
+   4,
+   1
+  ],
   "v": "10.0",
   "v_date": "2021-10-21",
   "w": "19.0",
@@ -1134,6 +1424,16 @@
   ],
   "granularity_loss_top1": 0.0040000000000000036,
   "recovery_top1": 0.0,
+  "drift_penalty_p_sign": 0.453125,
+  "drift_penalty_discordant": [
+   5,
+   2
+  ],
+  "norm_gain_p_sign": 1.0,
+  "norm_gain_discordant": [
+   1,
+   1
+  ],
   "v": "10.0",
   "v_date": "2021-10-21",
   "w": "19.0",
@@ -1172,6 +1472,16 @@
   ],
   "granularity_loss_top1": 0.02400000000000002,
   "recovery_top1": 0.0588235294117649,
+  "drift_penalty_p_sign": 0.002315700054168701,
+  "drift_penalty_discordant": [
+   23,
+   6
+  ],
+  "norm_gain_p_sign": 1.0,
+  "norm_gain_discordant": [
+   1,
+   0
+  ],
   "v": "11.0",
   "v_date": "2022-04-25",
   "w": "19.0",
@@ -1210,6 +1520,16 @@
   ],
   "granularity_loss_top1": 0.041999999999999926,
   "recovery_top1": 0.3333333333333333,
+  "drift_penalty_p_sign": 0.28627872467041016,
+  "drift_penalty_discordant": [
+   14,
+   8
+  ],
+  "norm_gain_p_sign": 0.625,
+  "norm_gain_discordant": [
+   3,
+   1
+  ],
   "v": "11.0",
   "v_date": "2022-04-25",
   "w": "19.0",
@@ -1248,6 +1568,16 @@
   ],
   "granularity_loss_top1": 0.0,
   "recovery_top1": 0.0,
+  "drift_penalty_p_sign": 0.3876953125,
+  "drift_penalty_discordant": [
+   8,
+   4
+  ],
+  "norm_gain_p_sign": 1.0,
+  "norm_gain_discordant": [
+   0,
+   0
+  ],
   "v": "11.0",
   "v_date": "2022-04-25",
   "w": "19.0",
@@ -1286,6 +1616,16 @@
   ],
   "granularity_loss_top1": 0.01200000000000001,
   "recovery_top1": 0.4,
+  "drift_penalty_p_sign": 0.005924612283706665,
+  "drift_penalty_discordant": [
+   21,
+   6
+  ],
+  "norm_gain_p_sign": 0.109375,
+  "norm_gain_discordant": [
+   8,
+   2
+  ],
   "v": "12.0",
   "v_date": "2022-10-25",
   "w": "19.0",
@@ -1324,6 +1664,16 @@
   ],
   "granularity_loss_top1": 0.038000000000000034,
   "recovery_top1": 0.6,
+  "drift_penalty_p_sign": 0.021270751953125,
+  "drift_penalty_discordant": [
+   13,
+   3
+  ],
+  "norm_gain_p_sign": 0.03125,
+  "norm_gain_discordant": [
+   6,
+   0
+  ],
   "v": "12.0",
   "v_date": "2022-10-25",
   "w": "19.0",
@@ -1362,6 +1712,16 @@
   ],
   "granularity_loss_top1": 0.008000000000000007,
   "recovery_top1": 0.3333333333333333,
+  "drift_penalty_p_sign": 0.0703125,
+  "drift_penalty_discordant": [
+   7,
+   1
+  ],
+  "norm_gain_p_sign": 0.5,
+  "norm_gain_discordant": [
+   2,
+   0
+  ],
   "v": "12.0",
   "v_date": "2022-10-25",
   "w": "19.0",
@@ -1400,6 +1760,16 @@
   ],
   "granularity_loss_top1": 0.0020000000000000018,
   "recovery_top1": 0.375,
+  "drift_penalty_p_sign": 0.005222879350185394,
+  "drift_penalty_discordant": [
+   23,
+   7
+  ],
+  "norm_gain_p_sign": 0.109375,
+  "norm_gain_discordant": [
+   8,
+   2
+  ],
   "v": "13.0",
   "v_date": "2023-04-25",
   "w": "19.0",
@@ -1438,6 +1808,16 @@
   ],
   "granularity_loss_top1": 0.0040000000000000036,
   "recovery_top1": 0.35294117647058937,
+  "drift_penalty_p_sign": 0.00022125244140625,
+  "drift_penalty_discordant": [
+   19,
+   2
+  ],
+  "norm_gain_p_sign": 0.03125,
+  "norm_gain_discordant": [
+   6,
+   0
+  ],
   "v": "13.0",
   "v_date": "2023-04-25",
   "w": "19.0",
@@ -1476,6 +1856,16 @@
   ],
   "granularity_loss_top1": 0.0020000000000000018,
   "recovery_top1": 0.2,
+  "drift_penalty_p_sign": 0.0625,
+  "drift_penalty_discordant": [
+   5,
+   0
+  ],
+  "norm_gain_p_sign": 1.0,
+  "norm_gain_discordant": [
+   1,
+   0
+  ],
   "v": "13.0",
   "v_date": "2023-04-25",
   "w": "19.0",
@@ -1514,6 +1904,16 @@
   ],
   "granularity_loss_top1": 0.010000000000000009,
   "recovery_top1": 0.5555555555555572,
+  "drift_penalty_p_sign": 0.0005335211753845215,
+  "drift_penalty_discordant": [
+   22,
+   4
+  ],
+  "norm_gain_p_sign": 0.00634765625,
+  "norm_gain_discordant": [
+   11,
+   1
+  ],
   "v": "14.0",
   "v_date": "2023-10-31",
   "w": "19.0",
@@ -1552,6 +1952,16 @@
   ],
   "granularity_loss_top1": 0.02200000000000002,
   "recovery_top1": 1.2857142857142858,
+  "drift_penalty_p_sign": 0.21003961563110352,
+  "drift_penalty_discordant": [
+   15,
+   8
+  ],
+  "norm_gain_p_sign": 0.00390625,
+  "norm_gain_discordant": [
+   9,
+   0
+  ],
   "v": "14.0",
   "v_date": "2023-10-31",
   "w": "19.0",
@@ -1590,6 +2000,16 @@
   ],
   "granularity_loss_top1": 0.0040000000000000036,
   "recovery_top1": 0.2,
+  "drift_penalty_p_sign": 0.1796875,
+  "drift_penalty_discordant": [
+   7,
+   2
+  ],
+  "norm_gain_p_sign": 1.0,
+  "norm_gain_discordant": [
+   1,
+   0
+  ],
   "v": "14.0",
   "v_date": "2023-10-31",
   "w": "19.0",
@@ -1628,6 +2048,16 @@
   ],
   "granularity_loss_top1": 0.0040000000000000036,
   "recovery_top1": 0.5000000000000018,
+  "drift_penalty_p_sign": 0.0004024505615234375,
+  "drift_penalty_discordant": [
+   18,
+   2
+  ],
+  "norm_gain_p_sign": 0.0078125,
+  "norm_gain_discordant": [
+   8,
+   0
+  ],
   "v": "15.0",
   "v_date": "2024-04-23",
   "w": "19.0",
@@ -1666,6 +2096,16 @@
   ],
   "granularity_loss_top1": 0.008000000000000007,
   "recovery_top1": 0.5,
+  "drift_penalty_p_sign": 0.03857421875,
+  "drift_penalty_discordant": [
+   10,
+   2
+  ],
+  "norm_gain_p_sign": 0.21875,
+  "norm_gain_discordant": [
+   5,
+   1
+  ],
   "v": "15.0",
   "v_date": "2024-04-23",
   "w": "19.0",
@@ -1704,6 +2144,16 @@
   ],
   "granularity_loss_top1": 0.006000000000000005,
   "recovery_top1": 0.5,
+  "drift_penalty_p_sign": 0.21875,
+  "drift_penalty_discordant": [
+   5,
+   1
+  ],
+  "norm_gain_p_sign": 0.5,
+  "norm_gain_discordant": [
+   2,
+   0
+  ],
   "v": "15.0",
   "v_date": "2024-04-23",
   "w": "19.0",
@@ -1742,6 +2192,16 @@
   ],
   "granularity_loss_top1": 0.008000000000000007,
   "recovery_top1": 0.727272727272731,
+  "drift_penalty_p_sign": 0.00738525390625,
+  "drift_penalty_discordant": [
+   13,
+   2
+  ],
+  "norm_gain_p_sign": 0.0078125,
+  "norm_gain_discordant": [
+   8,
+   0
+  ],
   "v": "16.0",
   "v_date": "2024-10-31",
   "w": "19.0",
@@ -1780,6 +2240,16 @@
   ],
   "granularity_loss_top1": 0.0119999999999999,
   "recovery_top1": 0.5,
+  "drift_penalty_p_sign": 0.109375,
+  "drift_penalty_discordant": [
+   8,
+   2
+  ],
+  "norm_gain_p_sign": 0.25,
+  "norm_gain_discordant": [
+   3,
+   0
+  ],
   "v": "16.0",
   "v_date": "2024-10-31",
   "w": "19.0",
@@ -1818,6 +2288,16 @@
   ],
   "granularity_loss_top1": 0.0020000000000000018,
   "recovery_top1": 0.5,
+  "drift_penalty_p_sign": 0.03125,
+  "drift_penalty_discordant": [
+   6,
+   0
+  ],
+  "norm_gain_p_sign": 0.25,
+  "norm_gain_discordant": [
+   3,
+   0
+  ],
   "v": "16.0",
   "v_date": "2024-10-31",
   "w": "19.0",
@@ -1856,6 +2336,16 @@
   ],
   "granularity_loss_top1": -0.0040000000000000036,
   "recovery_top1": 0.7777777777777778,
+  "drift_penalty_p_sign": 0.01171875,
+  "drift_penalty_discordant": [
+   10,
+   1
+  ],
+  "norm_gain_p_sign": 0.0654296875,
+  "norm_gain_discordant": [
+   9,
+   2
+  ],
   "v": "17.0",
   "v_date": "2025-04-22",
   "w": "19.0",
@@ -1894,6 +2384,16 @@
   ],
   "granularity_loss_top1": 0.006000000000000005,
   "recovery_top1": 1.1666666666666683,
+  "drift_penalty_p_sign": 0.03125,
+  "drift_penalty_discordant": [
+   6,
+   0
+  ],
+  "norm_gain_p_sign": 0.015625,
+  "norm_gain_discordant": [
+   7,
+   0
+  ],
   "v": "17.0",
   "v_date": "2025-04-22",
   "w": "19.0",
@@ -1932,6 +2432,16 @@
   ],
   "granularity_loss_top1": 0.0,
   "recovery_top1": 1.0,
+  "drift_penalty_p_sign": 0.5,
+  "drift_penalty_discordant": [
+   2,
+   0
+  ],
+  "norm_gain_p_sign": 0.5,
+  "norm_gain_discordant": [
+   2,
+   0
+  ],
   "v": "17.0",
   "v_date": "2025-04-22",
   "w": "19.0",
@@ -1970,6 +2480,16 @@
   ],
   "granularity_loss_top1": 0.0,
   "recovery_top1": 1.0,
+  "drift_penalty_p_sign": 0.0078125,
+  "drift_penalty_discordant": [
+   8,
+   0
+  ],
+  "norm_gain_p_sign": 0.0078125,
+  "norm_gain_discordant": [
+   8,
+   0
+  ],
   "v": "18.0",
   "v_date": "2025-10-28",
   "w": "19.0",
@@ -2008,6 +2528,16 @@
   ],
   "granularity_loss_top1": -0.0020000000000000018,
   "recovery_top1": 0.875,
+  "drift_penalty_p_sign": 0.0078125,
+  "drift_penalty_discordant": [
+   8,
+   0
+  ],
+  "norm_gain_p_sign": 0.015625,
+  "norm_gain_discordant": [
+   7,
+   0
+  ],
   "v": "18.0",
   "v_date": "2025-10-28",
   "w": "19.0",
@@ -2046,6 +2576,16 @@
   ],
   "granularity_loss_top1": 0.0040000000000000036,
   "recovery_top1": 1.0,
+  "drift_penalty_p_sign": 1.0,
+  "drift_penalty_discordant": [
+   2,
+   1
+  ],
+  "norm_gain_p_sign": 1.0,
+  "norm_gain_discordant": [
+   2,
+   1
+  ],
   "v": "18.0",
   "v_date": "2025-10-28",
   "w": "19.0",

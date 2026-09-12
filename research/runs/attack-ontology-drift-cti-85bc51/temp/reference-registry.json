@@ -112,7 +112,7 @@
   "id": "athenabench-arxiv-251101144-dynamic-live-api-benchmarking-as-the-fields-answer-t",
   "title": "AthenaBench (arXiv 2511.01144): dynamic live-API benchmarking as the field's answer to CTIBench staleness",
   "url": "https://arxiv.org/abs/2511.01144",
-  "tier": "institutional",
+  "tier": "ground_truth",
   "summary": "AthenaBench explicitly diagnoses CTIBench as static-knowledge-limited and regenerates items from live MITRE ATT&CK and NVD APIs, fixing currency but removing any stable release identifier, and scores lowest exactly on the two ATT&CK-bookkeeping-exposed tasks (RMS 32.6, TAA 39.0).",
   "content_type": "paper"
  },
@@ -175,7 +175,7 @@
   "id": "beyond-single-reports-intra-version-technique-confusability-as-a-rival-explanati",
   "title": "Beyond Single Reports \u2014 intra-version technique confusability as a rival explanation for label instability",
   "url": "https://arxiv.org/abs/2604.07470",
-  "tier": "institutional",
+  "tier": "ground_truth",
   "summary": "Best F1 78.6% (SolarWinds) / 54.9% (XZ Utils) after aggregating reports; 33.3% of misclassifications are between semantically similar same-tactic techniques \u2014 a synchronic confusability floor entangled with sub-technique restructuring.",
   "content_type": "paper"
  },
@@ -256,7 +256,7 @@
   "id": "ctiarena-to-cticonnect-arxiv-251011974-691-to-1860-qa-pairs-under-one-identifier",
   "title": "CTIArena to CTIConnect (arXiv 2510.11974): 691 to 1,860 QA pairs under one identifier, same 9-task taxonomy",
   "url": "https://arxiv.org/abs/2510.11974",
-  "tier": "institutional",
+  "tier": "ground_truth",
   "summary": "One arXiv record carries two benchmark identities: CTIArena v1 with 691 QA pairs and CTIConnect v2 (KDD 26) with 1,860 expert-verified pairs over the same 9 tasks and 5 sources, a 2.7x growth from re-verification rather than new adversary intelligence, and a citation hazard mirroring ATT&CK's own version instability.",
   "content_type": "paper"
  },
@@ -265,7 +265,7 @@
   "id": "ctibench-neurips-2024-authoritative-source-design-treats-attck-as-fixed-has-a-ti",
   "title": "CTIBench (NeurIPS 2024): authoritative-source design treats ATT&CK as fixed, has a time-controlled split for CVEs but none for ATT&CK",
   "url": "https://proceedings.neurips.cc/paper_files/paper/2024/file/5acd3c628aa1819fbf07c39ef73e7285-Paper-Datasets_and_Benchmarks_Track.pdf",
-  "tier": "institutional",
+  "tier": "ground_truth",
   "summary": "CTIBench justifies its ATT&CK/NVD/CWE sourcing on reproducibility grounds while treating those versioned ontologies as fixed; it builds a 2021 time-controlled comparison split for CVE data but no equivalent for its 60-item ATT&CK task, and reports persistent LLM knowledge gaps specifically in ATT&CK.",
   "content_type": "paper"
  },
@@ -310,7 +310,7 @@
   "id": "dos-and-donts-of-machine-learning-in-computer-security-arp-et-al",
   "title": "Dos and Don'ts of Machine Learning in Computer Security (Arp et al.)",
   "url": "https://www.usenix.org/conference/usenixsecurity22/presentation/arp",
-  "tier": "institutional",
+  "tier": "ground_truth",
   "summary": "Ten pitfalls of security ML including label inaccuracy and temporal snooping, all assuming a static class vocabulary; the natural home for an eleventh pitfall covering ontology drift.",
   "content_type": "paper"
  },
@@ -371,10 +371,10 @@
  {
   "n": 42,
   "id": "increttp-attck-version-updates-framed-as-concept-drift-and-why-incremental-learn",
-  "title": "IncreTTP: ATT&CK version updates framed as concept drift \u2014 and why incremental learning is not enough",
+  "title": "IncreTTP (SecureComm 2025): incremental learning across ATT&CK versions, abstract only",
   "url": "https://link.springer.com/chapter/10.1007/978-3-032-23450-6_2",
   "tier": "institutional",
-  "summary": "Closest prior art: treats ATT&CK releases as concept drift and proposes incremental learning, but addresses only technique additions, not revocation, sub-technique restructuring, tactic reassignment or silent description rewriting.",
+  "summary": "Closest prior art, reachable here only as the Springer abstract: existing TTP classifiers are described as static and dependent on fixed ATT&CK versions; IncreTTP answers with replay-based incremental learning plus multi-label and label-semantic distillation, keeping F1 with 5% replay. Which drift operators it handles cannot be verified without the full text.",
   "content_type": "paper"
  },
  {
@@ -526,7 +526,7 @@
   "id": "saha-et-al-kitten-or-panda-two-thirds-of-attck-threat-groups-have-no-group-speci",
   "title": "Saha et al. \u2014 Kitten or Panda? Two-thirds of ATT&CK threat groups have no group-specific behaviour",
   "url": "https://arxiv.org/abs/2506.10645",
-  "tier": "institutional",
+  "tier": "ground_truth",
   "summary": "Only 34% of ATT&CK groups (24% in Malpedia) have any group-specific technique \u2014 TTP attribution is non-identifiable for most groups within a single version, before drift enters.",
   "content_type": "paper"
  },
@@ -535,7 +535,7 @@
   "id": "schlette-et-al-measuring-and-visualizing-cyber-threat-intelligence-quality-ijis",
   "title": "Schlette et al. \u2014 Measuring and Visualizing Cyber Threat Intelligence Quality (IJIS 2021)",
   "url": "https://link.springer.com/article/10.1007/s10207-020-00490-y",
-  "tier": "institutional",
+  "tier": "ground_truth",
   "summary": "Computable CTI quality metrics at attribute/object/report level anchored to STIX 2, plus a Quality Indicator custom object \u2014 format-level scoring is blind to ontology drift by construction.",
   "content_type": "paper"
  },
@@ -553,7 +553,7 @@
   "id": "shen-et-al-asia-ccs-2024-whole-graph-re-analysis-of-mitre-evaluations-shows-per",
   "title": "Shen et al. (ASIA CCS 2024): whole-graph re-analysis of MITRE Evaluations shows per-technique tallies are the wrong unit",
   "url": "https://arxiv.org/abs/2401.15878",
-  "tier": "institutional",
+  "tier": "ground_truth",
   "summary": "Re-analyses multi-year MITRE Evaluations data with control/data-flow whole-graph analysis; finds graph-level correlation is what determines defence, protection delay is ubiquitous, and per-test protection rates are dominated by scenario construction.",
   "content_type": "paper"
  },
@@ -562,7 +562,7 @@
   "id": "sok-the-mitre-attck-framework-in-research-and-practice-non-comparability-already",
   "title": "SoK: The MITRE ATT&CK Framework in Research and Practice \u2014 non-comparability already established, temporal instability not",
   "url": "https://arxiv.org/abs/2304.07411",
-  "tier": "institutional",
+  "tier": "ground_truth",
   "summary": "Canonical SoK finds no standardization in how products implement ATT&CK and discrepancies across the literature \u2014 occupying the non-comparability slot synchronically and raising the novelty bar for a drift paper.",
   "content_type": "paper"
  },
@@ -598,7 +598,7 @@
   "id": "tesseract-eliminating-experimental-bias-in-malware-classification-across-space-a",
   "title": "TESSERACT: Eliminating Experimental Bias in Malware Classification across Space and Time",
   "url": "https://arxiv.org/abs/1807.07838",
-  "tier": "institutional",
+  "tier": "ground_truth",
   "summary": "Defines temporal and spatial bias in malware-classification evaluation and the AUT decay metric; constrains the sample-time axis but assumes a fixed binary label space throughout.",
   "content_type": "paper"
  },
@@ -661,7 +661,7 @@
   "id": "virkud-et-al-usenix-security-2024-attck-coverage-is-not-comparable-across-produc",
   "title": "Virkud et al. (USENIX Security 2024): ATT&CK coverage is not comparable across products \u2014 recomputed from the public artefact",
   "url": "https://www.usenix.org/conference/usenixsecurity24/presentation/virkud",
-  "tier": "institutional",
+  "tier": "ground_truth",
   "summary": "USENIX Sec'24: products disagree on the ATT&CK label for the same threat 51% of the time; recomputed from artefact repo: Splunk 38.9%, Elastic 37.5%, Sigma 57.8% of ATT&CK v11, pairwise Jaccard ~0.5, parents 79.6% vs sub-techniques 60.2%, and live Sigma rules still tagging revoked T1035/T1043/T1050.",
   "content_type": "paper"
  },
@@ -670,7 +670,7 @@
   "id": "when-benchmarks-age-quantifying-answer-key-decay-in-static-benchmarks",
   "title": "When Benchmarks Age: quantifying answer-key decay in static benchmarks",
   "url": "https://arxiv.org/abs/2510.07238",
-  "tier": "institutional",
+  "tier": "ground_truth",
   "summary": "Measures benchmark staleness with Dataset Drift Score, Evaluation Misleading Rate and Temporal Alignment Gap; the methodological template for measuring CTI benchmark decay under ATT&CK versioning.",
   "content_type": "paper"
  },
@@ -754,5 +754,23 @@
   "tier": "commentary",
   "summary": "Field articulation of the denominator problem: heatmaps count techniques with at least one mapped rule, a quantity unrelated to whether an alert fires; techniques vs implementations vs security-layers-per-technique are three non-inter-convertible denominators now in use.",
   "content_type": "blog"
+ },
+ {
+  "n": 85,
+  "id": "updates-updates-april-2026-mitre-attck",
+  "title": "MITRE ATT&CK v19 release notes (April 2026): Defense Evasion split into Stealth and Defense Impairment, Impair Defenses family revoked",
+  "url": "https://attack.mitre.org/resources/updates/updates-april-2026/",
+  "tier": "ground_truth",
+  "summary": "MITRE's official v19 release page states that the biggest change is the split of the Enterprise Defense Evasion tactic into Stealth and Defense Impairment; its Enterprise revocations list shows the Impair Defenses sub-techniques revoked into the new Disable or Modify Tools / Disable or Modify System Firewall arrangement, and it defines the release-note change classes (major, minor, patch, revocation, deprecation, deletion).",
+  "content_type": "docs"
+ },
+ {
+  "n": 86,
+  "id": "stix-version-21",
+  "title": "OASIS STIX Version 2.1 (Committee Specification): versioning by id+modified, revoked flag, and 'new version or new object?' left to the producer",
+  "url": "https://docs.oasis-open.org/cti/stix/v2.1/os/stix-v2.1-os.html",
+  "tier": "ground_truth",
+  "summary": "Section 3.6 defines STIX object versioning (id + modified identifies a version; revoked marks withdrawal) and Section 3.6.2 states that whether a material change is a new version or a new object is a data-quality problem for which the specification provides no normative text; Section 12 defines conformance as JSON encoding plus required properties and data types, so a conformant bundle can carry any vocabulary edition.",
+  "content_type": "policy"
  }
 ]

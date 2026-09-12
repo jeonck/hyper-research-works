@@ -33,6 +33,13 @@ Decomposition
 A secondary "historical" condition samples from the *actual* V-era profile
 (real archival labels) and reflects the combined effect of drift and genuine
 intelligence change.
+
+Per-row significance. Each contrast is also given an exact two-sided p-value
+from a paired sign test (McNemar's exact form): among trials where exactly one
+of the two conditions hit top-1, the number favouring the first condition is
+binomial(n_discordant, 1/2) under the null. It uses no random numbers, so the
+bootstrap and trial RNG streams are untouched; 37_statistics.py applies the
+Holm and Benjamini-Hochberg corrections across all rows.
 """
 from __future__ import annotations
 
@@ -126,6 +133,21 @@ def paired_bootstrap(a: list[float], b: list[float], rng: random.Random) -> tupl
     return means[int(0.025 * N_BOOT)], means[int(0.975 * N_BOOT)]
 
 
+def sign_test(a: list[float], b: list[float]) -> tuple[float, int, int]:
+    """Exact two-sided paired sign test on per-trial differences a - b.
+
+    Returns (p, n_plus, n_minus): trials where a hit and b missed, and the
+    reverse. Ties carry no information and are discarded. Deterministic.
+    """
+    n_plus = sum(1 for x, y in zip(a, b) if x > y)
+    n_minus = sum(1 for x, y in zip(a, b) if x < y)
+    n = n_plus + n_minus
+    if n == 0:
+        return 1.0, n_plus, n_minus
+    tail = sum(math.comb(n, i) for i in range(min(n_plus, n_minus) + 1)) / 2 ** n
+    return min(1.0, 2 * tail), n_plus, n_minus
+
+
 def evaluate(v: ad.Snapshot, w: ad.Snapshot, k: int, rng: random.Random) -> dict:
     pw_all = w.group_techniques(include_software=True)
     pv_all = v.group_techniques(include_software=True)
@@ -193,6 +215,13 @@ def evaluate(v: ad.Snapshot, w: ad.Snapshot, k: int, rng: random.Random) -> dict
     out["granularity_loss_top1"] = out["oracle_top1"] - out["contemporaneous_top1"]
     d = out["drift_penalty_top1"]
     out["recovery_top1"] = (out["norm_gain_top1"] / d) if d > 1e-9 else None
+    # exact sign-test p-values (appended after the bootstrap so the RNG order is unchanged)
+    p, np_, nm = sign_test(hits["contemporaneous"], hits["naive"])
+    out["drift_penalty_p_sign"] = p
+    out["drift_penalty_discordant"] = [np_, nm]
+    p, np_, nm = sign_test(hits["normalized"], hits["naive"])
+    out["norm_gain_p_sign"] = p
+    out["norm_gain_discordant"] = [np_, nm]
     return out
 
 

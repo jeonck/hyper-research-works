@@ -36,6 +36,7 @@ FIGURES = {
         "leaderboard reordering."),
     9: ("fig9_two_clocks", "The two clocks: the intensional clock at a common two-year "
         "horizon per cohort, and the five restructuring events across the three domains."),
+    10: ("fig10_cwe_capec", "The two clocks in three MITRE vocabularies: identifier-set Jaccard across consecutive releases, and edited and substantially rewritten shares by cohort age, for ATT&CK Enterprise, CWE and CAPEC."),
 }
 
 PREAMBLE = r"""\documentclass[11pt,a4paper]{article}

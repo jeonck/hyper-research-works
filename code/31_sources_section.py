@@ -40,12 +40,15 @@ def main() -> int:
 
     lines = ["", "## Sources", "",
              "Numbered as in this study's reference registry; only cited entries are listed.",
-             "Repository sources were read in full from local clones; the rest were reachable",
-             "here only as search summaries and are attributed as reported, never quoted.", ""]
+             "Repository artefacts were read in full from local clones, and entries marked",
+             "with an asterisk were read in full as open-access PDFs or specification text;",
+             "the rest were reachable here only as search summaries and are attributed as",
+             "reported, never quoted.", ""]
     for n in cited:
         e = registry[n]
         url = (e.get("url") or "").strip()
-        lines.append(f"{n}. {shorten(e['title'])}." + (f" {url}" if url else ""))
+        star = "*" if e.get("tier") == "ground_truth" and e.get("content_type") not in ("repo", "code") and not url.startswith("https://github.com") else ""
+        lines.append(f"{n}. {star}{shorten(e['title'])}." + (f" {url}" if url else ""))
     out = "\n".join(lines) + "\n"
 
     if "\n## Sources" in text:

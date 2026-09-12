@@ -1,0 +1,151 @@
+item_id,level,rationale
+A001,1,"B adds that the collected security-software information shapes follow-on behaviour, which is new context about the same discovery act and moves no boundary."
+A002,0,"The only change is deletion of detection, platform, data-source and permissions boilerplate; the behavioural text is byte-identical."
+A003,0,"B adds only a tautological restatement that a flood reduces availability plus a pluralisation fix, so nothing new is learned; torn with 1 and taking the lower."
+A004,0,Section markers change from === to ### and detection/platform boilerplate is dropped; the MBR and VBR behaviours are unchanged.
+A005,0,A single extra citation marker is the whole difference.
+A006,0,Tool names gain hyperlinks and detection/platform boilerplate is removed; the described discovery behaviour is untouched.
+A007,0,"Heading syntax changes, Net gains a link, and detection/platform boilerplate is dropped; all three OS examples are unchanged."
+A008,1,"B adds Office 365 examples of disabling audit logging to the existing AWS example, illustrating the same cloud-logging-disable behaviour that A already framed generically."
+A009,0,The only change is that the Impair Defenses hyperlink becomes plain text.
+A010,0,The opening sentence is re-worded and two referenced technique names are updated to their new titles; the same local-system collection is denoted.
+A011,1,"B appends network-device CLI history disabling, but A already defined the behaviour environment-neutrally as impairing any command interpreter's history, so this reads as another instance rather than a boundary move."
+A012,0,A single citation is added to an unchanged explanation of the source command.
+A013,0,Only two referenced technique names and links are updated to their renamed equivalents.
+A014,1,"B generalises ""logs or captured files"" into ""artifacts used as defensive indicators"" and names their purpose, but A's non-exhaustive wording already covered these host artifacts; torn with 2 and taking the lower."
+A015,0,System Firmware gains a hyperlink and platform/permissions boilerplate is removed.
+A016,2,"B adds module stomping and DLL hollowing, where the payload is shellcode written over a legitimate loaded module rather than an injected DLL, which A's definition of writing and loading a malicious DLL did not cover."
+A017,0,One citation is swapped for another; the Squiblydoo and COM-registration behaviour is unchanged.
+A018,0,"Only detection, platform and data-source boilerplate is removed."
+A019,0,Technique and tool names gain hyperlinks and detection/platform boilerplate is removed.
+A020,0,A single citation label is renamed.
+A021,0,"Only detection, platform, data-source and permissions boilerplate is removed."
+A022,0,Two existing sentences are swapped in order and a paragraph break is inserted.
+A023,0,B merges A's two duplicate consent-phishing paragraphs into one; no claim is added or removed.
+A024,2,"B extends the technique from local and domain accounts to cloud tenant accounts with an Office 365 Global Admin example, so cloud account creation that A did not cover is now in scope."
+A025,0,Only whitespace before citation markers changes.
+A026,0,Referenced techniques gain hyperlinks and detection/platform boilerplate is removed.
+A027,0,A comma is added and detection/platform boilerplate is removed.
+A028,1,"B names email servers supporting phishing as a further example, which A's general ""servers used during targeting"" wording already covered."
+A029,0,"A background fact is hedged from ""are digitally signed"" to ""may be digitally signed""; the abuse behaviour is unchanged."
+A030,1,"B replaces the generic cloud paragraph with concrete AWS, GCP and Azure instance-listing commands, illustrating cloud discovery that A's Cloud section already placed in scope."
+A031,3,"A defines side-loading as hijacking a WinSxS library manifest by replacing a legitimate library, while B defines it as planting and invoking a legitimate application positioned alongside a malicious payload, replacing the object acted on and the mechanism."
+A032,0,"Heading syntax changes, one code block is split in two, and detection/platform boilerplate is removed."
+A033,1,"B adds that gathered time may feed a time bomb or delayed execution, a new use of the same time-discovery act that A already said supports other techniques."
+A034,0,"""will likely look"" becomes ""may look"" with no other change."
+A035,0,"Only detection, platform and data-source boilerplate is removed."
+A036,0,A single citation is added to an otherwise identical description.
+A037,0,A tool name typo is corrected from Mauraena to Muraena.
+A038,0,"Only detection, platform, data-source and permissions boilerplate is removed."
+A039,0,B drops the detection guidance and platform and data-source metadata while the behavioural text stays identical.
+A040,0,One technique hyperlink is retargeted to a different identifier.
+A041,2,"B brings unchanged factory-default appliance credentials and publicly disclosed private keys into the technique, neither of which is the stolen or socially engineered credential that A confined the technique to."
+A042,0,A single citation is added to an unchanged description.
+A043,0,"Only detection, platform and data-source boilerplate is removed."
+A044,0,A second vulnerability-list reference (CWE top 25) is cited alongside OWASP; no adversary behaviour is added or described differently.
+A045,3,"A defines the technique as exploiting vulnerabilities to bypass security features, paradigmatically disabling defensive software, while B expressly excludes directly disabling defenses and re-centres it on exploitation for concealment and log suppression."
+A046,2,"B drops all of A's delaying behaviours (sleeps, scheduled delays, ping loops, API hammering) and keeps only time enumeration as a sandbox check, so sleep-to-outlast-analysis observations leave the technique while its core check survives."
+A047,0,One citation label is renamed.
+A048,1,"The technique is reframed from DCShadow itself to rogue domain controller registration with DCShadow as one method, but the mechanism described is identical so no observation changes tag."
+A049,1,"B generalises the named mail clients to ""most email clients"" and adds persistence-after-password-reset and MAPI rule hiding, all elaborations of setting up a forwarding rule that A already framed generically."
+A050,1,"B adds tricking a user into running malicious browser JavaScript, which is another instance of the user-performed execution A already covered."
+A051,0,Referenced techniques gain hyperlinks and detection/platform boilerplate is removed.
+A052,2,"A's specific treatments (mail files on disk, Exchange and O365 access, forwarding rules) are collapsed into a one-line general parent, the sub-technique split pattern that generalises rather than replaces the family."
+A053,2,"A's detailed variants are replaced by a general statement about manipulating artifact features that newly includes giving legitimate task or service names, generalising the parent beyond executable name, location, metadata and RTLO."
+A054,0,"The word ""attackers"" is replaced by ""adversaries""."
+A055,0,"Heading syntax changes, one lead-in phrase is re-worded, and detection/platform boilerplate is removed."
+A056,1,"B explains that native API functions can be reached through direct syscalls and notes accompanying unhooking of monitored functions, elaborating the same API-abuse behaviour A already defined as direct interaction with the native API."
+A057,0,"Heading syntax changes, referenced techniques gain links, ""Apple""/""Linux-based"" become ""macOS""/""POSIX-based"", and detection/platform boilerplate is removed."
+A058,0,Tool names gain hyperlinks and a long detection/platform block is removed.
+A059,0,AppleScript gains a hyperlink and detection/platform boilerplate is removed.
+A060,1,"B adds that an adversary who guesses a password may shift infrastructure to satisfy location-based conditional access, context around the same guessing behaviour rather than a new tagged act; torn with 2 and taking the lower."
+A061,0,"Only detection, platform and data-source boilerplate is removed."
+A062,0,"Process Injection gains a link, a citation name typo is fixed, and detection/platform boilerplate is removed."
+A063,2,"B brings service accounts (Azure service principals and managed identities, GCP service accounts, AWS role-assuming resources) into the technique alongside the user accounts A confined itself to."
+A064,2,"B deletes A's IaaS paragraph covering enumeration of cloud instances and virtual machines via provider APIs and CLIs, so that cloud-instance listing is no longer within what the identifier explicitly denotes."
+A065,1,"certutil is added to the list of Windows download utilities, another instance of the transfer behaviour A already covered."
+A066,1,Two concrete network-device commands are added as examples of the route and interface enumeration A already described.
+A067,0,"Hooking, Hypervisor and System Firmware gain hyperlinks and detection/platform boilerplate is removed."
+A068,0,"The clause ""Before compromising a victim"" is dropped from the opening sentence and nothing else changes."
+A069,0,"Only detection, platform and data-source boilerplate is removed."
+A070,0,"Only detection, platform and data-source boilerplate is removed."
+A071,2,"B re-centres the technique on centralized suites in enterprise or cloud environments and adds SaaS configuration management running commands on cloud instances and CI/CD integration, which A's third-party on-premises deployment systems did not cover."
+A072,1,"B adds setgid chmod forms, find commands for locating setuid binaries and a shell-escape note, all elaborations of the setuid abuse (including targeting existing vulnerable binaries) that A already described."
+A073,2,"A's detailed macro, Office Test and add-in treatments collapse into a one-line mention plus the Outlook paragraph, the sub-technique split pattern that generalises the parent rather than replacing it."
+A074,2,"B adds organization-wide Exchange transport rules acting on all inbound mail, which A's definition of rules inside a compromised user's mailbox did not cover."
+A075,0,The only change is the removal of a space before a citation marker.
+A076,0,A single citation is added.
+A077,2,"B adds coercing a remote machine over MS-EFSRPC with EfsRpcOpenFileRaw for NTLM relay, machine-account coercion that A's user-triggered SMB/WebDAV resource access did not cover."
+A078,2,"B widens the technique from processes created with a duplicated token to processes created with any different token, including runas using the target user's credentials, which A's DuplicateToken-based definition excluded."
+A079,1,"B adds Linux ccache/SSSD and macOS KCM ticket storage and extraction, new platform illustrations of the same ticket theft that A defined protocol-generically."
+A080,2,"B deletes the environmental keying treatment and narrows the definition to checking for an expected target-specific value before continuing execution, so key-derivation payloads that were guardrails under A sit outside B."
+A081,0,Two citations are added to an unchanged sentence.
+A082,1,"B adds the Registry WindowPosition trick that opens PowerShell windows off screen, another method of the window hiding A already covered."
+A083,0,"Only detection, platform, data-source and defense-bypassed boilerplate is removed."
+A084,0,"Referenced techniques gain hyperlinks, bullets are reformatted, and detection/platform boilerplate is removed."
+A085,1,"B appends context on when brute forcing occurs and what knowledge it builds on, leaving the set of brute-force observations unchanged."
+A086,0,"""application layer protocols"" becomes ""OSI application layer protocols"" with no other change."
+A087,2,"B adds creating the Performance key to load a malicious DLL and adding Parameters/ServiceDll subkeys, which go beyond A's redirection of the service's specified executable or failure command."
+A088,1,"B notes that sniffing also reveals service, version and network configuration details, new information about the yield of the capture behaviour A already defined generally."
+A089,1,"B adds an Azure AD Application Administrator adding credentials to a service principal, another instance of the credential-adding behaviour A already covered."
+A090,1,"B adds WMI background, a wmic shadow-copy deletion example, the wmic deprecation note and COM API access, all illustrating the WMI abuse A already covered."
+A091,2,"A's per-utility treatments (msiexec, mavinject, SyncAppvPublishingServer, odbcconf) collapse into a two-sentence general statement, the sub-technique split pattern that generalises the parent."
+A092,0,Spearphishing Attachment gains a hyperlink and detection/platform boilerplate is removed.
+A093,1,"B adds the opt-in nature of the quarantine flag, notarization and dylib checks, curl as a non-flagging download route and recursive xattr removal, all elaborations of the same flag-stripping behaviour."
+A094,2,"B drops icon mimicry, which A explicitly covered, and restricts the technique to matching names or locations of files, Registry keys and resources."
+A095,1,"B adds a list of services commonly targeted by password spraying and a logging note, detail about the same guessing behaviour."
+A096,0,"Only detection, platform and permissions boilerplate is removed."
+A097,0,"A summarising opening sentence is added, one technique link is retargeted and a parenthetical technique reference is dropped; the described behaviour is the same."
+A098,2,"A's per-utility sections (MSBuild, DNX, RCSI, WinDbg, Tracker) collapse into a general statement about trusted developer utilities, generalising the parent rather than replacing it."
+A099,1,"B adds chained sideloading and loader-for-a-loader DLL splitting, elaborations of the side-loading behaviour A already covered."
+A100,1,"B states the denial-of-availability purpose explicitly and notes that corruption may also destroy data, new framing of the same firmware overwrite behaviour."
+A101,0,"Only detection, platform and data-source boilerplate is removed."
+A102,0,Windows Admin Shares and Net gain hyperlinks and detection/platform boilerplate is removed.
+A103,1,"Residential proxy services are named as a source of acquired proxy infrastructure, an instance of the purchasing behaviour A already covered."
+A104,2,"B adds a Cloud section covering discovery of remote systems through cloud provider APIs, an environment A's Windows, Mac and Linux treatment did not reach."
+A105,1,"""data pipelines"" is added to the cloud collection mechanisms with a supporting citation, a new example of the automated collection A already covered."
+A106,0,A technique hyperlink is retargeted and a missing preposition is fixed.
+A107,1,"B drops three citations and the phrase ""at recurring intervals"", leaving the same unit-file directives and persistence behaviour in scope; torn with 0 and choosing the lower is unnecessary since no boundary moves."
+A108,0,"Only detection, platform and data-source boilerplate is removed."
+A109,2,"B drops A's login-item registration material and adds dylib injection through DYLD_INSERT_LIBRARIES and LSEnvironment keys, moving the boundary on both sides while keeping plist modification as the core."
+A110,0,The only change is HTML entity escaping of angle brackets inside one code block.
+A111,0,One citation is swapped for another.
+A112,2,"B adds silent process exit monitoring (SilentProcessExit keys launching a monitor program), which A's debugger-value definition of IFEO injection did not cover."
+A113,1,"B adds SNMP to the port list and wifi-router credential guessing via wireless authentication interfaces, further targets for the same guessing behaviour A defined generally; torn with 2 and taking the lower."
+A114,1,"B explains PubPrn's legitimate use, the script: parameter mechanism and its later hardening, all elaboration of the same proxy execution behaviour."
+A115,1,"B adds Exchange mailbox permissions, Azure service principal second passwords and AWS account trust as examples, each already an instance of the permission and credential modification A defined generically."
+A116,0,One technique hyperlink is retargeted to a new identifier.
+A117,2,"B recasts the technique around rpath ambiguity and weak-linked missing dylibs, bringing planting where no legitimate library exists into scope beyond A's shadowing of an existing library earlier in the search path."
+A118,1,Two concrete network-device commands are added as examples of the history clearing A already covered.
+A119,1,"ilasm.exe is added to the list of native compilers used after delivery, another instance of the same behaviour."
+A120,2,"B adds non-exploitation use of compromised websites to deliver users to token-stealing applications, which A's browser-exploitation definition excluded."
+A121,2,"B widens GUI use from causing a binary or script to execute to using the GUI to search for information as well, so interactive browsing with no execution is now covered."
+A122,1,"B adds execution of PowerShell code through the System.Management.Automation assembly without powershell.exe, another route to the same PowerShell abuse."
+A123,0,"Two technique hyperlinks are updated, tactic names are lower-cased and a parenthetical pointer is dropped."
+A124,1,"B names Applications alongside Service Principals as credential targets in Azure AD, a small addition to the same credential-adding behaviour, with the rest re-worded or re-cited."
+A125,0,One referenced technique's display name is updated in the link text.
+A126,0,cmd and Automated Collection gain hyperlinks and detection/platform boilerplate is removed.
+A127,2,"B extends password policy discovery to cloud environments with the AWS GetAccountPasswordPolicy API, an environment A's enterprise-network and OS shell treatment did not cover."
+A128,2,"B adds creating shadow copies or backups with vssadmin, wbadmin and esentutl, which is not the raw parsing of file system data structures A defined as direct volume access."
+A129,2,"B adds internal chat applications such as Microsoft Teams as a vector, where A's definition was confined to compromised internal email accounts."
+A130,1,"""publishing/subscribing"" is added to the list of protocol families, another instance of the same C2 blending behaviour."
+A131,1,"B adds a paragraph on reusing domain credentials across many machines via SSH or RDP, context around the same remote-service logon behaviour."
+A132,2,"B adds externally facing Exchange/O365 access and an email forwarding rule section, and abusing forwarding rules to siphon mail is not the acquisition of stored email A confined itself to."
+A133,0,"FTP, Windows Admin Shares and RDP gain hyperlinks and detection/platform boilerplate is removed."
+A134,1,"B contrasts hardware additions with payload delivery via removable storage and re-words ""computers"" as ""other computing devices"", clarifying rather than moving the boundary; torn with 2 and taking the lower."
+A135,1,"B adds DNS-setting manipulation examples and cross-references downgrade attacks and denial of service as related activity, elaborating on the same traffic-interception positioning."
+A136,0,"""targeted attack"" becomes ""targeted campaign"" and nothing else changes."
+A137,0,"Only detection guidance, certificate hash list, platform and data-source boilerplate is removed."
+A138,1,"B names credentialed access to remote services in the opening and adds a sentence on cloud-based infrastructure, both instances of the redundant access A already described in its body."
+A139,0,"Only detection, platform, data-source and defense-bypassed boilerplate is removed."
+A140,0,"Only detection, platform and defense-bypassed boilerplate is removed."
+A141,0,The technique is renamed to an abbreviation and the two sentences are recast from passive into adversary-subject phrasing with the same content.
+A142,0,"Section heading syntax changes and detection, platform, data-source and system-requirement boilerplate is removed."
+A143,1,"B names the AWS AssumeRole and GetFederationToken APIs as a way to obtain new temporary credentials, which A's ""credentials are new and generated by the adversary"" definition already admits; torn with 2 and taking the lower."
+A144,0,Component Object Model Hijacking gains a hyperlink and detection/platform boilerplate is removed.
+A145,0,"Only detection, platform and data-source boilerplate is removed."
+A146,0,A single citation is added.
+A147,0,"Heading syntax changes, referenced techniques gain hyperlinks, and detection/platform boilerplate is removed."
+A148,1,"B splits the OAuth link material into its own paragraph, names it consent phishing and adds that stolen tokens enable API actions on the user's behalf, with no change in what a link-based phish covers."
+A149,1,"B adds domain shadowing, creating malicious subdomains under an already-compromised domain, which A's hijacking of domains and subdomains for use in targeting already admits; torn with 2 and taking the lower."
+A150,3,"A's central case is C2 riding a known encryption protocol such as HTTPS or SSL/TLS, and B expressly excludes reliance on a protocol's inherent protections, re-centring the identifier on algorithms the adversary applies itself, which was only A's secondary case."

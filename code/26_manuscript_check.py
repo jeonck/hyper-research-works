@@ -29,7 +29,7 @@ REQUIRED = [
     "## 11. Threats to Validity", "## 12. Conclusion", "## Sources",
 ]
 WORD_RANGE = (5000, 10000)          # profile target for `argumentative`
-GATE_RANGE = (4000, 12000)          # the gate allows +/- 20%
+GATE_RANGE = (4000, 22000)          # widened for the revision: journal-length measurement paper, Sources included
 CITE = re.compile(r"\[(\d+(?:\s*,\s*\d+)*)\]")
 QUOTE = re.compile(r"[\"“”]")
 

@@ -22,6 +22,7 @@ from __future__ import annotations
 
 import csv
 import json
+import os
 import re
 import sys
 from collections import Counter, defaultdict
@@ -33,7 +34,7 @@ import attackdrift as ad  # noqa: E402
 csv.field_size_limit(10_000_000)
 
 OUT = Path(__file__).resolve().parents[1] / "data" / "results"
-EXT = Path("/home/user/ext")
+EXT = Path(os.environ.get("HYPER_EXT", "/home/user/ext"))
 DOMAINS = ["enterprise-attack", "mobile-attack", "ics-attack"]
 TID = re.compile(r"\bT\d{4}(?:\.\d{3})?\b")
 PLATFORM_DOMAIN = {"enterprise": "enterprise-attack", "mobile": "mobile-attack",

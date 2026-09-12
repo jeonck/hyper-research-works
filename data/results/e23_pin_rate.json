@@ -1,0 +1,3953 @@
+{
+  "seed": 20260912,
+  "date_range": [
+    "20230101",
+    "20260901"
+  ],
+  "frame": [
+    {
+      "id": "2608.28394v1",
+      "title": "BEACON: Behavior-Anchored Cross-Source Knowledge Graph Construction for Cyber Threat Intelligence",
+      "published": "2026-08-28",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2608.23185v1",
+      "title": "Towards Automated Cyber Threat Intelligence Elicitation in Underground Forums",
+      "published": "2026-08-24",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2608.19011v1",
+      "title": "From Threat Intelligence to Detection: Knowledge-driven Enrichment and Template-based Rule Grounding for Automated Sigma Rule Generation",
+      "published": "2026-08-19",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2608.17361v1",
+      "title": "Trusted Workflow Relays:Cross-Tenant Email Abuse and Composable Red Team Initial-Access Primitives in Multi-Tenant Clouds",
+      "published": "2026-08-18",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2608.16187v1",
+      "title": "Securing AI-Generated Code: A Just-in-Time Vulnerability Detection and Remediation Pipeline",
+      "published": "2026-08-17",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2608.06778v1",
+      "title": "Retrieval-Constrained Policy Optimization for Attack Technique Extraction from Cyber Threat Intelligence",
+      "published": "2026-08-07",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2608.05223v1",
+      "title": "Towards a Risk Assessment of Malicious Skill Files in Coding Agents",
+      "published": "2026-08-05",
+      "primary_category": "cs.SE"
+    },
+    {
+      "id": "2608.00901v1",
+      "title": "A Decade of Healthcare Cyber Threats: Empirical Analysis, Evidence-Based Prioritisation, and AI Threat Model",
+      "published": "2026-08-02",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2608.00895v1",
+      "title": "Multi-LLM Consensus Framework for Evaluating Banking-Sector NIDS Dataset Coverage of MITRE ATT&CK Techniques",
+      "published": "2026-08-01",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2607.27528v1",
+      "title": "ThreatForest: Multi-Agent Attack Tree Generation with Pluggable TTP Framework Mapping",
+      "published": "2026-07-29",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2607.25572v1",
+      "title": "Mapping CVEs to MITRE ATT&CK Techniques: A Curated Gold-Set Classifier and the Limits of LLM-Assisted Label Expansion",
+      "published": "2026-07-28",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2607.24563v2",
+      "title": "TRACE-CTI: Auditable Post-Extraction Governance of TTP Claims with Knowledge Graphs",
+      "published": "2026-07-27",
+      "primary_category": "cs.AI"
+    },
+    {
+      "id": "2607.23312v1",
+      "title": "A Structured Cyber Threat Intelligence Dataset Using STIX 2.1 Entities and MITRE ATT&CK Mappings",
+      "published": "2026-07-25",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2607.20713v1",
+      "title": "Security Vulnerability Patterns in AI-Generated Code: A Cross-Model Comparative Study",
+      "published": "2026-07-22",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2607.16175v1",
+      "title": "Evaluating Open-Weight LLMs for Generating Structured Threat Information for Autonomous Vehicle Vulnerabilities",
+      "published": "2026-07-17",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2607.14566v1",
+      "title": "Fully Automated End-to-End Adversary Emulation from MITRE ATT\\&CK Based Cyber Threat Intelligence Using LLMs",
+      "published": "2026-07-16",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2607.13087v1",
+      "title": "GDM AI Control Roadmap",
+      "published": "2026-07-13",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2607.11517v1",
+      "title": "Graph-Based Structural Evaluation of LLM-Translated Adversary Emulation Procedures",
+      "published": "2026-07-13",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2607.02615v2",
+      "title": "TAG: A Lightweight Framework for Test-Driven Agentic Artifact Generation",
+      "published": "2026-07-01",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2606.31557v2",
+      "title": "CVE-TTP KG: Knowledge Graph Linking Software Vulnerabilities to Attack Behaviors",
+      "published": "2026-06-30",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2606.27966v1",
+      "title": "Decoys Cannot Go Everywhere: Mapping the Deception Surface in MITRE ATT&CK",
+      "published": "2026-06-26",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2606.22214v1",
+      "title": "TRACE: A Threat Modelling Methodology for Distributed, Cloud-First, and Decentralized Organisations",
+      "published": "2026-06-20",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2606.21389v1",
+      "title": "From Production SIEM to Reusable Cybersecurity Artifacts",
+      "published": "2026-06-19",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2606.21377v1",
+      "title": "ARENA: An Architecture for Measuring the Transferability of Autonomous Cyber Defense",
+      "published": "2026-06-19",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2606.18651v2",
+      "title": "TGCM: Topic-Guided Consistency Modeling for One-Step Disentanglement of Interleaved APT Technique Sequences",
+      "published": "2026-06-17",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2606.18325v2",
+      "title": "Agentra: A Supervisable Multi-Agent Framework for Enterprise Intrusion Response",
+      "published": "2026-06-16",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2606.08173v1",
+      "title": "AI-Native Closed-Loop Security for 6G-Enabled Cyber-Physical Systems: From Edge Detection to Network-Wide Mitigation",
+      "published": "2026-06-06",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2606.05252v1",
+      "title": "From Attack Simulation to SIEM Rule: Deterministic Detection-as-Code Synthesis with Probe-Level Traceability",
+      "published": "2026-06-03",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2605.31199v1",
+      "title": "MAECO-Lite: Modular Ontology for Dynamic Malware Analysis",
+      "published": "2026-05-29",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2605.25836v1",
+      "title": "TTPrint: Evidence-Grounded TTP Extraction via Diverge-then-Converge Verification",
+      "published": "2026-05-25",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2605.19899v1",
+      "title": "reconCTI: A Proactive Approach to Cyber-Threat Intelligence",
+      "published": "2026-05-19",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2605.13337v1",
+      "title": "Context-Aware Web Attack Detection in Open-Source SIEM Systems via MITRE ATT&CK-Enriched Behavioral Profiling",
+      "published": "2026-05-13",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2605.11682v2",
+      "title": "HySecTwin: A Knowledge-Driven Digital Twin Framework Augmented with Hybrid Reasoning for Cyber-Physical Systems",
+      "published": "2026-05-12",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2605.09792v1",
+      "title": "Operationalizing Cybersecurity Governance for Mitigation Planning with Attack-Path Modeling and Reinforcement Learning",
+      "published": "2026-05-10",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2605.06486v1",
+      "title": "Autonomous Adversary: Red-Teaming in the age of LLM",
+      "published": "2026-05-07",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2605.05807v1",
+      "title": "LCC-LLM: Leveraging Code-Centric Large Language Models for Malware Attribution",
+      "published": "2026-05-07",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2605.01892v1",
+      "title": "CyberAId: AI-Driven Cybersecurity for Financial Service Providers",
+      "published": "2026-05-03",
+      "primary_category": "cs.AI"
+    },
+    {
+      "id": "2604.26217v1",
+      "title": "OpenSOC-AI: Democratizing Security Operations with Parameter Efficient LLM Log Analysis",
+      "published": "2026-04-29",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2604.23905v1",
+      "title": "SMSI: System Model Security Inference: Automated Threat Modeling for Cyber-Physical Systems",
+      "published": "2026-04-26",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2604.23545v1",
+      "title": "Safeguarding Skies: Airport Cybersecurity in the Digital Age",
+      "published": "2026-04-26",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2604.23025v2",
+      "title": "Self-Supervised Learning for Android Malware Detection on a Time-Stamped Dataset",
+      "published": "2026-04-24",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2604.21840v1",
+      "title": "TraceScope: Interactive URL Triage via Decoupled Checklist Adjudication",
+      "published": "2026-04-23",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2604.19533v3",
+      "title": "Cyber Defense Benchmark: Agentic Threat Hunting Evaluation for LLMs in SecOps",
+      "published": "2026-04-21",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2604.13308v1",
+      "title": "Threat Modeling and Attack Surface Analysis of IoT-Enabled Controlled Environment Agriculture Systems",
+      "published": "2026-04-14",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2604.12228v1",
+      "title": "From IOCs to Regex: Automating CTI Operationalization for SOC with LLMs",
+      "published": "2026-04-14",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2604.09523v3",
+      "title": "NetForge RL: A Multi-Agent Simulation Environment for Cyber Defense with Durative Actions",
+      "published": "2026-04-10",
+      "primary_category": "cs.LG"
+    },
+    {
+      "id": "2604.06856v1",
+      "title": "Enhancing Secure Intent-Based Networking with an Agentic AI: The EU Project MARE Approach",
+      "published": "2026-04-08",
+      "primary_category": "cs.NI"
+    },
+    {
+      "id": "2604.04426v1",
+      "title": "ShieldNet: Network-Level Guardrails against Emerging Supply-Chain Injections in Agentic Systems",
+      "published": "2026-04-06",
+      "primary_category": "cs.AI"
+    },
+    {
+      "id": "2604.02377v1",
+      "title": "What Are Adversaries Doing? Automating Tactics, Techniques, and Procedures Extraction: A Systematic Review",
+      "published": "2026-04-01",
+      "primary_category": "cs.SE"
+    },
+    {
+      "id": "2604.00303v1",
+      "title": "Cybersecurity Risk Assessment for CubeSat Missions: Adapting Established Frameworks for Resource-Constrained Environments",
+      "published": "2026-03-31",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2604.14166v1",
+      "title": "Hierarchical Retrieval Augmented Generation for Adversarial Technique Annotation in Cyber Threat Intelligence Text",
+      "published": "2026-03-24",
+      "primary_category": "cs.CL"
+    },
+    {
+      "id": "2603.18196v3",
+      "title": "Retrieval-Augmented LLMs for Security Incident Analysis",
+      "published": "2026-03-18",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2603.16694v2",
+      "title": "An Empirical Study of Observability Limits in Advanced Software Supply Chain Attacks",
+      "published": "2026-03-17",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2603.16969v2",
+      "title": "DeepStage: Learning Autonomous Defense Policies Against Multi-Stage APT Campaigns",
+      "published": "2026-03-17",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2603.12455v1",
+      "title": "Operationalising Cyber Risk Management Using AI: Connecting Cyber Incidents to MITRE ATT&CK Techniques, Security Controls, and Metrics",
+      "published": "2026-03-12",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2603.07560v2",
+      "title": "Learning the APT Kill Chain: Temporal Reasoning over Provenance Data for Attack Stage Estimation",
+      "published": "2026-03-08",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2602.22433v1",
+      "title": "Predicting Known Vulnerabilities from Attack Descriptions Using Sentence Transformers",
+      "published": "2026-02-25",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2602.21524v2",
+      "title": "Quantum Attacks Targeting Nuclear Power Plants: Threat Analysis, Defense and Mitigation Strategies",
+      "published": "2026-02-25",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2602.20663v1",
+      "title": "ICSSPulse: A Modular LLM-Assisted Platform for Industrial Control System Penetration Testing",
+      "published": "2026-02-24",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2601.14556v1",
+      "title": "Constructing Multi-label Hierarchical Classification Models for MITRE ATT&CK Text Tagging",
+      "published": "2026-01-21",
+      "primary_category": "cs.LG"
+    },
+    {
+      "id": "2601.07122v2",
+      "title": "Enhancing Cloud Network Resilience via a Robust LLM-Empowered Multi-Agent Reinforcement Learning Framework",
+      "published": "2026-01-12",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2601.06779v1",
+      "title": "CyberLLM-FINDS 2025: Instruction-Tuned Fine-tuning of Domain-Specific LLMs with Retrieval-Augmented Generation and Graph Integration for MITRE Evaluation",
+      "published": "2026-01-11",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2601.03287v1",
+      "title": "Automated Post-Incident Policy Gap Analysis via Threat-Informed Evidence Mapping using Large Language Models",
+      "published": "2026-01-04",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2512.18714v3",
+      "title": "An Evidence-Driven Analysis of Threat Information Sharing Challenges for Industrial Control Systems and Future Directions",
+      "published": "2025-12-21",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2512.14846v1",
+      "title": "MALCDF: A Distributed Multi-Agent LLM Framework for Real-Time Cyber",
+      "published": "2025-12-16",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2512.12078v3",
+      "title": "The Procedural Semantics Gap in Structured CTI: A Measurement-Driven STIX Analysis for APT Emulation",
+      "published": "2025-12-12",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2512.09485v1",
+      "title": "Advancing LLM-Based Security Automation with Customized Group Relative Policy Optimization for Zero-Touch Networks",
+      "published": "2025-12-10",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2512.08864v2",
+      "title": "Toward Quantitative Modeling of Cybersecurity Risks Due to AI Misuse",
+      "published": "2025-12-09",
+      "primary_category": "cs.CY"
+    },
+    {
+      "id": "2512.08107v1",
+      "title": "Detecting Ambiguity Aversion in Cyberattack Behavior to Inform Cognitive Defense Strategies",
+      "published": "2025-12-08",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2512.05321v1",
+      "title": "A Practical Honeypot-Based Threat Intelligence Framework for Cyber Defence in the Cloud",
+      "published": "2025-12-04",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2511.17761v1",
+      "title": "StealthCup: Realistic, Multi-Stage, Evasion-Focused CTF for Benchmarking IDS",
+      "published": "2025-11-21",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2511.12743v1",
+      "title": "An Evaluation Framework for Network IDS/IPS Datasets: Leveraging MITRE ATT&CK and Industry Relevance Metrics",
+      "published": "2025-11-16",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2511.11366v1",
+      "title": "Grid-STIX: A STIX 2.1-Compliant Cyber-Physical Security Ontology for Power Grid",
+      "published": "2025-11-14",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2511.08352v1",
+      "title": "Endpoint Security Agent: A Comprehensive Approach to Real-time System Monitoring and Threat Detection",
+      "published": "2025-11-11",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2511.06429v1",
+      "title": "Inside LockBit: Technical, Behavioral, and Financial Anatomy of a Ransomware Empire",
+      "published": "2025-11-09",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2511.03799v1",
+      "title": "Temporal Analysis Framework for Intrusion Detection Systems: A Novel Taxonomy for Time-Aware Cybersecurity",
+      "published": "2025-11-05",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2511.00360v1",
+      "title": "Mind the Gap: Missing Cyber Threat Coverage in NIDS Datasets for the Energy Sector",
+      "published": "2025-11-01",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2510.27140v3",
+      "title": "Measuring the Security of Mobile LLM Agents under Adversarial Prompts from Untrusted Third-Party Channels",
+      "published": "2025-10-31",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2510.21601v1",
+      "title": "PTMF: A Privacy Threat Modeling Framework for IoT with Expert-Driven Threat Propagation Analysis",
+      "published": "2025-10-24",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2510.20930v1",
+      "title": "Security Logs to ATT&CK Insights: Leveraging LLMs for High-Level Threat Understanding and Cognitive Trait Inference",
+      "published": "2025-10-23",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2510.14233v1",
+      "title": "RHINO: Guided Reasoning for Mapping Network Logs to Adversarial Tactics and Techniques with Large Language Models",
+      "published": "2025-10-16",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2510.11974v2",
+      "title": "CTIConnect: A Benchmark for Retrieval-Augmented LLMs over Heterogeneous Cyber Threat Intelligence",
+      "published": "2025-10-13",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2510.07363v2",
+      "title": "L2M-AID: Autonomous Cyber-Physical Defense by Fusing Semantic Reasoning of Large Language Models with Multi-Agent Reinforcement Learning (Preprint)",
+      "published": "2025-10-08",
+      "primary_category": "cs.AI"
+    },
+    {
+      "id": "2510.06607v3",
+      "title": "Your Harness is Not Secure: Benchmarking Real-world Threat of Command Line Interface Agent",
+      "published": "2025-10-08",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2510.03407v1",
+      "title": "Security Analysis and Threat Modeling of Research Management Applications [Extended Version]",
+      "published": "2025-10-03",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2510.01409v2",
+      "title": "OntoLogX: Ontology-Guided Knowledge Graph Extraction from Cybersecurity Logs with Large Language Models",
+      "published": "2025-10-01",
+      "primary_category": "cs.AI"
+    },
+    {
+      "id": "2509.22040v2",
+      "title": "\"Your AI, My Shell\": Demystifying Prompt Injection Attacks on Agentic AI Coding Editors",
+      "published": "2025-09-26",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2509.07939v2",
+      "title": "Guided Reasoning in LLM-Driven Penetration Testing Using Structured Attack Trees",
+      "published": "2025-09-09",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2509.05379v1",
+      "title": "ThreatGPT: An Agentic AI Framework for Enhancing Public Safety through Threat Modeling",
+      "published": "2025-09-04",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2509.10482v2",
+      "title": "AegisShield: Democratizing Cyber Threat Modeling with Generative AI",
+      "published": "2025-08-29",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2508.21005v2",
+      "title": "Measuring Ransomware Lateral Movement Susceptibility via Privilege-Weighted Adjacency Matrix Exponentiation",
+      "published": "2025-08-28",
+      "primary_category": "cs.DM"
+    },
+    {
+      "id": "2508.18230v1",
+      "title": "KillChainGraph: ML Framework for Predicting and Mapping ATT&CK Techniques",
+      "published": "2025-08-19",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2508.02942v1",
+      "title": "LMDG: Advancing Lateral Movement Detection Through High-Fidelity Dataset Generation",
+      "published": "2025-08-04",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2507.18037v2",
+      "title": "Your ATs to Ts: MITRE ATT&CK Attack Technique to P-SSCRM Task Mapping",
+      "published": "2025-07-24",
+      "primary_category": "cs.SE"
+    },
+    {
+      "id": "2507.16852v1",
+      "title": "SynthCTI: LLM-Driven Synthetic CTI Generation to enhance MITRE Technique Mapping",
+      "published": "2025-07-21",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2507.09074v1",
+      "title": "Favicon Trojans: Executable Steganography Via Ico Alpha Channel Exploitation",
+      "published": "2025-07-11",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2506.13434v1",
+      "title": "From Promise to Peril: Rethinking Cybersecurity Red and Blue Teaming in the Age of LLMs",
+      "published": "2025-06-16",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2506.12113v4",
+      "title": "Semantic Preprocessing for LLM-based Malware Analysis",
+      "published": "2025-06-13",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2506.10645v2",
+      "title": "Kitten or Panda? Measuring the Specificity of Threat Group Behaviors in Public CTI Knowledge Bases",
+      "published": "2025-06-12",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2506.05740v1",
+      "title": "FIST: A Structured Threat Modeling Framework for Fraud Incidents",
+      "published": "2025-06-06",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2505.17107v1",
+      "title": "CRAKEN: Cybersecurity LLM Agent with Knowledge-Based Execution",
+      "published": "2025-05-21",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2505.13641v2",
+      "title": "An Alignment Between the CRA's Essential Requirements and the ATT&CK's Mitigations",
+      "published": "2025-05-19",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2505.11547v1",
+      "title": "On Technique Identification and Threat-Actor Attribution using LLMs and Embedding Models",
+      "published": "2025-05-15",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2505.09261v1",
+      "title": "Instantiating Standards: Enabling Standard-Driven Text TTP Extraction with Evolvable Memory",
+      "published": "2025-05-14",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2505.03147v1",
+      "title": "Towards Effective Identification of Attack Techniques in Cyber Threat Intelligence Reports using Large Language Models",
+      "published": "2025-05-06",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2505.18156v1",
+      "title": "InjectLab: A Tactical Framework for Adversarial Threat Modeling Against Large Language Models",
+      "published": "2025-04-16",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2504.05866v1",
+      "title": "CTI-HAL: A Human-Annotated Dataset for Cyber Threat Intelligence Analysis",
+      "published": "2025-04-08",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2504.01803v1",
+      "title": "DISINFOX: an open-source threat exchange platform serving intelligence on disinformation and influence operations",
+      "published": "2025-04-02",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2503.17219v1",
+      "title": "Cyber Campaign Fractals -- Geometric Analysis of Hierarchical Cyber Attack Taxonomies",
+      "published": "2025-03-21",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2503.15866v1",
+      "title": "DroidTTP: Mapping Android Applications with TTP for Cyber Threat Intelligence",
+      "published": "2025-03-20",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2502.20997v1",
+      "title": "Toward interoperable representation and sharing of disinformation incidents in cyber threat intelligence",
+      "published": "2025-02-28",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2502.10931v2",
+      "title": "D-CIPHER: Dynamic Collaborative Intelligent Multi-Agent System with Planner and Heterogeneous Executors for Offensive Security",
+      "published": "2025-02-15",
+      "primary_category": "cs.AI"
+    },
+    {
+      "id": "2502.10825v1",
+      "title": "MITRE ATT&CK Applications in Cybersecurity and The Way Forward",
+      "published": "2025-02-15",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2502.02337v1",
+      "title": "Rule-ATT&CK Mapper (RAM): Mapping SIEM Rules to TTPs Using LLMs",
+      "published": "2025-02-04",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2501.15578v1",
+      "title": "A Complexity-Informed Approach to Optimise Cyber Defences",
+      "published": "2025-01-26",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2501.13268v1",
+      "title": "Threat-based Security Controls to Protect Industrial Control Systems",
+      "published": "2025-01-22",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2412.16484v1",
+      "title": "Automated CVE Analysis: Harnessing Machine Learning In Designing Question-Answering Models For Cybersecurity Information Extraction",
+      "published": "2024-12-21",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2412.15348v1",
+      "title": "Autonomous Vehicle Security: A Deep Dive into Threat Modeling",
+      "published": "2024-12-19",
+      "primary_category": "eess.SY"
+    },
+    {
+      "id": "2412.10978v1",
+      "title": "Labeling NIDS Rules with MITRE ATT&CK Techniques: Machine Learning vs. Large Language Models",
+      "published": "2024-12-14",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2411.18755v1",
+      "title": "Cyber-Attack Technique Classification Using Two-Stage Trained Large Language Models",
+      "published": "2024-11-27",
+      "primary_category": "cs.LG"
+    },
+    {
+      "id": "2411.13459v1",
+      "title": "SoK: A Systems Perspective on Compound AI Threats and Countermeasures",
+      "published": "2024-11-20",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2411.13138v2",
+      "title": "SAGA: Synthetic Audit Log Generation for APT Campaigns",
+      "published": "2024-11-20",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2410.22602v1",
+      "title": "A Cascade Approach for APT Campaign Attribution in System Event Logs: Technique Hunting and Subgraph Matching",
+      "published": "2024-10-29",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2410.11573v2",
+      "title": "Clustering doc2vec output for topic-dimensionality reduction: A MITRE ATT&CK calibration",
+      "published": "2024-10-15",
+      "primary_category": "cs.CE"
+    },
+    {
+      "id": "2409.02074v1",
+      "title": "RACONTEUR: A Knowledgeable, Insightful, and Portable LLM-Powered Shell Command Explainer",
+      "published": "2024-09-03",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2408.12081v1",
+      "title": "Towards Threat Modelling of IoT Context-Sharing Platforms",
+      "published": "2024-08-22",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2408.07933v1",
+      "title": "Adapting cybersecurity frameworks to manage frontier AI risks: A defense-in-depth approach",
+      "published": "2024-08-15",
+      "primary_category": "cs.CY"
+    },
+    {
+      "id": "2407.19222v1",
+      "title": "Enhancing cybersecurity defenses: a multicriteria decision-making approach to MITRE ATT&CK mitigation strategy",
+      "published": "2024-07-27",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2407.14255v1",
+      "title": "Bridging the Gap: A Survey and Classification of Research-Informed Ethical Hacking Tools",
+      "published": "2024-07-19",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2407.08532v1",
+      "title": "Tactics, Techniques, and Procedures (TTPs) in Interpreted Malware: A Zero-Shot Generation with Large Language Models",
+      "published": "2024-07-11",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2407.05290v1",
+      "title": "Lack of Systematic Approach to Security of IoT Context Sharing Platforms",
+      "published": "2024-07-07",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2406.15210v1",
+      "title": "Assessing Effectiveness of Cyber Essentials Technical Controls",
+      "published": "2024-06-21",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2406.05933v1",
+      "title": "A Relevance Model for Threat-Centric Ranking of Cybersecurity Vulnerabilities",
+      "published": "2024-06-09",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2405.15908v1",
+      "title": "Knowledge-Informed Auto-Penetration Testing Based on Reinforcement Learning with Reward Machine",
+      "published": "2024-05-24",
+      "primary_category": "cs.AI"
+    },
+    {
+      "id": "2405.01888v1",
+      "title": "Securing the Open RAN Infrastructure: Exploring Vulnerabilities in Kubernetes Deployments",
+      "published": "2024-05-03",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2404.17989v2",
+      "title": "Who Shares What? An Empirical Analysis of Security Conference Content Across Academia and Industry",
+      "published": "2024-04-27",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2404.12783v3",
+      "title": "A Proactive Decoy Selection Scheme for Cyber Deception using MITRE ATT&CK",
+      "published": "2024-04-19",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2404.07765v1",
+      "title": "AnnoCTR: A Dataset for Detecting and Linking Entities, Tactics, and Techniques in Cyber Threat Reports",
+      "published": "2024-04-11",
+      "primary_category": "cs.CL"
+    },
+    {
+      "id": "2403.00878v1",
+      "title": "Crimson: Empowering Strategic Reasoning in Cybersecurity through Large Language Models",
+      "published": "2024-03-01",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2401.08127v1",
+      "title": "Framework and Classification of Indicator of Compromise for physics-based attacks",
+      "published": "2024-01-16",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2401.07995v2",
+      "title": "The Pulse of Fileless Cryptojacking Attacks: Malicious PowerShell Scripts",
+      "published": "2024-01-15",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2401.07783v2",
+      "title": "Cybersecurity and Embodiment Integrity for Modern Robots: A Conceptual Framework",
+      "published": "2024-01-15",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2401.01865v1",
+      "title": "Attackers reveal their arsenal: An investigation of adversarial techniques in CTI reports",
+      "published": "2024-01-03",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2401.00280v3",
+      "title": "Advancing TTP Analysis: Harnessing the Power of Large Language Models with Retrieval Augmented Generation",
+      "published": "2023-12-30",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2312.01681v1",
+      "title": "Malicious Lateral Movement in 5G Core With Network Slicing And Its Detection",
+      "published": "2023-12-04",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2312.01330v2",
+      "title": "Rethinking Satellite Cybersecurity: A System-Level Taxonomy and Longitudinal Analysis",
+      "published": "2023-12-03",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2311.03809v2",
+      "title": "SoK: Security Below the OS -- A Security Analysis of UEFI",
+      "published": "2023-11-07",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2310.13079v1",
+      "title": "Critical Path Prioritization Dashboard for Alert-driven Attack Graphs",
+      "published": "2023-10-19",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2308.14016v1",
+      "title": "MITRE ATT&CK: State of the Art and Way Forward",
+      "published": "2023-08-27",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2307.10877v1",
+      "title": "Battle Ground: Data Collection and Labeling of CTF Games to Understand Human Cyber Operators",
+      "published": "2023-07-20",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2306.09242v1",
+      "title": "Tecnicas Avanzadas de Ciberseguridad: Integracion y Evolucion de la Kill Chain en Diversos Escenarios",
+      "published": "2023-06-03",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2305.10358v2",
+      "title": "NUANCE: Near Ultrasound Attack On Networked Communication Environments",
+      "published": "2023-04-25",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2304.07411v1",
+      "title": "SoK: The MITRE ATT&CK Framework in Research and Practice",
+      "published": "2023-04-14",
+      "primary_category": "cs.CR"
+    },
+    {
+      "id": "2302.05530v1",
+      "title": "Machine Learning Based Approach to Recommend MITRE ATT&CK Framework for Software Requirements and Design Specifications",
+      "published": "2023-02-10",
+      "primary_category": "cs.SE"
+    },
+    {
+      "id": "2301.12013v3",
+      "title": "Cybersecurity Threat Hunting and Vulnerability Analysis Using a Neo4j Graph Database of Open Source Intelligence",
+      "published": "2023-01-27",
+      "primary_category": "cs.CR"
+    }
+  ],
+  "fetch_log": [
+    {
+      "arxiv_id": "2508.18230v1",
+      "attempt": 1,
+      "status": "ok",
+      "note_id": "killchaingraph-ml-framework-for-predicting-and",
+      "word_count": 5623
+    },
+    {
+      "arxiv_id": "2407.08532v1",
+      "attempt": 2,
+      "status": "ok",
+      "note_id": "tactics-techniques-and-procedures-ttps-in-interpreted-malware",
+      "word_count": 15343
+    },
+    {
+      "arxiv_id": "2606.18325v2",
+      "attempt": 3,
+      "status": "ok",
+      "note_id": "agentra-a-supervisable-multi-agent-framework",
+      "word_count": 6235
+    },
+    {
+      "arxiv_id": "2505.11547v1",
+      "attempt": 4,
+      "status": "ok",
+      "note_id": "arxiv250511547v1-cscr-15-may-2025",
+      "word_count": 7772
+    },
+    {
+      "arxiv_id": "2603.16694v2",
+      "attempt": 5,
+      "status": "ok",
+      "note_id": "an-empirical-study-of-observability-limits-in-advanced-software",
+      "word_count": 20426
+    },
+    {
+      "arxiv_id": "2307.10877v1",
+      "attempt": 6,
+      "status": "ok",
+      "note_id": "battle-ground-data-collection-and-labeling-of-ctf-games-to",
+      "word_count": 7022
+    },
+    {
+      "arxiv_id": "2512.09485v1",
+      "attempt": 7,
+      "status": "ok",
+      "note_id": "journal-of-latex-class-files-vol-14-no-8-august-2021",
+      "word_count": 14723
+    },
+    {
+      "arxiv_id": "2505.13641v2",
+      "attempt": 8,
+      "status": "ok",
+      "note_id": "an-alignment-between-the-cras-essential",
+      "word_count": 4216
+    },
+    {
+      "arxiv_id": "2411.18755v1",
+      "attempt": 9,
+      "status": "ok",
+      "note_id": "cyber-attack-technique-classification",
+      "word_count": 6606
+    },
+    {
+      "arxiv_id": "2605.09792v1",
+      "attempt": 10,
+      "status": "ok",
+      "note_id": "operationalizing-cybersecurity-governance-for",
+      "word_count": 13150
+    },
+    {
+      "arxiv_id": "2606.21377v1",
+      "attempt": 11,
+      "status": "ok",
+      "note_id": "arena-an-architecture-for-measuring-the",
+      "word_count": 7250
+    },
+    {
+      "arxiv_id": "2505.18156v1",
+      "attempt": 12,
+      "status": "ok",
+      "note_id": "injectlab-a-tactical-framework-for-adversarial-threat",
+      "word_count": 4319
+    },
+    {
+      "arxiv_id": "2511.08352v1",
+      "attempt": 13,
+      "status": "ok",
+      "note_id": "xxx-x-xxxx-xxxx-xxxxx00-20xx-ieee",
+      "word_count": 3742
+    },
+    {
+      "arxiv_id": "2511.17761v1",
+      "attempt": 14,
+      "status": "ok",
+      "note_id": "stealthcup-realistic-multi-stage-evasion-focused-ctf-for",
+      "word_count": 9926
+    },
+    {
+      "arxiv_id": "2607.25572v1",
+      "attempt": 15,
+      "status": "ok",
+      "note_id": "mapping-cves-to-mitre-attck-techniques",
+      "word_count": 10657
+    },
+    {
+      "arxiv_id": "2509.10482v2",
+      "attempt": 16,
+      "status": "ok",
+      "note_id": "aegisshield-democratizing-cyber-threat-modeling-with-generative-ai",
+      "word_count": 35067
+    },
+    {
+      "arxiv_id": "2503.17219v1",
+      "attempt": 17,
+      "status": "ok",
+      "note_id": "cyber-campaign-fractals",
+      "word_count": 4958
+    },
+    {
+      "arxiv_id": "2306.09242v1",
+      "attempt": 18,
+      "status": "ok",
+      "note_id": "t\u00e9cnicas-avanzadas-de",
+      "word_count": 7098
+    },
+    {
+      "arxiv_id": "2604.02377v1",
+      "attempt": 19,
+      "status": "ok",
+      "note_id": "what-are-adversaries-doing-automating-tactics",
+      "word_count": 21166
+    },
+    {
+      "arxiv_id": "2510.14233v1",
+      "attempt": 20,
+      "status": "ok",
+      "note_id": "journal-of-latex-class-files-vol-14-no-8-august-2021-2",
+      "word_count": 10497
+    },
+    {
+      "arxiv_id": "2604.09523v3",
+      "attempt": 21,
+      "status": "ok",
+      "note_id": "netforge-rl-a-multi-agent-simulation-environment-for-cyber-defense-with-durative",
+      "word_count": 4685
+    },
+    {
+      "arxiv_id": "2510.07363v2",
+      "attempt": 22,
+      "status": "ok",
+      "note_id": "l2m-aid-autonomous-cyber-physical-defense-by",
+      "word_count": 5497
+    },
+    {
+      "arxiv_id": "2608.23185v1",
+      "attempt": 23,
+      "status": "ok",
+      "note_id": "towards-automated-cyber-threat-intelligence",
+      "word_count": 18188
+    },
+    {
+      "arxiv_id": "2503.15866v1",
+      "attempt": 24,
+      "status": "ok",
+      "note_id": "droidttp-mapping-android-applications-with-ttp-for-cyber",
+      "word_count": 16287
+    },
+    {
+      "arxiv_id": "2512.12078v3",
+      "attempt": 25,
+      "status": "ok",
+      "note_id": "the-procedural-semantics-gap-in-attck-in-stix-measuring",
+      "word_count": 12731
+    },
+    {
+      "arxiv_id": "2401.07995v2",
+      "attempt": 26,
+      "status": "ok",
+      "note_id": "ieee-copyright-notice",
+      "word_count": 8227
+    },
+    {
+      "arxiv_id": "2601.03287v1",
+      "attempt": 27,
+      "status": "ok",
+      "note_id": "automated-post-incident-policy-gap-analysis-via",
+      "word_count": 3782
+    },
+    {
+      "arxiv_id": "2401.01865v1",
+      "attempt": 28,
+      "status": "ok",
+      "note_id": "attackers-reveal-their-arsenal-an-investigation-of-adversarial",
+      "word_count": 23682
+    },
+    {
+      "arxiv_id": "2506.10645v2",
+      "attempt": 29,
+      "status": "ok",
+      "note_id": "kitten-or-panda-measuring-the-specificity-of-threat-group-2",
+      "word_count": 13740
+    },
+    {
+      "arxiv_id": "2604.23545v1",
+      "attempt": 30,
+      "status": "ok",
+      "note_id": "research-paper-safeguarding-skies-airport-cybersecurity-in-the-digital-age",
+      "word_count": 9766
+    },
+    {
+      "arxiv_id": "2608.28394v1",
+      "attempt": 31,
+      "status": "ok",
+      "note_id": "beacon-behavior-anchored-cross-source-knowledge-graph",
+      "word_count": 9965
+    },
+    {
+      "arxiv_id": "2607.23312v1",
+      "attempt": 32,
+      "status": "ok",
+      "note_id": "a-structured-cyber-threat-intelligence-dataset",
+      "word_count": 4611
+    },
+    {
+      "arxiv_id": "2604.14166v1",
+      "attempt": 33,
+      "status": "ok",
+      "note_id": "hierarchical-retrieval-augmented-genera",
+      "word_count": 5689
+    },
+    {
+      "arxiv_id": "2510.27140v3",
+      "attempt": 34,
+      "status": "ok",
+      "note_id": "exploiting-mobile-llm-agents-as-confused",
+      "word_count": 15225
+    },
+    {
+      "arxiv_id": "2510.06607v3",
+      "attempt": 35,
+      "status": "ok",
+      "note_id": "your-harness-is-not-secure-benchmarking-real-world-threat-of",
+      "word_count": 14924
+    },
+    {
+      "arxiv_id": "2510.20930v1",
+      "attempt": 36,
+      "status": "ok",
+      "note_id": "security-logs-to-attck-insights-leveraging-llms",
+      "word_count": 2977
+    },
+    {
+      "arxiv_id": "2401.07783v2",
+      "attempt": 37,
+      "status": "ok",
+      "note_id": "arxiv240107783v2-cscr-16-jun-2025",
+      "word_count": 8145
+    },
+    {
+      "arxiv_id": "2505.17107v1",
+      "attempt": 38,
+      "status": "ok",
+      "note_id": "arxiv250517107v1-cscr-21-may-2025",
+      "word_count": 10163
+    },
+    {
+      "arxiv_id": "2601.06779v1",
+      "attempt": 39,
+      "status": "ok",
+      "note_id": "cyberllm-finds-2025-instruction-tuned",
+      "word_count": 3595
+    },
+    {
+      "arxiv_id": "2410.11573v2",
+      "attempt": 40,
+      "status": "ok",
+      "note_id": "clustering-doc2vec-output-for-topic-dimensionality",
+      "word_count": 6385
+    },
+    {
+      "arxiv_id": "2605.06486v1",
+      "attempt": 41,
+      "status": "ok",
+      "note_id": "autonomous-adversary-red-teaming-in-the-age",
+      "word_count": 7809
+    },
+    {
+      "arxiv_id": "2512.18714v3",
+      "attempt": 42,
+      "status": "ok",
+      "note_id": "an-evidence-driven-analysis-of-threat-information-sharing",
+      "word_count": 12705
+    },
+    {
+      "arxiv_id": "2601.07122v2",
+      "attempt": 43,
+      "status": "ok",
+      "note_id": "journal-of-latex-class-files-vol-14-no-8-august-2021-3",
+      "word_count": 13560
+    },
+    {
+      "arxiv_id": "2604.12228v1",
+      "attempt": 44,
+      "status": "ok",
+      "note_id": "from-iocs-to-regex-automating-cti-operationalization-for-soc-with-llms",
+      "word_count": 12055
+    },
+    {
+      "arxiv_id": "2510.11974v2",
+      "attempt": 45,
+      "status": "ok",
+      "note_id": "cticonnect-a-benchmark-for-retrieval-augmented-llms-over-2",
+      "word_count": 9689
+    },
+    {
+      "arxiv_id": "2404.17989v2",
+      "attempt": 46,
+      "status": "ok",
+      "note_id": "who-shares-what-an-empirical-analysis-of-security-conference-content",
+      "word_count": 12279
+    },
+    {
+      "arxiv_id": "2504.01803v1",
+      "attempt": 47,
+      "status": "ok",
+      "note_id": "disinfox-an-open-source-threat-exchange-platform",
+      "word_count": 4489
+    },
+    {
+      "arxiv_id": "2401.00280v3",
+      "attempt": 48,
+      "status": "ok",
+      "note_id": "advancing-ttp-analysis-harnessing-the-power-of-large",
+      "word_count": 5769
+    },
+    {
+      "arxiv_id": "2605.01892v1",
+      "attempt": 49,
+      "status": "ok",
+      "note_id": "cyberaid-ai-driven-cybersecurity-for-financial",
+      "word_count": 5201
+    },
+    {
+      "arxiv_id": "2408.12081v1",
+      "attempt": 50,
+      "status": "ok",
+      "note_id": "towards-threat-modelling-of-iot-context-sharing",
+      "word_count": 7983
+    },
+    {
+      "arxiv_id": "2608.17361v1",
+      "attempt": 51,
+      "status": "ok",
+      "note_id": "trusted-workflow-relays",
+      "word_count": 4873
+    },
+    {
+      "arxiv_id": "2604.00303v1",
+      "attempt": 52,
+      "status": "ok",
+      "note_id": "cybersecurity-risk-assessment-for-cubesat-missions",
+      "word_count": 10119
+    },
+    {
+      "arxiv_id": "2511.12743v1",
+      "attempt": 53,
+      "status": "ok",
+      "note_id": "accepted-in-computers-security-elsevier",
+      "word_count": 21810
+    },
+    {
+      "arxiv_id": "2502.10931v2",
+      "attempt": 54,
+      "status": "ok",
+      "note_id": "d-cipher-dynamic-collaborative-intelligent",
+      "word_count": 10619
+    },
+    {
+      "arxiv_id": "2504.05866v1",
+      "attempt": 55,
+      "status": "ok",
+      "note_id": "cti-hal-a-human-annotated-dataset-for",
+      "word_count": 6929
+    },
+    {
+      "arxiv_id": "2512.08107v1",
+      "attempt": 56,
+      "status": "ok",
+      "note_id": "2025-published-by-ahfe-open-access-all-rights-reserved",
+      "word_count": 3591
+    },
+    {
+      "arxiv_id": "2510.21601v1",
+      "attempt": 57,
+      "status": "ok",
+      "note_id": "ptmf-a-privacy-threat-modeling-framework-for",
+      "word_count": 12395
+    },
+    {
+      "arxiv_id": "2411.13459v1",
+      "attempt": 58,
+      "status": "ok",
+      "note_id": "sok-a-systems-perspective-on-compound-ai-threats-and-countermeasures",
+      "word_count": 16358
+    },
+    {
+      "arxiv_id": "2604.26217v1",
+      "attempt": 59,
+      "status": "ok",
+      "note_id": "opensoc-ai-democratizing-security-operations",
+      "word_count": 3398
+    },
+    {
+      "arxiv_id": "2305.10358v2",
+      "attempt": 60,
+      "status": "ok",
+      "note_id": "nuance-near-ultrasound-attack-on",
+      "word_count": 8170
+    }
+  ],
+  "papers": [
+    {
+      "arxiv_id": "2508.18230v1",
+      "title": "KillChainGraph: ML Framework for Predicting and Mapping ATT&CK Techniques",
+      "year": 2025,
+      "note_id": "killchaingraph-ml-framework-for-predicting-and",
+      "tech_id_count": 42,
+      "included": true,
+      "classification": "none",
+      "evidence": "",
+      "uses_subtechniques": true,
+      "mentions_version_change": false
+    },
+    {
+      "arxiv_id": "2407.08532v1",
+      "title": "Tactics, Techniques, and Procedures (TTPs) in Interpreted Malware: A Zero-Shot Generation with Large Language Models",
+      "year": 2024,
+      "note_id": "tactics-techniques-and-procedures-ttps-in-interpreted-malware",
+      "tech_id_count": 0,
+      "included": false,
+      "exclusion_reason": "only 0 technique-ID occurrences (<3)"
+    },
+    {
+      "arxiv_id": "2606.18325v2",
+      "title": "Agentra: A Supervisable Multi-Agent Framework for Enterprise Intrusion Response",
+      "year": 2026,
+      "note_id": "agentra-a-supervisable-multi-agent-framework",
+      "tech_id_count": 8,
+      "included": true,
+      "classification": "none",
+      "evidence": "",
+      "uses_subtechniques": true,
+      "mentions_version_change": false
+    },
+    {
+      "arxiv_id": "2505.11547v1",
+      "title": "On Technique Identification and Threat-Actor Attribution using LLMs and Embedding Models",
+      "year": 2025,
+      "note_id": "arxiv250511547v1-cscr-15-may-2025",
+      "tech_id_count": 15,
+      "included": true,
+      "classification": "none",
+      "evidence": "",
+      "uses_subtechniques": true,
+      "mentions_version_change": true
+    },
+    {
+      "arxiv_id": "2603.16694v2",
+      "title": "An Empirical Study of Observability Limits in Advanced Software Supply Chain Attacks",
+      "year": 2026,
+      "note_id": "an-empirical-study-of-observability-limits-in-advanced-software",
+      "tech_id_count": 29,
+      "included": true,
+      "classification": "none",
+      "evidence": "",
+      "uses_subtechniques": true,
+      "mentions_version_change": true
+    },
+    {
+      "arxiv_id": "2307.10877v1",
+      "title": "Battle Ground: Data Collection and Labeling of CTF Games to Understand Human Cyber Operators",
+      "year": 2023,
+      "note_id": "battle-ground-data-collection-and-labeling-of-ctf-games-to",
+      "tech_id_count": 0,
+      "included": false,
+      "exclusion_reason": "only 0 technique-ID occurrences (<3)"
+    },
+    {
+      "arxiv_id": "2512.09485v1",
+      "title": "Advancing LLM-Based Security Automation with Customized Group Relative Policy Optimization for Zero-Touch Networks",
+      "year": 2025,
+      "note_id": "journal-of-latex-class-files-vol-14-no-8-august-2021",
+      "tech_id_count": 0,
+      "included": false,
+      "exclusion_reason": "only 0 technique-ID occurrences (<3)"
+    },
+    {
+      "arxiv_id": "2505.13641v2",
+      "title": "An Alignment Between the CRA's Essential Requirements and the ATT&CK's Mitigations",
+      "year": 2025,
+      "note_id": "an-alignment-between-the-cras-essential",
+      "tech_id_count": 0,
+      "included": false,
+      "exclusion_reason": "only 0 technique-ID occurrences (<3)"
+    },
+    {
+      "arxiv_id": "2411.18755v1",
+      "title": "Cyber-Attack Technique Classification Using Two-Stage Trained Large Language Models",
+      "year": 2024,
+      "note_id": "cyber-attack-technique-classification",
+      "tech_id_count": 0,
+      "included": false,
+      "exclusion_reason": "only 0 technique-ID occurrences (<3)"
+    },
+    {
+      "arxiv_id": "2605.09792v1",
+      "title": "Operationalizing Cybersecurity Governance for Mitigation Planning with Attack-Path Modeling and Reinforcement Learning",
+      "year": 2026,
+      "note_id": "operationalizing-cybersecurity-governance-for",
+      "tech_id_count": 17,
+      "included": true,
+      "classification": "none",
+      "evidence": "",
+      "uses_subtechniques": true,
+      "mentions_version_change": false
+    },
+    {
+      "arxiv_id": "2606.21377v1",
+      "title": "ARENA: An Architecture for Measuring the Transferability of Autonomous Cyber Defense",
+      "year": 2026,
+      "note_id": "arena-an-architecture-for-measuring-the",
+      "tech_id_count": 5,
+      "included": true,
+      "classification": "none",
+      "evidence": "",
+      "uses_subtechniques": true,
+      "mentions_version_change": true
+    },
+    {
+      "arxiv_id": "2505.18156v1",
+      "title": "InjectLab: A Tactical Framework for Adversarial Threat Modeling Against Large Language Models",
+      "year": 2025,
+      "note_id": "injectlab-a-tactical-framework-for-adversarial-threat",
+      "tech_id_count": 0,
+      "included": false,
+      "exclusion_reason": "only 0 technique-ID occurrences (<3)"
+    },
+    {
+      "arxiv_id": "2511.08352v1",
+      "title": "Endpoint Security Agent: A Comprehensive Approach to Real-time System Monitoring and Threat Detection",
+      "year": 2025,
+      "note_id": "xxx-x-xxxx-xxxx-xxxxx00-20xx-ieee",
+      "tech_id_count": 0,
+      "included": false,
+      "exclusion_reason": "only 0 technique-ID occurrences (<3)"
+    },
+    {
+      "arxiv_id": "2511.17761v1",
+      "title": "StealthCup: Realistic, Multi-Stage, Evasion-Focused CTF for Benchmarking IDS",
+      "year": 2025,
+      "note_id": "stealthcup-realistic-multi-stage-evasion-focused-ctf-for",
+      "tech_id_count": 128,
+      "included": true,
+      "classification": "none",
+      "evidence": "",
+      "uses_subtechniques": true,
+      "mentions_version_change": true
+    },
+    {
+      "arxiv_id": "2607.25572v1",
+      "title": "Mapping CVEs to MITRE ATT&CK Techniques: A Curated Gold-Set Classifier and the Limits of LLM-Assisted Label Expansion",
+      "year": 2026,
+      "note_id": "mapping-cves-to-mitre-attck-techniques",
+      "tech_id_count": 59,
+      "included": true,
+      "classification": "exact_release",
+      "evidence": "We target the Enterprise domain, whose version 19.1 catalogue contains 697 active techniques and sub-techniques.",
+      "uses_subtechniques": true,
+      "mentions_version_change": true,
+      "manual_override": true
+    },
+    {
+      "arxiv_id": "2509.10482v2",
+      "title": "AegisShield: Democratizing Cyber Threat Modeling with Generative AI",
+      "year": 2025,
+      "note_id": "aegisshield-democratizing-cyber-threat-modeling-with-generative-ai",
+      "tech_id_count": 2,
+      "included": false,
+      "exclusion_reason": "only 2 technique-ID occurrences (<3)"
+    },
+    {
+      "arxiv_id": "2503.17219v1",
+      "title": "Cyber Campaign Fractals -- Geometric Analysis of Hierarchical Cyber Attack Taxonomies",
+      "year": 2025,
+      "note_id": "cyber-campaign-fractals",
+      "tech_id_count": 0,
+      "included": false,
+      "exclusion_reason": "only 0 technique-ID occurrences (<3)"
+    },
+    {
+      "arxiv_id": "2306.09242v1",
+      "title": "Tecnicas Avanzadas de Ciberseguridad: Integracion y Evolucion de la Kill Chain en Diversos Escenarios",
+      "year": 2023,
+      "note_id": "t\u00e9cnicas-avanzadas-de",
+      "tech_id_count": 0,
+      "included": false,
+      "exclusion_reason": "only 0 technique-ID occurrences (<3)"
+    },
+    {
+      "arxiv_id": "2604.02377v1",
+      "title": "What Are Adversaries Doing? Automating Tactics, Techniques, and Procedures Extraction: A Systematic Review",
+      "year": 2026,
+      "note_id": "what-are-adversaries-doing-automating-tactics",
+      "tech_id_count": 0,
+      "included": false,
+      "exclusion_reason": "only 0 technique-ID occurrences (<3)"
+    },
+    {
+      "arxiv_id": "2510.14233v1",
+      "title": "RHINO: Guided Reasoning for Mapping Network Logs to Adversarial Tactics and Techniques with Large Language Models",
+      "year": 2025,
+      "note_id": "journal-of-latex-class-files-vol-14-no-8-august-2021-2",
+      "tech_id_count": 45,
+      "included": true,
+      "classification": "none",
+      "evidence": "",
+      "uses_subtechniques": true,
+      "mentions_version_change": false
+    },
+    {
+      "arxiv_id": "2604.09523v3",
+      "title": "NetForge RL: A Multi-Agent Simulation Environment for Cyber Defense with Durative Actions",
+      "year": 2026,
+      "note_id": "netforge-rl-a-multi-agent-simulation-environment-for-cyber-defense-with-durative",
+      "tech_id_count": 5,
+      "included": true,
+      "classification": "none",
+      "evidence": "",
+      "uses_subtechniques": true,
+      "mentions_version_change": false
+    },
+    {
+      "arxiv_id": "2510.07363v2",
+      "title": "L2M-AID: Autonomous Cyber-Physical Defense by Fusing Semantic Reasoning of Large Language Models with Multi-Agent Reinforcement Learning (Preprint)",
+      "year": 2025,
+      "note_id": "l2m-aid-autonomous-cyber-physical-defense-by",
+      "tech_id_count": 4,
+      "included": true,
+      "classification": "none",
+      "evidence": "",
+      "uses_subtechniques": false,
+      "mentions_version_change": false
+    },
+    {
+      "arxiv_id": "2608.23185v1",
+      "title": "Towards Automated Cyber Threat Intelligence Elicitation in Underground Forums",
+      "year": 2026,
+      "note_id": "towards-automated-cyber-threat-intelligence",
+      "tech_id_count": 0,
+      "included": false,
+      "exclusion_reason": "only 0 technique-ID occurrences (<3)"
+    },
+    {
+      "arxiv_id": "2503.15866v1",
+      "title": "DroidTTP: Mapping Android Applications with TTP for Cyber Threat Intelligence",
+      "year": 2025,
+      "note_id": "droidttp-mapping-android-applications-with-ttp-for-cyber",
+      "tech_id_count": 199,
+      "included": true,
+      "classification": "none",
+      "evidence": "",
+      "uses_subtechniques": true,
+      "mentions_version_change": true
+    },
+    {
+      "arxiv_id": "2512.12078v3",
+      "title": "The Procedural Semantics Gap in Structured CTI: A Measurement-Driven STIX Analysis for APT Emulation",
+      "year": 2025,
+      "note_id": "the-procedural-semantics-gap-in-attck-in-stix-measuring",
+      "tech_id_count": 8,
+      "included": true,
+      "classification": "exact_release",
+      "evidence": "We use version 18.1 of the Enterprise bundle as the authoritative source for all quantitative analyses.",
+      "uses_subtechniques": true,
+      "mentions_version_change": true,
+      "manual_override": true
+    },
+    {
+      "arxiv_id": "2401.07995v2",
+      "title": "The Pulse of Fileless Cryptojacking Attacks: Malicious PowerShell Scripts",
+      "year": 2024,
+      "note_id": "ieee-copyright-notice",
+      "tech_id_count": 0,
+      "included": false,
+      "exclusion_reason": "only 0 technique-ID occurrences (<3)"
+    },
+    {
+      "arxiv_id": "2601.03287v1",
+      "title": "Automated Post-Incident Policy Gap Analysis via Threat-Informed Evidence Mapping using Large Language Models",
+      "year": 2026,
+      "note_id": "automated-post-incident-policy-gap-analysis-via",
+      "tech_id_count": 4,
+      "included": true,
+      "classification": "none",
+      "evidence": "",
+      "uses_subtechniques": false,
+      "mentions_version_change": false
+    },
+    {
+      "arxiv_id": "2401.01865v1",
+      "title": "Attackers reveal their arsenal: An investigation of adversarial techniques in CTI reports",
+      "year": 2024,
+      "note_id": "attackers-reveal-their-arsenal-an-investigation-of-adversarial",
+      "tech_id_count": 662,
+      "included": true,
+      "classification": "major_only",
+      "evidence": ". We download the STIX3 export file of the MITRE ATT&CK from their official repository [22]. We use Version 12 of the MITRE ATT&CK repository. The file contains the following: (a) taxonomy information",
+      "uses_subtechniques": true,
+      "mentions_version_change": true
+    },
+    {
+      "arxiv_id": "2506.10645v2",
+      "title": "Kitten or Panda? Measuring the Specificity of Threat Group Behaviors in Public CTI Knowledge Bases",
+      "year": 2025,
+      "note_id": "kitten-or-panda-measuring-the-specificity-of-threat-group-2",
+      "tech_id_count": 94,
+      "included": true,
+      "classification": "exact_release",
+      "evidence": "tive coverage of its content. Dataset comparison. Table 1 summarizes the contents of both datasets. ATT&CK v15.1 contains 152 groups, 358 techniques, 481 sub-techniques, 794 software entries, and 930 ",
+      "uses_subtechniques": true,
+      "mentions_version_change": true
+    },
+    {
+      "arxiv_id": "2604.23545v1",
+      "title": "Safeguarding Skies: Airport Cybersecurity in the Digital Age",
+      "year": 2026,
+      "note_id": "research-paper-safeguarding-skies-airport-cybersecurity-in-the-digital-age",
+      "tech_id_count": 87,
+      "included": true,
+      "classification": "none",
+      "evidence": "",
+      "uses_subtechniques": true,
+      "mentions_version_change": false
+    },
+    {
+      "arxiv_id": "2608.28394v1",
+      "title": "BEACON: Behavior-Anchored Cross-Source Knowledge Graph Construction for Cyber Threat Intelligence",
+      "year": 2026,
+      "note_id": "beacon-behavior-anchored-cross-source-knowledge-graph",
+      "tech_id_count": 23,
+      "included": true,
+      "classification": "exact_release",
+      "evidence": "lity. Implementation. Every system that requires an LLM uses GPT- 4o [35]. All systems use the same ATT&CK v17.1 snapshot, and all thresholds were tuned once on a small held-out development set and th",
+      "uses_subtechniques": false,
+      "mentions_version_change": false
+    },
+    {
+      "arxiv_id": "2607.23312v1",
+      "title": "A Structured Cyber Threat Intelligence Dataset Using STIX 2.1 Entities and MITRE ATT&CK Mappings",
+      "year": 2026,
+      "note_id": "a-structured-cyber-threat-intelligence-dataset",
+      "tech_id_count": 7,
+      "included": true,
+      "classification": "exact_release",
+      "evidence": "ere identified as attack patterns SDO in the dataset. These attack patterns were manually mapped to ATT&CK version 19.1 enterprise techniques and sub-techniques within the defined tactics [4]. Manual ",
+      "uses_subtechniques": true,
+      "mentions_version_change": true
+    },
+    {
+      "arxiv_id": "2604.14166v1",
+      "title": "Hierarchical Retrieval Augmented Generation for Adversarial Technique Annotation in Cyber Threat Intelligence Text",
+      "year": 2026,
+      "note_id": "hierarchical-retrieval-augmented-genera",
+      "tech_id_count": 7,
+      "included": true,
+      "classification": "none",
+      "evidence": "",
+      "uses_subtechniques": false,
+      "mentions_version_change": true
+    },
+    {
+      "arxiv_id": "2510.27140v3",
+      "title": "Measuring the Security of Mobile LLM Agents under Adversarial Prompts from Untrusted Third-Party Channels",
+      "year": 2025,
+      "note_id": "exploiting-mobile-llm-agents-as-confused",
+      "tech_id_count": 0,
+      "included": false,
+      "exclusion_reason": "only 0 technique-ID occurrences (<3)"
+    },
+    {
+      "arxiv_id": "2510.06607v3",
+      "title": "Your Harness is Not Secure: Benchmarking Real-world Threat of Command Line Interface Agent",
+      "year": 2025,
+      "note_id": "your-harness-is-not-secure-benchmarking-real-world-threat-of",
+      "tech_id_count": 14,
+      "included": true,
+      "classification": "none",
+      "evidence": "",
+      "uses_subtechniques": true,
+      "mentions_version_change": true
+    },
+    {
+      "arxiv_id": "2510.20930v1",
+      "title": "Security Logs to ATT&CK Insights: Leveraging LLMs for High-Level Threat Understanding and Cognitive Trait Inference",
+      "year": 2025,
+      "note_id": "security-logs-to-attck-insights-leveraging-llms",
+      "tech_id_count": 0,
+      "included": false,
+      "exclusion_reason": "only 0 technique-ID occurrences (<3)"
+    },
+    {
+      "arxiv_id": "2401.07783v2",
+      "title": "Cybersecurity and Embodiment Integrity for Modern Robots: A Conceptual Framework",
+      "year": 2024,
+      "note_id": "arxiv240107783v2-cscr-16-jun-2025",
+      "tech_id_count": 0,
+      "included": false,
+      "exclusion_reason": "only 0 technique-ID occurrences (<3)"
+    },
+    {
+      "arxiv_id": "2505.17107v1",
+      "title": "CRAKEN: Cybersecurity LLM Agent with Knowledge-Based Execution",
+      "year": 2025,
+      "note_id": "arxiv250517107v1-cscr-21-may-2025",
+      "tech_id_count": 48,
+      "included": true,
+      "classification": "none",
+      "evidence": "",
+      "uses_subtechniques": false,
+      "mentions_version_change": false
+    },
+    {
+      "arxiv_id": "2601.06779v1",
+      "title": "CyberLLM-FINDS 2025: Instruction-Tuned Fine-tuning of Domain-Specific LLMs with Retrieval-Augmented Generation and Graph Integration for MITRE Evaluation",
+      "year": 2026,
+      "note_id": "cyberllm-finds-2025-instruction-tuned",
+      "tech_id_count": 15,
+      "included": true,
+      "classification": "none",
+      "evidence": "",
+      "uses_subtechniques": true,
+      "mentions_version_change": true
+    },
+    {
+      "arxiv_id": "2410.11573v2",
+      "title": "Clustering doc2vec output for topic-dimensionality reduction: A MITRE ATT&CK calibration",
+      "year": 2024,
+      "note_id": "clustering-doc2vec-output-for-topic-dimensionality",
+      "tech_id_count": 0,
+      "included": false,
+      "exclusion_reason": "only 0 technique-ID occurrences (<3)"
+    },
+    {
+      "arxiv_id": "2605.06486v1",
+      "title": "Autonomous Adversary: Red-Teaming in the age of LLM",
+      "year": 2026,
+      "note_id": "autonomous-adversary-red-teaming-in-the-age",
+      "tech_id_count": 0,
+      "included": false,
+      "exclusion_reason": "only 0 technique-ID occurrences (<3)"
+    },
+    {
+      "arxiv_id": "2512.18714v3",
+      "title": "An Evidence-Driven Analysis of Threat Information Sharing Challenges for Industrial Control Systems and Future Directions",
+      "year": 2025,
+      "note_id": "an-evidence-driven-analysis-of-threat-information-sharing",
+      "tech_id_count": 102,
+      "included": true,
+      "classification": "none",
+      "evidence": "",
+      "uses_subtechniques": false,
+      "mentions_version_change": false
+    },
+    {
+      "arxiv_id": "2601.07122v2",
+      "title": "Enhancing Cloud Network Resilience via a Robust LLM-Empowered Multi-Agent Reinforcement Learning Framework",
+      "year": 2026,
+      "note_id": "journal-of-latex-class-files-vol-14-no-8-august-2021-3",
+      "tech_id_count": 0,
+      "included": false,
+      "exclusion_reason": "only 0 technique-ID occurrences (<3)"
+    },
+    {
+      "arxiv_id": "2604.12228v1",
+      "title": "From IOCs to Regex: Automating CTI Operationalization for SOC with LLMs",
+      "year": 2026,
+      "note_id": "from-iocs-to-regex-automating-cti-operationalization-for-soc-with-llms",
+      "tech_id_count": 0,
+      "included": false,
+      "exclusion_reason": "only 0 technique-ID occurrences (<3)"
+    },
+    {
+      "arxiv_id": "2510.11974v2",
+      "title": "CTIConnect: A Benchmark for Retrieval-Augmented LLMs over Heterogeneous Cyber Threat Intelligence",
+      "year": 2025,
+      "note_id": "cticonnect-a-benchmark-for-retrieval-augmented-llms-over-2",
+      "tech_id_count": 6,
+      "included": true,
+      "classification": "none",
+      "evidence": "",
+      "uses_subtechniques": true,
+      "mentions_version_change": false
+    },
+    {
+      "arxiv_id": "2404.17989v2",
+      "title": "Who Shares What? An Empirical Analysis of Security Conference Content Across Academia and Industry",
+      "year": 2024,
+      "note_id": "who-shares-what-an-empirical-analysis-of-security-conference-content",
+      "tech_id_count": 0,
+      "included": false,
+      "exclusion_reason": "only 0 technique-ID occurrences (<3)"
+    },
+    {
+      "arxiv_id": "2504.01803v1",
+      "title": "DISINFOX: an open-source threat exchange platform serving intelligence on disinformation and influence operations",
+      "year": 2025,
+      "note_id": "disinfox-an-open-source-threat-exchange-platform",
+      "tech_id_count": 0,
+      "included": false,
+      "exclusion_reason": "only 0 technique-ID occurrences (<3)"
+    },
+    {
+      "arxiv_id": "2401.00280v3",
+      "title": "Advancing TTP Analysis: Harnessing the Power of Large Language Models with Retrieval Augmented Generation",
+      "year": 2023,
+      "note_id": "advancing-ttp-analysis-harnessing-the-power-of-large",
+      "tech_id_count": 0,
+      "included": false,
+      "exclusion_reason": "only 0 technique-ID occurrences (<3)"
+    },
+    {
+      "arxiv_id": "2605.01892v1",
+      "title": "CyberAId: AI-Driven Cybersecurity for Financial Service Providers",
+      "year": 2026,
+      "note_id": "cyberaid-ai-driven-cybersecurity-for-financial",
+      "tech_id_count": 0,
+      "included": false,
+      "exclusion_reason": "only 0 technique-ID occurrences (<3)"
+    },
+    {
+      "arxiv_id": "2408.12081v1",
+      "title": "Towards Threat Modelling of IoT Context-Sharing Platforms",
+      "year": 2024,
+      "note_id": "towards-threat-modelling-of-iot-context-sharing",
+      "tech_id_count": 914,
+      "included": true,
+      "classification": "none",
+      "evidence": "",
+      "uses_subtechniques": true,
+      "mentions_version_change": true
+    },
+    {
+      "arxiv_id": "2608.17361v1",
+      "title": "Trusted Workflow Relays:Cross-Tenant Email Abuse and Composable Red Team Initial-Access Primitives in Multi-Tenant Clouds",
+      "year": 2026,
+      "note_id": "trusted-workflow-relays",
+      "tech_id_count": 14,
+      "included": true,
+      "classification": "major_only",
+      "evidence": "The MITRE Corporation. MITRE ATT&CK for enterprise, 2026. Version 19; accessed August 17, 2026.",
+      "uses_subtechniques": true,
+      "mentions_version_change": true,
+      "manual_override": true
+    },
+    {
+      "arxiv_id": "2604.00303v1",
+      "title": "Cybersecurity Risk Assessment for CubeSat Missions: Adapting Established Frameworks for Resource-Constrained Environments",
+      "year": 2026,
+      "note_id": "cybersecurity-risk-assessment-for-cubesat-missions",
+      "tech_id_count": 6,
+      "included": true,
+      "classification": "none",
+      "evidence": "",
+      "uses_subtechniques": false,
+      "mentions_version_change": false
+    },
+    {
+      "arxiv_id": "2511.12743v1",
+      "title": "An Evaluation Framework for Network IDS/IPS Datasets: Leveraging MITRE ATT&CK and Industry Relevance Metrics",
+      "year": 2025,
+      "note_id": "accepted-in-computers-security-elsevier",
+      "tech_id_count": 16,
+      "included": true,
+      "classification": "none",
+      "evidence": "",
+      "uses_subtechniques": true,
+      "mentions_version_change": false
+    },
+    {
+      "arxiv_id": "2502.10931v2",
+      "title": "D-CIPHER: Dynamic Collaborative Intelligent Multi-Agent System with Planner and Heterogeneous Executors for Offensive Security",
+      "year": 2025,
+      "note_id": "d-cipher-dynamic-collaborative-intelligent",
+      "tech_id_count": 59,
+      "included": true,
+      "classification": "none",
+      "evidence": "",
+      "uses_subtechniques": false,
+      "mentions_version_change": false
+    },
+    {
+      "arxiv_id": "2504.05866v1",
+      "title": "CTI-HAL: A Human-Annotated Dataset for Cyber Threat Intelligence Analysis",
+      "year": 2025,
+      "note_id": "cti-hal-a-human-annotated-dataset-for",
+      "tech_id_count": 21,
+      "included": true,
+      "classification": "exact_release",
+      "evidence": "CTI-HAL ... statement level json 116 81 real CTI reports v15.1 [own dataset row, Table 1: CTI Dataset Overview]",
+      "uses_subtechniques": true,
+      "mentions_version_change": true,
+      "manual_override": true
+    },
+    {
+      "arxiv_id": "2512.08107v1",
+      "title": "Detecting Ambiguity Aversion in Cyberattack Behavior to Inform Cognitive Defense Strategies",
+      "year": 2025,
+      "note_id": "2025-published-by-ahfe-open-access-all-rights-reserved",
+      "tech_id_count": 0,
+      "included": false,
+      "exclusion_reason": "only 0 technique-ID occurrences (<3)"
+    },
+    {
+      "arxiv_id": "2510.21601v1",
+      "title": "PTMF: A Privacy Threat Modeling Framework for IoT with Expert-Driven Threat Propagation Analysis",
+      "year": 2025,
+      "note_id": "ptmf-a-privacy-threat-modeling-framework-for",
+      "tech_id_count": 0,
+      "included": false,
+      "exclusion_reason": "only 0 technique-ID occurrences (<3)"
+    },
+    {
+      "arxiv_id": "2411.13459v1",
+      "title": "SoK: A Systems Perspective on Compound AI Threats and Countermeasures",
+      "year": 2024,
+      "note_id": "sok-a-systems-perspective-on-compound-ai-threats-and-countermeasures",
+      "tech_id_count": 0,
+      "included": false,
+      "exclusion_reason": "only 0 technique-ID occurrences (<3)"
+    },
+    {
+      "arxiv_id": "2604.26217v1",
+      "title": "OpenSOC-AI: Democratizing Security Operations with Parameter Efficient LLM Log Analysis",
+      "year": 2026,
+      "note_id": "opensoc-ai-democratizing-security-operations",
+      "tech_id_count": 4,
+      "included": true,
+      "classification": "major_only",
+      "evidence": "Ground-truth labels were derived from MITRE ATT&CK framework v14 and annotated by the author with reference to established threat intelligence sources.",
+      "uses_subtechniques": true,
+      "mentions_version_change": false,
+      "manual_override": true
+    },
+    {
+      "arxiv_id": "2305.10358v2",
+      "title": "NUANCE: Near Ultrasound Attack On Networked Communication Environments",
+      "year": 2023,
+      "note_id": "nuance-near-ultrasound-attack-on",
+      "tech_id_count": 46,
+      "included": true,
+      "classification": "none",
+      "evidence": "",
+      "uses_subtechniques": false,
+      "mentions_version_change": false
+    }
+  ],
+  "excluded": [
+    {
+      "arxiv_id": "2407.08532v1",
+      "title": "Tactics, Techniques, and Procedures (TTPs) in Interpreted Malware: A Zero-Shot Generation with Large Language Models",
+      "year": 2024,
+      "note_id": "tactics-techniques-and-procedures-ttps-in-interpreted-malware",
+      "tech_id_count": 0,
+      "included": false,
+      "exclusion_reason": "only 0 technique-ID occurrences (<3)"
+    },
+    {
+      "arxiv_id": "2307.10877v1",
+      "title": "Battle Ground: Data Collection and Labeling of CTF Games to Understand Human Cyber Operators",
+      "year": 2023,
+      "note_id": "battle-ground-data-collection-and-labeling-of-ctf-games-to",
+      "tech_id_count": 0,
+      "included": false,
+      "exclusion_reason": "only 0 technique-ID occurrences (<3)"
+    },
+    {
+      "arxiv_id": "2512.09485v1",
+      "title": "Advancing LLM-Based Security Automation with Customized Group Relative Policy Optimization for Zero-Touch Networks",
+      "year": 2025,
+      "note_id": "journal-of-latex-class-files-vol-14-no-8-august-2021",
+      "tech_id_count": 0,
+      "included": false,
+      "exclusion_reason": "only 0 technique-ID occurrences (<3)"
+    },
+    {
+      "arxiv_id": "2505.13641v2",
+      "title": "An Alignment Between the CRA's Essential Requirements and the ATT&CK's Mitigations",
+      "year": 2025,
+      "note_id": "an-alignment-between-the-cras-essential",
+      "tech_id_count": 0,
+      "included": false,
+      "exclusion_reason": "only 0 technique-ID occurrences (<3)"
+    },
+    {
+      "arxiv_id": "2411.18755v1",
+      "title": "Cyber-Attack Technique Classification Using Two-Stage Trained Large Language Models",
+      "year": 2024,
+      "note_id": "cyber-attack-technique-classification",
+      "tech_id_count": 0,
+      "included": false,
+      "exclusion_reason": "only 0 technique-ID occurrences (<3)"
+    },
+    {
+      "arxiv_id": "2505.18156v1",
+      "title": "InjectLab: A Tactical Framework for Adversarial Threat Modeling Against Large Language Models",
+      "year": 2025,
+      "note_id": "injectlab-a-tactical-framework-for-adversarial-threat",
+      "tech_id_count": 0,
+      "included": false,
+      "exclusion_reason": "only 0 technique-ID occurrences (<3)"
+    },
+    {
+      "arxiv_id": "2511.08352v1",
+      "title": "Endpoint Security Agent: A Comprehensive Approach to Real-time System Monitoring and Threat Detection",
+      "year": 2025,
+      "note_id": "xxx-x-xxxx-xxxx-xxxxx00-20xx-ieee",
+      "tech_id_count": 0,
+      "included": false,
+      "exclusion_reason": "only 0 technique-ID occurrences (<3)"
+    },
+    {
+      "arxiv_id": "2509.10482v2",
+      "title": "AegisShield: Democratizing Cyber Threat Modeling with Generative AI",
+      "year": 2025,
+      "note_id": "aegisshield-democratizing-cyber-threat-modeling-with-generative-ai",
+      "tech_id_count": 2,
+      "included": false,
+      "exclusion_reason": "only 2 technique-ID occurrences (<3)"
+    },
+    {
+      "arxiv_id": "2503.17219v1",
+      "title": "Cyber Campaign Fractals -- Geometric Analysis of Hierarchical Cyber Attack Taxonomies",
+      "year": 2025,
+      "note_id": "cyber-campaign-fractals",
+      "tech_id_count": 0,
+      "included": false,
+      "exclusion_reason": "only 0 technique-ID occurrences (<3)"
+    },
+    {
+      "arxiv_id": "2306.09242v1",
+      "title": "Tecnicas Avanzadas de Ciberseguridad: Integracion y Evolucion de la Kill Chain en Diversos Escenarios",
+      "year": 2023,
+      "note_id": "t\u00e9cnicas-avanzadas-de",
+      "tech_id_count": 0,
+      "included": false,
+      "exclusion_reason": "only 0 technique-ID occurrences (<3)"
+    },
+    {
+      "arxiv_id": "2604.02377v1",
+      "title": "What Are Adversaries Doing? Automating Tactics, Techniques, and Procedures Extraction: A Systematic Review",
+      "year": 2026,
+      "note_id": "what-are-adversaries-doing-automating-tactics",
+      "tech_id_count": 0,
+      "included": false,
+      "exclusion_reason": "only 0 technique-ID occurrences (<3)"
+    },
+    {
+      "arxiv_id": "2608.23185v1",
+      "title": "Towards Automated Cyber Threat Intelligence Elicitation in Underground Forums",
+      "year": 2026,
+      "note_id": "towards-automated-cyber-threat-intelligence",
+      "tech_id_count": 0,
+      "included": false,
+      "exclusion_reason": "only 0 technique-ID occurrences (<3)"
+    },
+    {
+      "arxiv_id": "2401.07995v2",
+      "title": "The Pulse of Fileless Cryptojacking Attacks: Malicious PowerShell Scripts",
+      "year": 2024,
+      "note_id": "ieee-copyright-notice",
+      "tech_id_count": 0,
+      "included": false,
+      "exclusion_reason": "only 0 technique-ID occurrences (<3)"
+    },
+    {
+      "arxiv_id": "2510.27140v3",
+      "title": "Measuring the Security of Mobile LLM Agents under Adversarial Prompts from Untrusted Third-Party Channels",
+      "year": 2025,
+      "note_id": "exploiting-mobile-llm-agents-as-confused",
+      "tech_id_count": 0,
+      "included": false,
+      "exclusion_reason": "only 0 technique-ID occurrences (<3)"
+    },
+    {
+      "arxiv_id": "2510.20930v1",
+      "title": "Security Logs to ATT&CK Insights: Leveraging LLMs for High-Level Threat Understanding and Cognitive Trait Inference",
+      "year": 2025,
+      "note_id": "security-logs-to-attck-insights-leveraging-llms",
+      "tech_id_count": 0,
+      "included": false,
+      "exclusion_reason": "only 0 technique-ID occurrences (<3)"
+    },
+    {
+      "arxiv_id": "2401.07783v2",
+      "title": "Cybersecurity and Embodiment Integrity for Modern Robots: A Conceptual Framework",
+      "year": 2024,
+      "note_id": "arxiv240107783v2-cscr-16-jun-2025",
+      "tech_id_count": 0,
+      "included": false,
+      "exclusion_reason": "only 0 technique-ID occurrences (<3)"
+    },
+    {
+      "arxiv_id": "2410.11573v2",
+      "title": "Clustering doc2vec output for topic-dimensionality reduction: A MITRE ATT&CK calibration",
+      "year": 2024,
+      "note_id": "clustering-doc2vec-output-for-topic-dimensionality",
+      "tech_id_count": 0,
+      "included": false,
+      "exclusion_reason": "only 0 technique-ID occurrences (<3)"
+    },
+    {
+      "arxiv_id": "2605.06486v1",
+      "title": "Autonomous Adversary: Red-Teaming in the age of LLM",
+      "year": 2026,
+      "note_id": "autonomous-adversary-red-teaming-in-the-age",
+      "tech_id_count": 0,
+      "included": false,
+      "exclusion_reason": "only 0 technique-ID occurrences (<3)"
+    },
+    {
+      "arxiv_id": "2601.07122v2",
+      "title": "Enhancing Cloud Network Resilience via a Robust LLM-Empowered Multi-Agent Reinforcement Learning Framework",
+      "year": 2026,
+      "note_id": "journal-of-latex-class-files-vol-14-no-8-august-2021-3",
+      "tech_id_count": 0,
+      "included": false,
+      "exclusion_reason": "only 0 technique-ID occurrences (<3)"
+    },
+    {
+      "arxiv_id": "2604.12228v1",
+      "title": "From IOCs to Regex: Automating CTI Operationalization for SOC with LLMs",
+      "year": 2026,
+      "note_id": "from-iocs-to-regex-automating-cti-operationalization-for-soc-with-llms",
+      "tech_id_count": 0,
+      "included": false,
+      "exclusion_reason": "only 0 technique-ID occurrences (<3)"
+    },
+    {
+      "arxiv_id": "2404.17989v2",
+      "title": "Who Shares What? An Empirical Analysis of Security Conference Content Across Academia and Industry",
+      "year": 2024,
+      "note_id": "who-shares-what-an-empirical-analysis-of-security-conference-content",
+      "tech_id_count": 0,
+      "included": false,
+      "exclusion_reason": "only 0 technique-ID occurrences (<3)"
+    },
+    {
+      "arxiv_id": "2504.01803v1",
+      "title": "DISINFOX: an open-source threat exchange platform serving intelligence on disinformation and influence operations",
+      "year": 2025,
+      "note_id": "disinfox-an-open-source-threat-exchange-platform",
+      "tech_id_count": 0,
+      "included": false,
+      "exclusion_reason": "only 0 technique-ID occurrences (<3)"
+    },
+    {
+      "arxiv_id": "2401.00280v3",
+      "title": "Advancing TTP Analysis: Harnessing the Power of Large Language Models with Retrieval Augmented Generation",
+      "year": 2023,
+      "note_id": "advancing-ttp-analysis-harnessing-the-power-of-large",
+      "tech_id_count": 0,
+      "included": false,
+      "exclusion_reason": "only 0 technique-ID occurrences (<3)"
+    },
+    {
+      "arxiv_id": "2605.01892v1",
+      "title": "CyberAId: AI-Driven Cybersecurity for Financial Service Providers",
+      "year": 2026,
+      "note_id": "cyberaid-ai-driven-cybersecurity-for-financial",
+      "tech_id_count": 0,
+      "included": false,
+      "exclusion_reason": "only 0 technique-ID occurrences (<3)"
+    },
+    {
+      "arxiv_id": "2512.08107v1",
+      "title": "Detecting Ambiguity Aversion in Cyberattack Behavior to Inform Cognitive Defense Strategies",
+      "year": 2025,
+      "note_id": "2025-published-by-ahfe-open-access-all-rights-reserved",
+      "tech_id_count": 0,
+      "included": false,
+      "exclusion_reason": "only 0 technique-ID occurrences (<3)"
+    },
+    {
+      "arxiv_id": "2510.21601v1",
+      "title": "PTMF: A Privacy Threat Modeling Framework for IoT with Expert-Driven Threat Propagation Analysis",
+      "year": 2025,
+      "note_id": "ptmf-a-privacy-threat-modeling-framework-for",
+      "tech_id_count": 0,
+      "included": false,
+      "exclusion_reason": "only 0 technique-ID occurrences (<3)"
+    },
+    {
+      "arxiv_id": "2411.13459v1",
+      "title": "SoK: A Systems Perspective on Compound AI Threats and Countermeasures",
+      "year": 2024,
+      "note_id": "sok-a-systems-perspective-on-compound-ai-threats-and-countermeasures",
+      "tech_id_count": 0,
+      "included": false,
+      "exclusion_reason": "only 0 technique-ID occurrences (<3)"
+    }
+  ],
+  "fetch_attempts_used": 60,
+  "results": {
+    "n_frame": 155,
+    "n_manual_overrides": 5,
+    "n_sampled": 60,
+    "n_fetch_attempts": 60,
+    "n_fetch_failures": 0,
+    "n_fetched_ok": 60,
+    "n_excluded": 27,
+    "n_included": 33,
+    "pin_exact": {
+      "k": 6,
+      "n": 33,
+      "rate": 0.18181818181818182,
+      "wilson_lo": 0.08610768208940667,
+      "wilson_hi": 0.3438823163466992
+    },
+    "pin_major_or_better": {
+      "k": 9,
+      "n": 33,
+      "rate": 0.2727272727272727,
+      "wilson_lo": 0.1506744088542064,
+      "wilson_hi": 0.44217559002872625
+    },
+    "pin_any_declaration": {
+      "k": 9,
+      "n": 33,
+      "rate": 0.2727272727272727,
+      "wilson_lo": 0.1506744088542064,
+      "wilson_hi": 0.44217559002872625
+    },
+    "by_year": {
+      "2023": {
+        "exact": {
+          "k": 0,
+          "n": 1,
+          "rate": 0.0,
+          "wilson_lo": 0.0,
+          "wilson_hi": 0.7934506856227626
+        },
+        "major_or_better": {
+          "k": 0,
+          "n": 1,
+          "rate": 0.0,
+          "wilson_lo": 0.0,
+          "wilson_hi": 0.7934506856227626
+        }
+      },
+      "2024": {
+        "exact": {
+          "k": 0,
+          "n": 2,
+          "rate": 0.0,
+          "wilson_lo": 0.0,
+          "wilson_hi": 0.6576197724933469
+        },
+        "major_or_better": {
+          "k": 1,
+          "n": 2,
+          "rate": 0.5,
+          "wilson_lo": 0.09453120573423074,
+          "wilson_hi": 0.9054687942657693
+        }
+      },
+      "2025": {
+        "exact": {
+          "k": 3,
+          "n": 15,
+          "rate": 0.2,
+          "wilson_lo": 0.07047549346981563,
+          "wilson_hi": 0.45185448715169363
+        },
+        "major_or_better": {
+          "k": 3,
+          "n": 15,
+          "rate": 0.2,
+          "wilson_lo": 0.07047549346981563,
+          "wilson_hi": 0.45185448715169363
+        }
+      },
+      "2026": {
+        "exact": {
+          "k": 3,
+          "n": 15,
+          "rate": 0.2,
+          "wilson_lo": 0.07047549346981563,
+          "wilson_hi": 0.45185448715169363
+        },
+        "major_or_better": {
+          "k": 5,
+          "n": 15,
+          "rate": 0.3333333333333333,
+          "wilson_lo": 0.1517632443971473,
+          "wilson_hi": 0.5828645226148023
+        }
+      }
+    },
+    "by_subtechnique_use": {
+      "uses_subtechniques": {
+        "k": 8,
+        "n": 24,
+        "rate": 0.3333333333333333,
+        "wilson_lo": 0.1797219032729775,
+        "wilson_hi": 0.5329368316186824
+      },
+      "no_subtechniques": {
+        "k": 1,
+        "n": 9,
+        "rate": 0.1111111111111111,
+        "wilson_lo": 0.019890887638544907,
+        "wilson_hi": 0.434999705576656
+      }
+    }
+  },
+  "lint_after_curation": {
+    "ok": true,
+    "data": {
+      "issues": [
+        {
+          "rule": "missing-summary",
+          "severity": "warning",
+          "note_id": "251011974v1-ctiarena-benchmarking-llm-knowledge-and-reasoning-across-heterogeneo",
+          "note_path": "research/notes/251011974v1-ctiarena-benchmarking-llm-knowledge-and-reasoning-across-heterogeneo.md",
+          "message": "Note has no summary. Add one for better search and listings."
+        },
+        {
+          "rule": "missing-summary",
+          "severity": "warning",
+          "note_id": "240607599-ctibench-a-benchmark-for-evaluating-llms-in-cyber-threat-intelligence",
+          "note_path": "research/notes/240607599-ctibench-a-benchmark-for-evaluating-llms-in-cyber-threat-intelligence.md",
+          "message": "Note has no summary. Add one for better search and listings."
+        },
+        {
+          "rule": "missing-summary",
+          "severity": "warning",
+          "note_id": "ctibench-a-benchmark-for-evaluating-llms-in-2",
+          "note_path": "research/notes/ctibench-a-benchmark-for-evaluating-llms-in-2.md",
+          "message": "Note has no summary. Add one for better search and listings."
+        },
+        {
+          "rule": "patch-surgery",
+          "severity": "warning",
+          "note_id": "<vault>",
+          "message": "Patch log is empty (applied=0, skipped=0, conflicts=0) but critics returned 34 findings and the final report exists. The patcher's log was almost certainly lost in transit \u2014 Layer 6 orchestrator didn't pre-create `research/patch-log.json` as an empty stub, so the tool-locked patcher (`[Read, Edit]` only) couldn't populate it and inlined the log in its Task result instead. The draft WAS patched \u2014 you can verify via `git diff` on the L4 draft snapshot \u2014 but the audit trail is gone. Fix: orchestrator must `echo '{\"applied\":[], \"skipped\":[], \"conflicts\":[]}' > research/patch-log.json` before spawning the patcher."
+        },
+        {
+          "rule": "instruction-coverage",
+          "severity": "error",
+          "note_id": "<vault>",
+          "message": "6 atomic entity/entities from prompt-decomposition.json are missing from the final report: MITRE ATT&CK (Enterprise, Mobile, ICS), ATT&CK STIX 2.1 release corpus, TTP-based threat-actor attribution, CTI benchmarks and training corpora (CTIBench, TRAM, rcATT), Detection and mitigation coverage claims, ATT&CK-Norm normalization protocol. The draft drifted from the user's explicit ask. Re-spawn the instruction-critic with the missing items flagged, or hand-craft Edits to restore them."
+        },
+        {
+          "rule": "instruction-coverage",
+          "severity": "warning",
+          "note_id": "<vault>",
+          "message": "Required format(s) from prompt-decomposition not visibly present in draft: journal manuscript structure with numbered sections, quantitative results tables, figures referenced by number, explicit threats-to-validity section, reproducibility statement. This may be a false positive if the format is rendered without the spec word in the prose \u2014 review manually."
+        },
+        {
+          "rule": "singleton-tags",
+          "severity": "info",
+          "note_id": "gap",
+          "message": "Tag 'gap' is used by only 1 note. Consider merging."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "attck-release-corpus-used-for-drift-measurement",
+          "note_path": "research/notes/attck-release-corpus-used-for-drift-measurement.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "e1-attck-enterprise-release-churn-table",
+          "note_path": "research/notes/e1-attck-enterprise-release-churn-table.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "e2-identifier-survival-to-attck-v190",
+          "note_path": "research/notes/e2-identifier-survival-to-attck-v190.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "e3-silent-semantic-drift-of-id-stable-attck-techniques",
+          "note_path": "research/notes/e3-silent-semantic-drift-of-id-stable-attck-techniques.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "e4-how-much-attck-growth-is-bookkeeping-rather-than-new-intelligence",
+          "note_path": "research/notes/e4-how-much-attck-growth-is-bookkeeping-rather-than-new-intelligence.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "e5-attribution-accuracy-under-attck-vocabulary-mismatch",
+          "note_path": "research/notes/e5-attribution-accuracy-under-attck-vocabulary-mismatch.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "e6-attck-coverage-claims-drift-while-the-capability-stays-frozen",
+          "note_path": "research/notes/e6-attck-coverage-claims-drift-while-the-capability-stays-frozen.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "e7-attck-label-validity-in-ctibench-tram-and-rcatt",
+          "note_path": "research/notes/e7-attck-label-validity-in-ctibench-tram-and-rcatt.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "tesseract-eliminating-experimental-bias-in-malware-classification-across-space-a",
+          "note_path": "research/notes/tesseract-eliminating-experimental-bias-in-malware-classification-across-space-a.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "dos-and-donts-of-machine-learning-in-computer-security-arp-et-al",
+          "note_path": "research/notes/dos-and-donts-of-machine-learning-in-computer-security-arp-et-al.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "transcend-and-transcendent-conformal-evaluation-and-rejection-under-concept-drif",
+          "note_path": "research/notes/transcend-and-transcendent-conformal-evaluation-and-rejection-under-concept-drif.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "cade-detecting-and-explaining-concept-drift-samples-for-security-applications",
+          "note_path": "research/notes/cade-detecting-and-explaining-concept-drift-samples-for-security-applications.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "tomczak-et-al-2018-gene-ontology-evolution-changes-the-interpretation-of-biologi",
+          "note_path": "research/notes/tomczak-et-al-2018-gene-ontology-evolution-changes-the-interpretation-of-biologi.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "attck-navigator-layer-file-format-the-attck-content-version-is-an-optional-field",
+          "note_path": "research/notes/attck-navigator-layer-file-format-the-attck-content-version-is-an-optional-field.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "ctibench-cti-ate-gold-label-forensics-60-items-115-techniques-zero-sub-technique",
+          "note_path": "research/notes/ctibench-cti-ate-gold-label-forensics-60-items-115-techniques-zero-sub-technique.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "obo-foundry-principle-19-stability-of-term-meaning-referent-stability-obsoletion",
+          "note_path": "research/notes/obo-foundry-principle-19-stability-of-term-meaning-referent-stability-obsoletion.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "obo-foundry-principle-4-versioning-version-iris-release-immutability-perpetual-r",
+          "note_path": "research/notes/obo-foundry-principle-4-versioning-version-iris-release-immutability-perpetual-r.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "leco-continual-learning-with-evolving-class-ontologies-neurips-2022",
+          "note_path": "research/notes/leco-continual-learning-with-evolving-class-ontologies-neurips-2022.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "class-incremental-learning-surveys-the-additive-quadrant-of-label-space-change",
+          "note_path": "research/notes/class-incremental-learning-surveys-the-additive-quadrant-of-label-space-change.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "dataset-shift-and-concept-drift-taxonomies-gama-moreno-torres-lu-et-al",
+          "note_path": "research/notes/dataset-shift-and-concept-drift-taxonomies-gama-moreno-torres-lu-et-al.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "rcatt-repo-audit-a-2019-era-flat-attck-label-space-half-of-it-revoked-by-v13",
+          "note_path": "research/notes/rcatt-repo-audit-a-2019-era-flat-attck-label-space-half-of-it-revoked-by-v13.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "legoy-et-al-2020-automated-retrieval-of-attck-tactics-and-techniques-rcatt-paper",
+          "note_path": "research/notes/legoy-et-al-2020-automated-retrieval-of-attck-tactics-and-techniques-rcatt-paper.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "tram-repo-audit-declared-attck-v131-19-of-shipped-attack-patterns-are-tombstones",
+          "note_path": "research/notes/tram-repo-audit-declared-attck-v131-19-of-shipped-attack-patterns-are-tombstones.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "athenabench-gold-label-forensics-500-single-label-ate-items-70-sub-techniques-v1",
+          "note_path": "research/notes/athenabench-gold-label-forensics-500-single-label-ate-items-70-sub-techniques-v1.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "athenabench-arxiv-251101144-dynamic-live-api-benchmarking-as-the-fields-answer-t",
+          "note_path": "research/notes/athenabench-arxiv-251101144-dynamic-live-api-benchmarking-as-the-fields-answer-t.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "obo-foundry-identifier-policy-global-uniqueness-no-reuse-and-persistence-as-a-pr",
+          "note_path": "research/notes/obo-foundry-identifier-policy-global-uniqueness-no-reuse-and-persistence-as-a-pr.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "conto-diff-hartung-gross-rahm-complex-change-operations-as-evolution-mappings-be",
+          "note_path": "research/notes/conto-diff-hartung-gross-rahm-complex-change-operations-as-evolution-mappings-be.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "virkud-et-al-usenix-sec-2024-edr-vendors-disagree-on-attck-labels-within-a-singl",
+          "note_path": "research/notes/virkud-et-al-usenix-sec-2024-edr-vendors-disagree-on-attck-labels-within-a-singl.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "case-study-the-attck-v190-revocation-wave",
+          "note_path": "research/notes/case-study-the-attck-v190-revocation-wave.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "zibak-et-al-threat-intelligence-quality-dimensions-for-research-and-practice-dtr",
+          "note_path": "research/notes/zibak-et-al-threat-intelligence-quality-dimensions-for-research-and-practice-dtr.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "schlette-et-al-measuring-and-visualizing-cyber-threat-intelligence-quality-ijis",
+          "note_path": "research/notes/schlette-et-al-measuring-and-visualizing-cyber-threat-intelligence-quality-ijis.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "li-et-al-reading-the-tea-leaves-a-comparative-analysis-of-threat-intelligence-us",
+          "note_path": "research/notes/li-et-al-reading-the-tea-leaves-a-comparative-analysis-of-threat-intelligence-us.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "when-benchmarks-age-quantifying-answer-key-decay-in-static-benchmarks",
+          "note_path": "research/notes/when-benchmarks-age-quantifying-answer-key-decay-in-static-benchmarks.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "motif-ground-truth-malware-family-labels-and-the-open-unstable-class-set",
+          "note_path": "research/notes/motif-ground-truth-malware-family-labels-and-the-open-unstable-class-set.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "avclass-alias-resolution-and-label-normalization-as-prior-art-for-a-migration-ma",
+          "note_path": "research/notes/avclass-alias-resolution-and-label-normalization-as-prior-art-for-a-migration-ma.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "griffioen-booij-doerr-quality-evaluation-of-cyber-threat-intelligence-feeds-acns",
+          "note_path": "research/notes/griffioen-booij-doerr-quality-evaluation-of-cyber-threat-intelligence-feeds-acns.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "feedmeter-evaluating-the-quality-of-community-driven-threat-intelligence-2024",
+          "note_path": "research/notes/feedmeter-evaluating-the-quality-of-community-driven-threat-intelligence-2024.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "geras-schreck-the-big-beast-to-tackle-practices-in-quality-assurance-for-cti-rai",
+          "note_path": "research/notes/geras-schreck-the-big-beast-to-tackle-practices-in-quality-assurance-for-cti-rai.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "evidence-driven-analysis-of-threat-information-sharing-challenges-for-ics-arxiv",
+          "note_path": "research/notes/evidence-driven-analysis-of-threat-information-sharing-challenges-for-ics-arxiv.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "cti-bench-data-audit-v15-era-vocabulary-hard-coded-into-prompts-sub-techniques-e",
+          "note_path": "research/notes/cti-bench-data-audit-v15-era-vocabulary-hard-coded-into-prompts-sub-techniques-e.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "tumeteormitre-ttp-mapping-audit-a-declared-v120-remap-that-still-leaks-pre-v7-re",
+          "note_path": "research/notes/tumeteormitre-ttp-mapping-audit-a-declared-v120-remap-that-still-leaks-pre-v7-re.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "ctibench-neurips-2024-authoritative-source-design-treats-attck-as-fixed-has-a-ti",
+          "note_path": "research/notes/ctibench-neurips-2024-authoritative-source-design-treats-attck-as-fixed-has-a-ti.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "ctiarena-to-cticonnect-arxiv-251011974-691-to-1860-qa-pairs-under-one-identifier",
+          "note_path": "research/notes/ctiarena-to-cticonnect-arxiv-251011974-691-to-1860-qa-pairs-under-one-identifier.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "ontology-evolution-vs-ontology-versioning-change-management-as-the-core-task-kle",
+          "note_path": "research/notes/ontology-evolution-vs-ontology-versioning-change-management-as-the-core-task-kle.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "owl-versioning-vocabulary-versioniri-priorversion-backwardcompatiblewith-owldepr",
+          "note_path": "research/notes/owl-versioning-vocabulary-versioniri-priorversion-backwardcompatiblewith-owldepr.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "vmray-stix-and-taxii-explained-why-a-valid-feed-still-might-not-be-usable",
+          "note_path": "research/notes/vmray-stix-and-taxii-explained-why-a-valid-feed-still-might-not-be-usable.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "suarez-roman-et-al-the-cti-echo-chamber-fragmentation-overlap-and-vendor-specifi",
+          "note_path": "research/notes/suarez-roman-et-al-the-cti-echo-chamber-fragmentation-overlap-and-vendor-specifi.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "a-comprehensive-survey-of-threat-intelligence-research-a-measurement-based-study",
+          "note_path": "research/notes/a-comprehensive-survey-of-threat-intelligence-research-a-measurement-based-study.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "cti-quality-assessment-cluster-automated-dynamic-assessment-misp-weighted-criter",
+          "note_path": "research/notes/cti-quality-assessment-cluster-automated-dynamic-assessment-misp-weighted-criter.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "evidenced-absence-no-cti-quality-framework-treats-label-vocabulary-versioning-as",
+          "note_path": "research/notes/evidenced-absence-no-cti-quality-framework-treats-label-vocabulary-versioning-as.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "mitre-diffstix-changelog_helper-attcks-own-change-taxonomy-patch-detection-and-d",
+          "note_path": "research/notes/mitre-diffstix-changelog_helper-attcks-own-change-taxonomy-patch-detection-and-d.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "virkud-et-al-usenix-security-2024-attck-coverage-is-not-comparable-across-produc",
+          "note_path": "research/notes/virkud-et-al-usenix-security-2024-attck-coverage-is-not-comparable-across-produc.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "modern-malware-drift-adaptation-morph-adapt-few-sample-adaptation-still-a-fixed",
+          "note_path": "research/notes/modern-malware-drift-adaptation-morph-adapt-few-sample-adaptation-still-a-fixed.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "boundary-synthesis-where-concept-drift-literature-stops-and-ontology-drift-begin",
+          "note_path": "research/notes/boundary-synthesis-where-concept-drift-literature-stops-and-ontology-drift-begin.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "multi-label-attck-classification-arxiv-260618166-tram-annotations-declared-not-g",
+          "note_path": "research/notes/multi-label-attck-classification-arxiv-260618166-tram-annotations-declared-not-g.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "ttprint-arxiv-260525836-tram-clean-fork-and-verification-against-official-attck",
+          "note_path": "research/notes/ttprint-arxiv-260525836-tram-clean-fork-and-verification-against-official-attck.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "formal-drift-taxonomy-and-the-attck-norm-protocol",
+          "note_path": "research/notes/formal-drift-taxonomy-and-the-attck-norm-protocol.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "mitre-attack-stix-data-usagemd-the-official-versioning-and-revocation-contract-p",
+          "note_path": "research/notes/mitre-attack-stix-data-usagemd-the-official-versioning-and-revocation-contract-p.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "diffstix-mitres-own-machine-readable-ontology-drift-ledger-and-the-errors-it-def",
+          "note_path": "research/notes/diffstix-mitres-own-machine-readable-ontology-drift-ledger-and-the-errors-it-def.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "attck-navigator-layer-upgrade-version-stamping-is-mandatory-migration-is-manual",
+          "note_path": "research/notes/attck-navigator-layer-upgrade-version-stamping-is-mandatory-migration-is-manual.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "attackg-repo-audit-attck-ontology-frozen-as-a-2021-08-31-html-scrape-parent-only",
+          "note_path": "research/notes/attackg-repo-audit-attck-ontology-frozen-as-a-2021-08-31-html-scrape-parent-only.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "ttpdrill-acsac-2017-the-pre-sub-technique-baseline-everyone-still-compares-again",
+          "note_path": "research/notes/ttpdrill-acsac-2017-the-pre-sub-technique-baseline-everyone-still-compares-again.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "ttphunter-ttpxhunter-50-then-193-ttp-classes-no-declared-attck-release",
+          "note_path": "research/notes/ttphunter-ttpxhunter-50-then-193-ttp-classes-no-declared-attck-release.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "fragmentation-of-cvss-scores-in-the-nvd-cross-version-incomparability-in-a-secur",
+          "note_path": "research/notes/fragmentation-of-cvss-scores-in-the-nvd-cross-version-incomparability-in-a-secur.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "cleaning-the-nvd-and-the-security-knowledge-base-data-quality-genre",
+          "note_path": "research/notes/cleaning-the-nvd-and-the-security-knowledge-base-data-quality-genre.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "synthcti-arxiv-250716852-synthesising-the-attck-long-tail-and-what-that-says-abo",
+          "note_path": "research/notes/synthcti-arxiv-250716852-synthesising-the-attck-long-tail-and-what-that-says-abo.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "sevenllm-arxiv-240503446-90k-samples-and-28-tasks-from-8485-reports-spanning-200",
+          "note_path": "research/notes/sevenllm-arxiv-240503446-90k-samples-and-28-tasks-from-8485-reports-spanning-200.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "evidence-fidelity-ledger-for-this-study",
+          "note_path": "research/notes/evidence-fidelity-ledger-for-this-study.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "mitre-attck-evaluations-a-governed-measurement-protocol-that-refuses-to-emit-a-c",
+          "note_path": "research/notes/mitre-attck-evaluations-a-governed-measurement-protocol-that-refuses-to-emit-a-c.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "saha-et-al-kitten-or-panda-two-thirds-of-attck-threat-groups-have-no-group-speci",
+          "note_path": "research/notes/saha-et-al-kitten-or-panda-two-thirds-of-attck-threat-groups-have-no-group-speci.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "the-cti-echo-chamber-vendor-fragmentation-as-the-confounder-the-drift-thesis-mus",
+          "note_path": "research/notes/the-cti-echo-chamber-vendor-fragmentation-as-the-confounder-the-drift-thesis-mus.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "sok-the-mitre-attck-framework-in-research-and-practice-non-comparability-already",
+          "note_path": "research/notes/sok-the-mitre-attck-framework-in-research-and-practice-non-comparability-already.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "captain-chasing-the-shadows-ttp-sequence-attribution-with-no-declared-attck-vers",
+          "note_path": "research/notes/captain-chasing-the-shadows-ttp-sequence-attribution-with-no-declared-attck-vers.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "synthetic-apts-2026-llm-agents-reproduce-documented-apt-profiles-at-55-80-precis",
+          "note_path": "research/notes/synthetic-apts-2026-llm-agents-reproduce-documented-apt-profiles-at-55-80-precis.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "beyond-single-reports-2026-29-extractors-compared-333-of-errors-are-semantically",
+          "note_path": "research/notes/beyond-single-reports-2026-29-extractors-compared-333-of-errors-are-semantically.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "attck-enterprise-technique-population-census-v10-v192-858-ids-ever-active-697-ac",
+          "note_path": "research/notes/attck-enterprise-technique-population-census-v10-v192-858-ids-ever-active-697-ac.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "increttp-attck-version-updates-framed-as-concept-drift-and-why-incremental-learn",
+          "note_path": "research/notes/increttp-attck-version-updates-framed-as-concept-drift-and-why-incremental-learn.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "v63-to-v70-sub-technique-migration-decomposed-302-new-ids-120-pure-re-identifica",
+          "note_path": "research/notes/v63-to-v70-sub-technique-migration-decomposed-302-new-ids-120-pure-re-identifica.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "attck-v19-defense-evasion-split-measured-294-of-active-techniques-changed-tactic",
+          "note_path": "research/notes/attck-v19-defense-evasion-split-measured-294-of-active-techniques-changed-tactic.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "cve-identifier-lifecycle-rejected-disputed-merge-and-split-as-security-vocabular",
+          "note_path": "research/notes/cve-identifier-lifecycle-rejected-disputed-merge-and-split-as-security-vocabular.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "evolution-of-vocabulary-terms-in-knowledge-graphs-vocabulary-churn-vs-instance-d",
+          "note_path": "research/notes/evolution-of-vocabulary-terms-in-knowledge-graphs-vocabulary-churn-vs-instance-d.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "cti-realm-arxiv-260313517-telemetry-grounded-detection-evaluation-as-the-only-st",
+          "note_path": "research/notes/cti-realm-arxiv-260313517-telemetry-grounded-detection-evaluation-as-the-only-st.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "attackseqbench-arxiv-250303170-sequence-level-attck-reasoning-and-the-tactic-rea",
+          "note_path": "research/notes/attackseqbench-arxiv-250303170-sequence-level-attck-reasoning-and-the-tactic-rea.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "silent-technique-description-rewriting-1366-edits-over-8359-pairs-163-494-with-n",
+          "note_path": "research/notes/silent-technique-description-rewriting-1366-edits-over-8359-pairs-163-494-with-n.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "the-revoked-by-crosswalk-is-a-function-but-not-a-bijection-149-edges-8-many-to-o",
+          "note_path": "research/notes/the-revoked-by-crosswalk-is-a-function-but-not-a-bijection-149-edges-8-many-to-o.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "attack-stix-data-usagemd-normative-deprecated-vs-revoked-semantics-and-the-non-d",
+          "note_path": "research/notes/attack-stix-data-usagemd-normative-deprecated-vs-revoked-semantics-and-the-non-d.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "diff_stix-official-change-taxonomy-eight-change-classes-including-patches-and-un",
+          "note_path": "research/notes/diff_stix-official-change-taxonomy-eight-change-classes-including-patches-and-un.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "mitre-attck-changelog-version-history-and-release-cadence-semiannual-majors-iner",
+          "note_path": "research/notes/mitre-attck-changelog-version-history-and-release-cadence-semiannual-majors-iner.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "mitres-sub-technique-release-announcement-and-the-jsoncsv-crosswalks-abstraction",
+          "note_path": "research/notes/mitres-sub-technique-release-announcement-and-the-jsoncsv-crosswalks-abstraction.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "cve-cwe-cpe-mapping-instability-abstraction-ladder-drift-between-security-vocabu",
+          "note_path": "research/notes/cve-cwe-cpe-mapping-instability-abstraction-ladder-drift-between-security-vocabu.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "attck-v19-announcement-defense-evasion-split-into-stealth-and-impair-defenses-t1",
+          "note_path": "research/notes/attck-v19-announcement-defense-evasion-split-into-stealth-and-impair-defenses-t1.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "ctid-attck-sync-institutional-admission-that-version-drift-invalidates-dependent",
+          "note_path": "research/notes/ctid-attck-sync-institutional-admission-that-version-drift-invalidates-dependent.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "practitioner-evidence-on-coverage-claim-fragility-red-canary-remapping-cost-elas",
+          "note_path": "research/notes/practitioner-evidence-on-coverage-claim-fragility-red-canary-remapping-cost-elas.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "attck-design-and-philosophy-inclusion-criteria-are-explicitly-non-stationary-and",
+          "note_path": "research/notes/attck-design-and-philosophy-inclusion-criteria-are-explicitly-non-stationary-and.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "apt-attribution-survey-jisa-2025-taxonomy-by-artefact-type-not-by-ontology-versi",
+          "note_path": "research/notes/apt-attribution-survey-jisa-2025-taxonomy-by-artefact-type-not-by-ontology-versi.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "measured-43x-label-space-growth-between-ctibench-and-athenabench-is-96-pre-exist",
+          "note_path": "research/notes/measured-43x-label-space-growth-between-ctibench-and-athenabench-is-96-pre-exist.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "b2-synthesis-six-ttp-systems-five-different-attck-ontologies-two-declared-versio",
+          "note_path": "research/notes/b2-synthesis-six-ttp-systems-five-different-attck-ontologies-two-declared-versio.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "beyond-single-reports-intra-version-technique-confusability-as-a-rival-explanati",
+          "note_path": "research/notes/beyond-single-reports-intra-version-technique-confusability-as-a-rival-explanati.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "mitres-own-bias-taxonomy-and-the-sightings-ecosystem-top-15-techniques-are-80-of",
+          "note_path": "research/notes/mitres-own-bias-taxonomy-and-the-sightings-ecosystem-top-15-techniques-are-80-of.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "attck-is-an-ontology-not-a-taxonomy-the-definitional-defence-and-the-ontology-ev",
+          "note_path": "research/notes/attck-is-an-ontology-not-a-taxonomy-the-definitional-defence-and-the-ontology-ev.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "forrester-a-100-attck-evaluations-claim-is-a-red-flag-selective-presentation-unr",
+          "note_path": "research/notes/forrester-a-100-attck-evaluations-claim-is-a-red-flag-selective-presentation-unr.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "shen-et-al-asia-ccs-2024-whole-graph-re-analysis-of-mitre-evaluations-shows-per",
+          "note_path": "research/notes/shen-et-al-asia-ccs-2024-whole-graph-re-analysis-of-mitre-evaluations-shows-per.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "attck-v19-retires-defense-evasion-tactic-reassignment-at-scale-and-the-industrys",
+          "note_path": "research/notes/attck-v19-retires-defense-evasion-tactic-reassignment-at-scale-and-the-industrys.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "practitioner-critique-cluster-attck-coverage-percentages-were-never-a-valid-metr",
+          "note_path": "research/notes/practitioner-critique-cluster-attck-coverage-percentages-were-never-a-valid-metr.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "mitre-attck-state-of-the-art-and-way-forward-acm-csur-2025-the-novelty-bar-an-sc",
+          "note_path": "research/notes/mitre-attck-state-of-the-art-and-way-forward-acm-csur-2025-the-novelty-bar-an-sc.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "summiting-the-pyramid-v50-ctid-implementations-replace-techniques-as-the-coverag",
+          "note_path": "research/notes/summiting-the-pyramid-v50-ctid-implementations-replace-techniques-as-the-coverag.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "vendor-attck-coverage-claims-100-of-what-exactly-and-the-five-ways-a-coverage-nu",
+          "note_path": "research/notes/vendor-attck-coverage-claims-100-of-what-exactly-and-the-five-ways-a-coverage-nu.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "rahman-williams-arxiv221106500-mitigation-coverage-has-a-ceiling-set-by-the-cont",
+          "note_path": "research/notes/rahman-williams-arxiv221106500-mitigation-coverage-has-a-ceiling-set-by-the-cont.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "practitioner-critique-the-attck-heatmap-counts-rules-not-coverage-and-three-inco",
+          "note_path": "research/notes/practitioner-critique-the-attck-heatmap-counts-rules-not-coverage-and-three-inco.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "dettct-omits-the-attck-version-from-generated-navigator-layers-by-default-and-st",
+          "note_path": "research/notes/dettct-omits-the-attck-version-from-generated-navigator-layers-by-default-and-st.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "audit-six-of-eight-sample-layers-shipped-in-mitres-own-navigator-repository-carr",
+          "note_path": "research/notes/audit-six-of-eight-sample-layers-shipped-in-mitres-own-navigator-repository-carr.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "how-coverage-layers-are-actually-built-ad-hoc-scoring-schemes-over-a-data-source",
+          "note_path": "research/notes/how-coverage-layers-are-actually-built-ad-hoc-scoring-schemes-over-a-data-source.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "corpus-integrity-incident-and-how-it-was-handled",
+          "note_path": "research/notes/corpus-integrity-incident-and-how-it-was-handled.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "attcks-published-retirement-contract-read-from-the-artefact",
+          "note_path": "research/notes/attcks-published-retirement-contract-read-from-the-artefact.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "mitres-own-change-taxonomy-read-from-diffstix-source",
+          "note_path": "research/notes/mitres-own-change-taxonomy-read-from-diffstix-source.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "ctid-attck-sync",
+          "note_path": "research/notes/ctid-attck-sync.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "tesseract-eliminating-experimental-bias-in-malware-classi\ufb01cation",
+          "note_path": "research/notes/tesseract-eliminating-experimental-bias-in-malware-classi\ufb01cation.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "athenabench-a-dynamic-benchmark-for-evaluating-llms-in-cyber-threat",
+          "note_path": "research/notes/athenabench-a-dynamic-benchmark-for-evaluating-llms-in-cyber-threat.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "kitten-or-panda-measuring-the-specificity-of-threat-group",
+          "note_path": "research/notes/kitten-or-panda-measuring-the-specificity-of-threat-group.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "when-benchmarks-age-temporal-misalignment-through",
+          "note_path": "research/notes/when-benchmarks-age-temporal-misalignment-through.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "beyond-single-reports-evaluating-automated-attck",
+          "note_path": "research/notes/beyond-single-reports-evaluating-automated-attck.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "cticonnect-a-benchmark-for-retrieval-augmented-llms-over",
+          "note_path": "research/notes/cticonnect-a-benchmark-for-retrieval-augmented-llms-over.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "ctibench-a-benchmark-for-evaluating-llms-in",
+          "note_path": "research/notes/ctibench-a-benchmark-for-evaluating-llms-in.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "this-paper-is-included-in-the-proceedings-of-the",
+          "note_path": "research/notes/this-paper-is-included-in-the-proceedings-of-the.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "this-paper-is-included-in-the-proceedings-of-the-2",
+          "note_path": "research/notes/this-paper-is-included-in-the-proceedings-of-the-2.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "version-history-mitre-attck",
+          "note_path": "research/notes/version-history-mitre-attck.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "updates-updates-april-2026-mitre-attck",
+          "note_path": "research/notes/updates-updates-april-2026-mitre-attck.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "increttp-an-incremental-ttps-classification-model-springer-nature-link",
+          "note_path": "research/notes/increttp-an-incremental-ttps-classification-model-springer-nature-link.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "stix-version-21",
+          "note_path": "research/notes/stix-version-21.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "251011974v1-ctiarena-benchmarking-llm-knowledge-and-reasoning-across-heterogeneo",
+          "note_path": "research/notes/251011974v1-ctiarena-benchmarking-llm-knowledge-and-reasoning-across-heterogeneo.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "sok-the-mitre-attck-framework-in",
+          "note_path": "research/notes/sok-the-mitre-attck-framework-in.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "decoding-the-mitre-engenuity-attck-enterprise-evaluation",
+          "note_path": "research/notes/decoding-the-mitre-engenuity-attck-enterprise-evaluation.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "240607599-ctibench-a-benchmark-for-evaluating-llms-in-cyber-threat-intelligence",
+          "note_path": "research/notes/240607599-ctibench-a-benchmark-for-evaluating-llms-in-cyber-threat-intelligence.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "ctibench-a-benchmark-for-evaluating-llms-in-2",
+          "note_path": "research/notes/ctibench-a-benchmark-for-evaluating-llms-in-2.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "measuring-and-visualizing-cyber-threat-intelligence-quality-international-journa",
+          "note_path": "research/notes/measuring-and-visualizing-cyber-threat-intelligence-quality-international-journa.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "benchmarking-llm-knowledge",
+          "note_path": "research/notes/benchmarking-llm-knowledge.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "killchaingraph-ml-framework-for-predicting-and",
+          "note_path": "research/notes/killchaingraph-ml-framework-for-predicting-and.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "tactics-techniques-and-procedures-ttps-in-interpreted-malware",
+          "note_path": "research/notes/tactics-techniques-and-procedures-ttps-in-interpreted-malware.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "agentra-a-supervisable-multi-agent-framework",
+          "note_path": "research/notes/agentra-a-supervisable-multi-agent-framework.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "arxiv250511547v1-cscr-15-may-2025",
+          "note_path": "research/notes/arxiv250511547v1-cscr-15-may-2025.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "an-empirical-study-of-observability-limits-in-advanced-software",
+          "note_path": "research/notes/an-empirical-study-of-observability-limits-in-advanced-software.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "battle-ground-data-collection-and-labeling-of-ctf-games-to",
+          "note_path": "research/notes/battle-ground-data-collection-and-labeling-of-ctf-games-to.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "journal-of-latex-class-files-vol-14-no-8-august-2021",
+          "note_path": "research/notes/journal-of-latex-class-files-vol-14-no-8-august-2021.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "an-alignment-between-the-cras-essential",
+          "note_path": "research/notes/an-alignment-between-the-cras-essential.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "cyber-attack-technique-classification",
+          "note_path": "research/notes/cyber-attack-technique-classification.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "operationalizing-cybersecurity-governance-for",
+          "note_path": "research/notes/operationalizing-cybersecurity-governance-for.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "arena-an-architecture-for-measuring-the",
+          "note_path": "research/notes/arena-an-architecture-for-measuring-the.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "injectlab-a-tactical-framework-for-adversarial-threat",
+          "note_path": "research/notes/injectlab-a-tactical-framework-for-adversarial-threat.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "xxx-x-xxxx-xxxx-xxxxx00-20xx-ieee",
+          "note_path": "research/notes/xxx-x-xxxx-xxxx-xxxxx00-20xx-ieee.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "stealthcup-realistic-multi-stage-evasion-focused-ctf-for",
+          "note_path": "research/notes/stealthcup-realistic-multi-stage-evasion-focused-ctf-for.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "mapping-cves-to-mitre-attck-techniques",
+          "note_path": "research/notes/mapping-cves-to-mitre-attck-techniques.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "aegisshield-democratizing-cyber-threat-modeling-with-generative-ai",
+          "note_path": "research/notes/aegisshield-democratizing-cyber-threat-modeling-with-generative-ai.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "cyber-campaign-fractals",
+          "note_path": "research/notes/cyber-campaign-fractals.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "t\u00e9cnicas-avanzadas-de",
+          "note_path": "research/notes/t\u00e9cnicas-avanzadas-de.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "what-are-adversaries-doing-automating-tactics",
+          "note_path": "research/notes/what-are-adversaries-doing-automating-tactics.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "journal-of-latex-class-files-vol-14-no-8-august-2021-2",
+          "note_path": "research/notes/journal-of-latex-class-files-vol-14-no-8-august-2021-2.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "netforge-rl-a-multi-agent-simulation-environment-for-cyber-defense-with-durative",
+          "note_path": "research/notes/netforge-rl-a-multi-agent-simulation-environment-for-cyber-defense-with-durative.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "l2m-aid-autonomous-cyber-physical-defense-by",
+          "note_path": "research/notes/l2m-aid-autonomous-cyber-physical-defense-by.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "towards-automated-cyber-threat-intelligence",
+          "note_path": "research/notes/towards-automated-cyber-threat-intelligence.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "droidttp-mapping-android-applications-with-ttp-for-cyber",
+          "note_path": "research/notes/droidttp-mapping-android-applications-with-ttp-for-cyber.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "the-procedural-semantics-gap-in-attck-in-stix-measuring",
+          "note_path": "research/notes/the-procedural-semantics-gap-in-attck-in-stix-measuring.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "ieee-copyright-notice",
+          "note_path": "research/notes/ieee-copyright-notice.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "automated-post-incident-policy-gap-analysis-via",
+          "note_path": "research/notes/automated-post-incident-policy-gap-analysis-via.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "attackers-reveal-their-arsenal-an-investigation-of-adversarial",
+          "note_path": "research/notes/attackers-reveal-their-arsenal-an-investigation-of-adversarial.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "kitten-or-panda-measuring-the-specificity-of-threat-group-2",
+          "note_path": "research/notes/kitten-or-panda-measuring-the-specificity-of-threat-group-2.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "research-paper-safeguarding-skies-airport-cybersecurity-in-the-digital-age",
+          "note_path": "research/notes/research-paper-safeguarding-skies-airport-cybersecurity-in-the-digital-age.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "beacon-behavior-anchored-cross-source-knowledge-graph",
+          "note_path": "research/notes/beacon-behavior-anchored-cross-source-knowledge-graph.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "a-structured-cyber-threat-intelligence-dataset",
+          "note_path": "research/notes/a-structured-cyber-threat-intelligence-dataset.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "hierarchical-retrieval-augmented-genera",
+          "note_path": "research/notes/hierarchical-retrieval-augmented-genera.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "exploiting-mobile-llm-agents-as-confused",
+          "note_path": "research/notes/exploiting-mobile-llm-agents-as-confused.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "your-harness-is-not-secure-benchmarking-real-world-threat-of",
+          "note_path": "research/notes/your-harness-is-not-secure-benchmarking-real-world-threat-of.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "security-logs-to-attck-insights-leveraging-llms",
+          "note_path": "research/notes/security-logs-to-attck-insights-leveraging-llms.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "arxiv240107783v2-cscr-16-jun-2025",
+          "note_path": "research/notes/arxiv240107783v2-cscr-16-jun-2025.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "arxiv250517107v1-cscr-21-may-2025",
+          "note_path": "research/notes/arxiv250517107v1-cscr-21-may-2025.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "cyberllm-finds-2025-instruction-tuned",
+          "note_path": "research/notes/cyberllm-finds-2025-instruction-tuned.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "clustering-doc2vec-output-for-topic-dimensionality",
+          "note_path": "research/notes/clustering-doc2vec-output-for-topic-dimensionality.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "autonomous-adversary-red-teaming-in-the-age",
+          "note_path": "research/notes/autonomous-adversary-red-teaming-in-the-age.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "an-evidence-driven-analysis-of-threat-information-sharing",
+          "note_path": "research/notes/an-evidence-driven-analysis-of-threat-information-sharing.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "journal-of-latex-class-files-vol-14-no-8-august-2021-3",
+          "note_path": "research/notes/journal-of-latex-class-files-vol-14-no-8-august-2021-3.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "from-iocs-to-regex-automating-cti-operationalization-for-soc-with-llms",
+          "note_path": "research/notes/from-iocs-to-regex-automating-cti-operationalization-for-soc-with-llms.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "cticonnect-a-benchmark-for-retrieval-augmented-llms-over-2",
+          "note_path": "research/notes/cticonnect-a-benchmark-for-retrieval-augmented-llms-over-2.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "who-shares-what-an-empirical-analysis-of-security-conference-content",
+          "note_path": "research/notes/who-shares-what-an-empirical-analysis-of-security-conference-content.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "disinfox-an-open-source-threat-exchange-platform",
+          "note_path": "research/notes/disinfox-an-open-source-threat-exchange-platform.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "advancing-ttp-analysis-harnessing-the-power-of-large",
+          "note_path": "research/notes/advancing-ttp-analysis-harnessing-the-power-of-large.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "cyberaid-ai-driven-cybersecurity-for-financial",
+          "note_path": "research/notes/cyberaid-ai-driven-cybersecurity-for-financial.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "towards-threat-modelling-of-iot-context-sharing",
+          "note_path": "research/notes/towards-threat-modelling-of-iot-context-sharing.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "trusted-workflow-relays",
+          "note_path": "research/notes/trusted-workflow-relays.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "cybersecurity-risk-assessment-for-cubesat-missions",
+          "note_path": "research/notes/cybersecurity-risk-assessment-for-cubesat-missions.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "accepted-in-computers-security-elsevier",
+          "note_path": "research/notes/accepted-in-computers-security-elsevier.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "d-cipher-dynamic-collaborative-intelligent",
+          "note_path": "research/notes/d-cipher-dynamic-collaborative-intelligent.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "cti-hal-a-human-annotated-dataset-for",
+          "note_path": "research/notes/cti-hal-a-human-annotated-dataset-for.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "2025-published-by-ahfe-open-access-all-rights-reserved",
+          "note_path": "research/notes/2025-published-by-ahfe-open-access-all-rights-reserved.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "ptmf-a-privacy-threat-modeling-framework-for",
+          "note_path": "research/notes/ptmf-a-privacy-threat-modeling-framework-for.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "sok-a-systems-perspective-on-compound-ai-threats-and-countermeasures",
+          "note_path": "research/notes/sok-a-systems-perspective-on-compound-ai-threats-and-countermeasures.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "opensoc-ai-democratizing-security-operations",
+          "note_path": "research/notes/opensoc-ai-democratizing-security-operations.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "orphaned-notes",
+          "severity": "info",
+          "note_id": "nuance-near-ultrasound-attack-on",
+          "note_path": "research/notes/nuance-near-ultrasound-attack-on.md",
+          "message": "Note is orphaned (no links in or out)."
+        },
+        {
+          "rule": "quote-integrity",
+          "severity": "error",
+          "note_id": "<report>",
+          "note_path": "/Users/mac/ws/claude/hyper-research-works/research/notes/final_report_attack-ontology-drift-cti-85bc51.md",
+          "message": "Quoted span not found verbatim in any vault note: \"submitted between January 2023 and September 2026, 155 papers; a seeded random sample of 60 was fetched in full, and a p\"... Either the quote is hallucinated/mangled or its source was never fetched. Fix the quote or drop the quotation marks."
+        },
+        {
+          "rule": "numeric-consistency",
+          "severity": "warning",
+          "note_id": "<report>",
+          "note_path": "/Users/mac/ws/claude/hyper-research-works/research/notes/final_report_attack-ontology-drift-cti-85bc51.md",
+          "message": "Number '0.0010' in the final report appears in no claim or cited note body. If it is derived arithmetic, fine; otherwise verify it against a source or remove it."
+        },
+        {
+          "rule": "numeric-consistency",
+          "severity": "warning",
+          "note_id": "<report>",
+          "note_path": "/Users/mac/ws/claude/hyper-research-works/research/notes/final_report_attack-ontology-drift-cti-85bc51.md",
+          "message": "Number '0.0019' in the final report appears in no claim or cited note body. If it is derived arithmetic, fine; otherwise verify it against a source or remove it."
+        },
+        {
+          "rule": "numeric-consistency",
+          "severity": "warning",
+          "note_id": "<report>",
+          "note_path": "/Users/mac/ws/claude/hyper-research-works/research/notes/final_report_attack-ontology-drift-cti-85bc51.md",
+          "message": "Number '0.0067' in the final report appears in no claim or cited note body. If it is derived arithmetic, fine; otherwise verify it against a source or remove it."
+        },
+        {
+          "rule": "numeric-consistency",
+          "severity": "warning",
+          "note_id": "<report>",
+          "note_path": "/Users/mac/ws/claude/hyper-research-works/research/notes/final_report_attack-ontology-drift-cti-85bc51.md",
+          "message": "Number '0.0073' in the final report appears in no claim or cited note body. If it is derived arithmetic, fine; otherwise verify it against a source or remove it."
+        },
+        {
+          "rule": "numeric-consistency",
+          "severity": "warning",
+          "note_id": "<report>",
+          "note_path": "/Users/mac/ws/claude/hyper-research-works/research/notes/final_report_attack-ontology-drift-cti-85bc51.md",
+          "message": "Number '0.0101' in the final report appears in no claim or cited note body. If it is derived arithmetic, fine; otherwise verify it against a source or remove it."
+        },
+        {
+          "rule": "numeric-consistency",
+          "severity": "warning",
+          "note_id": "<report>",
+          "note_path": "/Users/mac/ws/claude/hyper-research-works/research/notes/final_report_attack-ontology-drift-cti-85bc51.md",
+          "message": "Number '0.0109' in the final report appears in no claim or cited note body. If it is derived arithmetic, fine; otherwise verify it against a source or remove it."
+        },
+        {
+          "rule": "numeric-consistency",
+          "severity": "warning",
+          "note_id": "<report>",
+          "note_path": "/Users/mac/ws/claude/hyper-research-works/research/notes/final_report_attack-ontology-drift-cti-85bc51.md",
+          "message": "Number '0.0125' in the final report appears in no claim or cited note body. If it is derived arithmetic, fine; otherwise verify it against a source or remove it."
+        },
+        {
+          "rule": "numeric-consistency",
+          "severity": "warning",
+          "note_id": "<report>",
+          "note_path": "/Users/mac/ws/claude/hyper-research-works/research/notes/final_report_attack-ontology-drift-cti-85bc51.md",
+          "message": "Number '0.0140' in the final report appears in no claim or cited note body. If it is derived arithmetic, fine; otherwise verify it against a source or remove it."
+        },
+        {
+          "rule": "numeric-consistency",
+          "severity": "warning",
+          "note_id": "<report>",
+          "note_path": "/Users/mac/ws/claude/hyper-research-works/research/notes/final_report_attack-ontology-drift-cti-85bc51.md",
+          "message": "Number '0.0166' in the final report appears in no claim or cited note body. If it is derived arithmetic, fine; otherwise verify it against a source or remove it."
+        },
+        {
+          "rule": "numeric-consistency",
+          "severity": "warning",
+          "note_id": "<report>",
+          "note_path": "/Users/mac/ws/claude/hyper-research-works/research/notes/final_report_attack-ontology-drift-cti-85bc51.md",
+          "message": "Number '0.0199' in the final report appears in no claim or cited note body. If it is derived arithmetic, fine; otherwise verify it against a source or remove it."
+        },
+        {
+          "rule": "numeric-consistency",
+          "severity": "warning",
+          "note_id": "<report>",
+          "note_path": "/Users/mac/ws/claude/hyper-research-works/research/notes/final_report_attack-ontology-drift-cti-85bc51.md",
+          "message": "Number '0.0213' in the final report appears in no claim or cited note body. If it is derived arithmetic, fine; otherwise verify it against a source or remove it."
+        },
+        {
+          "rule": "numeric-consistency",
+          "severity": "warning",
+          "note_id": "<report>",
+          "note_path": "/Users/mac/ws/claude/hyper-research-works/research/notes/final_report_attack-ontology-drift-cti-85bc51.md",
+          "message": "Number '0.0239' in the final report appears in no claim or cited note body. If it is derived arithmetic, fine; otherwise verify it against a source or remove it."
+        },
+        {
+          "rule": "numeric-consistency",
+          "severity": "warning",
+          "note_id": "<report>",
+          "note_path": "/Users/mac/ws/claude/hyper-research-works/research/notes/final_report_attack-ontology-drift-cti-85bc51.md",
+          "message": "Number '0.0273' in the final report appears in no claim or cited note body. If it is derived arithmetic, fine; otherwise verify it against a source or remove it."
+        },
+        {
+          "rule": "numeric-consistency",
+          "severity": "warning",
+          "note_id": "<report>",
+          "note_path": "/Users/mac/ws/claude/hyper-research-works/research/notes/final_report_attack-ontology-drift-cti-85bc51.md",
+          "message": "Number '0.0331' in the final report appears in no claim or cited note body. If it is derived arithmetic, fine; otherwise verify it against a source or remove it."
+        },
+        {
+          "rule": "numeric-consistency",
+          "severity": "warning",
+          "note_id": "<report>",
+          "note_path": "/Users/mac/ws/claude/hyper-research-works/research/notes/final_report_attack-ontology-drift-cti-85bc51.md",
+          "message": "Number '0.0344' in the final report appears in no claim or cited note body. If it is derived arithmetic, fine; otherwise verify it against a source or remove it."
+        },
+        {
+          "rule": "numeric-consistency",
+          "severity": "warning",
+          "note_id": "<report>",
+          "note_path": "/Users/mac/ws/claude/hyper-research-works/research/notes/final_report_attack-ontology-drift-cti-85bc51.md",
+          "message": "Number '0.0391' in the final report appears in no claim or cited note body. If it is derived arithmetic, fine; otherwise verify it against a source or remove it."
+        },
+        {
+          "rule": "numeric-consistency",
+          "severity": "warning",
+          "note_id": "<report>",
+          "note_path": "/Users/mac/ws/claude/hyper-research-works/research/notes/final_report_attack-ontology-drift-cti-85bc51.md",
+          "message": "Number '0.0497' in the final report appears in no claim or cited note body. If it is derived arithmetic, fine; otherwise verify it against a source or remove it."
+        },
+        {
+          "rule": "numeric-consistency",
+          "severity": "warning",
+          "note_id": "<report>",
+          "note_path": "/Users/mac/ws/claude/hyper-research-works/research/notes/final_report_attack-ontology-drift-cti-85bc51.md",
+          "message": "Number '0.0587' in the final report appears in no claim or cited note body. If it is derived arithmetic, fine; otherwise verify it against a source or remove it."
+        },
+        {
+          "rule": "numeric-consistency",
+          "severity": "warning",
+          "note_id": "<report>",
+          "note_path": "/Users/mac/ws/claude/hyper-research-works/research/notes/final_report_attack-ontology-drift-cti-85bc51.md",
+          "message": "Number '0.065' in the final report appears in no claim or cited note body. If it is derived arithmetic, fine; otherwise verify it against a source or remove it."
+        },
+        {
+          "rule": "numeric-consistency",
+          "severity": "warning",
+          "note_id": "<report>",
+          "note_path": "/Users/mac/ws/claude/hyper-research-works/research/notes/final_report_attack-ontology-drift-cti-85bc51.md",
+          "message": "Number '0.086' in the final report appears in no claim or cited note body. If it is derived arithmetic, fine; otherwise verify it against a source or remove it."
+        },
+        {
+          "rule": "numeric-consistency",
+          "severity": "warning",
+          "note_id": "<report>",
+          "note_path": "/Users/mac/ws/claude/hyper-research-works/research/notes/final_report_attack-ontology-drift-cti-85bc51.md",
+          "message": "...and 88 more untraceable numbers (showing first 20)."
+        }
+      ],
+      "summary": {
+        "errors": 2,
+        "warnings": 26,
+        "info": 197,
+        "total": 225
+      }
+    },
+    "count": 225,
+    "vault": "/Users/mac/ws/claude/hyper-research-works",
+    "timestamp": "2026-09-12T21:44:38.297734+00:00"
+  }
+}

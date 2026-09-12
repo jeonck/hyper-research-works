@@ -10,12 +10,13 @@ its scope, and the scope is reported with the result.
 from __future__ import annotations
 
 import json
+import os
 import re
 import sys
 from pathlib import Path
 
 OUT = Path(__file__).resolve().parents[1] / "data" / "results"
-EXT = Path("/home/user/ext")
+EXT = Path(os.environ.get("HYPER_EXT", "/home/user/ext"))
 CORPORA = {"cti-bench": EXT / "cti-bench", "rcATT": EXT / "rcATT", "tram": EXT / "tram"}
 SUFFIXES = {".md", ".txt", ".cfg", ".toml", ".yml", ".yaml", ".rst", ".ini"}
 SKIP_DIRS = {".git", "logs", "data", "node_modules", "__pycache__"}

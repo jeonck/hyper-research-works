@@ -10,6 +10,7 @@ current when it is opened, so its annotations silently change meaning.
 from __future__ import annotations
 
 import json
+import os
 import sys
 from collections import Counter
 from pathlib import Path
@@ -18,7 +19,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import attackdrift as ad  # noqa: E402
 
 OUT = Path(__file__).resolve().parents[1] / "data" / "results"
-ROOTS = [Path("/home/user/ext"), Path("/home/user/mitre-attack")]
+ROOTS = [Path(os.environ.get("HYPER_EXT", "/home/user/ext")), Path(os.environ.get("ATTACK_STIX_REPO", "/home/user/mitre-attack/attack-stix-data")).parent]
 SKIP = {"node_modules", ".git", "dist", "build", "__pycache__", "site-packages"}
 # the same upstream repository is cloned under two names in this workspace;
 # scanning both would double-count its sample layers
