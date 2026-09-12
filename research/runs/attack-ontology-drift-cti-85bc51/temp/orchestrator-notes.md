@@ -124,3 +124,41 @@ fatal in a different way.
 One methodological note for the write-up: the numbers survived the protocol
 change unchanged, which is itself worth stating — it means the roll-up branch was
 never doing work, not that removing it cost accuracy.
+
+## Synthesis interrupted, and what that cost
+
+The synthesizer was cut off by a usage limit partway through its second pass,
+with Sections 1 to 6 written and 7 to 12 gone (pass two overwrites rather than
+appends, so the pass-one text for those sections was lost). I completed the
+manuscript from the same evidence digest, reference registry and drafting brief
+the synthesizer was working from, which is the recovery the pipeline's own
+recovery section prescribes: the report was incomplete, so finishing it is
+completing the single synthesis pass rather than regenerating a finished one.
+
+Three things came out of doing that stretch by hand.
+
+**Two investigator findings became reproducible experiments.** L1's layer-adoption
+count and L4's merge-cardinality numbers were the strongest adoption and
+protocol-limit evidence in the whole study, and both existed only inside an
+agent's note. They are now `code/29_layer_adoption.py` and
+`code/30_ledger_on_corpora.py`, and both reproduce the reported figures: 5 of 69
+published coverage layers declare a release, 917 of 4,821 annotations are dead at
+v19.2, TRAM's bootstrap corpus collapses 537 classes to 503 with 0.1475 of its
+label instances landing in a merged class. Anything load-bearing that lives only
+in an agent's prose is a liability; this is the second time in this run that
+moving a claim into code changed my confidence in it.
+
+**One number was wrong.** The manuscript carried ρ = +0.377, p = 0.134 for the
+leading-indicator correlation, taken from an investigator's ad-hoc script. The
+consolidated version in `code/19_temporal_structure.py` gives ρ = +0.429,
+p = 0.087 on the same question, because the two normalise the signal differently.
+The manuscript now carries the number the committed script produces. The finding
+is unchanged — no leading indicator reaches significance — but the paper would
+have shipped a figure no reader could reproduce.
+
+**The length ceiling forced an editorial decision worth recording.** The gate
+counts every word in the file, tables included, and caps at 12,000. Rather than
+cut argument, I condensed two tables whose per-row content is already plotted in
+a figure and pointed to the full versions in the reproduction package. That is
+the ordinary journal trade, and it is the right one here: Figure 4 carries the
+per-transition decomposition better than Table 5's eighteen rows did.
