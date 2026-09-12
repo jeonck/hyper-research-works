@@ -1,0 +1,42 @@
+{
+ "cti-bench": {
+  "files_scanned": 2,
+  "scanned_files": [
+   "LICENSE.txt",
+   "README.md"
+  ],
+  "declarations_found": 0,
+  "hits": []
+ },
+ "rcATT": {
+  "files_scanned": 2,
+  "scanned_files": [
+   "README.md",
+   "example_ctr/input.txt"
+  ],
+  "declarations_found": 0,
+  "hits": []
+ },
+ "tram": {
+  "files_scanned": 15,
+  "scanned_files": [
+   ".github/workflows/build-push-container.yml",
+   ".github/workflows/test.yml",
+   ".hadolint.yaml",
+   ".pre-commit-config.yaml",
+   "CONTRIBUTING.md",
+   "LICENSE.txt",
+   "NOTICE.txt",
+   "README.md",
+   "docker/README.md",
+   "docker/docker-compose.yml",
+   "pyproject.toml",
+   "requirements/requirements.txt",
+   "requirements/test-requirements.txt",
+   "tox.ini",
+   "user_notebooks/readme.md"
+  ],
+  "declarations_found": 0,
+  "hits": []
+ }
+}
