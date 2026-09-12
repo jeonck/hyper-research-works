@@ -151,6 +151,18 @@ def main() -> None:
                     f"{d['repairable_by_revocation_chain']} |")
     w("t9_artifacts.md", "\n".join(rows))
 
+    e11 = load("e11_version_metadata.json")
+    rows = ["| Transition | Techniques live in both | Text changed, version bumped | "
+            "Text changed, no bump | Bump, no text change | Neither |",
+            "|---|---|---|---|---|---|"]
+    for r in e11["per_transition"]:
+        rows.append(f"| v{r['from']}→v{r['to']} | {r['shared']} | {r['text_and_bump']} | "
+                    f"{r['text_no_bump']} | {r['bump_no_text']} | {r['neither']} |")
+    t = e11["totals"]
+    rows.append(f"| **All** | **{sum(t.values())}** | **{t['text_and_bump']}** | "
+                f"**{t['text_no_bump']}** | **{t['bump_no_text']}** | **{t['neither']}** |")
+    w("t13_version_metadata.md", "\n".join(rows))
+
     # T10 conclusion flips
     e10 = load("e10_conclusion_flips.json")
     rows = ["| Artefact vocabulary | Verdict changed | Changed and now wrong | "

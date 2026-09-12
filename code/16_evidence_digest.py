@@ -25,6 +25,7 @@ def main() -> None:
     rb, e8 = load("e5b_e2b_robustness.json"), load("e8_case_v19.json")
     e9, e10 = load("e9_version_declaration.json"), load("e10_conclusion_flips.json")
     e6b, e5c = load("e6b_prevalence.json"), load("e5c_backprojection.json")
+    e11 = load("e11_version_metadata.json")["summary"]
     ent = e123["enterprise-attack"]
     latest = ent["releases"][-1]["version"]
 
@@ -77,6 +78,18 @@ def main() -> None:
     c = e4["enterprise-attack"]["cumulative"]
     base = c["total_added"] - c["new_actor"]
     book = c["ontology_refinement"] + c["revocation_remap"]
+    L += ["## 4b. Is ATT&CK's own change metadata a usable signal?", "",
+          f"- {e11['carried_over_pairs']} carried-over technique pairs across consecutive "
+          f"major releases; {e11['description_changed']} "
+          f"({e11['description_changed_frac']:.3f}) had their description rewritten.",
+          f"- {e11['changed_without_version_bump']} of those "
+          f"({e11['changed_without_bump_frac']:.3f}) carried no x_mitre_version increment, "
+          f"and {e11['bumped_without_text_change']} version increments carried no text "
+          f"change at all.",
+          f"- As a detector of description change, x_mitre_version has precision "
+          f"{e11['precision_of_version_bump']:.3f} and recall "
+          f"{e11['recall_of_version_bump']:.3f}.", ""]
+
     L += ["## 5. Growth decomposition", "",
           f"- {c['total_added']} group-technique edges added across all Enterprise",
           f"  transitions; {c['new_actor']} belong to groups newly added to ATT&CK.",

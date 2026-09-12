@@ -34,6 +34,12 @@ numbers exactly and must not recompute or round them differently.
 - v15.0: 621 identifier-stable techniques; 0.275 have edited descriptions by v19.0; mean token Jaccard 0.956; 0.087 substantially rewritten (J < 0.8).
 - v18.0: 674 identifier-stable techniques; 0.061 have edited descriptions by v19.0; mean token Jaccard 0.997; 0.003 substantially rewritten (J < 0.8).
 
+## 4b. Is ATT&CK's own change metadata a usable signal?
+
+- 8359 carried-over technique pairs across consecutive major releases; 1358 (0.162) had their description rewritten.
+- 487 of those (0.359) carried no x_mitre_version increment, and 1077 version increments carried no text change at all.
+- As a detector of description change, x_mitre_version has precision 0.447 and recall 0.641.
+
 ## 5. Growth decomposition
 
 - 5516 group-technique edges added across all Enterprise
