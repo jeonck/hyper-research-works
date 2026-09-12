@@ -1,0 +1,182 @@
+[
+ {
+  "v": "1.0",
+  "v_date": "2018-01-17",
+  "w": "19.0",
+  "modern_techniques": 697,
+  "no_v_era_ancestor": 389,
+  "no_ancestor_frac": 0.5581061692969871,
+  "mean_profile_retention": 0.6176724569108175,
+  "mean_profile_collapse": 0.3823275430891825
+ },
+ {
+  "v": "2.0",
+  "v_date": "2018-04-18",
+  "w": "19.0",
+  "modern_techniques": 697,
+  "no_v_era_ancestor": 331,
+  "no_ancestor_frac": 0.4748923959827834,
+  "mean_profile_retention": 0.6827720561520974,
+  "mean_profile_collapse": 0.31722794384790265
+ },
+ {
+  "v": "3.0",
+  "v_date": "2018-10-23",
+  "w": "19.0",
+  "modern_techniques": 697,
+  "no_v_era_ancestor": 326,
+  "no_ancestor_frac": 0.46771879483500717,
+  "mean_profile_retention": 0.6846426125154992,
+  "mean_profile_collapse": 0.3153573874845008
+ },
+ {
+  "v": "4.0",
+  "v_date": "2019-04-30",
+  "w": "19.0",
+  "modern_techniques": 697,
+  "no_v_era_ancestor": 286,
+  "no_ancestor_frac": 0.4103299856527977,
+  "mean_profile_retention": 0.7093171450223792,
+  "mean_profile_collapse": 0.2906828549776208
+ },
+ {
+  "v": "5.0",
+  "v_date": "2019-07-19",
+  "w": "19.0",
+  "modern_techniques": 697,
+  "no_v_era_ancestor": 286,
+  "no_ancestor_frac": 0.4103299856527977,
+  "mean_profile_retention": 0.7093171450223792,
+  "mean_profile_collapse": 0.2906828549776208
+ },
+ {
+  "v": "6.0",
+  "v_date": "2019-10-23",
+  "w": "19.0",
+  "modern_techniques": 697,
+  "no_v_era_ancestor": 259,
+  "no_ancestor_frac": 0.3715925394548063,
+  "mean_profile_retention": 0.7267436332892673,
+  "mean_profile_collapse": 0.2732563667107327
+ },
+ {
+  "v": "7.0",
+  "v_date": "2020-03-31",
+  "w": "19.0",
+  "modern_techniques": 697,
+  "no_v_era_ancestor": 155,
+  "no_ancestor_frac": 0.2223816355810617,
+  "mean_profile_retention": 0.9025900139888047,
+  "mean_profile_collapse": 0.09740998601119533
+ },
+ {
+  "v": "8.0",
+  "v_date": "2020-10-27",
+  "w": "19.0",
+  "modern_techniques": 697,
+  "no_v_era_ancestor": 59,
+  "no_ancestor_frac": 0.08464849354375897,
+  "mean_profile_retention": 0.9459254167129467,
+  "mean_profile_collapse": 0.05407458328705328
+ },
+ {
+  "v": "9.0",
+  "v_date": "2021-04-29",
+  "w": "19.0",
+  "modern_techniques": 697,
+  "no_v_era_ancestor": 42,
+  "no_ancestor_frac": 0.06025824964131994,
+  "mean_profile_retention": 0.9593460941500682,
+  "mean_profile_collapse": 0.04065390584993178
+ },
+ {
+  "v": "10.0",
+  "v_date": "2021-10-21",
+  "w": "19.0",
+  "modern_techniques": 697,
+  "no_v_era_ancestor": 37,
+  "no_ancestor_frac": 0.05308464849354376,
+  "mean_profile_retention": 0.9640814899534461,
+  "mean_profile_collapse": 0.035918510046553886
+ },
+ {
+  "v": "11.0",
+  "v_date": "2022-04-25",
+  "w": "19.0",
+  "modern_techniques": 697,
+  "no_v_era_ancestor": 35,
+  "no_ancestor_frac": 0.05021520803443329,
+  "mean_profile_retention": 0.9660090122146986,
+  "mean_profile_collapse": 0.03399098778530141
+ },
+ {
+  "v": "12.0",
+  "v_date": "2022-10-25",
+  "w": "19.0",
+  "modern_techniques": 697,
+  "no_v_era_ancestor": 33,
+  "no_ancestor_frac": 0.047345767575322814,
+  "mean_profile_retention": 0.9724689251235797,
+  "mean_profile_collapse": 0.02753107487642026
+ },
+ {
+  "v": "13.0",
+  "v_date": "2023-04-25",
+  "w": "19.0",
+  "modern_techniques": 697,
+  "no_v_era_ancestor": 29,
+  "no_ancestor_frac": 0.04160688665710186,
+  "mean_profile_retention": 0.9767857982786381,
+  "mean_profile_collapse": 0.023214201721361905
+ },
+ {
+  "v": "14.0",
+  "v_date": "2023-10-31",
+  "w": "19.0",
+  "modern_techniques": 697,
+  "no_v_era_ancestor": 23,
+  "no_ancestor_frac": 0.03299856527977044,
+  "mean_profile_retention": 0.9830610172540338,
+  "mean_profile_collapse": 0.01693898274596617
+ },
+ {
+  "v": "15.0",
+  "v_date": "2024-04-23",
+  "w": "19.0",
+  "modern_techniques": 697,
+  "no_v_era_ancestor": 22,
+  "no_ancestor_frac": 0.03156384505021521,
+  "mean_profile_retention": 0.9879846588928195,
+  "mean_profile_collapse": 0.0120153411071805
+ },
+ {
+  "v": "16.0",
+  "v_date": "2024-10-31",
+  "w": "19.0",
+  "modern_techniques": 697,
+  "no_v_era_ancestor": 21,
+  "no_ancestor_frac": 0.03012912482065997,
+  "mean_profile_retention": 0.9895474973582511,
+  "mean_profile_collapse": 0.010452502641748906
+ },
+ {
+  "v": "17.0",
+  "v_date": "2025-04-22",
+  "w": "19.0",
+  "modern_techniques": 697,
+  "no_v_era_ancestor": 13,
+  "no_ancestor_frac": 0.018651362984218076,
+  "mean_profile_retention": 0.9925610812296012,
+  "mean_profile_collapse": 0.007438918770398817
+ },
+ {
+  "v": "18.0",
+  "v_date": "2025-10-28",
+  "w": "19.0",
+  "modern_techniques": 697,
+  "no_v_era_ancestor": 7,
+  "no_ancestor_frac": 0.010043041606886656,
+  "mean_profile_retention": 0.9982603516295091,
+  "mean_profile_collapse": 0.0017396483704908983
+ }
+]

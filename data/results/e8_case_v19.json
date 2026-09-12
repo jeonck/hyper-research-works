@@ -1,0 +1,155 @@
+{
+ "previous_release": "18.1",
+ "current_release": "19.2",
+ "revoked_techniques": [
+  "T1070.001",
+  "T1070.002",
+  "T1562",
+  "T1562.001",
+  "T1562.002",
+  "T1562.003",
+  "T1562.004",
+  "T1562.006",
+  "T1562.007",
+  "T1562.008",
+  "T1562.009",
+  "T1562.010",
+  "T1562.011",
+  "T1562.012",
+  "T1562.013",
+  "T1656",
+  "T1672"
+ ],
+ "n_revoked": 17,
+ "replacements": {
+  "T1070.001": "T1685.005",
+  "T1070.002": "T1685.006",
+  "T1562": "T1685",
+  "T1562.001": "T1685",
+  "T1562.002": "T1685.001",
+  "T1562.003": "T1690",
+  "T1562.004": "T1686",
+  "T1562.006": "T1685",
+  "T1562.007": "T1686.001",
+  "T1562.008": "T1685.002",
+  "T1562.009": "T1688",
+  "T1562.010": "T1689",
+  "T1562.011": "T1685.003",
+  "T1562.012": "T1685.004",
+  "T1562.013": "T1686.002",
+  "T1656": "T1684.001",
+  "T1672": "T1684.002"
+ },
+ "names": {
+  "T1070.001": "Clear Windows Event Logs",
+  "T1070.002": "Clear Linux or Mac System Logs",
+  "T1562": "Impair Defenses",
+  "T1562.001": "Disable or Modify Tools",
+  "T1562.002": "Disable Windows Event Logging",
+  "T1562.003": "Impair Command History Logging",
+  "T1562.004": "Disable or Modify System Firewall",
+  "T1562.006": "Indicator Blocking",
+  "T1562.007": "Disable or Modify Cloud Firewall",
+  "T1562.008": "Disable or Modify Cloud Logs",
+  "T1562.009": "Safe Mode Boot",
+  "T1562.010": "Downgrade Attack",
+  "T1562.011": "Spoof Security Alerting",
+  "T1562.012": "Disable or Modify Linux Audit System",
+  "T1562.013": "Disable or Modify Network Device Firewall",
+  "T1656": "Impersonation",
+  "T1672": "Email Spoofing"
+ },
+ "group_technique_edges_affected": 84,
+ "software_technique_edges_affected": 155,
+ "mitigations_affected": 47,
+ "detections_affected": 17,
+ "groups_losing_an_identifier": 52,
+ "groups_total": 168,
+ "usage_rank": {
+  "T1070.001": {
+   "edges": 40,
+   "rank": 98,
+   "of": 599
+  },
+  "T1070.002": {
+   "edges": 8,
+   "rank": 272,
+   "of": 599
+  },
+  "T1562": {
+   "edges": 5,
+   "rank": 354,
+   "of": 599
+  },
+  "T1562.001": {
+   "edges": 110,
+   "rank": 33,
+   "of": 599
+  },
+  "T1562.002": {
+   "edges": 6,
+   "rank": 324,
+   "of": 599
+  },
+  "T1562.003": {
+   "edges": 10,
+   "rank": 253,
+   "of": 599
+  },
+  "T1562.004": {
+   "edges": 45,
+   "rank": 92,
+   "of": 599
+  },
+  "T1562.006": {
+   "edges": 10,
+   "rank": 247,
+   "of": 599
+  },
+  "T1562.007": {
+   "edges": 1,
+   "rank": 580,
+   "of": 599
+  },
+  "T1562.008": {
+   "edges": 2,
+   "rank": 470,
+   "of": 599
+  },
+  "T1562.009": {
+   "edges": 7,
+   "rank": 285,
+   "of": 599
+  },
+  "T1562.010": {
+   "edges": 3,
+   "rank": 430,
+   "of": 599
+  },
+  "T1562.011": {
+   "edges": 0,
+   "rank": null,
+   "of": 599
+  },
+  "T1562.012": {
+   "edges": 1,
+   "rank": 561,
+   "of": 599
+  },
+  "T1562.013": {
+   "edges": 2,
+   "rank": 488,
+   "of": 599
+  },
+  "T1656": {
+   "edges": 12,
+   "rank": 234,
+   "of": 599
+  },
+  "T1672": {
+   "edges": 0,
+   "rank": null,
+   "of": 599
+  }
+ }
+}
