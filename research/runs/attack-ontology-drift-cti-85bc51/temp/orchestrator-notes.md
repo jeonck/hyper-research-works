@@ -162,3 +162,51 @@ cut argument, I condensed two tables whose per-row content is already plotted in
 a figure and pointed to the full versions in the reproduction package. That is
 the ordinary journal trade, and it is the right one here: Figure 4 carries the
 per-transition decomposition better than Table 5's eighteen rows did.
+
+## What the critics actually bought, measured
+
+Forty-seven findings across four critics, thirteen of them critical. The useful
+way to score a stage like this is not the count but what would have shipped
+without it.
+
+Six of the thirteen criticals were places where the manuscript's prose
+contradicted the manuscript's own results files. Not one of them was a
+disagreement about interpretation:
+
+- "removing every rank-1 flip" — the data leaves the v6.0 flip standing, so the
+  paper's own protocol was being credited with a clean sweep it does not have.
+  The corrected sentence is now evidence *against* the protocol, which is where
+  the evidence actually points.
+- "eleven of the twelve post-restructuring rows" excluding zero — it is nine.
+  Two rows straddle zero and one sits on it. The overclaim was in the direction
+  that flatters the paper's central modern-regime argument.
+- the noise-factorial figures matched nothing on disk — they came from an
+  investigator's scratch run rather than the committed script. Same phenomenon
+  as the leading-indicator correlation earlier: a number that travelled from an
+  agent's prose into the manuscript without passing through code.
+- "naive is a uniform worst case" — the archival condition scores *below* naive
+  at every release, which the study had computed and never read. A limitation
+  stated backwards is worse than a limitation omitted.
+- prevalence weighting "makes the artefact larger, not smaller" — true for
+  legacy artefacts, false from v10.0 onward. The sentence had been written once
+  when only the legacy rows existed and never revisited.
+
+The seventh critical is the most interesting because it is not an error of
+arithmetic. The draft said intensional drift is un-inferable; diffStix will
+compute a line-level description diff between any two releases. The claim had to
+be narrowed to what is actually true — no signal exists in the artefact a
+consumer holds — and narrowing it made it sharper, because the objection "MITRE
+does publish diffs" now has an answer instead of being a hole.
+
+The width critic found the one thing that genuinely weakens the paper: MITRE's
+own Sightings telemetry says the top 15 of 353 techniques carry over 80% of
+observed events, against our documentation-derived 0.285 for the same cut. Our
+long-tail refutation holds for the written CTI corpus and does not reach the
+telemetry distribution. That is now stated as an open question. A reviewer
+holding the Sightings report would have found it in ten minutes, and finding it
+ourselves is the difference between a limitation and a rebuttal.
+
+Process conclusion worth keeping: every number that entered the manuscript from
+an agent's prose rather than from a committed script was wrong or unverifiable.
+Three separate instances in one run. The rule that follows is mechanical — if a
+figure is load-bearing, it lives in code before it lives in a sentence.
