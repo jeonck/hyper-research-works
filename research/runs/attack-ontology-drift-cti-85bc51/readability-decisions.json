@@ -1,0 +1,135 @@
+{
+ "step": "16-readability",
+ "recommendations_received": 25,
+ "applied": 25,
+ "rejected": 0,
+ "note": "All twenty-five were applied. Four of them fixed defects this session's own editing introduced: a lowercase sentence start and a stray colon left by earlier replacements, a leading-space orphan line, and a sixty-nine-word sentence made ungrammatical by a cite-check correction. One removed a fact stated three times across sections drafted separately. None touched a claim, a number or a citation.",
+ "word_delta_expected": -67,
+ "decisions": [
+  {
+   "id": 1,
+   "kind": "split-sentence",
+   "decision": "applied"
+  },
+  {
+   "id": 2,
+   "kind": "split-sentence",
+   "decision": "applied"
+  },
+  {
+   "id": 3,
+   "kind": "split-sentence",
+   "decision": "applied"
+  },
+  {
+   "id": 4,
+   "kind": "convert-to-list",
+   "decision": "applied"
+  },
+  {
+   "id": 5,
+   "kind": "cut-filler",
+   "decision": "applied"
+  },
+  {
+   "id": 6,
+   "kind": "cut-filler",
+   "decision": "applied"
+  },
+  {
+   "id": 7,
+   "kind": "unify-term",
+   "decision": "applied"
+  },
+  {
+   "id": 8,
+   "kind": "break-paragraph",
+   "decision": "applied"
+  },
+  {
+   "id": 9,
+   "kind": "convert-to-list",
+   "decision": "applied"
+  },
+  {
+   "id": 10,
+   "kind": "split-sentence",
+   "decision": "applied"
+  },
+  {
+   "id": 11,
+   "kind": "convert-to-list",
+   "decision": "applied"
+  },
+  {
+   "id": 12,
+   "kind": "split-sentence",
+   "decision": "applied"
+  },
+  {
+   "id": 13,
+   "kind": "split-sentence",
+   "decision": "applied"
+  },
+  {
+   "id": 14,
+   "kind": "split-sentence",
+   "decision": "applied"
+  },
+  {
+   "id": 15,
+   "kind": "convert-to-list",
+   "decision": "applied"
+  },
+  {
+   "id": 16,
+   "kind": "split-sentence",
+   "decision": "applied"
+  },
+  {
+   "id": 17,
+   "kind": "split-sentence",
+   "decision": "applied"
+  },
+  {
+   "id": 18,
+   "kind": "split-sentence",
+   "decision": "applied"
+  },
+  {
+   "id": 19,
+   "kind": "convert-to-list",
+   "decision": "applied"
+  },
+  {
+   "id": 20,
+   "kind": "break-paragraph",
+   "decision": "applied"
+  },
+  {
+   "id": 21,
+   "kind": "break-paragraph",
+   "decision": "applied"
+  },
+  {
+   "id": 22,
+   "kind": "break-paragraph",
+   "decision": "applied"
+  },
+  {
+   "id": 23,
+   "kind": "convert-to-list",
+   "decision": "applied"
+  },
+  {
+   "id": 24,
+   "kind": "unify-term",
+   "decision": "applied"
+  },
+  {
+   "id": 25,
+   "kind": "remove-bold",
+   "decision": "applied"
+  }
+ ]
+}

@@ -2,7 +2,7 @@
  "summary": {
   "total": 152,
   "dangling": 0,
-  "number_bearing": 68,
+  "number_bearing": 65,
   "distinct_sources": 81
  },
  "dangling": [],
@@ -104,7 +104,7 @@
    "source_url": "https://github.com/mitre-attack/attack-stix-data/blob/master/USAGE.md",
    "tier": "ground_truth",
    "section": "## 1. Introduction",
-   "sentence": "The apparatus is real: pinning a release is MITRE's documented first-class workflow, tombstones are guaranteed, revocation edges are typed, and a change-computation tool ships with an explicit class for objects patched without a version increment [1, 7, 34, 48], so anyone holding that documentation refutes a naive version of this paper in a paragraph.",
+   "sentence": "The apparatus is real: pinning a release is MITRE's documented first-class workflow, tombstones are guaranteed, revocation edges are typed, and a change-computation tool ships with an explicit class for objects patched without a version increment [1, 7, 34, 48].",
    "number_bearing": false
   },
   {
@@ -114,7 +114,7 @@
    "source_url": "https://github.com/mitre-attack/mitreattack-python",
    "tier": "ground_truth",
    "section": "## 1. Introduction",
-   "sentence": "The apparatus is real: pinning a release is MITRE's documented first-class workflow, tombstones are guaranteed, revocation edges are typed, and a change-computation tool ships with an explicit class for objects patched without a version increment [1, 7, 34, 48], so anyone holding that documentation refutes a naive version of this paper in a paragraph.",
+   "sentence": "The apparatus is real: pinning a release is MITRE's documented first-class workflow, tombstones are guaranteed, revocation edges are typed, and a change-computation tool ships with an explicit class for objects patched without a version increment [1, 7, 34, 48].",
    "number_bearing": false
   },
   {
@@ -124,7 +124,7 @@
    "source_url": "https://github.com/mitre-attack/mitreattack-python/tree/master/mitreattack/diffStix",
    "tier": "institutional",
    "section": "## 1. Introduction",
-   "sentence": "The apparatus is real: pinning a release is MITRE's documented first-class workflow, tombstones are guaranteed, revocation edges are typed, and a change-computation tool ships with an explicit class for objects patched without a version increment [1, 7, 34, 48], so anyone holding that documentation refutes a naive version of this paper in a paragraph.",
+   "sentence": "The apparatus is real: pinning a release is MITRE's documented first-class workflow, tombstones are guaranteed, revocation edges are typed, and a change-computation tool ships with an explicit class for objects patched without a version increment [1, 7, 34, 48].",
    "number_bearing": false
   },
   {
@@ -134,7 +134,7 @@
    "source_url": "https://github.com/mitre-attack/mitreattack-python/blob/master/mitreattack/diffStix/changelog_helper.py",
    "tier": "institutional",
    "section": "## 1. Introduction",
-   "sentence": "The apparatus is real: pinning a release is MITRE's documented first-class workflow, tombstones are guaranteed, revocation edges are typed, and a change-computation tool ships with an explicit class for objects patched without a version increment [1, 7, 34, 48], so anyone holding that documentation refutes a naive version of this paper in a paragraph.",
+   "sentence": "The apparatus is real: pinning a release is MITRE's documented first-class workflow, tombstones are guaranteed, revocation edges are typed, and a change-computation tool ships with an explicit class for objects patched without a version increment [1, 7, 34, 48].",
    "number_bearing": false
   },
   {
@@ -144,8 +144,8 @@
    "source_url": "https://www.usenix.org/conference/usenixsecurity24/presentation/virkud",
    "tier": "institutional",
    "section": "## 1. Introduction",
-   "sentence": "The noise floor is real: products pinned to one release disagree about the label for the same behaviour [74] and, as reported, roughly a third of ATT&CK groups have any technique unique to them [59]; we do not claim drift dominates that noise, only that it is separable by construction, and we test additivity rather than assuming it (Section 7.3).",
-   "number_bearing": true
+   "sentence": "The noise floor is real: products pinned to one release disagree about the label for the same behaviour [74] and, as reported, roughly a third of ATT&CK groups have any technique unique to them [59].",
+   "number_bearing": false
   },
   {
    "citation": 59,
@@ -154,8 +154,8 @@
    "source_url": "https://arxiv.org/abs/2506.10645",
    "tier": "institutional",
    "section": "## 1. Introduction",
-   "sentence": "The noise floor is real: products pinned to one release disagree about the label for the same behaviour [74] and, as reported, roughly a third of ATT&CK groups have any technique unique to them [59]; we do not claim drift dominates that noise, only that it is separable by construction, and we test additivity rather than assuming it (Section 7.3).",
-   "number_bearing": true
+   "sentence": "The noise floor is real: products pinned to one release disagree about the label for the same behaviour [74] and, as reported, roughly a third of ATT&CK groups have any technique unique to them [59].",
+   "number_bearing": false
   },
   {
    "citation": 78,
@@ -334,7 +334,7 @@
    "source_url": "https://github.com/center-for-threat-informed-defense/attack-sync",
    "tier": "ground_truth",
    "section": "## 2. Background: ATT&CK as a Versioned Ontology",
-   "sentence": "The Center for Threat-Informed Defense funds ATT&CK Sync to flag mappings affected by a release [5], an institutional concession that staying in sync is an operational burden, and the Navigator layer format can record the content version of a coverage layer, though the field is optional and defaults silently to current [15], with the upgrade path itself manual and unrecorded [16] and widely used tooling omits it altogether [79].",
+   "sentence": "The Center for Threat-Informed Defense funds ATT&CK Sync to flag mappings affected by a release [5], an institutional concession that staying in sync is an operational burden.",
    "number_bearing": false
   },
   {
@@ -344,7 +344,7 @@
    "source_url": "https://github.com/mitre-attack/attack-navigator/blob/master/layers/spec/v4.5/layerformat.md",
    "tier": "institutional",
    "section": "## 2. Background: ATT&CK as a Versioned Ontology",
-   "sentence": "The Center for Threat-Informed Defense funds ATT&CK Sync to flag mappings affected by a release [5], an institutional concession that staying in sync is an operational burden, and the Navigator layer format can record the content version of a coverage layer, though the field is optional and defaults silently to current [15], with the upgrade path itself manual and unrecorded [16] and widely used tooling omits it altogether [79].",
+   "sentence": "The Navigator layer format can record the content version of a coverage layer, but the field is optional and defaults silently to current [15], the upgrade path is manual and unrecorded [16], and widely used tooling omits the field altogether [79].",
    "number_bearing": false
   },
   {
@@ -354,7 +354,7 @@
    "source_url": "https://github.com/mitre-attack/attack-navigator/blob/master/USAGE.md",
    "tier": "institutional",
    "section": "## 2. Background: ATT&CK as a Versioned Ontology",
-   "sentence": "The Center for Threat-Informed Defense funds ATT&CK Sync to flag mappings affected by a release [5], an institutional concession that staying in sync is an operational burden, and the Navigator layer format can record the content version of a coverage layer, though the field is optional and defaults silently to current [15], with the upgrade path itself manual and unrecorded [16] and widely used tooling omits it altogether [79].",
+   "sentence": "The Navigator layer format can record the content version of a coverage layer, but the field is optional and defaults silently to current [15], the upgrade path is manual and unrecorded [16], and widely used tooling omits the field altogether [79].",
    "number_bearing": false
   },
   {
@@ -364,7 +364,7 @@
    "source_url": "https://github.com/rabobank-cdc/DeTTECT",
    "tier": "practitioner",
    "section": "## 2. Background: ATT&CK as a Versioned Ontology",
-   "sentence": "The Center for Threat-Informed Defense funds ATT&CK Sync to flag mappings affected by a release [5], an institutional concession that staying in sync is an operational burden, and the Navigator layer format can record the content version of a coverage layer, though the field is optional and defaults silently to current [15], with the upgrade path itself manual and unrecorded [16] and widely used tooling omits it altogether [79].",
+   "sentence": "The Navigator layer format can record the content version of a coverage layer, but the field is optional and defaults silently to current [15], the upgrade path is manual and unrecorded [16], and widely used tooling omits the field altogether [79].",
    "number_bearing": false
   },
   {
@@ -664,7 +664,7 @@
    "source_url": "https://proceedings.neurips.cc/paper_files/paper/2024/file/5acd3c628aa1819fbf07c39ef73e7285-Paper-Datasets_and_Benchmarks_Track.pdf",
    "tier": "institutional",
    "section": "## 3. Related Work",
-   "sentence": "LLM-era benchmarks are the dominant evaluation surface: CTIBench treats authoritative sources as fixed and time-controls one task but not the ATT&CK task [30]; a successor line grew from 691 to 1,860 QA pairs under one identifier and the same nine-task taxonomy [29]; AthenaBench argues static benchmarks go stale and proposes live-API construction [13]; a large instruction corpus is reported to span two decades of reports, and we could not establish from the sources reachable here whether it declares a release or assigns ATT&CK labels at all [61]; synthesis work targets the long tail [65]; sequence-level benchmarks exist [17], and by our argument tactic ordering is a drift surface for them, since Section 6.1 measures 198 techniques changing tactic in one release; telemetry grounding is the only structurally drift-resistant design in the set [28]; and answer-key decay has been quantified outside security [75].",
+   "sentence": "LLM-era benchmarks are the dominant evaluation surface: CTIBench treats authoritative sources as fixed and time-controls one task but not the ATT&CK task [30]; a successor line grew from 691 to 1,860 QA pairs under one identifier and the same nine-task taxonomy [29]; AthenaBench argues static benchmarks go stale and proposes live-API construction [13].",
    "number_bearing": true
   },
   {
@@ -674,7 +674,7 @@
    "source_url": "https://arxiv.org/abs/2510.11974",
    "tier": "institutional",
    "section": "## 3. Related Work",
-   "sentence": "LLM-era benchmarks are the dominant evaluation surface: CTIBench treats authoritative sources as fixed and time-controls one task but not the ATT&CK task [30]; a successor line grew from 691 to 1,860 QA pairs under one identifier and the same nine-task taxonomy [29]; AthenaBench argues static benchmarks go stale and proposes live-API construction [13]; a large instruction corpus is reported to span two decades of reports, and we could not establish from the sources reachable here whether it declares a release or assigns ATT&CK labels at all [61]; synthesis work targets the long tail [65]; sequence-level benchmarks exist [17], and by our argument tactic ordering is a drift surface for them, since Section 6.1 measures 198 techniques changing tactic in one release; telemetry grounding is the only structurally drift-resistant design in the set [28]; and answer-key decay has been quantified outside security [75].",
+   "sentence": "LLM-era benchmarks are the dominant evaluation surface: CTIBench treats authoritative sources as fixed and time-controls one task but not the ATT&CK task [30]; a successor line grew from 691 to 1,860 QA pairs under one identifier and the same nine-task taxonomy [29]; AthenaBench argues static benchmarks go stale and proposes live-API construction [13].",
    "number_bearing": true
   },
   {
@@ -684,7 +684,7 @@
    "source_url": "https://arxiv.org/abs/2511.01144",
    "tier": "institutional",
    "section": "## 3. Related Work",
-   "sentence": "LLM-era benchmarks are the dominant evaluation surface: CTIBench treats authoritative sources as fixed and time-controls one task but not the ATT&CK task [30]; a successor line grew from 691 to 1,860 QA pairs under one identifier and the same nine-task taxonomy [29]; AthenaBench argues static benchmarks go stale and proposes live-API construction [13]; a large instruction corpus is reported to span two decades of reports, and we could not establish from the sources reachable here whether it declares a release or assigns ATT&CK labels at all [61]; synthesis work targets the long tail [65]; sequence-level benchmarks exist [17], and by our argument tactic ordering is a drift surface for them, since Section 6.1 measures 198 techniques changing tactic in one release; telemetry grounding is the only structurally drift-resistant design in the set [28]; and answer-key decay has been quantified outside security [75].",
+   "sentence": "LLM-era benchmarks are the dominant evaluation surface: CTIBench treats authoritative sources as fixed and time-controls one task but not the ATT&CK task [30]; a successor line grew from 691 to 1,860 QA pairs under one identifier and the same nine-task taxonomy [29]; AthenaBench argues static benchmarks go stale and proposes live-API construction [13].",
    "number_bearing": true
   },
   {
@@ -694,7 +694,7 @@
    "source_url": "https://arxiv.org/abs/2405.03446",
    "tier": "institutional",
    "section": "## 3. Related Work",
-   "sentence": "LLM-era benchmarks are the dominant evaluation surface: CTIBench treats authoritative sources as fixed and time-controls one task but not the ATT&CK task [30]; a successor line grew from 691 to 1,860 QA pairs under one identifier and the same nine-task taxonomy [29]; AthenaBench argues static benchmarks go stale and proposes live-API construction [13]; a large instruction corpus is reported to span two decades of reports, and we could not establish from the sources reachable here whether it declares a release or assigns ATT&CK labels at all [61]; synthesis work targets the long tail [65]; sequence-level benchmarks exist [17], and by our argument tactic ordering is a drift surface for them, since Section 6.1 measures 198 techniques changing tactic in one release; telemetry grounding is the only structurally drift-resistant design in the set [28]; and answer-key decay has been quantified outside security [75].",
+   "sentence": "A large instruction corpus is reported to span two decades of reports, and we could not establish from the sources reachable here whether it declares a release or assigns ATT&CK labels at all [61]; synthesis work targets the long tail [65]; sequence-level benchmarks exist [17], and by our argument tactic ordering is a drift surface for them, since Section 6.1 measures 198 techniques changing tactic in one release; telemetry grounding is the only structurally drift-resistant design in the set [28]; and answer-key decay has been quantified outside security [75].",
    "number_bearing": true
   },
   {
@@ -704,7 +704,7 @@
    "source_url": "https://arxiv.org/abs/2507.16852",
    "tier": "institutional",
    "section": "## 3. Related Work",
-   "sentence": "LLM-era benchmarks are the dominant evaluation surface: CTIBench treats authoritative sources as fixed and time-controls one task but not the ATT&CK task [30]; a successor line grew from 691 to 1,860 QA pairs under one identifier and the same nine-task taxonomy [29]; AthenaBench argues static benchmarks go stale and proposes live-API construction [13]; a large instruction corpus is reported to span two decades of reports, and we could not establish from the sources reachable here whether it declares a release or assigns ATT&CK labels at all [61]; synthesis work targets the long tail [65]; sequence-level benchmarks exist [17], and by our argument tactic ordering is a drift surface for them, since Section 6.1 measures 198 techniques changing tactic in one release; telemetry grounding is the only structurally drift-resistant design in the set [28]; and answer-key decay has been quantified outside security [75].",
+   "sentence": "A large instruction corpus is reported to span two decades of reports, and we could not establish from the sources reachable here whether it declares a release or assigns ATT&CK labels at all [61]; synthesis work targets the long tail [65]; sequence-level benchmarks exist [17], and by our argument tactic ordering is a drift surface for them, since Section 6.1 measures 198 techniques changing tactic in one release; telemetry grounding is the only structurally drift-resistant design in the set [28]; and answer-key decay has been quantified outside security [75].",
    "number_bearing": true
   },
   {
@@ -714,7 +714,7 @@
    "source_url": "https://arxiv.org/abs/2503.03170",
    "tier": "institutional",
    "section": "## 3. Related Work",
-   "sentence": "LLM-era benchmarks are the dominant evaluation surface: CTIBench treats authoritative sources as fixed and time-controls one task but not the ATT&CK task [30]; a successor line grew from 691 to 1,860 QA pairs under one identifier and the same nine-task taxonomy [29]; AthenaBench argues static benchmarks go stale and proposes live-API construction [13]; a large instruction corpus is reported to span two decades of reports, and we could not establish from the sources reachable here whether it declares a release or assigns ATT&CK labels at all [61]; synthesis work targets the long tail [65]; sequence-level benchmarks exist [17], and by our argument tactic ordering is a drift surface for them, since Section 6.1 measures 198 techniques changing tactic in one release; telemetry grounding is the only structurally drift-resistant design in the set [28]; and answer-key decay has been quantified outside security [75].",
+   "sentence": "A large instruction corpus is reported to span two decades of reports, and we could not establish from the sources reachable here whether it declares a release or assigns ATT&CK labels at all [61]; synthesis work targets the long tail [65]; sequence-level benchmarks exist [17], and by our argument tactic ordering is a drift surface for them, since Section 6.1 measures 198 techniques changing tactic in one release; telemetry grounding is the only structurally drift-resistant design in the set [28]; and answer-key decay has been quantified outside security [75].",
    "number_bearing": true
   },
   {
@@ -724,7 +724,7 @@
    "source_url": "https://arxiv.org/abs/2603.13517",
    "tier": "institutional",
    "section": "## 3. Related Work",
-   "sentence": "LLM-era benchmarks are the dominant evaluation surface: CTIBench treats authoritative sources as fixed and time-controls one task but not the ATT&CK task [30]; a successor line grew from 691 to 1,860 QA pairs under one identifier and the same nine-task taxonomy [29]; AthenaBench argues static benchmarks go stale and proposes live-API construction [13]; a large instruction corpus is reported to span two decades of reports, and we could not establish from the sources reachable here whether it declares a release or assigns ATT&CK labels at all [61]; synthesis work targets the long tail [65]; sequence-level benchmarks exist [17], and by our argument tactic ordering is a drift surface for them, since Section 6.1 measures 198 techniques changing tactic in one release; telemetry grounding is the only structurally drift-resistant design in the set [28]; and answer-key decay has been quantified outside security [75].",
+   "sentence": "A large instruction corpus is reported to span two decades of reports, and we could not establish from the sources reachable here whether it declares a release or assigns ATT&CK labels at all [61]; synthesis work targets the long tail [65]; sequence-level benchmarks exist [17], and by our argument tactic ordering is a drift surface for them, since Section 6.1 measures 198 techniques changing tactic in one release; telemetry grounding is the only structurally drift-resistant design in the set [28]; and answer-key decay has been quantified outside security [75].",
    "number_bearing": true
   },
   {
@@ -734,7 +734,7 @@
    "source_url": "https://arxiv.org/abs/2510.07238",
    "tier": "institutional",
    "section": "## 3. Related Work",
-   "sentence": "LLM-era benchmarks are the dominant evaluation surface: CTIBench treats authoritative sources as fixed and time-controls one task but not the ATT&CK task [30]; a successor line grew from 691 to 1,860 QA pairs under one identifier and the same nine-task taxonomy [29]; AthenaBench argues static benchmarks go stale and proposes live-API construction [13]; a large instruction corpus is reported to span two decades of reports, and we could not establish from the sources reachable here whether it declares a release or assigns ATT&CK labels at all [61]; synthesis work targets the long tail [65]; sequence-level benchmarks exist [17], and by our argument tactic ordering is a drift surface for them, since Section 6.1 measures 198 techniques changing tactic in one release; telemetry grounding is the only structurally drift-resistant design in the set [28]; and answer-key decay has been quantified outside security [75].",
+   "sentence": "A large instruction corpus is reported to span two decades of reports, and we could not establish from the sources reachable here whether it declares a release or assigns ATT&CK labels at all [61]; synthesis work targets the long tail [65]; sequence-level benchmarks exist [17], and by our argument tactic ordering is a drift surface for them, since Section 6.1 measures 198 techniques changing tactic in one release; telemetry grounding is the only structurally drift-resistant design in the set [28]; and answer-key decay has been quantified outside security [75].",
    "number_bearing": true
   },
   {
@@ -944,7 +944,7 @@
    "source_url": "https://arxiv.org/abs/2302.03648",
    "tier": "institutional",
    "section": "## 4. Problem Formalization and Drift Taxonomy",
-   "sentence": "Six operators carry `(L_V, \u03b9_V)` to `(L_W, \u03b9_W)`. **O1 Addition**: a new identifier with no predecessor, the only operator class-incremental learning handles [24] and the only one benign for backward comparison; forward it is not benign, because a growing denominator makes a frozen capability's percentage fall with no change in the capability (Table 8). **O2 Deprecation**: withdrawn with no successor, marked and retained [1]. **O3 Revocation with a typed successor**: the well-handled case on which the ecosystem's defence rests, and in our corpus every revoked Enterprise identifier resolves to a live one (Table 3). **O4 Re-cut**: a concept split across successors, or several merged into one.",
+   "sentence": "- **O1 Addition**: a new identifier with no predecessor, the only operator class-incremental learning handles [24] and the only one benign for backward comparison; forward it is not benign, because a growing denominator makes a frozen capability's percentage fall with no change in the capability (Table 8). - **O2 Deprecation**: withdrawn with no successor, marked and retained [1]. - **O3 Revocation with a typed successor**: the well-handled case on which the ecosystem's defence rests, and in our corpus every revoked Enterprise identifier resolves to a live one (Table 3). - **O4 Re-cut**: a concept split across successors, or several merged into one.",
    "number_bearing": true
   },
   {
@@ -954,7 +954,7 @@
    "source_url": "https://github.com/mitre-attack/attack-stix-data/blob/master/USAGE.md",
    "tier": "ground_truth",
    "section": "## 4. Problem Formalization and Drift Taxonomy",
-   "sentence": "Six operators carry `(L_V, \u03b9_V)` to `(L_W, \u03b9_W)`. **O1 Addition**: a new identifier with no predecessor, the only operator class-incremental learning handles [24] and the only one benign for backward comparison; forward it is not benign, because a growing denominator makes a frozen capability's percentage fall with no change in the capability (Table 8). **O2 Deprecation**: withdrawn with no successor, marked and retained [1]. **O3 Revocation with a typed successor**: the well-handled case on which the ecosystem's defence rests, and in our corpus every revoked Enterprise identifier resolves to a live one (Table 3). **O4 Re-cut**: a concept split across successors, or several merged into one.",
+   "sentence": "- **O1 Addition**: a new identifier with no predecessor, the only operator class-incremental learning handles [24] and the only one benign for backward comparison; forward it is not benign, because a growing denominator makes a frozen capability's percentage fall with no change in the capability (Table 8). - **O2 Deprecation**: withdrawn with no successor, marked and retained [1]. - **O3 Revocation with a typed successor**: the well-handled case on which the ecosystem's defence rests, and in our corpus every revoked Enterprise identifier resolves to a live one (Table 3). - **O4 Re-cut**: a concept split across successors, or several merged into one.",
    "number_bearing": true
   },
   {
@@ -964,7 +964,7 @@
    "source_url": "https://obofoundry.org/principles/fp-019-term-stability.html",
    "tier": "institutional",
    "section": "## 4. Problem Formalization and Drift Taxonomy",
-   "sentence": "The defect is annotation rather than expressiveness \u2014 the merge is unlabelled, so a consumer applying the crosswalk mechanically cannot distinguish an exact successor from a narrowing, which ontology engineering settled by splitting the successor relation into exact and inexact variants [54] and typing complex change operations [26, 56]. **O5 Cross-layer reassignment**: a technique demoted onto a sub-technique, a sub-technique promoted, or a technique promoted to a tactic; the crosswalk carries no abstraction-level annotation, and a promotion to the tactic layer is not representable at all, since `revoked-by` cannot point a technique at a tactic and no tactic object in the corpus carries a revocation edge. **O6 Intensional rewriting**: the identifier survives and what it denotes moves, invisible to every identifier-based mechanism in the ecosystem.",
+   "sentence": "The defect is annotation rather than expressiveness \u2014 the merge is unlabelled, so a consumer applying the crosswalk mechanically cannot distinguish an exact successor from a narrowing, which ontology engineering settled by splitting the successor relation into exact and inexact variants [54] and typing complex change operations [26, 56]. - **O5 Cross-layer reassignment**: a technique demoted onto a sub-technique, a sub-technique promoted, or a technique promoted to a tactic; the crosswalk carries no abstraction-level annotation, and a promotion to the tactic layer is not representable at all, since `revoked-by` cannot point a technique at a tactic and no tactic object in the corpus carries a revocation edge. - **O6 Intensional rewriting**: the identifier survives and what it denotes moves, invisible to every identifier-based mechanism in the ecosystem.",
    "number_bearing": true
   },
   {
@@ -974,7 +974,7 @@
    "source_url": "https://www.sciencedirect.com/science/article/pii/S1532046412000627",
    "tier": "institutional",
    "section": "## 4. Problem Formalization and Drift Taxonomy",
-   "sentence": "The defect is annotation rather than expressiveness \u2014 the merge is unlabelled, so a consumer applying the crosswalk mechanically cannot distinguish an exact successor from a narrowing, which ontology engineering settled by splitting the successor relation into exact and inexact variants [54] and typing complex change operations [26, 56]. **O5 Cross-layer reassignment**: a technique demoted onto a sub-technique, a sub-technique promoted, or a technique promoted to a tactic; the crosswalk carries no abstraction-level annotation, and a promotion to the tactic layer is not representable at all, since `revoked-by` cannot point a technique at a tactic and no tactic object in the corpus carries a revocation edge. **O6 Intensional rewriting**: the identifier survives and what it denotes moves, invisible to every identifier-based mechanism in the ecosystem.",
+   "sentence": "The defect is annotation rather than expressiveness \u2014 the merge is unlabelled, so a consumer applying the crosswalk mechanically cannot distinguish an exact successor from a narrowing, which ontology engineering settled by splitting the successor relation into exact and inexact variants [54] and typing complex change operations [26, 56]. - **O5 Cross-layer reassignment**: a technique demoted onto a sub-technique, a sub-technique promoted, or a technique promoted to a tactic; the crosswalk carries no abstraction-level annotation, and a promotion to the tactic layer is not representable at all, since `revoked-by` cannot point a technique at a tactic and no tactic object in the corpus carries a revocation edge. - **O6 Intensional rewriting**: the identifier survives and what it denotes moves, invisible to every identifier-based mechanism in the ecosystem.",
    "number_bearing": true
   },
   {
@@ -984,7 +984,7 @@
    "source_url": "https://www.researchgate.net/publication/37538421_Change_Management_The_Core_Task_of_Ontology_Versioning_and_Evolution",
    "tier": "institutional",
    "section": "## 4. Problem Formalization and Drift Taxonomy",
-   "sentence": "The defect is annotation rather than expressiveness \u2014 the merge is unlabelled, so a consumer applying the crosswalk mechanically cannot distinguish an exact successor from a narrowing, which ontology engineering settled by splitting the successor relation into exact and inexact variants [54] and typing complex change operations [26, 56]. **O5 Cross-layer reassignment**: a technique demoted onto a sub-technique, a sub-technique promoted, or a technique promoted to a tactic; the crosswalk carries no abstraction-level annotation, and a promotion to the tactic layer is not representable at all, since `revoked-by` cannot point a technique at a tactic and no tactic object in the corpus carries a revocation edge. **O6 Intensional rewriting**: the identifier survives and what it denotes moves, invisible to every identifier-based mechanism in the ecosystem.",
+   "sentence": "The defect is annotation rather than expressiveness \u2014 the merge is unlabelled, so a consumer applying the crosswalk mechanically cannot distinguish an exact successor from a narrowing, which ontology engineering settled by splitting the successor relation into exact and inexact variants [54] and typing complex change operations [26, 56]. - **O5 Cross-layer reassignment**: a technique demoted onto a sub-technique, a sub-technique promoted, or a technique promoted to a tactic; the crosswalk carries no abstraction-level annotation, and a promotion to the tactic layer is not representable at all, since `revoked-by` cannot point a technique at a tactic and no tactic object in the corpus carries a revocation edge. - **O6 Intensional rewriting**: the identifier survives and what it denotes moves, invisible to every identifier-based mechanism in the ecosystem.",
    "number_bearing": true
   },
   {
@@ -1264,8 +1264,8 @@
    "source_url": "https://software.imdea.org/~juanca/papers/avclass_raid16.pdf",
    "tier": "institutional",
    "section": "## 9. Label Validity of Deployed CTI Corpora",
-   "sentence": "Two of the four corpora can be dated precisely from their labels alone, : rcATT's vocabulary is simultaneously live only across v4.0 to v6.3 and TRAM 2's only across v8.2 to v16.1 (Table 9), so an undeclared artefact's release can be bounded by inspection, which shares an ancestry with the label-normalization work that canonicalises malware family aliases across labellers [19].",
-   "number_bearing": true
+   "sentence": "An undeclared artefact's release can therefore be bounded by inspection, which shares an ancestry with the label-normalization work that canonicalises malware family aliases across labellers [19].",
+   "number_bearing": false
   },
   {
    "citation": 52,
