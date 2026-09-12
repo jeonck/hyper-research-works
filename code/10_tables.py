@@ -168,6 +168,67 @@ def main() -> None:
                 f"**{t['text_no_bump']}** | **{t['bump_no_text']}** | **{t['neither']}** |")
     w("t13_version_metadata.md", "\n".join(rows))
 
+
+    # T14-T16: the audits of the attribution experiment
+    e14 = load("e14_noise_stratification.json")
+    rows = ["| Artefact vocabulary | Labeller-noise rate | Self-consistent | Naive | "
+            "ATT&CK-Norm | Drift penalty (pp) | Recovered |",
+            "|---|---|---|---|---|---|---|"]
+    for r in e14["factorial"]:
+        rec = f"{r['recovery']:.2f}" if r["recovery"] is not None else "n/a"
+        rows.append(f"| v{r['v']} | {r['rho']:.1f} | {r['contemporaneous']:.3f} | "
+                    f"{r['naive']:.3f} | {r['normalized']:.3f} | "
+                    f"{100*r['drift_penalty']:.1f} | {rec} |")
+    w("t14_noise_factorial.md", "\n".join(rows))
+
+    rows = ["| Artefact vocabulary | Candidate groups | Groups with a unique technique | "
+            "Drift penalty, all | Drift penalty, groups with a unique technique | "
+            "Drift penalty, groups without |", "|---|---|---|---|---|---|"]
+    for r in e14["stratified"]:
+        def cell(key):
+            x = r.get(key)
+            if not x:
+                return "n/a"
+            return (f"{x['drift_penalty']:+.4f} "
+                    f"[{x['ci'][0]:+.4f}, {x['ci'][1]:+.4f}]")
+        rows.append(f"| v{r['v']} | {r['n_groups']} | "
+                    f"{r['groups_with_unique_technique']} "
+                    f"({r['specificity_fraction']:.3f}) | {cell('all')} | "
+                    f"{cell('group_has_a_unique_technique')} | {cell('group_has_none')} |")
+    w("t15_specificity_stratification.md", "\n".join(rows))
+
+    rows = ["| Artefact vocabulary | Back-projected self-consistent | "
+            "Archival self-consistent | Archival artefact against the modern base | "
+            "Mean observation size, back-projected | Mean observation size, archival |",
+            "|---|---|---|---|---|---|"]
+    for r in e14["archival_control"]:
+        rows.append(f"| v{r['v']} | {r['backprojected_self_consistent']:.3f} | "
+                    f"{r['archival_self_consistent']:.3f} | "
+                    f"{r['archival_against_modern']:.3f} | "
+                    f"{r['obs_size_backprojected']:.2f} | {r['obs_size_archival']:.2f} |")
+    w("t16_archival_control.md", "\n".join(rows))
+
+    # T17: the tactic layer and the arity of the revocation relation
+    e13 = load("e13_tactic_layer.json")
+    rows = ["| Domain | Release | Revocation edges | One-to-many splits | "
+            "Many-to-one merges | Most predecessors absorbed by one target |",
+            "|---|---|---|---|---|---|"]
+    for dom, a in e13["revocation_arity"].items():
+        rows.append(f"| {dom} | v{a['release']} | {a['revocation_edges']} | "
+                    f"{a['sources_with_multiple_targets']} | "
+                    f"{a['targets_absorbing_multiple']} | "
+                    f"{a['max_predecessors_absorbed']} |")
+    rows += ["", f"Revocation edges originating at a tactic, across every domain and "
+                 f"release: **{e13['tactic_revocation_edges']}** of "
+                 f"{e13['total_revocation_edges']}.", "",
+             "Tactics renamed in place, identifier and object version retained:", ""]
+    for r in e13["renamed_in_place_tactics"]:
+        rows.append(f"- {r['domain']} v{r['from']} to v{r['to']}: {r['attack_id']} "
+                    f"{r['old_name']} to {r['new_name']} (same STIX identifier: "
+                    f"{str(r['stix_id_unchanged']).lower()}, object version "
+                    f"{r['object_version_from']} to {r['object_version_to']})")
+    w("t17_tactic_layer.md", "\n".join(rows))
+
     # T10 conclusion flips
     e10 = load("e10_conclusion_flips.json")
     rows = ["| Artefact vocabulary | Verdict changed | Changed and now wrong | "

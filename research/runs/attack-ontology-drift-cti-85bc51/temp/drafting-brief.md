@@ -118,3 +118,18 @@ Tables are reproduced inline in the manuscript in markdown, under a caption of
 the form `**Table N.** <caption>`. Figures are referenced by number and given a
 caption of the form `**Figure N.** <caption>` at the point of first reference;
 the manuscript is markdown, so a figure is referenced, not embedded.
+
+## Tables added after the depth investigations (same fixed numbering rule)
+
+| In text | File | Shows |
+|---|---|---|
+| Table 14 | `paper/tables/t14_noise_factorial.md` | the attribution experiment repeated with inter-labeller noise injected at four rates |
+| Table 15 | `paper/tables/t15_specificity_stratification.md` | the modern drift penalty split by whether a group has any technique unique to it |
+| Table 16 | `paper/tables/t16_archival_control.md` | the back-projected control against the real archival release judged against itself |
+| Table 17 | `paper/tables/t17_tactic_layer.md` | the tactic layer, the arity of the revocation relation, and the two tactics renamed in place |
+
+Naming correction, binding on anything written from here on: the condition the
+code calls `contemporaneous` is a **back-projected self-consistent** system, not
+a V-era system. Table 16 gives the real archival control alongside it. Wherever
+the manuscript describes that condition it must say back-projected, and it must
+report both numbers rather than only the one that flatters the design.

@@ -83,3 +83,44 @@ one the half-life analysis forces: identifier churn is episodic and currently
 mild, semantic drift is continuous, and the ecosystem has no mechanism that
 detects the second at all — x_mitre_version has precision 0.447 and recall 0.641
 as a change detector, which is barely better than not looking.
+
+## After the depth investigations — what the adversarial stage actually bought
+
+Worth recording precisely, because the case for running a pipeline like this
+rests on whether the critics change anything or merely decorate.
+
+Four investigators produced five corrections that a normal writing process would
+not have caught:
+
+1. **A false claim, killed.** I had written that `revoked-by` cannot express the
+   v19 one-to-many re-cut. L1 checked: the relation is never one-to-many in any
+   domain, and the re-cut is encoded as merges onto the narrowest survivor. The
+   defensible claim is narrower — lossy and unannounced, not impossible — and
+   the contradiction graph has been corrected.
+2. **A dead code path in the contribution.** L4 found that the normalization
+   protocol's roll-up branch never fires. My own broader sweep: three firings in
+   12,027 resolutions across every domain and major release. The branch was the
+   only part of the protocol that could invent an assertion the artefact never
+   made, and it bought nothing. It is now off by default and the protocol returns
+   a residual ledger instead of a set.
+3. **An untested assumption in the experiment.** L2 noticed that the design sets
+   inter-labeller noise to zero rather than holding it at a realistic level,
+   which licenses separability but leaves additivity untested — and then ran the
+   missing factorial. The penalty survives injected noise but attenuates 22-33%
+   at high noise in the legacy regime, so the headline numbers are upper bounds.
+4. **A mislabelled control.** What the code calls `contemporaneous` is a
+   back-projected transcription, not a V-era system. The real archival control
+   scores 0.969 at v1.0 against the back-projection's 0.668. Both now get
+   reported.
+5. **A corrupted evidence base.** Ten of 112 vault notes carried front matter and
+   body from different sources. Any claim drawn from one would have been
+   attributed to a source that never made it — the paper's own failure mode,
+   inside the paper's own corpus. All ten quarantined; the load-bearing ones
+   re-derived from artefacts I read myself.
+
+Two of those five would have been fatal in review. The fifth would have been
+fatal in a different way.
+
+One methodological note for the write-up: the numbers survived the protocol
+change unchanged, which is itself worth stating — it means the roll-up branch was
+never doing work, not that removing it cost accuracy.

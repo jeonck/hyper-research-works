@@ -31,244 +31,205 @@ kept, merged, demoted and dropped.
 
 A coverage percentage, an attribution verdict and a benchmark score are all measurements, and
 every measurement is stated in units. In cyber threat intelligence the unit is the ATT&CK
-technique identifier. When a vendor reports that a product covers 84.2% of ATT&CK, when a
-paper reports that a classifier attains a given micro-F1 over ATT&CK labels, or when an
-analytic names an intrusion set from a set of observed TTPs, the number is meaningful only
-relative to a particular edition of the catalogue that supplies both the numerator's
-vocabulary and the denominator's cardinality [63, 74]. The ATT&CK project is unusually
-disciplined about publishing those editions: each release is an immutable, addressable STIX
-bundle, retired objects are retained rather than deleted, and every revoked technique carries
-a typed edge to its successor [1, 7]. The discipline is asymmetric. The producer versions
-scrupulously; the consumer literature does not report the version at all.
+technique identifier. When a vendor reports that a product covers 84.2% of ATT&CK, when a paper
+reports a micro-F1 over ATT&CK labels, or when an analytic names an intrusion set from a set of
+observed TTPs, the number is meaningful only relative to a particular edition of the catalogue,
+which supplies both the numerator's vocabulary and the denominator's cardinality [63, 74]. The
+ATT&CK project is unusually disciplined about publishing those editions: each release is an
+immutable, addressable STIX bundle, retired objects are retained rather than deleted, and every
+revoked technique carries a typed edge to its successor [1, 7]. The discipline is asymmetric.
+The producer versions scrupulously; the consumer literature does not report the version at all.
 
 This paper takes that asymmetry literally and treats ATT&CK as an instrument that has been
-silently recalibrated. The framing is not rhetorical. An instrument has a scale, and drift in
-the scale is separable from drift in the thing measured — precisely the separation that
-concept-drift theory in security machine learning cannot express, because it is formulated
-over a fixed label space and models change in the data-generating process, not in the
-vocabulary of the labels [22, 33, 67]. The literature that does study label-space change,
-under class-incremental learning or evolving class ontologies, models the additive case and
-occasionally relabelling, but not retirement, merger, promotion across abstraction levels, or
-silent redefinition of a retained class [24, 43]. ATT&CK performs all of these. A measurement
-vocabulary that performs all of these, and is consumed by a field that reports none of them,
-is a validity problem rather than a hygiene complaint.
+silently recalibrated. The framing is not rhetorical. Drift in the scale is separable from drift
+in the thing measured — precisely the separation that concept-drift theory in security machine
+learning cannot express, being formulated over a fixed label space [22, 33, 67], and that
+class-incremental and evolving-ontology work models only in its additive form [24, 43]. ATT&CK
+also retires, merges, promotes across abstraction levels, and silently redefines classes it
+retains. A measurement vocabulary that does all of this, consumed by a field that reports none
+of it, is a validity problem rather than a hygiene complaint.
 
-We make the argument by measurement, and we make the concessions that the measurement forces.
-The first concession is the apparatus. Anyone who opens MITRE's own usage documentation can
-refute a naive version of this paper in a paragraph: pinning a release is the documented
-first-class workflow, tombstones are guaranteed, and a change-computation tool ships in
-MITRE's Python library with an explicit class for objects patched without a version increment
-[1, 34, 48]. Our own extraction confirms the strongest form of the claim for Enterprise
-technique identifiers: at v19.2 there are 149 revoked-by edges from 149 distinct revoked
-techniques, zero dangling revocations, and no Enterprise identifier has ever vanished without
-a tombstone (Section 6.2). The second concession is the noise floor. Detection products
-pinned to a single ATT&CK release disagree about the label for the same behaviour roughly
-half the time [74], and roughly two-thirds of ATT&CK groups have no technique unique to them
-at all [59]. We do not claim drift dominates that noise. We claim it is separable from it by
-construction — every condition in our experiments draws from the same curated ATT&CK data, so
-the labelling process is held constant and cancels in the contrasts — and we test additivity
-rather than assuming it (Section 7.4). The third concession is the remedy. Identifier
-normalization is worth 42 to 53 points of recovered attribution penalty on pre-2020 artefacts
-and under one point on modern ones, with a confidence interval spanning zero in most modern
-conditions (Section 8). The constructive claim of this paper is not the crosswalk. It is what
-a CTI artefact must declare about its own calibration.
+We make the argument by measurement, and we make the concessions the measurement forces. The
+first is the apparatus. Anyone holding MITRE's usage documentation can refute a naive version of
+this paper in a paragraph: pinning a release is the documented first-class workflow, tombstones
+are guaranteed, and a change-computation tool ships with an explicit class for objects patched
+without a version increment [1, 34, 48]. Our extraction confirms the strongest form of that
+claim for Enterprise technique identifiers — 149 revoked-by edges from 149 distinct revoked
+techniques, zero dangling, no identifier ever vanished without a tombstone (Section 6.2). The
+second concession is the noise floor. Detection products pinned to one ATT&CK release disagree
+about the label for the same behaviour roughly half the time [74], and roughly two-thirds of
+ATT&CK groups have no technique unique to them [59]. We do not claim drift dominates that noise.
+We claim it is separable by construction — every condition in our experiments draws from the
+same curated ATT&CK data, so the labelling process is constant across conditions and cancels in
+the contrasts — and we test additivity rather than assume it (Section 7.4). The third concession
+is the remedy: identifier normalization is worth 42 to 53 points of recovered attribution
+penalty on pre-2020 artefacts and under one point on modern ones, with an interval spanning zero
+in most modern conditions (Section 8).
 
-The contributions are four. First, a longitudinal measurement of ATT&CK drift over every
-public release of all three domains, decomposed into four processes that behave differently
-in time and must be reported separately (Section 6). Second, four controlled experiments —
-attribution, coverage, mitigation ranking and benchmark label validity — in which the
-adversary intelligence is held fixed and only the vocabulary moves, so that every reported
-difference is attributable to the instrument (Sections 7 and 9). Third, a decomposition of
-apparent knowledge growth into intelligence and bookkeeping, answering the question of how
-much of ATT&CK's expansion is new adversary knowledge (Section 6.5). Fourth, a normalization
-protocol whose measured limits are themselves the result, and the reporting discipline that
-follows from those limits (Sections 8 and 10). A reader should be able to reconstruct every
-quantity in this paper from Section 5 alone; where a number is fragile, we say by how much
-and in which direction.
+The contributions are four: a longitudinal measurement of ATT&CK drift over every public release
+of all three domains, decomposed into four processes that behave differently in time (Section 6);
+four controlled experiments — attribution, coverage, mitigation ranking, benchmark label validity
+— in which intelligence is held fixed and only the vocabulary moves (Sections 7 and 9); a
+decomposition of apparent knowledge growth into intelligence and bookkeeping (Section 6.5); and a
+normalization protocol whose measured limits are themselves the result, with the reporting
+discipline that follows from them (Sections 8 and 10). A reader should be able to reconstruct
+every quantity here from Section 5 alone; where a number is fragile we say by how much and in
+which direction.
 
 ## 2. Background: ATT&CK as a Versioned Ontology
 
-ATT&CK organises adversary behaviour into tactics (adversary goals), techniques and
-sub-techniques (the means), and links them to intrusion sets, software, mitigations and data
-components. Its design documentation is explicit that inclusion criteria are non-stationary
-and that the abstraction level of a technique is a deliberate editorial choice rather than a
-natural kind [14]. This matters for measurement: the catalogue is not an inventory that only
-grows as adversaries innovate, it is an editorial artefact that is periodically re-cut. The
-project describes itself, and is described by practitioners, as an ontology rather than a
-taxonomy [77], which places it squarely inside a literature with well-developed machinery for
-exactly the problem this paper measures: ontology evolution versus ontology versioning, and
-change management as the core task of both [56].
+ATT&CK organises adversary behaviour into tactics, techniques and sub-techniques, and links them
+to intrusion sets, software, mitigations and data components. Its design documentation is
+explicit that inclusion criteria are non-stationary and that a technique's abstraction level is a
+deliberate editorial choice rather than a natural kind [14]. This matters for measurement: the
+catalogue is not an inventory that grows only as adversaries innovate, it is an editorial
+artefact that is periodically re-cut. The project is described, by MITRE and by practitioners, as
+an ontology rather than a taxonomy [77], which places it inside a literature with mature
+machinery for exactly this problem: ontology evolution versus versioning, with change management
+as the core task of both [56].
 
-That literature supplies the yardstick. OBO Foundry's versioning principle requires version
-IRIs, release immutability and perpetual resolvability of prior versions [55]; its identifier
-policy requires global uniqueness and forbids reuse [53]; its term-stability principle
-requires that the referent of an identifier not change, distinguishes exact successors
-(`replaced_by`) from inexact ones (`consider`), and requires an obsoletion to be visible in
-the human-readable label rather than only in metadata [54]. OWL supplies `versionIRI`,
-`priorVersion`, `backwardCompatibleWith` and `owl:deprecated` [57], and COnto-Diff supplies
-typed complex change operations — merge, split, move, substitute — as a first-class evolution
-mapping between two versions of an ontology rather than an untyped diff [26]. Biomedicine has
-already demonstrated the downstream consequence we measure here: Gene Ontology evolution
-changes the interpretation of enrichment analyses computed over it, so a conclusion can move
-without any new experiment [69]. The security vocabularies have their own version of the
-problem — CVE has typed lifecycle states including rejection and dispute [31], CVE-to-CWE-to-CPE
-mappings are unstable along the abstraction ladder [32], and CVSS scores fragment across
-versions in ways that defeat cross-version comparison [39] — and the knowledge-graph
-literature has argued that vocabulary churn and instance-data usage must be tracked as two
-distinct time series [37].
+That literature supplies the yardstick. OBO Foundry's versioning principle requires version IRIs,
+release immutability and perpetual resolvability of prior versions [55]; its identifier policy
+requires uniqueness and forbids reuse [53]; its term-stability principle requires that an
+identifier's referent not change, distinguishes exact successors (`replaced_by`) from inexact
+ones (`consider`), and requires obsoletion to be visible in the human-readable label rather than
+only in metadata [54]. OWL supplies `versionIRI`, `priorVersion`, `backwardCompatibleWith` and
+`owl:deprecated` [57], and COnto-Diff supplies typed complex change operations — merge, split,
+move, substitute — as a first-class evolution mapping rather than an untyped diff [26].
+Biomedicine has already demonstrated the downstream consequence: Gene Ontology evolution changes
+the interpretation of analyses computed over it, so a conclusion moves without any new experiment
+[69]. Security vocabularies have their own version of the problem — CVE has typed lifecycle
+states including rejection and dispute [31], CVE-to-CWE-to-CPE mappings are unstable along the
+abstraction ladder [32], CVSS scores fragment across versions [39] — and the knowledge-graph
+literature argues that vocabulary churn and instance-data usage are two distinct time series [37].
 
-Against that yardstick, ATT&CK scores well on some axes and has nothing on others. Releases
-are immutable and addressable, which satisfies the substance of the versioning principle [1,
-55]. Retirement is typed and non-destructive: an object with a successor is revoked and
-carries a `revoked-by` edge to its replacement, an object without one is deprecated, and both
-are retained in the bundle so that dependent workflows do not break [1]. MITRE ships
-`diffStix`, which computes a per-release change set across several classes including a
-`patches` class for objects changed while the version field stayed the same, and which
-annotates unintended version changes as a known historical defect [34, 48]; the Center for
-Threat-Informed Defense operates ATT&CK Sync to flag mappings affected by a release [5]; and
-the Navigator layer format carries a `versions` object able to record the ATT&CK content
-version of a coverage layer [15]. What ATT&CK lacks is the inexact-successor relation, the
-controlled obsolescence-reason vocabulary, the label-level visibility of obsoletion, the
-prior-version and compatibility links, and a typed evolution mapping published as an artefact
-in its own right. Sections 6.2 and 6.4 show what each absence costs.
-
-One further structural fact shapes everything downstream. The single largest editorial event
-in ATT&CK's history is the March 2020 introduction of sub-techniques, which re-cut a large
-fraction of the existing catalogue in one release. It is well documented and widely discussed
-[47, 63]. It is also, as Section 6.6 shows, not unique: it is one draw from a recurring
-per-domain hazard, and the same move is being executed in the ICS domain in 2026.
+Against that yardstick ATT&CK scores well on some axes and has nothing on others. Releases are
+immutable and addressable, satisfying the substance of the versioning principle [1, 55].
+Retirement is typed and non-destructive: an object with a successor is revoked and carries a
+`revoked-by` edge, one without is deprecated, and both are retained so dependent workflows do not
+break [1]. MITRE ships `diffStix`, which computes per-release change sets including a `patches`
+class for objects changed while the version field stayed the same, and annotates unintended
+version changes as a known historical defect [34, 48]; ATT&CK Sync flags mappings affected by a
+release [5]; and the Navigator layer format can record the ATT&CK content version of a coverage
+layer [15]. What ATT&CK lacks is the inexact-successor relation, a controlled obsolescence-reason
+vocabulary, label-level visibility of obsoletion, prior-version and compatibility links, and a
+typed evolution mapping published as an artefact in its own right. Sections 6.2 to 6.4 measure
+what each absence costs. One structural fact shapes everything downstream: the largest editorial
+event in ATT&CK's history, the March 2020 introduction of sub-techniques, is well documented
+[47, 63] — and, as Section 6.6 shows, is one draw from a recurring per-domain hazard rather than
+a closed event.
 
 ## 3. Related Work
 
 Four literatures bear on this problem and none of them measures it.
 
 **CTI quality.** A mature line of work defines quality dimensions for threat intelligence and
-builds instruments to score feeds against them: completeness, accuracy, timeliness,
-relevance, provenance and interoperability recur across the canonical treatments [60, 76],
-with dynamic automated assessment and weighted criteria added more recently [27], and
-empirical feed evaluations establishing that public feeds overlap little and age badly [41,
-45]. Practitioner-facing quality assurance has been studied directly [40], community feeds
-have been metered [38], and a 2025 measurement-based survey consolidates the field [11].
-Structural and syntactic validity of the exchange formats themselves is a separate recurring
-complaint [83]. None of these frameworks names the reference vocabulary's version as a
-quality dimension. This is an audited absence and we state its bound: across the
-quality-dimension sources reachable in this environment we found no dimension defined over
-the vocabulary edition, and we did not have full text for all of them, so we claim the
-absence of a named dimension rather than the absence of any awareness. The burden is
-nonetheless reported by practitioners and conceded institutionally by the existence of
-migration tooling [5, 81].
+scores feeds against them: completeness, accuracy, timeliness, relevance, provenance and
+interoperability recur across the canonical treatments [60, 76], with dynamic automated
+assessment and weighted criteria added more recently [27], and empirical evaluations
+establishing that public feeds overlap little and age badly [41, 45]. Practitioner-facing quality
+assurance has been studied directly [40], community feeds metered [38], and a 2025
+measurement-based survey consolidates the field [11]; structural validity of the exchange formats
+is a separate recurring complaint [83]. None of these frameworks names the reference vocabulary's
+version as a quality dimension. This is an audited absence and we state its bound: across the
+quality-dimension sources reachable in this environment we found no dimension defined over the
+vocabulary edition, and we did not hold full text for all of them, so we claim the absence of a
+named dimension rather than the absence of awareness. The burden is nonetheless conceded
+institutionally by the existence of migration tooling [5, 81].
 
-**ATT&CK-based analytics.** The SoK on ATT&CK in research and practice already establishes
-that coverage claims are not comparable across products and flags temporal instability as an
-open issue [63], and a 2025 survey sets the bar for what a contribution here must show [47].
-Virkud et al. demonstrate the non-comparability empirically at a single pinned release:
-detection rules from different vendors describing the same behaviour carry disjoint technique
-labels, and recomputing coverage from raw artefacts rather than vendor claims collapses the
-differences between products [74]. Shen et al. re-analyse MITRE's own Evaluations as whole
-attack graphs and show that per-technique tallies are the wrong unit [62]; MITRE's Evaluations
-programme itself refuses to emit a single coverage score [46]; and practitioners have made
-the same argument in blunter terms, that a heatmap counts rules rather than coverage and that
-at least three incompatible denominators are in circulation [80, 82, 84]. The
-Summiting-the-Pyramid line goes further and replaces techniques with implementations as the
-coverage denominator outright [64], while mitigation coverage has been shown to have a
-ceiling set by the control catalogue rather than by the product [58]. All of this is about
-disagreement at one version. None of it measures what happens when the version changes.
+**ATT&CK-based analytics.** The SoK on ATT&CK establishes that coverage claims are not comparable
+across products and flags temporal instability as open [63]; a 2025 survey sets the bar a
+contribution here must clear [47]. Virkud et al. demonstrate non-comparability empirically at a
+single pinned release, showing that vendor rules describing the same behaviour carry disjoint
+technique labels and that recomputing coverage from raw artefacts collapses the differences
+between products [74]. Shen et al. re-analyse MITRE's Evaluations as whole attack graphs and show
+per-technique tallies are the wrong unit [62]; the Evaluations programme itself refuses to emit a
+coverage score [46]; and practitioners argue in blunter terms that a heatmap counts rules rather
+than coverage and that incompatible denominators circulate [80, 82, 84]. Summiting the Pyramid
+replaces techniques with implementations as the denominator outright [64], and mitigation coverage
+has a ceiling set by the control catalogue rather than the product [58]. All of this concerns
+disagreement at one version; none of it measures what happens when the version changes.
 
 **TTP extraction, benchmarks and attribution.** The extraction line runs from TTPDrill [71]
-through rcATT [44] to TTPHunter and its successor [72], with graph-based systems such as
-AttacKG alongside [2] and recent multi-label treatments that explicitly decline to treat TRAM
-annotations as gold [52, 73]. LLM-era benchmarks are now the dominant evaluation surface:
-CTIBench treats authoritative sources as fixed and includes a time-controlled split for the
-CVE task but not for the ATT&CK task [30]; CTIArena grew into a successor with 691 to 1,860
-QA pairs under one identifier and the same nine-task taxonomy [29]; AthenaBench argues that
-static benchmarks go stale and proposes live-API construction as the remedy [13]; SEvenLLM
-assembles 90k samples from reports spanning two decades with no ATT&CK release declared [61];
-SynthCTI synthesises the long tail [65]; and CTI-REALM grounds evaluation in telemetry, which
-is the only structurally drift-resistant design in the set [28]. The staleness of static
-benchmarks has itself been quantified as answer-key decay [75]. Attribution work has moved to
-TTP sequences [17, 23] and is surveyed by artefact type rather than by ontology version [12],
-while two recent results bound what TTP attribution can do at all: roughly a third of ATT&CK
-groups have any group-specific technique [59], and LLM agents can reproduce documented APT
-profiles at 55-80% precision, which attacks the premise that a TTP profile identifies an
-actor [66]. Extractor errors concentrate among same-tactic, description-overlapping
-techniques, up to a third of them [20]. The common feature of this entire literature, as read
-through the repository audits in Section 9, is that the gold label space is a file whose
+through rcATT [44] to TTPHunter and its successor [72], with graph-based systems alongside [2]
+and recent multi-label treatments that decline to treat TRAM annotations as gold [52, 73].
+LLM-era benchmarks are now the dominant evaluation surface: CTIBench treats authoritative sources
+as fixed and time-controls only its CVE task [30]; CTIArena grew into a successor with 691 to
+1,860 QA pairs under one identifier and the same nine-task taxonomy [29]; AthenaBench argues
+static benchmarks go stale and proposes live-API construction [13]; SEvenLLM assembles 90k
+samples from two decades of reports with no ATT&CK release declared [61]; SynthCTI synthesises
+the long tail [65]; and CTI-REALM grounds evaluation in telemetry, the only structurally
+drift-resistant design in the set [28]. Benchmark staleness has itself been quantified as
+answer-key decay [75]. Attribution work has moved to TTP sequences [17, 23] and is surveyed by
+artefact type rather than by ontology version [12], while two recent results bound what TTP
+attribution can do at all: roughly a third of ATT&CK groups have any group-specific technique
+[59], and LLM agents reproduce documented APT profiles at 55-80% precision [66]. Extractor errors
+concentrate among same-tactic, description-overlapping techniques [20]. The common feature of
+this entire literature, as the repository audits in Section 9 show, is a gold label space whose
 provenance is undeclared.
 
-**Concept drift in security ML.** Dataset-shift taxonomies are formulated over a fixed label
-space and model change in the joint distribution [33]; TESSERACT establishes temporal
-experimental hygiene for malware classification [67]; CADE detects and explains drifting
-samples [22]; conformal evaluation rejects under drift [70]; and a long line of adaptation
-work assumes the vocabulary is fixed while the distribution moves [50]. Arp et al.'s catalogue
-of methodological pitfalls in security ML does not include vocabulary versioning [35]. Where
-the label space itself changes, the machinery is class-incremental learning and continual
-learning with evolving class ontologies [24, 43], and the closest security instance is
-MOTIF's open and unstable malware-family class set [51], with AVClass as the prior art for
-alias resolution as a normalization step [19]. IncreTTP is, as far as we found, the only work
-that frames ATT&CK version updates as concept drift directly, and its remedy is incremental
-learning rather than measurement [42]. The boundary is the contribution point: concept drift
-is change in P(y|x) with y fixed; ontology drift is change in the set y ranges over and in
-what its members mean [21].
-
-Positioned against all four, this paper's novelty is not the observation that ATT&CK changes.
-It is the quantification of what the change costs a downstream conclusion, under a design
-where nothing but the vocabulary moves.
+**Concept drift in security ML.** Dataset-shift taxonomies are formulated over a fixed label space
+[33]; TESSERACT establishes temporal hygiene for malware classification [67]; CADE detects and
+explains drifting samples [22]; conformal evaluation rejects under drift [70]; and adaptation work
+assumes a fixed vocabulary while the distribution moves [50]. The standard catalogue of security-ML
+pitfalls does not include vocabulary versioning [35]. Where the label space itself changes the
+machinery is class-incremental and continual learning with evolving class ontologies [24, 43], the
+closest security instance being MOTIF's open, unstable family set [51], with AVClass as prior art
+for alias resolution as normalization [19]. IncreTTP is the only work we found that frames ATT&CK
+version updates as concept drift directly, and its remedy is incremental learning rather than
+measurement [42]. The boundary is the contribution point: concept drift is change in P(y|x) with y
+fixed; ontology drift is change in the set y ranges over and in what its members mean [21].
+Positioned against all four, the novelty is not the observation that ATT&CK changes but the
+quantification of what the change costs a downstream conclusion under a design where nothing but
+the vocabulary moves.
 
 ## 4. Problem Formalization and Drift Taxonomy
 
 Let an ATT&CK release be a triple `R_v = (L_v, ⊑_v, μ_v)`. `L_v` is the set of live technique
-identifiers at release `v` — those present in the bundle and marked neither revoked nor
-deprecated. `⊑_v` is the abstraction relation, the partial order induced by `subtechnique-of`
-edges (with the dotted-identifier convention as a fallback for releases that omit the
-relationship). `μ_v` is the intension map, sending each identifier to its textual definition:
-the description, the detection guidance, and the set of tactic phases the technique is
-assigned to. A release also carries a retirement relation `ρ_v ⊆ L̄ × L_v` given by
-`revoked-by` edges, where `L̄` is the set of retired identifiers.
+identifiers at release `v`. `⊑_v` is the abstraction relation induced by `subtechnique-of` edges,
+with the dotted-identifier convention as a fallback for releases that omit the relationship.
+`μ_v` is the intension map, sending each identifier to its textual definition: description,
+detection guidance, and assigned tactic phases. A release also carries a retirement relation
+`ρ_v ⊆ L̄ × L_v` given by `revoked-by` edges, where `L̄` is the set of retired identifiers. A CTI
+artefact written at `v` is a multiset over `L_v` plus an implicit commitment to `⊑_v` and `μ_v`;
+it is consumed at `w > v`. Four drift operators may have acted in between, and any one can be
+zero while the others are large.
 
-A CTI artefact written at release `v` is a multiset of identifiers drawn from `L_v`, plus an
-implicit commitment to `⊑_v` and `μ_v`. It is consumed at release `w > v`. Four drift
-operators can have acted in between, and they are independent enough that any one of them can
-be zero while the others are large.
+**D1 — extensional drift.** `L_v ≠ L_w`: identifiers added, revoked with a successor, deprecated
+without one, or absent entirely. This is the only class a naive consumer notices, because it is
+the only one that produces a failed lookup. It is fully observable and, for Enterprise, fully
+repairable by transitive closure over `ρ_w`.
 
-**D1 — extensional drift.** `L_v ≠ L_w`. Identifiers are added, revoked with a successor,
-deprecated without one, or absent entirely. This is the only drift class that a naive
-consumer notices, because it is the only one that produces a failed lookup. It is fully
-observable from the bundles and, for Enterprise, fully repairable by transitive closure over
-`ρ_w`.
+**D2 — structural drift.** `⊑_v ≠ ⊑_w` on shared identifiers, or a retirement that crosses
+abstraction levels: a parent re-cut into children, a sub-technique promoted, or — the pathological
+case — a technique promoted to a tactic, which no technique-to-technique relation can express. D2
+is partly observable: the abstraction level of both endpoints of a retirement edge is computable,
+so the change can be detected even where it cannot be repaired.
 
-**D2 — structural drift.** `⊑_v ≠ ⊑_w` on identifiers present in both, or a retirement that
-crosses abstraction levels. A parent technique re-cut into children, a sub-technique promoted,
-or — the pathological case — a technique promoted to a tactic, which no technique-to-technique
-relation can express. D2 is partly observable: the abstraction level of both endpoints of a
-retirement edge is computable, so an abstraction change can be detected even though it cannot
-be repaired.
+**D3 — intensional drift.** `μ_v(t) ≠ μ_w(t)` for `t ∈ L_v ∩ L_w`: the identifier survives, the
+words change. This is the class identifier arithmetic cannot see by construction, and for which
+ATT&CK emits no reliable signal (Section 6.4).
 
-**D3 — intensional drift.** `μ_v(t) ≠ μ_w(t)` for `t ∈ L_v ∩ L_w`. The identifier survives,
-the words change. This is the class that identifier arithmetic cannot see by construction,
-and the class for which ATT&CK emits no reliable signal (Section 6.4).
+**D4 — relational drift.** The tactic assignment of a surviving technique changes, or the tactic
+layer is re-cut. Formally a restriction of D3 to the kill-chain component of `μ`, it deserves
+separation because tactic identifiers carry no retirement edges at all (Section 6.3) and because
+tactic-level aggregation is the commonest way coverage and profile statistics are reported.
 
-**D4 — relational drift.** The tactic assignment of a surviving technique changes, or the
-tactic layer itself is re-cut. Formally a special case of D3 restricted to the kill-chain
-phase component of `μ`, but it deserves separation because tactic identifiers carry no
-retirement edges at all (Section 6.3), and because tactic-level aggregation is the most common
-way coverage and profile statistics are reported.
+Two artefacts are **version-comparable** when both have been projected onto one reference release
+and the projection's residual is declared. Projection is the map `π_w : 2^{L_v} → 2^{L_w}` defined
+by transitive closure over `ρ_w`. It is a function, not an injection: it can merge, and it can land
+on a different abstraction level. The residual is the four-way ledger `(kept, merged, demoted,
+dropped)`. A protocol that returns `π_w(S)` and not the residual has destroyed exactly the
+information a reader needs in order to judge comparability, which is the reporting failure this
+paper is about and which Section 8 shows is not hypothetical.
 
-Two artefacts are **version-comparable** when both have been projected onto one reference
-release and the projection's residual is declared. Projection is the map `π_w : 2^{L_v} → 2^{L_w}`
-defined by transitive closure over `ρ_w`. It is a function, not an injection: it can merge,
-and it can land on a different abstraction level. The residual is the four-way ledger `(kept,
-merged, demoted, dropped)`. A protocol that returns only `π_w(S)` and not the residual has
-destroyed exactly the information a reader needs to judge comparability — which is the
-reporting failure this paper is about, and which Section 8 shows is not hypothetical.
-
-Finally, a note on what none of these operators express. ATT&CK is a description of adversary
-behaviour, not the behaviour itself. A technique whose description is rewritten may be
-tracking a genuine change in the threat landscape, an improvement in the curator's
-understanding, or an editorial preference. Our measurements cannot distinguish these, and we
-do not claim to. The claim is narrower and sufficient: whatever the reason, a downstream
-artefact written against the old text and scored against the new one is being measured with a
-recalibrated instrument, and nothing in the current publication practice of the field records
-that this has happened.
+A note on what none of these operators express. ATT&CK is a description of adversary behaviour,
+not the behaviour. A rewritten technique description may track a genuine change in the threat
+landscape, an improvement in the curator's understanding, or an editorial preference; our
+measurements cannot distinguish these and we do not claim to. The claim is narrower and
+sufficient: whatever the reason, an artefact written against the old text and scored against the
+new one is being measured with a recalibrated instrument, and nothing in current publication
+practice records that this has happened.
 
 ## 5. Data and Methodology
 
