@@ -1,0 +1,58 @@
+# Release-triggered re-measurement of pinned ATT&CK artefacts (Section 10).
+#
+# Not a predictor: Section 6.5 shows restructuring waves cannot be forecast
+# from the public bundles, so the only honest automation is a standing one.
+# Each week the job fetches the newest attack-stix-data, rebuilds the release
+# database, re-projects every artefact under artefacts/ onto the newest
+# release with attacknorm, and fails the run when a ledger crosses the
+# thresholds below. The intensional clock of Section 6.3 (first 10% of a
+# cohort substantively stale in a median 1.5 years at J < 0.8) sets how often
+# the thresholds are worth revisiting; the referential clock sets what the
+# dropped and demoted counts mean.
+name: attacknorm-recheck
+on:
+  schedule:
+    - cron: "0 6 * * 1"     # weekly; ATT&CK ships roughly every six months
+  workflow_dispatch:
+jobs:
+  recheck:
+    runs-on: ubuntu-latest
+    env:
+      ATTACK_STIX_REPO: ${{ github.workspace }}/attack-stix-data
+      # thresholds: fail when more than this share of an artefact's identifiers
+      # are dropped, or when any identifier changes abstraction level
+      MAX_DROPPED_SHARE: "0.02"
+      MAX_DEMOTED: "0"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: mitre-attack/attack-stix-data
+          path: attack-stix-data
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python code/01_extract.py
+      - name: re-project every pinned artefact onto the newest release
+        run: |
+          set -e
+          fail=0
+          for f in artefacts/*; do
+            python code/attacknorm.py --input "$f" --bundle-hash --json "ledger-$(basename "$f").json" > "ledger-$(basename "$f").txt"
+            python - "$f" "ledger-$(basename "$f").json" <<'PY'
+          import json, os, sys
+          f, path = sys.argv[1], sys.argv[2]
+          L = json.load(open(path))["ledger"]
+          dropped = L["dropped"] / max(L["input"], 1)
+          bad = dropped > float(os.environ["MAX_DROPPED_SHARE"]) or L["demoted"] > int(os.environ["MAX_DEMOTED"])
+          print(f"{f}: kept {L['kept']} merged {L['absorbed_by_merges']} demoted {L['demoted']} dropped {L['dropped']} ({dropped:.3f})"
+                + ("  <-- THRESHOLD" if bad else ""))
+          sys.exit(1 if bad else 0)
+          PY
+          done || fail=1
+          exit $fail
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: residual-ledgers
+          path: ledger-*

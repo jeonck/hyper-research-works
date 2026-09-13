@@ -41,7 +41,9 @@ randomness that is not seeded (`SEED = 20260912`).
 | `37_statistics.py` | E21 Holm / Benjamini-Hochberg over the attribution rows, Clopper-Pearson / Wilson / Poisson intervals, Mobile and ICS coverage |
 | `38_cwe_capec_drift.py` | E22 CWE and CAPEC measured on the same instrument as a same-institution control |
 | `39_pin_rate_survey.py` | E23 share of recent arXiv papers using ATT&CK identifiers that declare a release |
+| `40_llm_extractor.py` | E24 local LLM extractors: emitted identifiers classified as live / stale / fabricated against every release, home release, naive vs normalized scoring, prompt sensitivity (needs a running ollama with `gemma3:4b` and `llama3.2:3b`) |
 | `attacknorm.py`, `test_attacknorm.py` | the residual-ledger tool of Section 8.4 and its self-check |
+| `examples/attacknorm-recheck.yml` | a release-triggered re-measurement job wrapping `attacknorm` (Section 10); an example, not a contribution |
 | `07_figures.py`, `10_tables.py`, `16_evidence_digest.py` | every figure, table and quoted number in the paper |
 | `26_manuscript_check.py` | headings, length, citation density and quote integrity of the manuscript |
 | `27_to_latex.py` | LaTeX export for journal submission |
